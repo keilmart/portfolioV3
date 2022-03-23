@@ -15,8 +15,8 @@ const Hero = () => {
       <div className="relative order-1 -z-10 lg:order-2">
         <div className="inset-y-0 -mt-36 lg:-mt-40 lg:-mr-20">
           <motion.img
-            src="img/bg-circle.svg"
-            alt="cursor on a white box with abstract design"
+            src="/pictures/blobby.jpg"
+            alt="MOCKUP"
             className=" mx-auto w-96 md:w-auto"
             initial={{ opacity: 0 }}
             transition={{ ease: "easeIn", duration: 1.5 }}
@@ -25,8 +25,8 @@ const Hero = () => {
         </div>
       </div>
       <motion.img
-        src="img/artwork.svg"
-        alt="cursor on a white box with abstract design"
+        src="/pictures/device.jpg"
+        alt="MOCKUP"
         initial={{
           opacity: 0,
           rotate: 0,

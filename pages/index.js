@@ -1,5 +1,5 @@
-import Homepage from "../components/Homepage";
-import Layout from "../components/Layout";
+import Homepage from "../components/Homepage/Homepage";
+import Layout from "../components/Layout/Layout";
 
 const Home = () => {
   return (
