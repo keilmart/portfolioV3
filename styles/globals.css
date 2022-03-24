@@ -1,3 +1,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .text-primary {
+    @apply text-gray-900;
+  }
+
+  .text-secondary {
+    @apply text-gray-700;
+  }
+
+  .text-tertiary {
+    @apply text-gray-500;
+  }
+  .border-primary {
+    @apply border-gray-200;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-block px-4 py-2 text-sm text-center text-white transition duration-200 ease-in-out bg-gray-900 border border-gray-700 rounded-md shadow-sm active:bg-gray-600 hover:shadow-lg focus:ring-4 focus:ring-gray-300 text-opacity-95 hover:text-opacity-100;
+  }
+  .btn-light {
+    @apply inline-block px-4 py-2 text-sm antialiased font-semibold text-center transition duration-200 ease-in-out bg-white border rounded-md shadow-sm active:bg-gray-200 hover:bg-gray-100 focus:ring-2 focus:ring-gray-300 text-tertiary text-opacity-95 hover:text-opacity-100;
+  }
+}
+
+.effect-shine {
+  -webkit-mask-image: linear-gradient(
+    -75deg,
+    rgba(0, 0, 0, 0.5) 20%,
+    rgb(0, 0, 0) 40%,
+    rgb(0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.5) 80%
+  );
+  -webkit-mask-size: 200%;
+  animation: shine 5s infinite;
+}
+
+@-webkit-keyframes shine {
+  from {
+    -webkit-mask-position: 100%;
+  }
+  to {
+    -webkit-mask-position: -100%;
+  }
+}

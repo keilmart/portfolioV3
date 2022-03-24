@@ -8,7 +8,7 @@ const Hero = () => {
           Keil Martin —
         </span>
         <h1 className="text-4xl antialiased font-bold tracking-tight lg:leading-headers md:text-5xl text-primary">
-          front-end with <span className="effect-shine">superpowers</span>
+          Front-end developer from <span className="effect-shine">Toronto</span>
         </h1>
       </div>
 
