@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
+import { DarkModeToggle } from "tailwind-darkmode-toggle";
+
 const Nav = () => {
   const NavItem = ({ item }) => {
     return (
@@ -31,8 +33,8 @@ const Nav = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-10 border-b bg-white/80 border-primary backdrop-blur-md">
-      <div className="container flex items-center justify-between w-full px-4 pt-2 pb-2 mx-auto lg:px-0 max-w-screen-lg md:flex-row">
+    <nav className="sticky top-0 z-10 bg-black border-b dark:bg-white/80 border-primary backdrop-blur-md">
+      <div className="container flex items-center justify-between w-full max-w-screen-lg px-4 pt-2 pb-2 mx-auto lg:px-0 md:flex-row">
         <Link href="/">
           <a className="py-1 my-1 mr-0 font-sans text-sm antialiased font-semibold border-b border-gray-700 border-opacity-0 hover:border-opacity-100 md:mr-6 md:inline-block text-secondary">
             Keil&nbsp;Martin
@@ -45,6 +47,8 @@ const Nav = () => {
               <NavItem item={item} key={item.name} />
             ))}
           </div>
+          <DarkModeToggle className="mx-4 text-gray-800 w-7 h-7 dark:text-gray-300 mt-[1px]" />
+          <p className="text-[15px] text-darkseafoam">Light Mode</p>
         </div>
       </div>
     </nav>
