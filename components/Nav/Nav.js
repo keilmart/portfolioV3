@@ -23,12 +23,11 @@ const Nav = () => {
   const router = useRouter();
   const navigation = [
     { name: "Home", href: "/#", isActive: router.pathname === "/" },
-    {
-      name: "Work",
-      href: "/#workProjects",
-      isActive: false,
-    },
-    // Fill this in when about page is done //
+    // {
+    //   name: "Work",
+    //   href: "/#workProjects",
+    //   isActive: false,
+    // },
     { name: "About", href: "/about", isActive: router.pathname === "/about" },
   ];
 
@@ -41,14 +40,15 @@ const Nav = () => {
           </a>
         </Link>
 
-        <div className="flex md:items-center">
+        <div className="flex items-center">
           <div className="space-x-5">
             {navigation.map((item) => (
               <NavItem item={item} key={item.name} />
             ))}
           </div>
-          <DarkModeToggle className="mx-4 text-gray-800 w-7 h-7 dark:text-gray-300 mt-[1px]" />
-          <p className="text-[15px] text-darkseafoam">Light Mode</p>
+          <DarkModeToggle className="mx-4 text-gray-800 w-7 h-7 dark:text-gray-300" />
+          {/* when in dark mode (the moon) add mb-[3px] */}
+          <p className="text-sm text-darkseafoam">Light Mode</p>
         </div>
       </div>
     </nav>
