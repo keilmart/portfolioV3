@@ -5,7 +5,7 @@ import { ExternalLink } from "../components/Footer/Footer";
 import Layout from "../components/Layout/Layout";
 // import SectionWorkList from "../components/SectionWorkList";
 // import SEO from "../components/SEO";
-import { TriSquareIcon } from "../components/StripeIcons";
+import { TriSquareIcon } from "../components/StripeIcons/Index";
 
 const About = () => {
   return (
