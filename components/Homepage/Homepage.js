@@ -1,11 +1,5 @@
 import {
-  BriefcaseIcon,
-  FilterIcon,
   CodeIcon,
-  SearchCircleIcon,
-} from "@heroicons/react/solid";
-
-import {
   PencilIcon,
   BeakerIcon,
   CloudDownloadIcon,
