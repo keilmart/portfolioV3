@@ -1,3 +1,4 @@
+import { DiamondIcon, SquirqleIcon, CircleIcon } from "../StripeIcons/Index";
 import {
   CodeIcon,
   PencilIcon,
@@ -7,8 +8,6 @@ import {
   SparklesIcon,
   PuzzleIcon,
 } from "@heroicons/react/Outline";
-
-import { DiamondIcon, SquirqleIcon, CircleIcon } from "../StripeIcons/Index";
 
 import Hero from "./Hero";
 import Capsule from "../Capsule/Capsule";
