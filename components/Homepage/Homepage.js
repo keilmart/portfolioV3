@@ -8,7 +8,7 @@ import {
   PuzzleIcon,
 } from "@heroicons/react/Outline";
 
-import { DiamondIcon, SquirqleIcon, CircleIcon } from "../StripeIcons";
+import { DiamondIcon, SquirqleIcon, CircleIcon } from "../StripeIcons/Index";
 
 import Hero from "./Hero";
 import Capsule from "../Capsule/Capsule";
