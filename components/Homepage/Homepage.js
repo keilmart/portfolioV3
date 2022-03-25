@@ -76,7 +76,7 @@ const Homepage = () => {
       <a id="blogPosts" />
       <section className="mx-auto mb-10 md:mb-15">
         <SectionHeader
-          title="Blog Posts"
+          title="Tweets"
           subtitle="MOCKUP"
           icon={
             <div className="transition duration-1000 ease-in-out hover:scale-150 hover:rotate-180">
