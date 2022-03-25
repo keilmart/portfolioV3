@@ -7,7 +7,7 @@ import {
   FastForwardIcon,
   SparklesIcon,
   PuzzleIcon,
-} from "@heroicons/react/Outline";
+} from "@heroicons/react/outline";
 
 import Hero from "./Hero";
 import Capsule from "../Capsule/Capsule";
