@@ -16,7 +16,7 @@ const About = () => {
         description="About the life and times of Tyler"
       /> */}
       <div className="relative">
-        <img
+        <Image
           src="/pictures/blobby.jpg"
           alt="MOCKUP"
           className="absolute right-0 -bottom-32 -z-10"
