@@ -23,7 +23,7 @@ const About = () => {
         />
         <div className="absolute top-0 right-44">
           <motion.div
-            className="hidden overflow-hidden md:block md:w-40 md:h-40 rounded-md"
+            className="hidden overflow-hidden rounded-md md:block md:w-40 md:h-40"
             initial={{ rotate: 10 }}
             animate={{ rotate: 0 }}
             transition={{ type: "spring", bounce: 0.25, mass: 2 }}
@@ -56,7 +56,7 @@ const About = () => {
         </p>
 
         <hr className="mb-12 border-t-2 border-dotted mt-14" />
-        <h2 className="mt-12 text-lg font-semibold">Where I've Worked</h2>
+        <h2 className="mt-12 text-lg font-semibold">Where I&apos;ve Worked</h2>
         <h2 className="mb-4 text-lg font-semibold">Early Career Stuff</h2>
         <p className="mb-4 font-serif text-xl antialiased leading-relaxed -tracking-[.005em] text-secondary">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius,
