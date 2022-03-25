@@ -8,10 +8,12 @@
   },
   "dependencies": {
     "@heroicons/react": "^1.0.6",
+    "axios": "^0.26.1",
     "framer-motion": "^6.2.8",
     "next": "12.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-twitter-embed": "^4.0.4",
     "tailwind-darkmode-toggle": "^1.0.5"
   },
   "devDependencies": {

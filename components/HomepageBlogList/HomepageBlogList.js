@@ -1,14 +1,26 @@
-import { ArrowRightIcon } from "@heroicons/react/outline";
-import Link from "next/link";
+// import { ArrowRightIcon } from "@heroicons/react/outline";
+
+import {
+  TwitterTimelineEmbed,
+  // TwitterShareButton,
+  // TwitterFollowButton,
+  // TwitterHashtagButton,
+  // TwitterMentionButton,
+  // TwitterTweetEmbed,
+  // TwitterMomentShare,
+  // TwitterDMButton,
+  // TwitterVideoEmbed,
+  // TwitterOnAirButton,
+} from "react-twitter-embed";
+// import Link from "next/link";
 
 const HomepageBlogList = ({ posts }) => {
   return (
-    <div className="-mt-10 md:-mt-8 grid gap-4 grid-cols-1 md:grid-cols-3">
-      <div className="col-span-1"></div>
-      <div className="col-span-2">
-        <div className="border-b-2 border-dotted last-of-type:border-0">
+    <div className="grid grid-cols-1 gap-4 -mt-10 md:-mt-8 md:grid-cols-3">
+      <div className="col-span-1">
+        {/* <div className="border-b-2 border-dotted last-of-type:border-0">
           <Link href="/">
-            <a className="py-4 transition duration-500 ease-in-out group md:py-8 grid gap-1 md:gap-4 grid-cols-1 md:grid-cols-4 hover:bg-gray-100">
+            <a className="grid grid-cols-1 gap-1 py-4 transition duration-500 ease-in-out group md:py-8 md:gap-4 md:grid-cols-4 hover:bg-gray-100">
               <div className="col-span-1">
                 <span className="inline-block text-sm text-tertiary">
                   Date of Post
@@ -25,7 +37,14 @@ const HomepageBlogList = ({ posts }) => {
               </div>
             </a>
           </Link>
-        </div>
+        </div> */}
+      </div>
+      <div className="col-span-2">
+        <TwitterTimelineEmbed
+          sourceType="profile"
+          screenName="keilmart"
+          options={{ height: 350 }}
+        />
       </div>
     </div>
   );
