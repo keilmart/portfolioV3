@@ -13,7 +13,7 @@ import Hero from "./Hero";
 import Capsule from "../Capsule/Capsule";
 import SectionHeader from "../SectionHeader/SectionHeader";
 
-import HomepageBlogList from "../HomepageBlogList/HomepageBlogList";
+import HomepageSocialList from "../HomepageSocialList/HomepageSocialList";
 import HomepageWorkList from "../HomepageWorkList/HomepageWorkList";
 import HomepagePersonalList from "../HomepagePersonalList/HomepagePersonalList";
 
@@ -67,7 +67,7 @@ const Homepage = () => {
         </div>
       </section>
       <a id="blogPosts" />
-      <section className="mx-auto mb-10 md:mb-15">
+      <section className="mx-auto mb-4 md:mb-15">
         <SectionHeader
           title="My Feed"
           subtitle="MOCKUP"
@@ -78,7 +78,7 @@ const Homepage = () => {
           }
         />
         <div className="pt-8" />
-        <HomepageBlogList />
+        <HomepageSocialList />
         <a id="workProjects" />
       </section>
       <section className="mx-auto mb-10 md:mb-20">

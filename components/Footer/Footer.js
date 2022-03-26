@@ -17,12 +17,12 @@ const Footer = () => {
 
   return (
     <footer>
-      <div className="container flex flex-wrap items-baseline justify-between px-4 pt-6 pb-12 mx-auto border-t-2 border-dotted space-y-3 md:space-y-0 md:flex-nowrap lg:px-0 max-w-screen-lg">
-        <ul className="flex items-center text-sm text-secondary space-x-3">
+      <div className="container flex flex-wrap items-baseline justify-between max-w-screen-lg px-4 pt-6 pb-12 mx-auto space-y-3 border-t-2 border-dotted md:space-y-0 md:flex-nowrap lg:px-0">
+        <ul className="flex items-center space-x-3 text-sm text-secondary">
           <li>© {getYear}</li>
           <li className="hidden text-gray-400 md:inline-block">&bull;</li>
           <li className="hidden md:inline-block">
-            Built with Next.js and Tailwind
+            Built with Next.js Firebase and Tailwind
           </li>
         </ul>
         <div className="flex items-center space-x-4">
@@ -30,8 +30,8 @@ const Footer = () => {
             href="https://www.linkedin.com/in/keil-martin/"
             title="LinkedIn"
           />
+          <ExternalLink href="https://twitter.com/keilmart" title="Twitter" />
           <ExternalLink href="https://github.com/keilmart" title="GitHub" />
-          Twitter / Blog platform
         </div>
       </div>
     </footer>
