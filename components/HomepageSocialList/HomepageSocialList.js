@@ -24,9 +24,9 @@ const HomepageSocialList = ({ posts }) => {
         <TwitterTimelineEmbed
           sourceType="profile"
           screenName="keilmart"
-          // options={width >= 1024 ? { height: 350 } : { height: 245 }}
+          options={width >= 1024 ? { height: 350 } : { height: 350 }}
           // theme="dark"
-          options={{ height: 350 }}
+          // options={{ height: 350 }}
         />
       </div>
     </div>

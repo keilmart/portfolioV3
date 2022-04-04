@@ -1,4 +1,4 @@
-import { DiamondIcon, SquirqleIcon, CircleIcon } from "../StripeIcons/Index";
+import { MoonStart, MoonMiddle, MoonEnd } from "../HomepageIcons/Index";
 import {
   CodeIcon,
   PencilIcon,
@@ -22,7 +22,7 @@ const Homepage = () => {
     <>
       <Hero />
 
-      <section className="max-w-3xl px-5 py-6 mx-auto mt-6 mb-10 text-center bg-gray-100 border-2 border-gray-200 border-dotted rounded-lg md:mb-20 md:mt-32 md:py-12 md:px-14">
+      <section className="max-w-3xl px-5 py-6 mx-auto mt-6 mb-10 text-center bg-gray-100 border-2 border-gray-200 border-dotted rounded-lg md:mb-20 md:mt-28 md:py-12 md:px-14">
         <h2 className="text-xl font-semibold md:text-2xl text-primary">
           Some of the skills you can find in my toolbox
         </h2>
@@ -31,7 +31,7 @@ const Homepage = () => {
             <Capsule
               text="React"
               className="m-1 hover:rotate-1"
-              icon={<BeakerIcon className="w-5 h-6 text-darkseafoam" />}
+              icon={<BeakerIcon className="w-5 h-6 text-lime-600" />}
             />
             <Capsule
               text="Next.js"
@@ -41,7 +41,7 @@ const Homepage = () => {
             <Capsule
               text="Gatsby"
               className="m-1 hover:rotate-1"
-              icon={<SparklesIcon className="w-5 h-6 text-lime-600" />}
+              icon={<SparklesIcon className="w-5 h-6 text-blue-300" />}
             />
             <Capsule
               text="JavaScript"
@@ -61,7 +61,7 @@ const Homepage = () => {
             <Capsule
               text="Figma"
               className="m-1 hover:rotate-1"
-              icon={<PencilIcon className="w-5 h-6 text-darkseafoam" />}
+              icon={<PencilIcon className="w-5 h-6 text-pink-500" />}
             />
           </div>
         </div>
@@ -72,12 +72,12 @@ const Homepage = () => {
           title="My Feed"
           subtitle="MOCKUP"
           icon={
-            <div className="transition duration-1000 ease-in-out hover:scale-150 hover:rotate-180">
-              <CircleIcon />
+            <div className="transition duration-1000 ease-in-out hover:scale-125 hover:rotate-45">
+              <MoonStart />
             </div>
           }
         />
-        <div className="pt-8" />
+        <div className="pt-12 md:pt-16" />
         <HomepageSocialList />
         <a id="workProjects" />
       </section>
@@ -86,12 +86,12 @@ const Homepage = () => {
           title="Work Projects"
           subtitle="MOCKUP"
           icon={
-            <div className="transition duration-1000 ease-in-out hover:scale-150 hover:rotate-90">
-              <DiamondIcon />
+            <div className="transition duration-1000 ease-in-out hover:scale-125 hover:rotate-90">
+              <MoonMiddle />
             </div>
           }
         />
-        <div className="pt-12" />
+        <div className="pt-6 md:pt-12" />
         <HomepageWorkList />
       </section>
       <section className="mx-auto mb-10 md:mb-20">
@@ -99,12 +99,12 @@ const Homepage = () => {
           title="Personal Projects"
           subtitle="MOCKUP"
           icon={
-            <div className="transition duration-1000 ease-in-out hover:scale-150 hover:-rotate-12">
-              <SquirqleIcon />
+            <div className="transition duration-1000 ease-in-out hover:scale-125 hover:rotate-180">
+              <MoonEnd />
             </div>
           }
         />
-        <div className="pt-12" />
+        <div className="pt-6 md:pt-12" />
         <HomepagePersonalList />
       </section>
     </>

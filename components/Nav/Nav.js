@@ -10,7 +10,7 @@ const Nav = () => {
         <a
           className={`text-sm py-1 hover:bg-gray-100 hover:border-b  ${
             item.isActive
-              ? "text-darkseafoam hover:text-darkerseafoam  hover:border-darkerseafoam"
+              ? "text-syncWave hover:text-syncWave  hover:border-syncWave"
               : "text-secondary hover:text-primary hover:border-gray-700"
           }`}
         >
@@ -48,7 +48,7 @@ const Nav = () => {
           </div>
           <DarkModeToggle className="mx-4 text-gray-800 w-7 h-7 dark:text-gray-300" />
           {/* when in dark mode (the moon) add mb-[3px] */}
-          <p className="text-sm text-darkseafoam">Light Mode</p>
+          <p className="text-sm">Light Mode</p>
         </div>
       </div>
     </nav>

@@ -2,22 +2,24 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="relative px-0 pb-6 mb-0 overflow-hidden md:px-12 md:pb-6 lg:overflow-visible lg:pl-12 lg:pr-0 rounded-b-3xl grid grid-cols-1 lg:grid-cols-2 lg:gap-4 lg:mb-0 lg:-mx-12">
+    <section className="relative grid grid-cols-1 px-0 pb-6 mb-0 overflow-hidden md:px-12 md:pb-6 lg:overflow-visible lg:pl-12 lg:pr-0 rounded-b-3xl lg:grid-cols-2 lg:gap-4 lg:mb-0 lg:-mx-12">
       <div className="order-2 py-4 lg:py-32 lg:order-1">
         <span className="inline-block mt-4 mb-2 text-xl md:mb-3 md:text-2xl text-tertiary">
           Keil Martin —
         </span>
         <h1 className="text-4xl antialiased font-bold tracking-tight lg:leading-headers md:text-5xl text-primary">
-          Front-end developer from <span className="effect-shine">Toronto</span>
+          Front-end developer from <span className="syncWave">Toronto</span>
         </h1>
       </div>
 
       <div className="relative order-1 -z-10 lg:order-2">
-        <div className="inset-y-0 -mt-36 lg:-mt-40 lg:-mr-20">
+        <div className="inset-y-0 mt-2 lg:-mr-20">
+          {/* <div className="inset-y-0 -mt-36 lg:-mt-40 lg:-mr-20"> */}
           <motion.img
-            src="/pictures/blobby.jpg"
+            src="/pictures/vector.png"
             alt="MOCKUP"
-            className=" mx-auto w-96 md:w-auto"
+            // className="mx-auto w-96 md:w-auto"
+            className="mx-auto w-96 md:w-[1300px]"
             initial={{ opacity: 0 }}
             transition={{ ease: "easeIn", duration: 1.5 }}
             animate={{ opacity: 1 }}
@@ -25,7 +27,7 @@ const Hero = () => {
         </div>
       </div>
       <motion.img
-        src="/pictures/device.jpg"
+        src="/pictures/device2.svg"
         alt="MOCKUP"
         initial={{
           opacity: 0,
@@ -41,7 +43,7 @@ const Hero = () => {
         drag
         whileTap={{ rotate: 20, scale: 0.95 }}
         whileHover={{ scale: 1.02 }}
-        className="absolute bg-white border rounded-lg cursor-pointer shadow-art active:shadow-art-active hover:shadow-art-hover w-60 left-1/3 -top-60 md:w-80 lg:left-auto lg:right-32 lg:top-20 lg:w-auto"
+        className="absolute max-w-[220px] bg-white border rounded-lg cursor-pointer shadow-art active:shadow-art-active hover:shadow-art-hover w-60 left-1/3 -top-60 md:w-80 lg:left-auto lg:right-32 lg:top-20 lg:w-auto"
       />
     </section>
   );

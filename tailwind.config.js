@@ -30,12 +30,7 @@ module.exports = {
         headers: 1.15,
       },
       colors: {
-        gray: colors.stone,
-        cyan: colors.cyan,
-        darkseafoam: "#3F87A1",
-        darkerseafoam: "#207796",
-        lime: colors.lime,
-        sand100: "#FEFAF9",
+        syncWave: "#9399ea",
       },
     },
   },

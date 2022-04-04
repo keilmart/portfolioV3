@@ -5,7 +5,7 @@ import { ExternalLink } from "../components/Footer/Footer";
 import Layout from "../components/Layout/Layout";
 // import SectionWorkList from "../components/SectionWorkList";
 // import SEO from "../components/SEO";
-import { TriSquareIcon } from "../components/StripeIcons/Index";
+import { MoonStars } from "../components/HomepageIcons/Index";
 
 const About = () => {
   return (
@@ -16,11 +16,11 @@ const About = () => {
         description="About the life and times of Tyler"
       /> */}
       <div className="relative">
-        <Image
+        {/* <Image
           src="/pictures/blobby.jpg"
           alt="MOCKUP"
           className="absolute right-0 -bottom-32 -z-10"
-        />
+        /> */}
         <div className="absolute top-0 right-44">
           <motion.div
             className="hidden overflow-hidden rounded-md md:block md:w-40 md:h-40"
@@ -38,7 +38,7 @@ const About = () => {
         </div>
       </div>
       <div className="max-w-3xl mx-auto mt-4 mb-20 md:mt-12 md:pt-16">
-        <TriSquareIcon />
+        <MoonStars />
         <h1 className="mt-4 mb-8 text-4xl antialiased font-bold text-primary">
           About
         </h1>

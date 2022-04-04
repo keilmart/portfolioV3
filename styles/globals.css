@@ -28,23 +28,18 @@
   }
 }
 
-.effect-shine {
-  -webkit-mask-image: linear-gradient(
-    -75deg,
-    rgba(0, 0, 0, 0.5) 20%,
-    rgb(0, 0, 0) 40%,
-    rgb(0, 0, 0) 60%,
-    rgba(0, 0, 0, 0.5) 80%
-  );
-  -webkit-mask-size: 200%;
-  animation: shine 5s infinite;
+.svg-icon {
+  width: 1.7em;
+  height: 1.7em;
 }
 
-@-webkit-keyframes shine {
-  from {
-    -webkit-mask-position: 100%;
-  }
-  to {
-    -webkit-mask-position: -100%;
-  }
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #9399ea;
+}
+
+.svg-icon circle {
+  stroke: #9399ea;
+  stroke-width: 1;
 }
