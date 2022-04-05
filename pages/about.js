@@ -30,7 +30,7 @@ const About = () => {
           >
             <Image
               src="/pictures/self.jpg"
-              alt="MOCKUP"
+              alt="MOCKUP11"
               height="160"
               width="160"
             />

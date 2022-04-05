@@ -25,7 +25,7 @@ const HomepageSocialList = ({ posts }) => {
           sourceType="profile"
           screenName="keilmart"
           options={width >= 1024 ? { height: 350 } : { height: 350 }}
-          // theme="dark"
+          theme="dark"
           // options={{ height: 350 }}
         />
       </div>

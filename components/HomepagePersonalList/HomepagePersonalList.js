@@ -4,13 +4,13 @@ import Link from "next/link";
 const PersonalProjectList = () => {
   return (
     <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 md:gap-10">
-      <li key="MOCKUP" className="pb-6 border-b-2">
+      <li key="MOCKUP7" className="pb-6 border-b-2">
         <Link href="/">
           <a className="relative inline-block w-full h-48 pt-8 pl-8 mb-4 overflow-hidden transition duration-300 ease-in-out bg-gray-100 rounded-lg hover:shadow-lg hover:scale-105">
             <div className="absolute w-full overflow-hidden rounded-tl-3xl top-10">
               <Image
                 src="/pictures/project.png"
-                alt="MOCKUP"
+                alt="MOCKUP8"
                 width={768}
                 height={384}
                 objectFit="cover"
@@ -36,7 +36,7 @@ const PersonalProjectList = () => {
             <div className="absolute w-full overflow-hidden rounded-tl-3xl top-10">
               <Image
                 src="/pictures/project.png"
-                alt="MOCKUP"
+                alt="MOCKUP9"
                 width={768}
                 height={384}
                 objectFit="cover"

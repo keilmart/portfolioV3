@@ -17,7 +17,7 @@ const Hero = () => {
           {/* <div className="inset-y-0 -mt-36 lg:-mt-40 lg:-mr-20"> */}
           <motion.img
             src="/pictures/vector.png"
-            alt="MOCKUP"
+            alt="MOCKUP1"
             // className="mx-auto w-96 md:w-auto"
             className="mx-auto w-96 md:w-[1300px]"
             initial={{ opacity: 0 }}
@@ -28,7 +28,7 @@ const Hero = () => {
       </div>
       <motion.img
         src="/pictures/device2.svg"
-        alt="MOCKUP"
+        alt="MOCKUP2"
         initial={{
           opacity: 0,
           rotate: 0,

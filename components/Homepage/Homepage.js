@@ -70,7 +70,7 @@ const Homepage = () => {
       <section className="mx-auto mb-4 md:mb-15">
         <SectionHeader
           title="My Feed"
-          subtitle="MOCKUP"
+          subtitle="MOCKUP4"
           icon={
             <div className="transition duration-1000 ease-in-out hover:scale-125 hover:rotate-45">
               <MoonStart />
@@ -84,7 +84,7 @@ const Homepage = () => {
       <section className="mx-auto mb-10 md:mb-20">
         <SectionHeader
           title="Work Projects"
-          subtitle="MOCKUP"
+          subtitle="MOCKup5"
           icon={
             <div className="transition duration-1000 ease-in-out hover:scale-125 hover:rotate-90">
               <MoonMiddle />
@@ -97,7 +97,7 @@ const Homepage = () => {
       <section className="mx-auto mb-10 md:mb-20">
         <SectionHeader
           title="Personal Projects"
-          subtitle="MOCKUP"
+          subtitle="MOCKUP6"
           icon={
             <div className="transition duration-1000 ease-in-out hover:scale-125 hover:rotate-180">
               <MoonEnd />
