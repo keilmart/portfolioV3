@@ -112,19 +112,26 @@ const Homepage = ({ projects }) => {
 
         <HomepagePersonalList />
 
-        {projects.map((project) => (
+        {/* {projects.map((project) => (
           <div key={project.id}>
-            {project.name}-{project.timestamp}
             <img
               src={project.image}
               alt={project.name}
-              width={70}
-              height={50}
+              width={210}
+              height={150}
               objectFit="cover"
               objectPosition="top left"
             />
+            <div className="flex flex-col">
+              <div>{project.name}</div>
+              <div>{project.timestamp}</div>
+              <div>{project.description}</div>
+              <div>{project.stack}</div>
+              <a href={project.url}>Link here</a>
+              <div>{project.company}</div>
+            </div>
           </div>
-        ))}
+        ))} */}
       </section>
     </>
   );
