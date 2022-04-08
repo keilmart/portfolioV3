@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const PersonalProjectList = () => {
+const PersonalProjectList = ({ personalProjects }) => {
   return (
     <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 md:gap-10">
       <li key="MOCKUP7" className="pb-6 border-b-2">
@@ -55,6 +55,26 @@ const PersonalProjectList = () => {
           <a className="mt-2 btn-light">View Project</a>
         </Link>
       </li>
+      {personalProjects.map((personalProject) => (
+        <div key={personalProject.id}>
+          <img
+            src={personalProject.image}
+            alt={personalProject.name}
+            width={420}
+            height={300}
+            objectFit="cover"
+            objectPosition="top left"
+          />
+          <div className="flex flex-col">
+            <div>{personalProject.name}</div>
+            <div>{personalProject.timestamp}</div>
+            <div>{personalProject.description}</div>
+            <div>{personalProject.stack}</div>
+            <a href={personalProject.url}>Link here</a>
+            <div>{personalProject.company}</div>
+          </div>
+        </div>
+      ))}
     </ul>
   );
 };

@@ -17,11 +17,11 @@ import HomepageSocialList from "../HomepageSocialList/HomepageSocialList";
 import HomepageWorkList from "../HomepageWorkList/HomepageWorkList";
 import HomepagePersonalList from "../HomepagePersonalList/HomepagePersonalList";
 
-const Homepage = ({ projects }) => {
+const Homepage = ({ workProjects, personalProjects }) => {
   return (
     <>
       <Hero />
-      {console.log(projects)}
+
       <section className="max-w-3xl px-5 py-6 mx-auto mt-6 mb-10 text-center bg-gray-100 border-2 border-gray-200 border-dotted rounded-lg md:mb-20 md:mt-28 md:py-12 md:px-14">
         <h2 className="text-xl font-semibold md:text-2xl text-primary">
           Some of the skills you can find in my toolbox
@@ -66,7 +66,9 @@ const Homepage = ({ projects }) => {
           </div>
         </div>
       </section>
+      {/* ?????????????????? */}
       <a id="blogPosts" />
+
       <section className="mx-auto mb-4 md:mb-15">
         <SectionHeader
           title="My Feed"
@@ -78,7 +80,6 @@ const Homepage = ({ projects }) => {
           }
         />
         <div className="pt-12 md:pt-16" />
-
         <HomepageSocialList />
 
         <a id="workProjects" />
@@ -94,8 +95,7 @@ const Homepage = ({ projects }) => {
           }
         />
         <div className="pt-6 md:pt-12" />
-
-        <HomepageWorkList />
+        <HomepageWorkList workProjects={workProjects} />
       </section>
 
       <section className="mx-auto mb-10 md:mb-20">
@@ -109,29 +109,7 @@ const Homepage = ({ projects }) => {
           }
         />
         <div className="pt-6 md:pt-12" />
-
-        <HomepagePersonalList />
-
-        {/* {projects.map((project) => (
-          <div key={project.id}>
-            <img
-              src={project.image}
-              alt={project.name}
-              width={210}
-              height={150}
-              objectFit="cover"
-              objectPosition="top left"
-            />
-            <div className="flex flex-col">
-              <div>{project.name}</div>
-              <div>{project.timestamp}</div>
-              <div>{project.description}</div>
-              <div>{project.stack}</div>
-              <a href={project.url}>Link here</a>
-              <div>{project.company}</div>
-            </div>
-          </div>
-        ))} */}
+        <HomepagePersonalList personalProjects={personalProjects} />
       </section>
     </>
   );
