@@ -33,9 +33,14 @@ const HomepageWorkList = ({ workProjects }) => {
             <span className="block mb-1 text-md text-tertiary">
               {workProject.stack}
             </span>
-            <Link href={workProject.url}>
-              <a className="w-full mt-2 btn-light md:w-auto">View Project</a>
-            </Link>
+            <a
+              href={`https://${workProject.url}`}
+              target={"_blank"}
+              rel={"noreferrer"}
+              className="w-full mt-2 btn-light md:w-auto"
+            >
+              View Project
+            </a>
           </div>
         </li>
       ))}
