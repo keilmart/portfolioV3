@@ -74,7 +74,7 @@ const Homepage = ({ workProjects, personalProjects }) => {
       <section className="mx-auto mb-4 md:mb-15">
         <SectionHeader
           title="My Feed"
-          subtitle="MOCKUP4"
+          subtitle="Personal branding moon imagery"
           icon={
             <div className="transition duration-1000 ease-in-out hover:scale-125 hover:rotate-45">
               <MoonStart />
@@ -89,7 +89,7 @@ const Homepage = ({ workProjects, personalProjects }) => {
       <section className="mx-auto mb-10 md:mb-20">
         <SectionHeader
           title="Work Projects"
-          subtitle="MOCKup5"
+          subtitle="Personal branding moon imagery"
           icon={
             <div className="transition duration-1000 ease-in-out hover:scale-125 hover:rotate-90">
               <MoonMiddle />
@@ -103,7 +103,7 @@ const Homepage = ({ workProjects, personalProjects }) => {
       <section className="mx-auto mb-10 md:mb-20">
         <SectionHeader
           title="Personal Projects"
-          subtitle="MOCKUP6"
+          subtitle="Personal branding moon imagery"
           icon={
             <div className="transition duration-1000 ease-in-out hover:scale-125 hover:rotate-180">
               <MoonEnd />

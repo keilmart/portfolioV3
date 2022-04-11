@@ -17,7 +17,7 @@ const HomepageWorkList = ({ workProjects }) => {
                   alt={workProject.company}
                   width={768}
                   height={384}
-                  objectFit="cover"
+                  objectFit="fill"
                   objectPosition="top left"
                 />
               </div>

@@ -1,9 +1,7 @@
 import { ThemeProvider } from "tailwind-darkmode-toggle";
 
 import "../styles/globals.css";
-import "../styles/fonts.css";
 
-// Search and remove all "MOCKUP" / alt image tags
 // Remove max-w-[220px], className="mx-auto w-96 md:w-auto", <div className="inset-y-0 -mt-36 lg:-mt-40 lg:-mr-20"> from Hero.js"
 
 import Nav from "../components/Nav/Nav";

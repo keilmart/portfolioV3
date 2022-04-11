@@ -30,7 +30,7 @@ const About = () => {
           >
             <Image
               src="/pictures/self.jpg"
-              alt="MOCKUP11"
+              alt="Personal photo of Keil Martin"
               height="160"
               width="160"
             />

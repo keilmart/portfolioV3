@@ -8,7 +8,8 @@ const Hero = () => {
           Keil Martin —
         </span>
         <h1 className="font-sans text-4xl antialiased font-medium tracking-tight lg:leading-titles md:text-6xl">
-          Front-end developer from <span className="syncWave">Toronto</span>
+          Front end developer from Toronto
+          {/* <span className="syncWave">Toronto</span> */}
         </h1>
       </div>
 
@@ -17,7 +18,7 @@ const Hero = () => {
           {/* <div className="inset-y-0 -mt-36 lg:-mt-40 lg:-mr-20"> */}
           <motion.img
             src="/pictures/vector.png"
-            alt="MOCKUP1"
+            alt="Header illustration, a vector illustration"
             // className="mx-auto w-96 md:w-auto"
             className="mx-auto w-96 md:w-[1300px]"
             initial={{ opacity: 0 }}
@@ -28,7 +29,7 @@ const Hero = () => {
       </div>
       <motion.img
         src="/pictures/device2.svg"
-        alt="MOCKUP2"
+        alt="Main image of abstract device"
         initial={{
           opacity: 0,
           rotate: 0,
