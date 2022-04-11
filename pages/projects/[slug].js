@@ -1,11 +1,27 @@
 import Link from "next/link";
 
-import Layout from "../components/Layout/Layout";
-import ProjectLayout from "../components/Layout/ProjectLayout";
+import Layout from "../../components/Layout/Layout";
+import ProjectLayout from "../../components/Layout/ProjectLayout";
 
-const HomepagePersonalListItem = () => {
+export const GetStaticPaths = async () => {
+  const response = await fetch("https://jsonplaceholder.typicode.com/users");
+  const data = response.json();
+
+  const paths = data.map((project) => {
+    return {
+      params: { id: project.id.toString() },
+    };
+  });
+  return {
+    paths: paths,
+    fallback: false,
+  };
+};
+
+const ProjectDetails = ({ personalProject }) => {
   return (
     <>
+      {console.log(personalProject)}
       <Layout>
         {/* <ProjectLayout> */}
         <main className="mt-12">
@@ -45,4 +61,4 @@ const HomepagePersonalListItem = () => {
   );
 };
 
-export default HomepagePersonalListItem;
+export default ProjectDetails;
