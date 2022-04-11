@@ -40,15 +40,12 @@ const Home = () => {
   }, []);
 
   return (
-    <>
-      <div>{console.log(workProjects, personalProjects)}</div>
-      <Layout>
-        <Homepage
-          workProjects={workProjects}
-          personalProjects={personalProjects}
-        />
-      </Layout>
-    </>
+    <Layout>
+      <Homepage
+        workProjects={workProjects}
+        personalProjects={personalProjects}
+      />
+    </Layout>
   );
 };
 

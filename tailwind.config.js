@@ -15,7 +15,8 @@ module.exports = {
         "art-active": "0 1px 2px 0 rgb(0 0 0 / 0.04)",
       },
       fontFamily: {
-        sans: ["PlusJakartaSans", "sans-serif"],
+        sans: ["'Inter'", "sans-serif"],
+        // sans: ["PlusJakartaSans", "sans-serif"],
         serif: [
           "Charter",
           "ui-serif",
@@ -27,7 +28,7 @@ module.exports = {
         ],
       },
       lineHeight: {
-        headers: 1.15,
+        titles: 1,
       },
       colors: {
         syncWave: "#9399ea",
