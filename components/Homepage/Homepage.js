@@ -22,8 +22,6 @@ const Homepage = ({ workProjects, personalProjects }) => {
     <>
       <Hero />
 
-      {console.log(workProjects, personalProjects)}
-
       <section className="max-w-3xl px-5 py-6 mx-auto mt-6 mb-10 text-center bg-gray-100 border-2 border-gray-200 border-dotted rounded-lg md:mb-20 md:mt-28 md:py-12 md:px-14">
         <h2 className="text-xl font-semibold md:text-2xl text-primary">
           Some of the skills you can find in my toolbox
@@ -97,7 +95,7 @@ const Homepage = ({ workProjects, personalProjects }) => {
           }
         />
         <div className="pt-6 md:pt-12" />
-        <HomepageWorkList workProjects={workProjects} />
+        <HomepageWorkList projects={workProjects} />
       </section>
 
       <section className="mx-auto mb-10 md:mb-20">
@@ -111,7 +109,7 @@ const Homepage = ({ workProjects, personalProjects }) => {
           }
         />
         <div className="pt-6 md:pt-12" />
-        <HomepagePersonalList personalProjects={personalProjects} />
+        <HomepagePersonalList projects={personalProjects} />
       </section>
     </>
   );

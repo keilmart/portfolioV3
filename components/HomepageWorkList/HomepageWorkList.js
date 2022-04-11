@@ -1,19 +1,28 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const HomepageWorkList = ({ workProjects }) => {
+const HomepageWorkList = ({ projects }) => {
   //     const { slug, image, name, timestamp, description, link, URL, company, stack  } =
   //   workProjects || {};
+  // const { handle } = useParams();
   return (
     <ul className="pb-12 space-y-12">
-      {workProjects.map((workProject) => (
-        <li className="flex flex-col items-center space-x-0 space-y-4 md:flex-row md:space-y-0 md:space-x-8 lg:space-x-12">
-          <Link href={"/projects/" + workProject.id} key={workProject.id}>
+      {projects.map((project) => (
+        <li
+          className="flex flex-col items-center space-x-0 space-y-4 md:flex-row md:space-y-0 md:space-x-8 lg:space-x-12"
+          key={project.id}
+        >
+          <Link
+            href={{
+              pathname: `/projects/${project.slug}`,
+              query: { project: JSON.stringify(project) },
+            }}
+          >
             <a className="flex w-full px-8 pt-8 overflow-hidden transition duration-500 ease-in-out bg-gray-100 rounded-lg md:px-12 md:pt-12 flex-end md:w-1/2 lg:w-2/3 h-72 hover:shadow-lg hover:scale-105">
               <div className="flex overflow-hidden shadow-md rounded-t-md">
                 <img
-                  src={workProject.image}
-                  alt={workProject.company}
+                  src={project.image}
+                  alt={project.company}
                   width={768}
                   height={384}
                   objectFit="fill"
@@ -24,15 +33,20 @@ const HomepageWorkList = ({ workProjects }) => {
           </Link>
           <div className="w-full md:w-1/2 lg:w-1/3">
             <span className="block mb-1 text-xs font-semibold tracking-widest uppercase text-tertiary">
-              {workProject.timestamp}
+              {project.timestamp}
             </span>
             <h3 className="mb-1 text-xl font-semibold text-primary">
-              {workProject.company}
+              {project.company}
             </h3>
             <span className="block mb-1 text-md text-tertiary">
-              {workProject.stack}
+              {project.stack}
             </span>
-            <Link href={"/projects/" + workProject.id}>
+            <Link
+              href={{
+                pathname: `/projects/${project.slug}`,
+                query: { project: JSON.stringify(project) },
+              }}
+            >
               <a className="w-full mt-2 btn-light md:w-auto">View Project</a>
             </Link>
           </div>

@@ -1,9 +1,9 @@
 import Link from "next/link";
+import { withRouter } from "next/router";
 
 import Layout from "../../components/Layout/Layout";
-import ProjectLayout from "../../components/Layout/ProjectLayout";
 
-export const GetStaticPaths = async () => {
+async () => {
   const response = await fetch("https://jsonplaceholder.typicode.com/users");
   const data = response.json();
 
@@ -18,47 +18,58 @@ export const GetStaticPaths = async () => {
   };
 };
 
-const ProjectDetails = ({ personalProject }) => {
+const ProjectDetails = ({ router: { query } }) => {
+  const project = JSON.parse(query.project);
+
   return (
     <>
-      {console.log(personalProject)}
       <Layout>
-        {/* <ProjectLayout> */}
+        {console.log(project)}
         <main className="mt-12">
           <div className="mb-8">
-            <Link href="/#work">
+            <Link href="/#workProjects">
               <a className="border-b border-gray-700 text-secondary hover:bg-gray-100">
                 &larr; Back to Projects
               </a>
             </Link>
           </div>
           <h1 className="mb-6 text-3xl font-bold tracking-tight md:mb-8 md:text-6xl leading-headers">
-            Project Title
+            {project.company}
           </h1>
           <div className="flex items-center space-x-8">
-            {/* {project.company && ( */}
             <div>
               <h2 className="font-semibold text-md">Company</h2>
-              <span className="text-md text-tertiary">Project Company</span>
+              <span className="text-md text-tertiary">{project.company}</span>
             </div>
-            {/* )} */}
             <div>
               <h2 className="font-semibold text-md">Timeline</h2>
-              <span className="text-md text-tertiary">
-                The Project Timeline
-              </span>
+              <span className="text-md text-tertiary">{project.timestamp}</span>
             </div>
           </div>
           <hr className="my-8 border-t-2 border-b-0 border-dotted border-primary" />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam modi
-          nihil, error harum laudantium eum ratione qui, veniam quam sint
-          praesentium molestias vero enim voluptatum nisi velit eaque
-          exercitationem id!
+          <a
+            className="relative inline-block w-full px-10 pt-10 overflow-hidden transition duration-300 ease-in-out bg-gray-100 rounded-lg h-min hover:shadow-lg hover:scale-105"
+            href={`https://${project.url}`}
+            target={"_blank"}
+            rel={"noreferrer"}
+          >
+            <div className="w-full overflow-hidden rounded-t-3xl top-10">
+              <img
+                src={project.image}
+                alt={project.name}
+                // width={768}
+                // height={384}
+                objectFit="cover"
+                objectPosition="top left"
+              />
+            </div>
+          </a>
+          <hr className="my-8 border-t-2 border-b-0 border-dotted border-primary" />
+          {project.description}
         </main>
-        {/* </ProjectLayout> */}
       </Layout>
     </>
   );
 };
 
-export default ProjectDetails;
+export default withRouter(ProjectDetails);
