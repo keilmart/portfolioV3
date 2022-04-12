@@ -25,7 +25,7 @@ const ProjectDetails = ({ router: { query } }) => {
     <>
       <Layout>
         {console.log(project)}
-        <main className="mt-12">
+        <main className="mt-6 sm:mt-12">
           <div className="mb-8">
             <Link href="/#workProjects">
               <a className="border-b border-gray-700 text-secondary hover:bg-gray-100">
@@ -48,7 +48,7 @@ const ProjectDetails = ({ router: { query } }) => {
           </div>
           <hr className="my-8 border-t-2 border-b-0 border-dotted border-primary" />
           <a
-            className="relative inline-block w-full px-10 pt-10 overflow-hidden transition duration-300 ease-in-out bg-gray-100 rounded-lg h-min hover:shadow-lg hover:scale-105"
+            className="relative inline-block w-full px-4 pt-4 overflow-hidden transition duration-300 ease-in-out bg-gray-100 rounded-lg sm:px-10 sm:pt-10 h-min hover:shadow-lg hover:scale-105"
             href={`https://${project.url}`}
             target={"_blank"}
             rel={"noreferrer"}

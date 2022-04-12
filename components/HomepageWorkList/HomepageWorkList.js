@@ -18,13 +18,13 @@ const HomepageWorkList = ({ projects }) => {
               query: { project: JSON.stringify(project) },
             }}
           >
-            <a className="flex w-full px-8 pt-8 overflow-hidden transition duration-500 ease-in-out bg-gray-100 rounded-lg md:px-12 md:pt-12 flex-end md:w-1/2 lg:w-2/3 h-72 hover:shadow-lg hover:scale-105">
-              <div className="flex overflow-hidden shadow-md rounded-t-md">
+            <a className="relative flex w-full px-8 pt-8 overflow-hidden transition duration-500 ease-in-out bg-gray-100 rounded-lg md:px-12 md:pt-12 flex-end md:w-1/2 lg:w-2/3 h-72 hover:shadow-lg hover:scale-105">
+              <div className="absolute flex overflow-hidden shadow-md rounded-tl-md">
                 <img
                   src={project.image}
                   alt={project.company}
-                  width={768}
-                  height={384}
+                  width={668}
+                  height={330}
                   objectFit="fill"
                   objectPosition="top left"
                 />
