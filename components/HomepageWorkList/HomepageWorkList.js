@@ -22,7 +22,7 @@ const HomepageWorkList = ({ projects }) => {
               <div className="absolute flex overflow-hidden shadow-md rounded-tl-md">
                 <Image
                   src={project.image}
-                  alt={project.company}
+                  alt={project.name}
                   width={668}
                   height={330}
                   objectFit="fill"
@@ -36,7 +36,7 @@ const HomepageWorkList = ({ projects }) => {
               {project.timestamp}
             </span>
             <h3 className="mb-1 text-xl font-semibold text-primary">
-              {project.company}
+              {project.name}
             </h3>
             <span className="block mb-1 text-md text-tertiary">
               {project.stack}

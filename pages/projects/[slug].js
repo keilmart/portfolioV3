@@ -35,12 +35,12 @@ const ProjectDetails = ({ router: { query } }) => {
             </Link>
           </div>
           <h1 className="mb-6 text-3xl font-bold tracking-tight md:mb-8 md:text-6xl leading-headers">
-            {project.company}
+            {project.name}
           </h1>
           <div className="flex items-center space-x-8">
             <div>
               <h2 className="font-semibold text-md">Company</h2>
-              <span className="text-md text-tertiary">{project.company}</span>
+              <span className="text-md text-tertiary">{project.name}</span>
             </div>
             <div>
               <h2 className="font-semibold text-md">Timeline</h2>
@@ -58,8 +58,8 @@ const ProjectDetails = ({ router: { query } }) => {
               <Image
                 src={project.image}
                 alt={project.name}
-                // width={768}
-                // height={384}
+                width={2768}
+                height={1400}
                 objectFit="cover"
                 objectPosition="top left"
               />
@@ -76,14 +76,18 @@ const ProjectDetails = ({ router: { query } }) => {
             >
               View Project
             </a>
-            <a
-              className="w-full mt-2 btn-light sm:w-auto"
-              href={`https://${project.url}`}
-              target={"_blank"}
-              rel={"noreferrer"}
-            >
-              View Github
-            </a>
+            {!!project.github ? (
+              <a
+                className="w-full mt-2 btn-light sm:w-auto"
+                href={`https://${project.url}`}
+                target={"_blank"}
+                rel={"noreferrer"}
+              >
+                View Github
+              </a>
+            ) : (
+              <></>
+            )}
           </div>
         </main>
       </Layout>
