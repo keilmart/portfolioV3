@@ -8,6 +8,8 @@ import "../styles/globals.css";
 
 // Intergrate SEO //
 
+// add in Id's for navigation to sections //
+
 import Nav from "../components/Nav/Nav";
 import Footer from "../components/Footer/Footer";
 

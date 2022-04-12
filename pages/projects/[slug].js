@@ -28,7 +28,7 @@ const ProjectDetails = ({ router: { query } }) => {
         {console.log(project)}
         <main className="mt-6 sm:mt-12">
           <div className="mb-8">
-            <Link href="/#workProjects">
+            <Link href="/#work">
               <a className="border-b border-gray-700 text-secondary hover:bg-gray-100">
                 &larr; Back to Projects
               </a>
@@ -40,7 +40,9 @@ const ProjectDetails = ({ router: { query } }) => {
           <div className="flex items-center space-x-8">
             <div>
               <h2 className="font-semibold text-md">Company</h2>
-              <span className="text-md text-tertiary">{project.name}</span>
+              <span className="text-md text-tertiary">
+                {!!project.company ? project.company : "Personal"}
+              </span>
             </div>
             <div>
               <h2 className="font-semibold text-md">Timeline</h2>
@@ -60,6 +62,7 @@ const ProjectDetails = ({ router: { query } }) => {
                 alt={project.name}
                 width={2768}
                 height={1400}
+                // Change these sizes to optimize //
                 objectFit="cover"
                 objectPosition="top left"
               />
@@ -74,12 +77,12 @@ const ProjectDetails = ({ router: { query } }) => {
               target={"_blank"}
               rel={"noreferrer"}
             >
-              View Project
+              {!!project.github ? "View Project" : "View Website"}
             </a>
             {!!project.github ? (
               <a
                 className="w-full mt-2 btn-light sm:w-auto"
-                href={`https://${project.url}`}
+                href={`https://${project.github}`}
                 target={"_blank"}
                 rel={"noreferrer"}
               >

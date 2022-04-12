@@ -2,9 +2,18 @@ import Image from "next/image";
 import Link from "next/link";
 
 const HomepageWorkList = ({ projects }) => {
-  //     const { slug, image, name, timestamp, description, link, URL, company, stack  } =
-  //   workProjects || {};
-  // const { handle } = useParams();
+  // const {
+  //   slug,
+  //   image,
+  //   name,
+  //   timestamp,
+  //   description,
+  //   link,
+  //   URL,
+  //   company,
+  //   stack,
+  // } = project || {};
+
   return (
     <ul className="pb-12 space-y-12">
       {projects.map((project) => (

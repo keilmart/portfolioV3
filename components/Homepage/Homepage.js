@@ -66,8 +66,6 @@ const Homepage = ({ workProjects, personalProjects }) => {
           </div>
         </div>
       </section>
-      {/* ?????????????????? */}
-      <a id="blogPosts" />
 
       <section className="mx-auto mb-4 md:mb-15">
         <SectionHeader
@@ -81,9 +79,8 @@ const Homepage = ({ workProjects, personalProjects }) => {
         />
         <div className="pt-12 md:pt-16" />
         <HomepageSocialList />
-
-        <a id="workProjects" />
       </section>
+
       <section className="mx-auto mb-10 md:mb-20">
         <SectionHeader
           title="Work Projects"
