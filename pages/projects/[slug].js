@@ -1,22 +1,23 @@
 import Link from "next/link";
+import Image from "next/image";
 import { withRouter } from "next/router";
 
 import Layout from "../../components/Layout/Layout";
 
-async () => {
-  const response = await fetch("https://jsonplaceholder.typicode.com/users");
-  const data = response.json();
+// async () => {
+//   const response = await fetch("https://jsonplaceholder.typicode.com/users");
+//   const data = response.json();
 
-  const paths = data.map((project) => {
-    return {
-      params: { id: project.id.toString() },
-    };
-  });
-  return {
-    paths: paths,
-    fallback: false,
-  };
-};
+//   const paths = data.map((project) => {
+//     return {
+//       params: { id: project.id.toString() },
+//     };
+//   });
+//   return {
+//     paths: paths,
+//     fallback: false,
+//   };
+// };
 
 const ProjectDetails = ({ router: { query } }) => {
   const project = JSON.parse(query.project);
