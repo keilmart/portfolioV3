@@ -54,7 +54,7 @@ const ProjectDetails = ({ router: { query } }) => {
             rel={"noreferrer"}
           >
             <div className="w-full overflow-hidden rounded-t-3xl top-10">
-              <img
+              <Image
                 src={project.image}
                 alt={project.name}
                 // width={768}
@@ -65,7 +65,25 @@ const ProjectDetails = ({ router: { query } }) => {
             </div>
           </a>
           <hr className="my-8 border-t-2 border-b-0 border-dotted border-primary" />
-          {project.description}
+          <p>{project.description}</p>
+          <div className="my-8">
+            <a
+              className="w-full mt-2 mr-8 btn-light sm:w-auto"
+              href={`https://${project.url}`}
+              target={"_blank"}
+              rel={"noreferrer"}
+            >
+              View Project
+            </a>
+            <a
+              className="w-full mt-2 btn-light sm:w-auto"
+              href={`https://${project.url}`}
+              target={"_blank"}
+              rel={"noreferrer"}
+            >
+              View Github
+            </a>
+          </div>
         </main>
       </Layout>
     </>
