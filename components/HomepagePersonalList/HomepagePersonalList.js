@@ -7,6 +7,7 @@ const PersonalProjectList = ({ projects }) => {
       {projects.map((project) => (
         <li className="pb-6 border-b-2" key={project.id}>
           <Link
+            slug={project.slug}
             href={{
               pathname: `/projects/${project.slug}`,
               query: { project: JSON.stringify(project) },
@@ -32,6 +33,7 @@ const PersonalProjectList = ({ projects }) => {
             {project.stack}
           </span>
           <Link
+            slug={project.slug}
             href={{
               pathname: `/projects/${project.slug}`,
               query: { project: JSON.stringify(project) },

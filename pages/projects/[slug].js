@@ -4,28 +4,15 @@ import { withRouter } from "next/router";
 
 import Layout from "../../components/Layout/Layout";
 
-// async () => {
-//   const response = await fetch("https://jsonplaceholder.typicode.com/users");
-//   const data = response.json();
+import db from "../../firebase/firebase";
 
-//   const paths = data.map((project) => {
-//     return {
-//       params: { id: project.id.toString() },
-//     };
-//   });
-//   return {
-//     paths: paths,
-//     fallback: false,
-//   };
-// };
-
-const ProjectDetails = ({ router: { query } }) => {
+const ProjectDetails = ({ router: { query }, posts }) => {
   const project = JSON.parse(query.project);
 
   return (
     <>
       <Layout>
-        {console.log(project)}
+        {console.log(posts)}
         <main className="mt-6 sm:mt-12">
           <div className="mb-8">
             <Link href="/#work">
@@ -58,10 +45,12 @@ const ProjectDetails = ({ router: { query } }) => {
           >
             <div className="w-full overflow-hidden rounded-t-3xl top-10">
               <Image
-                src={project.image}
+                src={project.imageZoom ? project.imageZoom : project.image}
                 alt={project.name}
                 width={2768}
-                height={1400}
+                height={1450}
+                // width={2886}
+                // height={1886}
                 // Change these sizes to optimize //
                 objectFit="cover"
                 objectPosition="top left"

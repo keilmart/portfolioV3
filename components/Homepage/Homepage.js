@@ -17,13 +17,13 @@ import HomepageSocialList from "../HomepageSocialList/HomepageSocialList";
 import HomepageWorkList from "../HomepageWorkList/HomepageWorkList";
 import HomepagePersonalList from "../HomepagePersonalList/HomepagePersonalList";
 
-const Homepage = ({ workProjects, personalProjects }) => {
+const Homepage = ({ personalProjects }) => {
   return (
     <>
       <Hero />
 
-      <section className="max-w-3xl px-5 py-6 mx-auto mt-6 mb-10 text-center bg-gray-100 border-2 border-gray-200 border-dotted rounded-lg md:mb-20 md:mt-28 md:py-12 md:px-14">
-        <h2 className="text-xl font-semibold md:text-2xl text-primary">
+      <section className="max-w-3xl px-0 py-6 mx-auto mt-6 mb-10 text-center bg-gray-100 border-2 border-gray-200 border-dotted rounded-lg sm:px-5 md:mb-20 md:mt-28 md:py-12 md:px-14">
+        <h2 className="px-5 text-xl font-semibold md:text-2xl text-primary">
           Some of the skills you can find in my toolbox
         </h2>
         <div className="flex justify-center mt-6">
@@ -92,7 +92,7 @@ const Homepage = ({ workProjects, personalProjects }) => {
           }
         />
         <div className="pt-6 md:pt-12" />
-        <HomepageWorkList projects={workProjects} />
+        {/* <HomepageWorkList projects={workProjects} /> */}
       </section>
 
       <section className="mx-auto mb-10 md:mb-20">

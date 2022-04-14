@@ -1,24 +1,20 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-import { ExternalLink } from "../components/Footer/Footer";
+// import { ExternalLink } from "../components/Footer/Footer";
 import Layout from "../components/Layout/Layout";
-// import SectionWorkList from "../components/SectionWorkList";
-// import SEO from "../components/SEO";
 import { MoonStars } from "../components/HomepageIcons/Index";
 
-const About = () => {
+const About = ({ personalProjects }) => {
   return (
     <Layout>
-      {/* <SEO
-        og="og-about.png"
-        title="About"
-        description="About the life and times of Tyler"
-      /> */}
+      {console.log(personalProjects)}
       <div className="relative">
         {/* <Image
-          src="/pictures/blobby.jpg"
-          alt="MOCKUP"
+          src="/pictures/vector.png"
+          alt="Picture of a decorative vector"
+          width={668}
+          height={330}
           className="absolute right-0 -bottom-32 -z-10"
         /> */}
         <div className="absolute top-0 right-44">
@@ -31,8 +27,8 @@ const About = () => {
             <Image
               src="/pictures/self.jpg"
               alt="Personal photo of Keil Martin"
-              height="160"
-              width="160"
+              height="170"
+              width="170"
             />
           </motion.div>
         </div>

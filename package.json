@@ -18,6 +18,7 @@
     "next-images": "^1.8.4",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-firebase-hooks": "^5.0.3",
     "react-twitter-embed": "^4.0.4",
     "tailwind-darkmode-toggle": "^1.0.5"
   },
