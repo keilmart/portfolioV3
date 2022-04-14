@@ -17,7 +17,7 @@ import HomepageSocialList from "../HomepageSocialList/HomepageSocialList";
 import HomepageWorkList from "../HomepageWorkList/HomepageWorkList";
 import HomepagePersonalList from "../HomepagePersonalList/HomepagePersonalList";
 
-const Homepage = ({ personalProjects }) => {
+const Homepage = ({ personalProjects, workProjects }) => {
   return (
     <>
       <Hero />
@@ -92,7 +92,7 @@ const Homepage = ({ personalProjects }) => {
           }
         />
         <div className="pt-6 md:pt-12" />
-        {/* <HomepageWorkList projects={workProjects} /> */}
+        <HomepageWorkList projects={workProjects} />
       </section>
 
       <section className="mx-auto mb-10 md:mb-20">

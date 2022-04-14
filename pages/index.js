@@ -4,44 +4,11 @@ import { collection, getDocs, query, orderBy } from "firebase/firestore";
 import Homepage from "../components/Homepage/Homepage";
 import Layout from "../components/Layout/Layout";
 
-const Home = ({ personalProjects }) => {
-  // const [workProjects, setWorkProjects] = useState([]);
-  // const [personalProjects, setPersonalProjects] = useState([]);
-
-  // useEffect(() => {
-  //   const workRef = collection(db, "workProjects");
-  //   const queryWork = query(workRef, orderBy("timestamp", "desc"));
-
-  //   onSnapshot(queryWork, (workSnapshot) => {
-  //     setWorkProjects(
-  //       workSnapshot.docs.map((doc) => ({
-  //         ...doc.data(),
-  //         id: doc.id,
-  //         timestamp: doc.data().timestamp?.toDate().toDateString(),
-  //       }))
-  //     );
-  //   });
-
-  //   const personalRef = collection(db, "personalProjects");
-  //   const queryPersonal = query(personalRef, orderBy("timestamp", "desc"));
-
-  //   onSnapshot(queryPersonal, (querySnapshot) => {
-  //     setPersonalProjects(
-  //       querySnapshot.docs.map((doc) => ({
-  //         ...doc.data(),
-  //         id: doc.id,
-  //         timestamp: doc.data().timestamp?.toDate().toDateString(),
-  //       }))
-  //     );
-  //   });
-
-  //   return;
-  // }, []);
-
+const Home = ({ personalProjects, workProjects }) => {
   return (
     <Layout>
       <Homepage
-        // workProjects={workProjects}
+        workProjects={workProjects}
         personalProjects={personalProjects}
       />
     </Layout>
@@ -49,35 +16,49 @@ const Home = ({ personalProjects }) => {
 };
 
 export const getStaticProps = async () => {
+  let fireResponse = [];
   let personalProjects = [];
+  let workProjects = [];
+
   try {
-    const querySnapshot = await getDocs(collection(db, "personalProjects"));
-    // const querySnapshot = query(workRef, orderBy("timestamp", "desc"));
+    const querySnapshot = await getDocs(collection(db, "firestoreProjects"));
+    // const querySnapshot = query(personalRef, orderBy("rank", "desc"));
 
     querySnapshot.forEach((doc) => {
       // doc.data() is never undefined for query doc snapshots
-      personalProjects.push({
+      fireResponse.push({
         company: !!doc.company ? doc.company : null,
         description: doc.description,
         github: !!doc.github ? doc.github : null,
         image: doc.image,
         imageZoom: !!doc.imageZoom ? doc.imageZoom : null,
         name: doc.name,
+        personal: doc.personal,
         slug: doc.slug,
         stack: doc.stack,
-        // timestamp: doc.timestamp.toDate().toDateString(),
         ...doc.data(),
       });
 
       console.log(doc.id, " => ", doc.data());
     });
-  } catch (e) {
-    console.log(e);
+
+    workProjects = fireResponse.reduce(
+      (p, project) => (project.personal === false && p.push(project), p),
+      []
+    );
+
+    personalProjects = fireResponse.reduce(
+      (p, project) => (project.personal === true && p.push(project), p),
+      []
+    );
+  } catch (error) {
+    console.log(error);
   }
 
   return {
     props: {
       personalProjects,
+      workProjects,
     },
   };
 };

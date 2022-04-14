@@ -8,7 +8,6 @@ import { MoonStars } from "../components/HomepageIcons/Index";
 const About = ({ personalProjects }) => {
   return (
     <Layout>
-      {console.log(personalProjects)}
       <div className="relative">
         {/* <Image
           src="/pictures/vector.png"
