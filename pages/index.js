@@ -36,6 +36,7 @@ export const getStaticProps = async () => {
         personal: doc.personal,
         slug: doc.slug,
         stack: doc.stack,
+        timeline: doc.timeline,
         ...doc.data(),
       });
 
@@ -43,12 +44,17 @@ export const getStaticProps = async () => {
     });
 
     workProjects = fireResponse.reduce(
-      (p, project) => (project.personal === false && p.push(project), p),
+      (newWorkArray, project) => (
+        project.personal === false && newWorkArray.push(project), newWorkArray
+      ),
       []
     );
 
     personalProjects = fireResponse.reduce(
-      (p, project) => (project.personal === true && p.push(project), p),
+      (newPersonalArray, project) => (
+        project.personal === true && newPersonalArray.push(project),
+        newPersonalArray
+      ),
       []
     );
   } catch (error) {

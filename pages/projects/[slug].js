@@ -33,7 +33,7 @@ const ProjectDetails = ({ router: { query }, posts }) => {
             </div>
             <div>
               <h2 className="font-semibold text-md">Timeline</h2>
-              <span className="text-md text-tertiary">{project.timestamp}</span>
+              <span className="text-md text-tertiary">{project.timeline}</span>
             </div>
           </div>
           <hr className="my-8 border-t-2 border-b-0 border-dotted border-primary" />
