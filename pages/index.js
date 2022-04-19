@@ -40,7 +40,7 @@ export const getStaticProps = async () => {
         ...doc.data(),
       });
 
-      console.log(doc.id, " => ", doc.data());
+      // console.log(doc.id, " => ", doc.data());
     });
 
     if (fireResponse.length > 0) {
@@ -55,21 +55,6 @@ export const getStaticProps = async () => {
         }
       });
     }
-
-    // workProjects = fireResponse.reduce(
-    //   (newWorkArray, project) => (
-    //     project.personal === false && newWorkArray.push(project), newWorkArray
-    //   ),
-    //   []
-    // );
-
-    // personalProjects = fireResponse.reduce(
-    //   (newWorkArray, project) => (
-    //     project.personal === true && newPersonalArray.push(project),
-    //     newWorkArray
-    //   ),
-    //   []
-    // );
   } catch (error) {
     console.log(error);
   }

@@ -1,13 +1,98 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import { db } from "../../firebase/firebase";
+
+import { collection, getDocs, query, orderBy, where } from "firebase/firestore";
+
+// import { getAllPostIds, getAllPostData } from "../../lib/projects";
+
 import Layout from "../../components/Layout/Layout";
 
-const ProjectDetails = ({ project }) => {
+export const getStaticPaths = async () => {
+  let posts = [];
+
+  try {
+    const querySnapshot = await getDocs(collection(db, "firestoreProjects"));
+
+    let posts = [];
+
+    querySnapshot.forEach((doc) => {
+      // doc.data() is never undefined for query doc snapshots
+      posts.push({
+        company: !!doc.company ? doc.company : null,
+        description: doc.description,
+        github: !!doc.github ? doc.github : null,
+        image: doc.image,
+        imageZoom: !!doc.imageZoom ? doc.imageZoom : null,
+        name: doc.name,
+        personal: doc.personal,
+        slug: doc.slug,
+        stack: doc.stack,
+        timeline: doc.timeline,
+        ...doc.data(),
+      });
+
+      // console.log(doc.id, " => ", doc.data());
+    });
+  } catch (e) {
+    console.log(e);
+  }
+  // Get the paths we want to pre-render based on posts
+  const paths = posts.map((post) => ({
+    params: { slug: post.slug },
+  }));
+
+  return { paths, fallback: false };
+};
+
+export const getStaticProps = async (context) => {
+  const slug = context.params.slug;
+
+  let post = {};
+
+  try {
+    // const firebaseRef = await getDocs(collection(db, "firestoreProjects"));
+    let post = {};
+    // const querySnapshot = query(firebaseRef, where("slug", "==", slug));
+
+    const firstQuery = query(
+      collection(db, "firestoreProjects"),
+      where("slug", "==", slug)
+    );
+
+    const querySnapshot = await getDocs(firstQuery);
+    querySnapshot.forEach((doc) => {
+      post.push({
+        company: !!doc.company ? doc.company : null,
+        description: doc.description,
+        github: !!doc.github ? doc.github : null,
+        image: doc.image,
+        imageZoom: !!doc.imageZoom ? doc.imageZoom : null,
+        name: doc.name,
+        personal: doc.personal,
+        slug: doc.slug,
+        stack: doc.stack,
+        timeline: doc.timeline,
+        ...doc.data(),
+      });
+      console.log(doc.id, " => ", doc.data());
+    });
+
+    return {
+      props: { post: post },
+      revalidate: 1,
+    };
+  } catch (e) {
+    console.log(e);
+  }
+};
+
+const ProjectDetails = ({ post }) => {
   return (
     <>
+      {console.log(props)}
       <Layout>
-        {console.log(projectData)}
         <main className="mt-6 sm:mt-12">
           <div className="mb-8">
             <Link href="/#work">
@@ -17,13 +102,13 @@ const ProjectDetails = ({ project }) => {
             </Link>
           </div>
           <h1 className="mb-6 text-3xl font-bold tracking-tight md:mb-8 md:text-6xl leading-headers">
-            {project.name}
+            {post.name}
           </h1>
           <div className="flex items-center space-x-8">
             <div>
               <h2 className="font-semibold text-md">Company</h2>
               <span className="text-md text-tertiary">
-                {!!project.company ? project.company : "Personal"}
+                {!!post.company ? post.company : "Personal"}
               </span>
             </div>
             <div>
@@ -40,8 +125,8 @@ const ProjectDetails = ({ project }) => {
           >
             <div className="w-full overflow-hidden rounded-t-3xl top-10">
               <Image
-                src={project.imageZoom ? project.imageZoom : project.image}
-                alt={project.name}
+                src={post.imageZoom ? post.imageZoom : post.image}
+                alt={post.name}
                 width={2768}
                 height={1450}
                 // width={2886}
@@ -53,7 +138,7 @@ const ProjectDetails = ({ project }) => {
             </div>
           </a>
           <hr className="my-8 border-t-2 border-b-0 border-dotted border-primary" />
-          <p>{project.description}</p>
+          <p>{post.description}</p>
           <div className="my-8">
             <a
               className="w-full mt-2 mr-8 btn-light sm:w-auto"
@@ -61,12 +146,12 @@ const ProjectDetails = ({ project }) => {
               target={"_blank"}
               rel={"noreferrer"}
             >
-              {!!project.github ? "View Project" : "View Website"}
+              {!!post.github ? "View Project" : "View Website"}
             </a>
-            {!!project.github ? (
+            {!!post.github ? (
               <a
                 className="w-full mt-2 btn-light sm:w-auto"
-                href={`https://${project.github}`}
+                href={`https://${post.github}`}
                 target={"_blank"}
                 rel={"noreferrer"}
               >
@@ -90,13 +175,13 @@ const ProjectDetails = ({ project }) => {
 //   };
 // }
 
-export async function getStaticProps({ params }) {
-  const postData = getPostData(params.id);
-  return {
-    props: {
-      postData,
-    },
-  };
-}
+// export async function getStaticProps({ params }) {
+//   const postData = getAllPostData(params.id);
+//   return {
+//     props: {
+//       postData,
+//     },
+//   };
+// }
 
 export default ProjectDetails;
