@@ -25,7 +25,7 @@ const HomepageWorkList = ({ projects }) => {
             slug={project.slug}
             href={{
               pathname: `/projects/${project.slug}`,
-              query: { project: JSON.stringify(project) },
+              // query: { project: JSON.stringify(project) },
             }}
           >
             <a className="relative flex w-full px-8 pt-8 overflow-hidden transition duration-500 ease-in-out bg-gray-100 rounded-lg md:px-12 md:pt-12 flex-end md:w-1/2 lg:w-2/3 h-72 hover:shadow-lg hover:scale-105">
@@ -55,7 +55,7 @@ const HomepageWorkList = ({ projects }) => {
               slug={project.slug}
               href={{
                 pathname: `/projects/${project.slug}`,
-                query: { project: JSON.stringify(project) },
+                // query: { project: JSON.stringify(project) },
               }}
             >
               <a className="w-full mt-2 btn-light md:w-auto">View Project</a>

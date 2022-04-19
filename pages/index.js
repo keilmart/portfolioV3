@@ -43,20 +43,33 @@ export const getStaticProps = async () => {
       console.log(doc.id, " => ", doc.data());
     });
 
-    workProjects = fireResponse.reduce(
-      (newWorkArray, project) => (
-        project.personal === false && newWorkArray.push(project), newWorkArray
-      ),
-      []
-    );
+    if (fireResponse.length > 0) {
+      fireResponse.forEach((project) => {
+        if (project.personal === true) {
+          personalProjects.push(project);
+        }
+        if (project.personal === false) {
+          workProjects.push(project);
+        } else {
+          console.log("Project not found");
+        }
+      });
+    }
 
-    personalProjects = fireResponse.reduce(
-      (newPersonalArray, project) => (
-        project.personal === true && newPersonalArray.push(project),
-        newPersonalArray
-      ),
-      []
-    );
+    // workProjects = fireResponse.reduce(
+    //   (newWorkArray, project) => (
+    //     project.personal === false && newWorkArray.push(project), newWorkArray
+    //   ),
+    //   []
+    // );
+
+    // personalProjects = fireResponse.reduce(
+    //   (newWorkArray, project) => (
+    //     project.personal === true && newPersonalArray.push(project),
+    //     newWorkArray
+    //   ),
+    //   []
+    // );
   } catch (error) {
     console.log(error);
   }

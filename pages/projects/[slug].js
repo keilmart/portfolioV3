@@ -1,18 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
-import { withRouter } from "next/router";
 
 import Layout from "../../components/Layout/Layout";
 
-import db from "../../firebase/firebase";
-
-const ProjectDetails = ({ router: { query }, posts }) => {
-  const project = JSON.parse(query.project);
-
+const ProjectDetails = ({ project }) => {
   return (
     <>
       <Layout>
-        {/* {console.log(posts)} */}
+        {console.log(projectData)}
         <main className="mt-6 sm:mt-12">
           <div className="mb-8">
             <Link href="/#work">
@@ -87,4 +82,21 @@ const ProjectDetails = ({ router: { query }, posts }) => {
   );
 };
 
-export default withRouter(ProjectDetails);
+// export async function getStaticPaths() {
+//   const paths = getAllPostIds();
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// }
+
+export async function getStaticProps({ params }) {
+  const postData = getPostData(params.id);
+  return {
+    props: {
+      postData,
+    },
+  };
+}
+
+export default ProjectDetails;

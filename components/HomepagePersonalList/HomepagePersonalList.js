@@ -10,7 +10,7 @@ const PersonalProjectList = ({ projects }) => {
             slug={project.slug}
             href={{
               pathname: `/projects/${project.slug}`,
-              query: { project: JSON.stringify(project) },
+              // query: { project: JSON.stringify(project) },
             }}
           >
             <a className="relative inline-block w-full h-48 pt-8 pl-8 mb-4 overflow-hidden transition duration-300 ease-in-out bg-gray-100 rounded-lg hover:shadow-lg hover:scale-105">
@@ -36,7 +36,7 @@ const PersonalProjectList = ({ projects }) => {
             slug={project.slug}
             href={{
               pathname: `/projects/${project.slug}`,
-              query: { project: JSON.stringify(project) },
+              // query: { project: JSON.stringify(project) },
             }}
           >
             <a
