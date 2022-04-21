@@ -42,12 +42,12 @@ const Homepage = ({ personalProjects, workProjects }) => {
       </FadeIn>
 
       <FadeIn>
-        <section className="max-w-3xl px-0 py-6 mx-auto mt-6 mb-10 text-center bg-gray-100 border-2 border-gray-200 border-dotted rounded-lg sm:px-5 md:mb-20 md:mt-28 md:py-12 md:px-14">
+        <section className="max-w-3xl px-0 py-6 mx-auto mt-6 mb-12 text-center bg-gray-100 border-2 border-gray-200 border-dotted rounded-lg sm:px-5 md:mb-20 md:mt-28 md:py-12 md:px-14">
           <h2 className="px-5 text-xl font-semibold md:text-2xl text-primary">
             Some of the skills you can find in my toolbox
           </h2>
           <div className="flex justify-center mt-6">
-            <div className="flex flex-wrap justify-center max-w-sm sm:max-w-lg">
+            <div className="flex flex-wrap justify-center max-w-sm text-sm sm:text-base sm:max-w-lg">
               <Capsule
                 text="React"
                 className="m-1 hover:rotate-1"
@@ -121,7 +121,7 @@ const Homepage = ({ personalProjects, workProjects }) => {
       </FadeIn>
 
       <FadeIn>
-        <section className="mx-auto mb-10 md:mb-20">
+        <section className="mx-auto mb-11 md:mb-20">
           <SectionHeader
             title="Personal Projects"
             subtitle="Personal branding moon imagery"

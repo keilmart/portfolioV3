@@ -37,6 +37,7 @@ const About = ({ personalProjects }) => {
         <h1 className="mt-4 mb-8 text-4xl antialiased font-bold text-primary">
           About
         </h1>
+        <h2 className="mb-4 text-lg font-semibold">Early Career Stuff</h2>
         <p className="mb-4 text-xl antialiased leading-relaxed tracking-tight text-secondary">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius,
           fugiat. Facere vitae magni non! Saepe ut cumque assumenda magni
@@ -51,15 +52,26 @@ const About = ({ personalProjects }) => {
         </p>
 
         <hr className="mb-12 border-t-2 border-dotted mt-14" />
-        <h2 className="mt-12 text-lg font-semibold">Where I&apos;ve Worked</h2>
-        <h2 className="mb-4 text-lg font-semibold">Early Career Stuff</h2>
-        <p className="mb-4 font-serif text-xl antialiased leading-relaxed -tracking-[.005em] text-secondary">
+        <h2 className="mt-12 mb-4 text-lg font-semibold">
+          Where I&apos;ve Worked
+        </h2>
+        <p className="text-xl antialiased leading-relaxed tracking-tight text-secondary">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius,
           fugiat. Facere vitae magni non! Saepe ut cumque assumenda magni
           deleniti qui ratione inventore voluptatem itaque tempore quam debitis,
           ad iusto! Lorem ipsum dolor, sit amet consectetur adipisicing elit.
           Eius, fugiat. Facere vitae magni non! Saepe ut cumque assumenda magni
         </p>
+        <hr className="mb-12 border-t-2 border-dotted mt-14" />
+        <h2 className="mt-12 text-lg font-semibold">View this sites Github </h2>
+        <a
+          className="w-full mt-6 btn-light sm:w-auto"
+          href={`https://github.com/keilmart/portfolioV3`}
+          target={"_blank"}
+          rel={"noreferrer"}
+        >
+          View Github
+        </a>
       </div>
     </Layout>
   );

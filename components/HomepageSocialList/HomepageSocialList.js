@@ -30,7 +30,7 @@ const HomepageSocialList = () => {
 
   return (
     <div className="grid grid-cols-1 gap-4 -mt-10 md:-mt-8 md:grid-cols-3">
-      <div className="col-span-2 mb-6 md:col-start-2">
+      <div className="col-span-2 mb-4 md:col-start-2">
         {/* <div className="col-span-2 mb-6 md:col-start-2 md:mb-20"> */}
         <TwitterTimelineEmbed
           sourceType="profile"

@@ -1,5 +1,5 @@
 import { db } from "../firebase/firebase";
-import { collection, getDocs, query, orderBy } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 
 import Homepage from "../components/Homepage/Homepage";
 import Layout from "../components/Layout/Layout";
@@ -25,7 +25,6 @@ export const getStaticProps = async () => {
     // const querySnapshot = query(personalRef, orderBy("rank", "desc"));
 
     querySnapshot.forEach((doc) => {
-      // doc.data() is never undefined for query doc snapshots
       fireResponse.push({
         company: !!doc.company ? doc.company : null,
         description: doc.description,
@@ -40,7 +39,7 @@ export const getStaticProps = async () => {
         ...doc.data(),
       });
 
-      // console.log(doc.id, " => ", doc.data());
+      console.log(doc.id, " => ", doc.data());
     });
 
     if (fireResponse.length > 0) {

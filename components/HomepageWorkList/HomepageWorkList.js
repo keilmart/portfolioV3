@@ -16,7 +16,7 @@ const HomepageWorkList = ({ projects }) => {
 
   return (
     // <ul>
-    <ul className="pb-10 md:pb-0">
+    <ul className="pb-11 md:pb-0">
       {/* <ul className="pb-12 space-y-12"> */}
       {projects.map((project) => (
         <li

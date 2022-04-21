@@ -14,7 +14,7 @@ const ProjectDetails = ({ projectData }) => {
     <>
       {console.log(projectData)}
       <Layout>
-        <main className="mt-6 sm:mt-12">
+        <main className="mt-6 sm:mt-10">
           <div className="mb-8">
             <Link href="/#work">
               <a className="border-b border-gray-700 text-secondary hover:bg-gray-100">
@@ -49,7 +49,7 @@ const ProjectDetails = ({ projectData }) => {
                 src={project.imageZoom ? project.imageZoom : project.image}
                 alt={project.name}
                 width={2886}
-                height={1220}
+                height={1245}
                 // Change these sizes to optimize //
                 objectFit="cover"
                 objectPosition="top left"
@@ -88,22 +88,22 @@ const ProjectDetails = ({ projectData }) => {
 };
 
 export const getStaticPaths = async () => {
-  // let posts = [];
-  // try {
-  const querySnapshot = await getDocs(collection(db, "firestoreProjects"));
   let projects = [];
 
-  querySnapshot.forEach((project) => {
-    projects.push({
-      id: project.id,
-      slug: project.slug,
-      ...project.data(),
+  try {
+    const querySnapshot = await getDocs(collection(db, "firestoreProjects"));
+
+    querySnapshot.forEach((project) => {
+      projects.push({
+        id: project.id,
+        slug: project.slug,
+        ...project.data(),
+      });
+      console.log(project.id, " => ", project.data());
     });
-    console.log(project.id, " => ", project.data());
-  });
-  // } catch (e) {
-  //   console.log(e);
-  // }
+  } catch (e) {
+    console.log(e);
+  }
   // Get the paths we want to pre-render based on posts
   const paths = projects.map((slug) => ({
     params: { slug: slug.slug },
