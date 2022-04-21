@@ -6,6 +6,8 @@ import { collection, getDocs, query, orderBy, where } from "firebase/firestore";
 import Layout from "../../components/Layout/Layout";
 
 const ProjectDetails = ({ post }) => {
+  let onePost = post[0];
+
   return (
     <>
       {console.log(post)}
@@ -19,54 +21,54 @@ const ProjectDetails = ({ post }) => {
             </Link>
           </div>
           <h1 className="mb-6 text-3xl font-bold tracking-tight md:mb-8 md:text-6xl leading-headers">
-            {post.name}
+            {onePost.name}
           </h1>
           <div className="flex items-center space-x-8">
             <div>
               <h2 className="font-semibold text-md">Company</h2>
               <span className="text-md text-tertiary">
-                {!!post.company ? post.company : "Personal"}
+                {!!onePost.company ? onePost.company : "Personal"}
               </span>
             </div>
             <div>
               <h2 className="font-semibold text-md">Timeline</h2>
-              <span className="text-md text-tertiary">{post.timeline}</span>
+              <span className="text-md text-tertiary">{onePost.timeline}</span>
             </div>
           </div>
           <hr className="my-8 border-t-2 border-b-0 border-dotted border-primary" />
           <a
             className="relative inline-block w-full px-4 pt-4 overflow-hidden transition duration-300 ease-in-out bg-gray-100 rounded-lg sm:px-10 sm:pt-10 h-min hover:shadow-lg hover:scale-105"
-            href={`https://${post.url}`}
+            href={`https://${onePost.url}`}
             target={"_blank"}
             rel={"noreferrer"}
           >
-            {/* <div className="w-full overflow-hidden rounded-t-3xl top-10">
+            <div className="w-full overflow-hidden rounded-t-3xl top-10">
               <Image
-                src={post.imageZoom ? post.imageZoom : post.image}
-                alt={post.name}
-                // width={2886}
-                // height={1886}
+                src={onePost.imageZoom ? onePost.imageZoom : onePost.image}
+                alt={onePost.name}
+                width={2886}
+                height={1886}
                 // Change these sizes to optimize //
                 objectFit="cover"
                 objectPosition="top left"
               />
-            </div> */}
+            </div>
           </a>
           <hr className="my-8 border-t-2 border-b-0 border-dotted border-primary" />
-          <p>{post.description}</p>
+          <p>{onePost.description}</p>
           <div className="my-8">
             <a
               className="w-full mt-2 mr-8 btn-light sm:w-auto"
-              href={`https://${post.url}`}
+              href={`https://${onePost.url}`}
               target={"_blank"}
               rel={"noreferrer"}
             >
-              {!!post.github ? "View Project" : "View Website"}
+              {!!onePost.github ? "View Project" : "View Website"}
             </a>
-            {!!post.github ? (
+            {!!onePost.github ? (
               <a
                 className="w-full mt-2 btn-light sm:w-auto"
-                href={`https://${post.github}`}
+                href={`https://${onePost.github}`}
                 target={"_blank"}
                 rel={"noreferrer"}
               >
@@ -109,10 +111,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   const slug = context.params.slug;
-  let post = {};
   try {
-    // const firebaseRef = await getDocs(collection(db, "firestoreProjects"));
-    // const querySnapshot = query(firebaseRef, where("slug", "==", slug));
     let post = [];
 
     const firstQuery = query(
@@ -139,7 +138,7 @@ export const getStaticProps = async (context) => {
     });
 
     return {
-      props: { post: post },
+      props: { post },
       revalidate: 1,
     };
   } catch (e) {
