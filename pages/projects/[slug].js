@@ -1,16 +1,18 @@
 import Link from "next/link";
 import Image from "next/image";
-// import { getAllPostIds, getAllPostData } from "../../lib/projects";
+
+import { getStaticPathBoy, getStaticPropBoy } from "../../lib/projects";
 import { db } from "../../firebase/firebase";
-import { collection, getDocs, query, orderBy, where } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
+
 import Layout from "../../components/Layout/Layout";
 
-const ProjectDetails = ({ post }) => {
-  let onePost = post[0];
+const ProjectDetails = ({ projectData }) => {
+  let project = projectData[0];
 
   return (
     <>
-      {console.log(post)}
+      {console.log(projectData)}
       <Layout>
         <main className="mt-6 sm:mt-12">
           <div className="mb-8">
@@ -21,54 +23,55 @@ const ProjectDetails = ({ post }) => {
             </Link>
           </div>
           <h1 className="mb-6 text-3xl font-bold tracking-tight md:mb-8 md:text-6xl leading-headers">
-            {onePost.name}
+            {project.name}
           </h1>
           <div className="flex items-center space-x-8">
             <div>
               <h2 className="font-semibold text-md">Company</h2>
               <span className="text-md text-tertiary">
-                {!!onePost.company ? onePost.company : "Personal"}
+                {!!project.company ? project.company : "Personal"}
               </span>
             </div>
             <div>
               <h2 className="font-semibold text-md">Timeline</h2>
-              <span className="text-md text-tertiary">{onePost.timeline}</span>
+              <span className="text-md text-tertiary">{project.timeline}</span>
             </div>
           </div>
           <hr className="my-8 border-t-2 border-b-0 border-dotted border-primary" />
           <a
             className="relative inline-block w-full px-4 pt-4 overflow-hidden transition duration-300 ease-in-out bg-gray-100 rounded-lg sm:px-10 sm:pt-10 h-min hover:shadow-lg hover:scale-105"
-            href={`https://${onePost.url}`}
+            href={`https://${project.url}`}
             target={"_blank"}
             rel={"noreferrer"}
           >
             <div className="w-full overflow-hidden rounded-t-3xl top-10">
               <Image
-                src={onePost.imageZoom ? onePost.imageZoom : onePost.image}
-                alt={onePost.name}
+                src={project.imageZoom ? project.imageZoom : project.image}
+                alt={project.name}
                 width={2886}
-                height={1886}
+                height={1220}
                 // Change these sizes to optimize //
                 objectFit="cover"
                 objectPosition="top left"
               />
             </div>
           </a>
-          <hr className="my-8 border-t-2 border-b-0 border-dotted border-primary" />
-          <p>{onePost.description}</p>
+          <hr className="mt-8 mb-6 border-t-2 border-b-0 border-dotted border-primary" />
+          <h2 className="mb-4 text-3xl font-semibold">Summary</h2>
+          <p>{project.description}</p>
           <div className="my-8">
             <a
               className="w-full mt-2 mr-8 btn-light sm:w-auto"
-              href={`https://${onePost.url}`}
+              href={`https://${project.url}`}
               target={"_blank"}
               rel={"noreferrer"}
             >
-              {!!onePost.github ? "View Project" : "View Website"}
+              {!!project.github ? "View Project" : "View Website"}
             </a>
-            {!!onePost.github ? (
+            {!!project.github ? (
               <a
                 className="w-full mt-2 btn-light sm:w-auto"
-                href={`https://${onePost.github}`}
+                href={`https://${project.github}`}
                 target={"_blank"}
                 rel={"noreferrer"}
               >
@@ -88,21 +91,21 @@ export const getStaticPaths = async () => {
   // let posts = [];
   // try {
   const querySnapshot = await getDocs(collection(db, "firestoreProjects"));
-  let posts = [];
+  let projects = [];
 
-  querySnapshot.forEach((doc) => {
-    posts.push({
-      id: doc.id,
-      slug: doc.slug,
-      ...doc.data(),
+  querySnapshot.forEach((project) => {
+    projects.push({
+      id: project.id,
+      slug: project.slug,
+      ...project.data(),
     });
-    console.log(doc.id, " => ", doc.data());
+    console.log(project.id, " => ", project.data());
   });
   // } catch (e) {
   //   console.log(e);
   // }
   // Get the paths we want to pre-render based on posts
-  const paths = posts.map((slug) => ({
+  const paths = projects.map((slug) => ({
     params: { slug: slug.slug },
   }));
 
@@ -112,7 +115,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
   const slug = context.params.slug;
   try {
-    let post = [];
+    let projectData = [];
 
     const firstQuery = query(
       collection(db, "firestoreProjects"),
@@ -120,25 +123,25 @@ export const getStaticProps = async (context) => {
     );
 
     const querySnapshot = await getDocs(firstQuery);
-    querySnapshot.forEach((doc) => {
-      post.push({
-        company: !!doc.company ? doc.company : null,
-        description: doc.description,
-        github: !!doc.github ? doc.github : null,
-        image: doc.image,
-        imageZoom: !!doc.imageZoom ? doc.imageZoom : null,
-        name: doc.name,
-        personal: doc.personal,
-        slug: doc.slug,
-        stack: doc.stack,
-        timeline: doc.timeline,
-        ...doc.data(),
+    querySnapshot.forEach((project) => {
+      projectData.push({
+        company: !!project.company ? project.company : null,
+        description: project.description,
+        github: !!project.github ? project.github : null,
+        image: project.image,
+        imageZoom: !!project.imageZoom ? project.imageZoom : null,
+        name: project.name,
+        personal: project.personal,
+        slug: project.slug,
+        stack: project.stack,
+        timeline: project.timeline,
+        ...project.data(),
       });
-      console.log(doc.id, " => ", doc.data());
+      console.log(project.id, " => ", project.data());
     });
 
     return {
-      props: { post },
+      props: { projectData },
       revalidate: 1,
     };
   } catch (e) {
@@ -147,7 +150,7 @@ export const getStaticProps = async (context) => {
 };
 
 // export async function getStaticPaths() {
-//   const paths = getAllPostIds();
+//   const paths = getStaticPathBoy();
 //   return {
 //     paths,
 //     fallback: false,
@@ -155,7 +158,7 @@ export const getStaticProps = async (context) => {
 // }
 
 // export async function getStaticProps({ params }) {
-//   const postData = getAllPostData(params.id);
+//   const postData = getStaticPropBoy(params.id);
 //   return {
 //     props: {
 //       postData,

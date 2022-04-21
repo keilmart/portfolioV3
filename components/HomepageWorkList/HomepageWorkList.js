@@ -15,10 +15,12 @@ const HomepageWorkList = ({ projects }) => {
   // } = project || {};
 
   return (
-    <ul className="pb-12 space-y-12">
+    // <ul>
+    <ul className="pb-10 md:pb-0">
+      {/* <ul className="pb-12 space-y-12"> */}
       {projects.map((project) => (
         <li
-          className="flex flex-col items-center space-x-0 space-y-4 md:flex-row md:space-y-0 md:space-x-8 lg:space-x-12"
+          className="flex flex-col items-center space-x-0 space-y-4 md:first:border-b-0 first:border-b-2 first:pb-6 last:pt-6 md:flex-row md:space-y-0 md:space-x-8 lg:space-x-12"
           key={project.slug}
         >
           <Link
@@ -42,15 +44,13 @@ const HomepageWorkList = ({ projects }) => {
             </a>
           </Link>
           <div className="w-full md:w-1/2 lg:w-1/3">
-            <span className="block mb-1 text-xs font-semibold tracking-widest uppercase text-tertiary">
+            <span className="block text-xs font-semibold tracking-widest uppercase text-tertiary">
               {project.timeline}
             </span>
-            <h3 className="mb-1 text-xl font-semibold text-primary">
+            <h3 className="my-1 text-xl font-semibold text-primary">
               {project.name}
             </h3>
-            <span className="block mb-1 text-md text-tertiary">
-              {project.stack}
-            </span>
+            <span className="block text-md text-tertiary">{project.stack}</span>
             <Link
               slug={project.slug}
               href={{
@@ -58,7 +58,7 @@ const HomepageWorkList = ({ projects }) => {
                 // query: { project: JSON.stringify(project) },
               }}
             >
-              <a className="w-full mt-2 btn-light md:w-auto">View Project</a>
+              <a className="w-auto mt-3 btn-light">View Project</a>
             </Link>
           </div>
         </li>

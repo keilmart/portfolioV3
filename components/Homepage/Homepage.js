@@ -105,7 +105,7 @@ const Homepage = ({ personalProjects, workProjects }) => {
       </FadeIn>
 
       <FadeIn>
-        <section className="mx-auto mb-10 md:mb-20">
+        <section className="mx-auto mb-2 md:mb-20">
           <SectionHeader
             title="Work Projects"
             subtitle="Personal branding moon imagery"
