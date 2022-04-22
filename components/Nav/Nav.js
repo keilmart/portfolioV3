@@ -46,9 +46,9 @@ const Nav = () => {
               <NavItem item={item} key={item.name} />
             ))}
           </div>
-          <DarkModeToggle className="mx-4 text-gray-800 w-7 h-7 dark:text-gray-300" />
+          <DarkModeToggle className="ml-4 text-gray-800 sm:mx-4 w-7 h-7 dark:text-gray-300" />
           {/* when in dark mode (the moon) add mb-[3px] */}
-          <p className="text-sm">Light Mode</p>
+          <p className="hidden text-sm sm:block">Light Mode</p>
         </div>
       </div>
     </nav>

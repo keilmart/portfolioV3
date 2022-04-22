@@ -32,7 +32,7 @@ const About = ({ personalProjects }) => {
           </motion.div>
         </div>
       </div>
-      <div className="max-w-3xl mx-auto mt-4 mb-20 md:mt-12 md:pt-16">
+      <div className="max-w-3xl mx-auto mt-4 mb-8 md:mb-20 md:mt-12 md:pt-16">
         <MoonStars />
         <h1 className="mt-4 mb-8 text-4xl antialiased font-bold text-primary">
           About
