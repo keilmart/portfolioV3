@@ -23,37 +23,33 @@ const Nav = () => {
   const router = useRouter();
   const navigation = [
     { name: "Home", href: "/#", isActive: router.pathname === "/" },
-    // {
-    //   name: "Work",
-    //   href: "/#workProjects",
-    //   isActive: false,
-    // },
     { name: "About", href: "/about", isActive: router.pathname === "/about" },
   ];
 
   return (
-    <nav className="sticky top-0 z-10 border-b bg-white/80 dark:bg-black border-primary backdrop-blur-md">
+    <nav className="sticky top-0 z-10 border-b border-primary backdrop-blur-md">
       <div className="container flex items-center justify-between w-full max-w-screen-lg px-4 pt-2 pb-2 mx-auto lg:px-0 md:flex-row">
         <Link href="/">
           <a className="py-1 my-1 mr-0 font-sans text-sm antialiased font-semibold border-b border-gray-700 border-opacity-0 hover:border-opacity-100 md:mr-6 md:inline-block text-secondary">
             Keil&nbsp;Martin
           </a>
         </Link>
-
         <div className="flex items-center">
           <div className="space-x-5">
             {navigation.map((item) => (
               <NavItem item={item} key={item.name} />
             ))}
           </div>
-          <DarkModeToggle className="ml-4 text-gray-800 sm:mx-4 w-7 h-7 dark:mb-0 mb-[3px]" />
+          <DarkModeToggle className="ml-4 text-gray-800 sm:mx-4 w-7 h-7 dark:mb-0 mb-[3px] " />
           <div className="hidden sm:block">
-            <p className="block text-sm dark:hidden text-syncWave">
+            <p className="block text-sm pointer-events-none dark:hidden text-syncWave">
               Light Mode
             </p>
           </div>
           <div className="hidden sm:block">
-            <p className="hidden text-sm dark:block text-syncWave">Dark Mode</p>
+            <p className="hidden text-sm pointer-events-none dark:block text-syncWave">
+              Dark Mode
+            </p>
           </div>
         </div>
       </div>

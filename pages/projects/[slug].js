@@ -10,6 +10,20 @@ import Layout from "../../components/Layout/Layout";
 const ProjectDetails = ({ projectData }) => {
   let project = projectData[0];
 
+  // const {
+  //   id,
+  //   URL,
+  //   slug,
+  //   name,
+  //   link,
+  //   stack,
+  //   image,
+  //   company,
+  //   timestamp,
+  //   imageZoom,
+  //   description,
+  // } = project || {};
+
   return (
     <>
       <Layout>

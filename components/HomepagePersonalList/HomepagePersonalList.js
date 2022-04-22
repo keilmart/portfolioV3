@@ -2,6 +2,20 @@ import Image from "next/image";
 import Link from "next/link";
 
 const PersonalProjectList = ({ projects }) => {
+  // const {
+  //   id,
+  //   URL,
+  //   slug,
+  //   name,
+  //   link,
+  //   stack,
+  //   image,
+  //   company,
+  //   timestamp,
+  //   imageZoom,
+  //   description,
+  // } = projects || {};
+
   return (
     <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 md:gap-10">
       {projects.map((project) => (

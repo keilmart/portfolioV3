@@ -3,16 +3,17 @@ import Link from "next/link";
 
 const HomepageWorkList = ({ projects }) => {
   // const {
+  //   id,
+  //   URL,
   //   slug,
-  //   image,
   //   name,
+  //   link,
+  //   stack,
+  //   image,
+  //   company,
   //   timestamp,
   //   description,
-  //   link,
-  //   URL,
-  //   company,
-  //   stack,
-  // } = project || {};
+  // } = projects || {};
 
   return (
     // <ul>
@@ -24,14 +25,12 @@ const HomepageWorkList = ({ projects }) => {
           key={project.slug}
         >
           <Link
-            slug={project.slug}
             href={{
-              pathname: `/projects/${project.slug}`,
-              // query: { project: JSON.stringify(project) },
+              pathname: `/projects/${projects.slug}`,
             }}
           >
-            <a className="relative flex w-full h-48 pt-8 pl-8 overflow-hidden transition duration-500 ease-in-out bg-gray-100 rounded-lg md:px-12 md:pt-12 flex-end md:w-1/2 lg:w-2/3 xs:h-72 sm:h-56 hover:shadow-lg hover:scale-105">
-              <div className="absolute flex overflow-hidden shadow-md rounded-tl-md">
+            <a className="relative flex w-full h-48 pt-8 pl-8 overflow-hidden transition duration-500 ease-in-out bg-gray-100 rounded-lg md:pl-12 md:pt-12 flex-end md:w-1/2 lg:w-2/3 sm:h-56 lg:h-72 hover:shadow-lg hover:scale-105">
+              <div className="absolute flex overflow-hidden shadow-md top-10 rounded-tl-3xl">
                 <Image
                   src={!!project.imageZoom ? project.imageZoom : project.image}
                   alt={project.name}
@@ -55,7 +54,6 @@ const HomepageWorkList = ({ projects }) => {
               slug={project.slug}
               href={{
                 pathname: `/projects/${project.slug}`,
-                // query: { project: JSON.stringify(project) },
               }}
             >
               <a className="w-auto mt-3 btn-light">View Project</a>
