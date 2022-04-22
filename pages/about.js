@@ -37,6 +37,14 @@ const About = ({ personalProjects }) => {
         <h1 className="mt-4 mb-8 text-4xl antialiased font-bold text-primary">
           About
         </h1>
+        <a
+          className="w-full mt-6 btn-light sm:w-auto"
+          href={`https://github.com/keilmart/portfolioV3`}
+          target={"_blank"}
+          rel={"noreferrer"}
+        >
+          View Sites Github
+        </a>
         <h2 className="mb-4 text-lg font-semibold">Early Career Stuff</h2>
         <p className="mb-4 text-xl antialiased leading-relaxed tracking-tight text-secondary">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius,

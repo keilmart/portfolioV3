@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { getStaticPathBoy, getStaticPropBoy } from "../../lib/projects";
+// import { getStaticPathBoy, getStaticPropBoy } from "../../lib/projects";
 import { db } from "../../firebase/firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
 
@@ -12,7 +12,6 @@ const ProjectDetails = ({ projectData }) => {
 
   return (
     <>
-      {console.log(projectData)}
       <Layout>
         <main className="mt-6 sm:mt-10">
           <div className="mb-8">
@@ -29,12 +28,14 @@ const ProjectDetails = ({ projectData }) => {
             <div>
               <h2 className="font-semibold text-md">Company</h2>
               <span className="text-md text-tertiary">
-                {!!project.company ? project.company : "Personal"}
+                {!!project.company && project.personal == false
+                  ? project.company
+                  : "Personal"}
               </span>
             </div>
             <div>
-              <h2 className="font-semibold text-md">Timeline</h2>
-              <span className="text-md text-tertiary">{project.timeline}</span>
+              <h2 className="font-semibold text-md">Stack</h2>
+              <span className="text-md text-tertiary">{project.stack}</span>
             </div>
           </div>
           <hr className="my-8 border-t-2 border-b-0 border-dotted border-primary" />
@@ -105,8 +106,8 @@ export const getStaticPaths = async () => {
     console.log(e);
   }
   // Get the paths we want to pre-render based on posts
-  const paths = projects.map((slug) => ({
-    params: { slug: slug.slug },
+  const paths = projects.map((singleSlug) => ({
+    params: { slug: singleSlug.slug },
   }));
 
   return { paths, fallback: false };
@@ -158,10 +159,10 @@ export const getStaticProps = async (context) => {
 // }
 
 // export async function getStaticProps({ params }) {
-//   const postData = getStaticPropBoy(params.id);
+//   const projectData = getStaticPropBoy(params.slug);
 //   return {
 //     props: {
-//       postData,
+//       projectData,
 //     },
 //   };
 // }

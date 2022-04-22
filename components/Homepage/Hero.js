@@ -7,7 +7,7 @@ const Hero = () => {
         <span className="inline-block mt-4 mb-2 text-xl md:mb-3 md:text-2xl text-tertiary">
           Keil Martin —
         </span>
-        <h1 className="text-4xl antialiased font-bold tracking-tight lg:leading-titles md:text-[56px]">
+        <h1 className="text-4xl antialiased font-bold tracking-tight lg:leading-titles md:text-[56px] text-black dark:text-syncWave">
           Front end developer from Toronto
           {/* <span className="syncWave">Toronto</span> */}
         </h1>

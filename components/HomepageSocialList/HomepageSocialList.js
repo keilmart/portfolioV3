@@ -1,5 +1,15 @@
 // import useWindowSize from "../../hooks/useWindowSize";
 // https://dev.to/heymarkkop/embed-twitter-widget-on-reactjs-1768 //
+import Capsule from "../Capsule/Capsule";
+import {
+  CodeIcon,
+  PencilIcon,
+  BeakerIcon,
+  CloudDownloadIcon,
+  FastForwardIcon,
+  SparklesIcon,
+  PuzzleIcon,
+} from "@heroicons/react/outline";
 
 import {
   TwitterTimelineEmbed,
@@ -37,6 +47,7 @@ const HomepageSocialList = () => {
           screenName="keilmart"
           // options={width >= 1024 ? { height: 350 } : { height: 350 }}
           theme="light"
+          data-chrome="transparent"
           options={{ height: 350 }}
         />
       </div>

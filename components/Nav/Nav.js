@@ -32,7 +32,7 @@ const Nav = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-10 border-b bg-white/80 border-primary backdrop-blur-md">
+    <nav className="sticky top-0 z-10 border-b bg-white/80 dark:bg-black border-primary backdrop-blur-md">
       <div className="container flex items-center justify-between w-full max-w-screen-lg px-4 pt-2 pb-2 mx-auto lg:px-0 md:flex-row">
         <Link href="/">
           <a className="py-1 my-1 mr-0 font-sans text-sm antialiased font-semibold border-b border-gray-700 border-opacity-0 hover:border-opacity-100 md:mr-6 md:inline-block text-secondary">
@@ -46,9 +46,15 @@ const Nav = () => {
               <NavItem item={item} key={item.name} />
             ))}
           </div>
-          <DarkModeToggle className="ml-4 text-gray-800 sm:mx-4 w-7 h-7 dark:text-gray-300" />
-          {/* when in dark mode (the moon) add mb-[3px] */}
-          <p className="hidden text-sm sm:block">Light Mode</p>
+          <DarkModeToggle className="ml-4 text-gray-800 sm:mx-4 w-7 h-7 dark:mb-0 mb-[3px]" />
+          <div className="hidden sm:block">
+            <p className="block text-sm dark:hidden text-syncWave">
+              Light Mode
+            </p>
+          </div>
+          <div className="hidden sm:block">
+            <p className="hidden text-sm dark:block text-syncWave">Dark Mode</p>
+          </div>
         </div>
       </div>
     </nav>
