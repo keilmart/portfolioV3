@@ -35,12 +35,12 @@ const ProjectDetails = ({ projectData }) => {
               </a>
             </Link>
           </div>
-          <h1 className="mb-6 text-3xl font-bold tracking-tight md:mb-8 md:text-6xl leading-headers">
+          <h1 className="mb-6 text-3xl font-bold tracking-tight md:mb-8 md:text-6xl leading-headers dark:text-syncWave">
             {project.name}
           </h1>
           <div className="flex items-center space-x-8">
             <div>
-              <h2 className="font-semibold text-md">Company</h2>
+              <h2 className="font-semibold text-md dark:text-white">Company</h2>
               <span className="text-md text-tertiary">
                 {!!project.company && project.personal == false
                   ? project.company
@@ -48,7 +48,7 @@ const ProjectDetails = ({ projectData }) => {
               </span>
             </div>
             <div>
-              <h2 className="font-semibold text-md">Stack</h2>
+              <h2 className="font-semibold text-md dark:text-white">Stack</h2>
               <span className="text-md text-tertiary">{project.stack}</span>
             </div>
           </div>
@@ -72,8 +72,10 @@ const ProjectDetails = ({ projectData }) => {
             </div>
           </a>
           <hr className="mt-8 mb-6 border-t-2 border-b-0 border-dotted border-primary" />
-          <h2 className="mb-4 text-3xl font-semibold">Summary</h2>
-          <p>{project.description}</p>
+          <h2 className="mb-4 text-3xl font-semibold text-black dark:text-white">
+            Summary
+          </h2>
+          <p className="text-black dark:text-white">{project.description}</p>
           <div className="my-8">
             <a
               className="w-full mt-2 mr-8 btn-light sm:w-auto"
