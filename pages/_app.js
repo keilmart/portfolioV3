@@ -17,6 +17,7 @@ import "../styles/globals.css";
 // 7. Remove unused assets //
 // 8. Figure out new hero setup? //
 // 9. Go through and comment all logic code //
+// 10. Add loaders to the images //
 
 // Last. Go through every component and clean up //
 
