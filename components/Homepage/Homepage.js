@@ -107,7 +107,7 @@ const Homepage = ({ personalProjects, workProjects }) => {
       <FadeIn>
         <section className="mx-auto mb-2 md:mb-20">
           <SectionHeader
-            title="Work Projects"
+            title="Featured Projects"
             subtitle="Personal branding moon imagery"
             icon={
               <div className="transition duration-1000 ease-in-out hover:scale-125 hover:rotate-90">
@@ -123,7 +123,7 @@ const Homepage = ({ personalProjects, workProjects }) => {
       <FadeIn>
         <section className="mx-auto mb-11 md:mb-20">
           <SectionHeader
-            title="Personal Projects"
+            title="Noteworthy Projects"
             subtitle="Personal branding moon imagery"
             icon={
               <div className="transition duration-1000 ease-in-out hover:scale-125 hover:rotate-180">
