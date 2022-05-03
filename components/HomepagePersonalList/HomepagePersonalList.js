@@ -24,7 +24,6 @@ const PersonalProjectList = ({ projects }) => {
             slug={project.slug}
             href={{
               pathname: `/projects/${project.slug}`,
-              // query: { project: JSON.stringify(project) },
             }}
           >
             <a className="relative inline-block w-full h-48 pt-8 pl-8 mb-4 overflow-hidden transition duration-300 ease-in-out bg-gray-100 rounded-lg hover:shadow-lg hover:scale-105">
@@ -50,29 +49,10 @@ const PersonalProjectList = ({ projects }) => {
             slug={project.slug}
             href={{
               pathname: `/projects/${project.slug}`,
-              // query: { project: JSON.stringify(project) },
             }}
           >
-            <a
-              className={`mt-2 btn-light ${
-                !!project.github ? "mr-5" : "mr-0"
-              } `}
-            >
-              View Project
-            </a>
+            <a className="mt-2 btn-primary primary-grad">View Project</a>
           </Link>
-          {/* {!!project.github ? (
-            <a
-              className="w-full mt-2 btn-light sm:w-auto"
-              href={`https://${project.github}`}
-              target={"_blank"}
-              rel={"noreferrer"}
-            >
-              View Github
-            </a>
-          ) : (
-            <></>
-          )} */}
         </li>
       ))}
     </ul>

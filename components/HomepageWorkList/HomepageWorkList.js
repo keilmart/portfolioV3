@@ -56,7 +56,9 @@ const HomepageWorkList = ({ projects }) => {
                 pathname: `/projects/${project.slug}`,
               }}
             >
-              <a className="w-auto mt-3 btn-light">View Project</a>
+              <a className="w-auto mt-3 btn-primary primary-grad">
+                View Project
+              </a>
             </Link>
           </div>
         </li>

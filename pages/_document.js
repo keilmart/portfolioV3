@@ -13,7 +13,7 @@ class MyDocument extends Document {
         <Head>
           <ThemeScriptTag />
         </Head>
-        <body className="bg-white dark:bg-black">
+        <body className="bg-white dark:bg-darkMode">
           <Main />
           <NextScript />
         </body>

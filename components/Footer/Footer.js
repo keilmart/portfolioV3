@@ -14,7 +14,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-white dark:bg-black">
+    <footer className="bg-white dark:bg-darkMode">
       <div className="container flex justify-end max-w-screen-lg px-6 pt-1 pb-4 mx-auto space-y-3 border-t-2 border-dotted md:pt-4 md:space-y-0 md:flex-nowrap lg:px-0 ">
         <div className="flex items-center space-x-4">
           <ExternalLink href="mailto:keilwmartin@gmail.com" title="Email Me!" />
