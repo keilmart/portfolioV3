@@ -1,3 +1,7 @@
+import Image from "next/image";
+
+import CodeBlock from "../CodeBlock/CodeBlock";
+
 import { motion } from "framer-motion";
 
 const Hero = () => {
@@ -9,34 +13,18 @@ const Hero = () => {
         </span>
         <h1 className="text-4xl antialiased font-bold tracking-tight lg:leading-titles md:text-[56px] text-black dark:text-syncWave">
           Front end developer from Toronto
-          {/* <span className="syncWave">Toronto</span> */}
         </h1>
       </div>
 
-      <div className="relative z-10 order-1 lg:order-2">
-        <div className="inset-y-0 mt-2 lg:-mr-20">
-          {/* <div className="inset-y-0 -mt-36 lg:-mt-40 lg:-mr-20"> */}
-          <motion.img
-            src="/pictures/vector.png"
-            alt="Header illustration, a vector illustration"
-            // className="mx-auto w-96 md:w-auto"
-            className="mx-auto w-96 md:w-[1300px]"
-            initial={{ opacity: 0 }}
-            transition={{ ease: "easeIn", duration: 1.5 }}
-            animate={{ opacity: 1 }}
-          />
-        </div>
-      </div>
-      <motion.img
-        src="/pictures/device2.svg"
-        alt="Main image of abstract device"
+      <motion.div
+        alt="Code block describing Keil Martin"
         initial={{
           opacity: 0,
-          rotate: 0,
+          rotate: 17,
         }}
         animate={{
           opacity: 1,
-          rotate: 15,
+          rotate: 0,
           transition: { type: "spring", bounce: 0.35, mass: 2 },
         }}
         transition={{ type: "spring" }}
@@ -44,8 +32,10 @@ const Hero = () => {
         drag
         whileTap={{ rotate: 20, scale: 0.95 }}
         whileHover={{ scale: 1.02 }}
-        className="absolute max-w-[220px] bg-white border rounded-lg cursor-pointer shadow-art active:shadow-art-active hover:shadow-art-hover w-60 left-1/3 -top-60 md:w-80 lg:left-auto lg:right-32 lg:top-20 lg:w-auto z-20"
-      />
+        className="absolute z-20 bg-white border rounded-lg cursor-pointer shadow-art active:shadow-art-active hover:shadow-art-hover w-60 left-1/3 -top-60 md:w-80 lg:left-auto lg:right-32 lg:top-20 lg:w-auto"
+      >
+        <CodeBlock />
+      </motion.div>
     </section>
   );
 };

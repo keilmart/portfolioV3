@@ -17,6 +17,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ["'Inter'", "sans-serif"],
+        montserrat: ["Montserrat"],
         // sans: ["PlusJakartaSans", "sans-serif"],
         serif: [
           "Charter",
@@ -32,7 +33,7 @@ module.exports = {
         titles: 1,
       },
       colors: {
-        syncWave: "#9399ea",
+        syncWave: "#6D83F2",
         darkMode: "#191919",
       },
     },
