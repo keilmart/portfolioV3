@@ -2,6 +2,7 @@ import { ThemeProvider } from "tailwind-darkmode-toggle";
 
 import "../styles/globals.css";
 
+// https://javascript.plainenglish.io/how-to-create-light-and-dark-mode-toggle-in-next-js-with-tailwind-61e67518fd2d?gi=e6553a8c148a //
 // Remove max-w-[220px], className="mx-auto w-96 md:w-auto", <div className="inset-y-0 -mt-36 lg:-mt-40 lg:-mr-20"> from Hero.js"
 // Remove all unused npm packages //
 // Intergrate SEO //
@@ -18,7 +19,6 @@ import "../styles/globals.css";
 // 8. Figure out new hero setup? //
 // 9. Go through and comment all logic code //
 // 10. Add loaders to the images //
-
 // Last. Go through every component and clean up //
 
 import Nav from "../components/Nav/Nav";
