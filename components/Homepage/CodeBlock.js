@@ -9,16 +9,16 @@ const HomepageSocialList = () => {
           2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; constructor() {"{"}
         </pre>
         <pre className="m-3 font-montserrat">
-          3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.name = "
-          <b>Keil Martin</b>";
+          3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.name = &quot;
+          <b>Keil Martin</b>&quot;;
         </pre>
         <pre className="m-3 font-montserrat">
-          4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.job = ["
-          <b>DEVELOPER</b>"];
+          4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.job = [&quot;
+          <b>DEVELOPER</b>&quot;];
         </pre>
         <pre className="m-3 font-montserrat">
-          5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.location = ["
-          <b>Toronto, Canada</b>"]
+          5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.location = [&quot;
+          <b>Toronto, Canada</b>&quot;]
         </pre>
         <pre className="m-3 font-montserrat">
           6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {"}"}
