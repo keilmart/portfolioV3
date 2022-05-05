@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
 import Image from "next/image";
 
+import { motion } from "framer-motion";
 // import { ExternalLink } from "../components/Footer/Footer";
 import Layout from "../components/Layout/Layout";
 import { MoonStars } from "../components/HomepageIcons/Index";

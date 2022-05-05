@@ -1,17 +1,7 @@
 import { motion } from "framer-motion";
 import { MoonStart, MoonMiddle, MoonEnd } from "../HomepageIcons/Index";
-import {
-  CodeIcon,
-  PencilIcon,
-  BeakerIcon,
-  CloudDownloadIcon,
-  FastForwardIcon,
-  SparklesIcon,
-  PuzzleIcon,
-} from "@heroicons/react/outline";
 
 import Hero from "./Hero";
-import Capsule from "../Capsule/Capsule";
 import SectionHeader from "../SectionHeader/SectionHeader";
 
 import HomepageSocialList from "../HomepageSocialList/HomepageSocialList";
@@ -41,7 +31,7 @@ const Homepage = ({ personalProjects, workProjects }) => {
         <Hero />
       </FadeIn>
 
-      <FadeIn>
+      {/* <FadeIn>
         <section className="max-w-3xl px-0 py-6 mx-auto mt-6 mb-12 text-center bg-gray-100 border-2 border-gray-200 border-dotted rounded-lg sm:px-5 md:mb-20 md:mt-28 md:py-12 md:px-14">
           <h2 className="px-5 text-xl font-semibold md:text-2xl text-primary">
             Some of the skills you can find in my toolbox
@@ -86,7 +76,7 @@ const Homepage = ({ personalProjects, workProjects }) => {
             </div>
           </div>
         </section>
-      </FadeIn>
+      </FadeIn> */}
 
       <FadeIn>
         <section className="mx-auto mb-4 md:mb-15">
@@ -101,6 +91,7 @@ const Homepage = ({ personalProjects, workProjects }) => {
           />
           <div className="pt-12 md:pt-16" />
           <HomepageSocialList />
+          <a id="work" />
         </section>
       </FadeIn>
 

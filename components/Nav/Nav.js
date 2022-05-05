@@ -1,7 +1,9 @@
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
 
 import { DarkModeToggle } from "tailwind-darkmode-toggle";
+import { MoonStars } from "../../components/HomepageIcons/Index";
 
 const Nav = () => {
   const NavItem = ({ item }) => {
@@ -30,9 +32,18 @@ const Nav = () => {
     <nav className="sticky top-0 z-30 border-b border-primary backdrop-blur-md dark:backdrop-blur-lg">
       <div className="container flex items-center justify-between w-full max-w-screen-lg px-4 pt-2 pb-2 mx-auto lg:px-0 md:flex-row">
         <Link href="/">
-          <a className="py-1 my-1 mr-0 font-sans text-sm antialiased font-semibold border-b border-gray-700 border-opacity-0 hover:border-opacity-100 md:mr-6 md:inline-block text-secondary">
+          {/* <a className="py-1 my-1 mr-0 font-sans text-sm antialiased font-semibold border-b border-gray-700 border-opacity-0 hover:border-opacity-100 md:mr-6 md:inline-block text-secondary">
             Keil&nbsp;Martin
-          </a>
+          </a> */}
+          {/* <a>
+            <Image
+              src="/pictures/logo-3.svg"
+              alt="KM Logo"
+              height="40"
+              width="40"
+            />
+          </a> */}
+          <MoonStars />
         </Link>
         <div className="flex items-center">
           <div className="space-x-5">

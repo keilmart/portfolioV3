@@ -42,18 +42,14 @@
 .svg-icon path,
 .svg-icon polygon,
 .svg-icon rect {
-  fill: #9399ea;
+  fill: #6d83f2;
 }
 
 .svg-icon circle {
-  stroke: #9399ea;
+  stroke: #6d83f2;
   stroke-width: 1;
 }
 
 .primary-grad {
-  background: linear-gradient(
-    134deg,
-    rgb(106, 152, 240) 0%,
-    rgb(73, 97, 220) 99%
-  );
+  background: linear-gradient(134deg, #6a98f0 0%, #4961dc 99%);
 }

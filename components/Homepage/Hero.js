@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import CodeBlock from "../CodeBlock/CodeBlock";
+import CodeBlock from "./CodeBlock";
 
 import { motion } from "framer-motion";
 
@@ -15,27 +15,30 @@ const Hero = () => {
           Front end developer from Toronto
         </h1>
       </div>
-
-      <motion.div
-        alt="Code block describing Keil Martin"
-        initial={{
-          opacity: 0,
-          rotate: 17,
-        }}
-        animate={{
-          opacity: 1,
-          rotate: 0,
-          transition: { type: "spring", bounce: 0.35, mass: 2 },
-        }}
-        transition={{ type: "spring" }}
-        dragConstraints={{ left: -50, right: 50, top: -50, bottom: 20 }}
-        drag
-        whileTap={{ rotate: 20, scale: 0.95 }}
-        whileHover={{ scale: 1.02 }}
-        className="absolute z-20 bg-white border rounded-lg cursor-pointer shadow-art active:shadow-art-active hover:shadow-art-hover w-60 left-1/3 -top-60 md:w-80 lg:left-auto lg:right-32 lg:top-20 lg:w-auto"
-      >
-        <CodeBlock />
-      </motion.div>
+      <dir className="relative z-10 order-1 lg:order-2">
+        <div className="inset-y-0 -mt-36 lg:-mt-40 lg:-mr-20">
+          <motion.div
+            alt="Code block describing Keil Martin"
+            initial={{
+              opacity: 0,
+              rotate: 17,
+            }}
+            animate={{
+              opacity: 1,
+              rotate: 0,
+              transition: { type: "spring", bounce: 0.35, mass: 2 },
+            }}
+            transition={{ type: "spring" }}
+            dragConstraints={{ left: -50, right: 50, top: -50, bottom: 20 }}
+            drag
+            whileTap={{ rotate: 20, scale: 0.95 }}
+            whileHover={{ scale: 1.02 }}
+            className="absolute z-20 mx-auto bg-white border rounded-lg cursor-pointer shadow-art active:shadow-art-active hover:shadow-art-hover left-1/3 -top-60 lg:left-auto lg:right-32 lg:top-20 lg:w-auto w-96 md:w-auto"
+          >
+            <CodeBlock />
+          </motion.div>
+        </div>
+      </dir>
     </section>
   );
 };
