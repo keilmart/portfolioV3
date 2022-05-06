@@ -14,10 +14,12 @@ const Footer = () => {
   };
 
   return (
-    <footer className="primary-grad dark:bg-darkMode">
-      <div className="flex justify-start px-6 pt-2 pb-4 mx-auto md:pt-3 lg:px-0 ">
+    <footer>
+      <div className="container flex justify-end max-w-screen-lg px-6 pt-2 pb-6 mx-auto space-y-3 border-t-2 border-dotted md:pt-4 md:space-y-0 md:flex-nowrap lg:px-0">
         <div className="flex items-center space-x-4">
           <ExternalLink href="mailto:keilwmartin@gmail.com" title="Email Me!" />
+          {/* <ExternalLink href="https://twitter.com/keilmart" title="Twitter" />
+          <ExternalLink href="https://github.com/keilmart" title="GitHub" /> */}
         </div>
       </div>
     </footer>

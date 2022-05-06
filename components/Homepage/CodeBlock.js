@@ -14,7 +14,7 @@ const HomepageSocialList = () => {
         </pre>
         <pre className="m-3 font-montserrat">
           4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.job = [&quot;
-          <b>DEVELOPER</b>&quot;];
+          <b className="uppercase">front end dev</b>&quot;];
         </pre>
         <pre className="m-3 font-montserrat">
           5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.location = [&quot;
@@ -25,7 +25,7 @@ const HomepageSocialList = () => {
         </pre>
         <pre className="m-3 font-montserrat">7&nbsp;&nbsp;{"}"}</pre>
       </section>
-      <div className="absolute z-30 p-3 rounded-lg shadow-art bottom-[-20%] left-[-20%]">
+      <div className="absolute z-30 p-3 rounded-lg shadow-art border bg-white bottom-[-13%] left-[-20%]">
         <a className="w-auto btn-primary primary-grad">Download Resume</a>
       </div>
     </div>
