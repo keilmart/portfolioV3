@@ -1,7 +1,9 @@
+import Link from "next/link";
+
 const HomepageSocialList = () => {
   return (
     <div className="w-full">
-      <section className="px-10 py-8 text-sm text-syncWave">
+      <section className="px-10 py-8 text-sm text-syncWave dark:text-white dark:bg-darkModeDetail">
         <pre className="m-3 font-montserrat">
           1&nbsp;&nbsp;class <b>Person</b> {"{"}
         </pre>
@@ -25,9 +27,11 @@ const HomepageSocialList = () => {
         </pre>
         <pre className="m-3 font-montserrat">7&nbsp;&nbsp;{"}"}</pre>
       </section>
-      <div className="absolute z-30 p-3 rounded-lg shadow-art border bg-white bottom-[-13%] left-[-20%]">
-        <a className="w-auto btn-primary primary-grad">Download Resume</a>
-      </div>
+      <Link href="/about">
+        <div className="absolute z-30 p-3 rounded-lg shadow-art border bg-white dark:bg-darkModeDetail bottom-[-13%] left-[-20%]">
+          <a className="w-auto btn-primary primary-grad">**Change this</a>
+        </div>
+      </Link>
     </div>
   );
 };

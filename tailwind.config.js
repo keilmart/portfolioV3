@@ -35,6 +35,7 @@ module.exports = {
       colors: {
         syncWave: "#6D83F2",
         darkMode: "#191919",
+        darkModeDetail: "#303030",
       },
     },
   },

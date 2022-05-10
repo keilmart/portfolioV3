@@ -10,6 +10,7 @@ import "../styles/globals.css";
 
 // Steps //
 // 1. Bring in new fonts //
+// 2. Add in new colors - check the white are all good //
 // 2. Figure out design for dark and light mode //
 // 3. Clean up getStaticProp / GetStaticPath //
 // 4. Write out descriptions for all projects //
