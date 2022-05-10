@@ -26,7 +26,7 @@ const PersonalProjectList = ({ projects }) => {
               pathname: `/projects/${project.slug}`,
             }}
           >
-            <a className="relative inline-block w-full h-48 pt-8 pl-8 mb-4 overflow-hidden transition duration-300 ease-in-out bg-gray-100 rounded-lg hover:shadow-lg hover:scale-105">
+            <a className="relative inline-block w-full h-48 pt-8 pl-8 mb-4 overflow-hidden transition duration-300 ease-in-out bg-gray-100 rounded-lg dark:bg-darkModeDetail hover:shadow-lg hover:scale-105">
               <div className="absolute w-full overflow-hidden rounded-tl-3xl top-10">
                 <Image
                   src={project.image}
@@ -39,10 +39,10 @@ const PersonalProjectList = ({ projects }) => {
               </div>
             </a>
           </Link>
-          <h3 className={`font-semibold text-xl text-primary mb-1`}>
+          <h3 className="mb-1 text-xl font-semibold text-primary dark:text-white">
             {project.name}
           </h3>
-          <span className={"block text-md text-tertiary mb-1"}>
+          <span className="block mb-1 text-md text-tertiary">
             {project.stack}
           </span>
           <Link

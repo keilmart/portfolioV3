@@ -46,7 +46,7 @@ const HomepageWorkList = ({ projects }) => {
             <span className="hidden text-xs font-semibold tracking-widest uppercase md:block text-tertiary">
               {project.timeline}
             </span>
-            <h3 className="my-1 text-xl font-semibold text-primary">
+            <h3 className="my-1 text-xl font-semibold text-primary dark:text-white">
               {project.name}
             </h3>
             <span className="block text-md text-tertiary">{project.stack}</span>

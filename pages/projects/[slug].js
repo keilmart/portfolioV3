@@ -72,13 +72,13 @@ const ProjectDetails = ({ projectData }) => {
             </div>
           </a>
           <hr className="mt-8 mb-6 border-t-2 border-b-0 border-dotted border-primary" />
-          <h2 className="mb-4 text-3xl font-semibold text-black dark:text-white">
+          <h2 className="mb-4 text-3xl font-semibold text-black dark:text-syncWave">
             Summary
           </h2>
           <p className="text-black dark:text-white">{project.description}</p>
           <div className="my-8">
             <a
-              className="w-full mt-2 mr-8 btn-light sm:w-auto"
+              className="w-full mt-2 mr-8 btn-primary primary-grad sm:w-auto"
               href={`https://${project.url}`}
               target={"_blank"}
               rel={"noreferrer"}
@@ -87,7 +87,7 @@ const ProjectDetails = ({ projectData }) => {
             </a>
             {!!project.github ? (
               <a
-                className="w-full mt-2 btn-light sm:w-auto"
+                className="w-full mt-2 btn-primary primary-grad sm:w-auto"
                 href={`https://${project.github}`}
                 target={"_blank"}
                 rel={"noreferrer"}
@@ -162,6 +162,7 @@ export const getStaticProps = async (context) => {
       revalidate: 1,
     };
   } catch (e) {
+    props = {};
     console.log(e);
   }
 };

@@ -15,6 +15,9 @@ module.exports = {
           "0 20px 25px -5px rgb(0 0 0 / 0.04), 0 8px 10px -6px rgb(0 0 0 / 0.06)",
         "art-active": "0 1px 2px 0 rgb(0 0 0 / 0.04)",
       },
+      fontSize: {
+        "2xs": "0.8rem",
+      },
       fontFamily: {
         sans: ["'Inter'", "sans-serif"],
         montserrat: ["Montserrat"],

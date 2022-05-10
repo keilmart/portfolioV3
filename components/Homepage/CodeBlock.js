@@ -2,8 +2,8 @@ import Link from "next/link";
 
 const HomepageSocialList = () => {
   return (
-    <div className="w-full">
-      <section className="px-10 py-8 text-sm text-syncWave dark:text-white dark:bg-darkModeDetail">
+    <div>
+      <section className="relative px-9 py-7 text-2xs text-syncWave lg:px-10 lg:py-8 lg:text-sm dark:text-white dark:bg-darkModeDetail">
         <pre className="m-3 font-montserrat">
           1&nbsp;&nbsp;class <b>Person</b> {"{"}
         </pre>
@@ -26,12 +26,10 @@ const HomepageSocialList = () => {
           6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {"}"}
         </pre>
         <pre className="m-3 font-montserrat">7&nbsp;&nbsp;{"}"}</pre>
-      </section>
-      <Link href="/about">
-        <div className="absolute z-30 p-3 rounded-lg shadow-art border bg-white dark:bg-darkModeDetail bottom-[-13%] left-[-20%]">
+        <div className="absolute z-30 p-3 rounded-lg shadow-art border bg-white dark:bg-darkModeDetail dark:border-0 bottom-[-13%] left-[-20%]">
           <a className="w-auto btn-primary primary-grad">**Change this</a>
         </div>
-      </Link>
+      </section>
     </div>
   );
 };

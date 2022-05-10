@@ -56,6 +56,7 @@ export const getStaticProps = async () => {
     }
   } catch (error) {
     console.log(error);
+    props = {};
   }
 
   // return allPostsData.sort((a, b) => {
