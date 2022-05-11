@@ -11,36 +11,37 @@
 //   PuzzleIcon,
 // } from "@heroicons/react/outline";
 
-import {
-  TwitterTimelineEmbed,
-  // TwitterShareButton,
-  // TwitterFollowButton,
-  // TwitterHashtagButton,
-  // TwitterMentionButton,
-  // TwitterTweetEmbed,
-  // TwitterMomentShare,
-  // TwitterDMButton,
-  // TwitterVideoEmbed,
-  // TwitterOnAirButton,
-} from "react-twitter-embed";
+// import {
+//   TwitterTimelineEmbed,
+//   // TwitterShareButton,
+//   // TwitterFollowButton,
+//   // TwitterHashtagButton,
+//   // TwitterMentionButton,
+//   // TwitterTweetEmbed,
+//   // TwitterMomentShare,
+//   // TwitterDMButton,
+//   // TwitterVideoEmbed,
+//   // TwitterOnAirButton,
+// } from "react-twitter-embed";
 
 const HomepageSocialList = () => {
   // const { width, height } = useWindowSize();
 
   return (
-    <section className="grid grid-cols-1 gap-4 -mt-10 md:-mt-8 md:grid-cols-3">
-      <div className="col-span-2 mb-4 md:col-start-2">
-        {/* <div className="col-span-2 mb-6 md:col-start-2 md:mb-20"> */}
-        <TwitterTimelineEmbed
-          sourceType="profile"
-          screenName="keilmart"
-          // options={width >= 1024 ? { height: 350 } : { height: 350 }}
-          theme="dark"
-          data-chrome="transparent"
-          options={{ height: 350 }}
-        />
-      </div>
-    </section>
+    <div>Your tech stack goes in here</div>
+    // <section className="grid grid-cols-1 gap-4 -mt-10 md:-mt-8 md:grid-cols-3">
+    //   <div className="col-span-2 mb-4 md:col-start-2">
+    //     {/* <div className="col-span-2 mb-6 md:col-start-2 md:mb-20"> */}
+    //     <TwitterTimelineEmbed
+    //       sourceType="profile"
+    //       screenName="keilmart"
+    //       // options={width >= 1024 ? { height: 350 } : { height: 350 }}
+    //       theme="dark"
+    //       data-chrome="transparent"
+    //       options={{ height: 350 }}
+    //     />
+    //   </div>
+    // </section>
     // <section className="grid grid-cols-1 gap-4 -mt-10 md:-mt-8 md:grid-cols-3">
     //   <div className="max-w-3xl col-span-2 px-5 mx-auto mb-4 text-center bg-gray-100 border-2 border-gray-200 border-dotted rounded-lg py-7 md:col-start-2 md:mb-8 md:py-12 md:px-14">
     //     <h2 className="text-xl font-semibold md:text-2xl text-primary">

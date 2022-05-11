@@ -40,7 +40,7 @@ const Hero = () => {
     //     </div>
     //   </dir>
     // </section>
-    <section className="flex flex-col items-center justify-between lg:flex-row mb-[100px] h-[400px]">
+    <section className="flex flex-col items-center justify-between sm:flex-row mb-[100px] h-[400px]">
       <div className="">
         <span className="inline-block mt-4 mb-2 text-xl md:mb-3 md:text-2xl text-tertiary">
           Keil Martin —

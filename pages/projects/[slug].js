@@ -54,7 +54,7 @@ const ProjectDetails = ({ projectData }) => {
           </div>
           <hr className="my-8 border-t-2 border-b-0 border-dotted border-primary" />
           <a
-            className="relative inline-block w-full px-4 pt-4 overflow-hidden transition duration-300 ease-in-out bg-gray-100 rounded-lg sm:px-10 sm:pt-10 h-min hover:shadow-lg hover:scale-105"
+            className="relative inline-block w-full px-4 pt-4 overflow-hidden transition duration-300 ease-in-out bg-gray-100 rounded-lg sm:px-10 sm:pt-10 h-min hover:shadow-lg hover:scale-105 dark:bg-darkModeDetail"
             href={`https://${project.url}`}
             target={"_blank"}
             rel={"noreferrer"}
@@ -78,7 +78,7 @@ const ProjectDetails = ({ projectData }) => {
           <p className="text-black dark:text-white">{project.description}</p>
           <div className="my-8">
             <a
-              className="w-full mt-2 mr-8 btn-primary primary-grad sm:w-auto"
+              className="mt-2 mr-8 btn-primary primary-grad"
               href={`https://${project.url}`}
               target={"_blank"}
               rel={"noreferrer"}
@@ -87,7 +87,7 @@ const ProjectDetails = ({ projectData }) => {
             </a>
             {!!project.github ? (
               <a
-                className="w-full mt-2 btn-primary primary-grad sm:w-auto"
+                className="mt-2 btn-primary primary-grad"
                 href={`https://${project.github}`}
                 target={"_blank"}
                 rel={"noreferrer"}
