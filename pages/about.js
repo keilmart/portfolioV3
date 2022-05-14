@@ -9,13 +9,6 @@ const About = ({ personalProjects }) => {
   return (
     <Layout>
       <div className="relative">
-        {/* <Image
-          src="/pictures/vector.png"
-          alt="Picture of a decorative vector"
-          width={668}
-          height={330}
-          className="absolute right-0 -bottom-32 -z-10"
-        /> */}
         <div className="absolute top-0 right-44">
           <motion.div
             className="hidden overflow-hidden rounded-md md:block md:w-40 md:h-40"

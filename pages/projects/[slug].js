@@ -78,7 +78,7 @@ const ProjectDetails = ({ projectData }) => {
           <p className="text-black dark:text-white">{project.description}</p>
           <div className="my-8">
             <a
-              className="mt-2 mr-8 btn-primary primary-grad"
+              className="mt-2 mr-4 btn-primary primary-grad"
               href={`https://${project.url}`}
               target={"_blank"}
               rel={"noreferrer"}

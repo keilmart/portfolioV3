@@ -65,8 +65,8 @@ const Hero = () => {
           dragConstraints={{ left: -50, right: 50, top: -50, bottom: 20 }}
           drag
           whileTap={{ rotate: 20, scale: 0.95 }}
-          whileHover={{ scale: 1.02 }}
-          className="z-20 mx-auto bg-white border rounded-lg cursor-pointer shadow-art active:shadow-art-active hover:shadow-art-hover dark:shadow-none dark:border-0"
+          whileHover={{ scale: 1.01 }}
+          className="z-20 mx-auto bg-white border rounded-lg cursor-pointer shadow-art active:shadow-art-active hover:shadow-art-hover dark:shadow-none dark:border-0 dark:bg-darkModeDetail"
         >
           <CodeBlock />
         </motion.div>
