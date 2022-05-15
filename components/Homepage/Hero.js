@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import CodeBlock from "./CodeBlock";
+import { GithubIcon, LinkedIcon, EmailIcon } from "./HeroIcons/Index";
 
 import { motion } from "framer-motion";
 
@@ -9,7 +10,7 @@ const Hero = () => {
     <section className="flex sm:mx-16 flex-col items-center justify-between mx-0 sm:flex-row mb-[75px] h-[525px] sm:mb-0 sm:h-[500px]">
       <div>
         <span className="inline-block text-xl text-tertiary md:text-2xl">
-          Hello, I'm
+          Hello, I&apos;m
         </span>
         <h1 className="text-4xl antialiased font-bold tracking-tight lg:leading-titles md:text-[56px] text-black dark:text-syncWave">
           Keil Martin
@@ -18,9 +19,15 @@ const Hero = () => {
           FRONT END DEVELOPER
         </span>
         <ul className="flex flex-row">
-          <li className="rx-2 text-syncWave">@</li>
-          <li className="mx-2 text-syncWave">L</li>
-          <li className="lx-2 text-syncWave">G</li>
+          <li className="rx-2 text-syncWave">
+            <LinkedIcon />
+          </li>
+          <li className="mx-2 text-syncWave">
+            <EmailIcon />
+          </li>
+          <li className="lx-2 text-syncWave">
+            <GithubIcon />
+          </li>
         </ul>
       </div>
       <div>

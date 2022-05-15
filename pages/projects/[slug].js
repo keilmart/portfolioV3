@@ -52,28 +52,7 @@ const ProjectDetails = ({ projectData }) => {
               <span className="text-md text-tertiary">{project.stack}</span>
             </div>
           </div>
-          <div className="mt-3">
-            <a
-              className="mt-2 mr-4 btn-primary primary-grad"
-              href={`https://${project.url}`}
-              target={"_blank"}
-              rel={"noreferrer"}
-            >
-              {!!project.github ? "View Project" : "View Website"}
-            </a>
-            {!!project.github ? (
-              <a
-                className="mt-2 btn-primary primary-grad"
-                href={`https://${project.github}`}
-                target={"_blank"}
-                rel={"noreferrer"}
-              >
-                View Github
-              </a>
-            ) : (
-              <></>
-            )}
-          </div>
+          <div className="mt-3"></div>
           <hr className="my-8 border-t-2 border-b-0 border-dotted border-primary" />
           <a
             className="relative inline-block w-full px-4 pt-4 overflow-hidden transition duration-300 ease-in-out bg-gray-100 rounded-lg sm:px-10 sm:pt-10 h-min hover:shadow-lg hover:scale-105 dark:bg-darkModeDetail"
@@ -99,7 +78,7 @@ const ProjectDetails = ({ projectData }) => {
           </h2>
           <p className="text-black dark:text-white">{project.description}</p>
           <div className="my-8">
-            {/* <a
+            <a
               className="mt-2 mr-4 btn-primary primary-grad"
               href={`https://${project.url}`}
               target={"_blank"}
@@ -118,7 +97,7 @@ const ProjectDetails = ({ projectData }) => {
               </a>
             ) : (
               <></>
-            )} */}
+            )}
           </div>
         </main>
       </Layout>
