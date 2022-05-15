@@ -21,7 +21,7 @@ const HomepageWorkList = ({ projects }) => {
       {/* <ul className="pb-12 space-y-12"> */}
       {projects.map((project) => (
         <li
-          className="flex flex-col items-center space-x-0 space-y-4 md:first:border-b-0 first:border-b-2 first:pb-6 last:pt-6 md:flex-row md:space-y-0 md:space-x-8 lg:space-x-12"
+          className="flex flex-col items-center space-x-0 space-y-4 antialiased md:first:border-b-0 first:border-b-2 first:pb-6 last:pt-6 md:flex-row md:space-y-0 md:space-x-8 lg:space-x-12"
           key={project.slug}
         >
           <Link

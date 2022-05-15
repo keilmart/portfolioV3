@@ -73,10 +73,10 @@ const ProjectDetails = ({ projectData }) => {
             </div>
           </a>
           <hr className="my-6 border-t-2 border-b-0 border-dotted border-primary" />
-          <h2 className="mb-4 text-3xl font-semibold text-black dark:text-syncWave">
+          <h2 className="mb-4 text-3xl font-semibold text-primary dark:text-syncWave">
             Summary
           </h2>
-          <p className="text-black dark:text-white">{project.description}</p>
+          <p className="text-primary dark:text-white">{project.description}</p>
           <div className="my-8">
             <a
               className="mt-2 mr-4 btn-primary primary-grad"

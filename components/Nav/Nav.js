@@ -32,7 +32,7 @@ const Nav = () => {
     <nav className="sticky top-0 z-30 bg-white border-b border-primary dark:bg-darkMode">
       <div className="container flex items-center justify-between w-full max-w-screen-lg px-4 pt-2 pb-2 mx-auto lg:px-0 md:flex-row">
         <Link href="/">
-          <a className="flex flex-row items-center justify-center font-sans text-sm antialiased font-semibold leading-3 tracking-wide text-black dark:text-white">
+          <a className="flex flex-row items-center justify-center font-sans text-sm antialiased font-semibold leading-3 tracking-wide text-primary dark:text-white">
             <MoonStartClone />
             <div className="pl-1">
               <span>

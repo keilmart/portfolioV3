@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import CodeBlock from "./CodeBlock";
 import { GithubIcon, LinkedIcon, EmailIcon } from "./HeroIcons/Index";
@@ -7,26 +8,32 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="flex sm:mx-16 flex-col items-center justify-between mx-0 sm:flex-row mb-[75px] h-[525px] sm:mb-0 sm:h-[500px]">
+    <section className="flex flex-col items-center justify-evenly sm:justify-between mx-0 mb-[75px] h-[525px] sm:flex-row sm:mx-16 sm:mb-0 sm:h-[500px]">
       <div>
-        <span className="inline-block text-xl text-tertiary md:text-2xl">
+        <span className="inline-block text-xl antialiased text-tertiary md:text-2xl">
           Hello, I&apos;m
         </span>
-        <h1 className="text-4xl antialiased font-bold tracking-tight lg:leading-titles md:text-[56px] text-black dark:text-syncWave">
+        <h1 className="text-4xl antialiased font-bold tracking-tight lg:leading-titles md:text-[56px] text-primary dark:text-syncWave">
           Keil Martin
         </h1>
-        <span className="inline-block text-lg text-tertiary dark:text-white">
-          FRONT END DEVELOPER
+        <span className="inline-block text-lg antialiased text-tertiary dark:text-white">
+          FRONT END DEVELOPER &amp; DOG DAD
         </span>
-        <ul className="flex flex-row">
-          <li className="rx-2 text-syncWave">
-            <LinkedIcon />
+        <ul className="flex flex-row mt-3">
+          <li className="pr-2 text-sm text-syncWave">
+            <Link href="https://www.linkedin.com/in/keilmart/">
+              <a>
+                <LinkedIcon />
+              </a>
+            </Link>
           </li>
-          <li className="mx-2 text-syncWave">
-            <EmailIcon />
-          </li>
-          <li className="lx-2 text-syncWave">
-            <GithubIcon />
+
+          <li className="pl-2 text-sm text-syncWave">
+            <Link href="https://github.com/keilmart">
+              <a>
+                <GithubIcon />
+              </a>
+            </Link>
           </li>
         </ul>
       </div>
@@ -44,7 +51,6 @@ const Hero = () => {
           }}
           transition={{ type: "spring" }}
           dragConstraints={{ left: -50, right: 50, top: -50, bottom: 20 }}
-          drag
           whileTap={{ rotate: 20, scale: 0.95 }}
           whileHover={{ scale: 1.01 }}
           className="z-20 mx-auto bg-white border rounded-lg cursor-pointer shadow-art active:shadow-art-active hover:shadow-art-hover dark:shadow-none dark:border-0 dark:bg-darkModeDetail"

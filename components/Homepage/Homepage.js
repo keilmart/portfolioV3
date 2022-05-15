@@ -5,7 +5,7 @@ import Image from "next/image";
 import Hero from "./Hero";
 import SectionHeader from "../SectionHeader/SectionHeader";
 
-import HomepageSocialList from "../HomepageSocialList/HomepageSocialList";
+import HomepageSkillsList from "../HomepageSkillsList/HomepageSkillsList";
 import HomepageWorkList from "../HomepageWorkList/HomepageWorkList";
 import HomepagePersonalList from "../HomepagePersonalList/HomepagePersonalList";
 
@@ -41,7 +41,7 @@ const Homepage = ({ personalProjects, workProjects }) => {
       <FadeIn>
         <section className="mx-auto mb-11 md:mb-20">
           <SectionHeader
-            title="My Feed"
+            title="My Skills"
             subtitle="Personal branding moon imagery"
             icon={
               <div className="transition duration-1000 ease-in-out hover:scale-125 hover:rotate-45">
@@ -50,7 +50,7 @@ const Homepage = ({ personalProjects, workProjects }) => {
             }
           />
           <div className="pt-6 md:pt-11" />
-          <HomepageSocialList />
+          <HomepageSkillsList />
           <a id="work" />
         </section>
       </FadeIn>

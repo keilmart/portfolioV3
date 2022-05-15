@@ -20,6 +20,8 @@ import "../styles/globals.css";
 // 8. Figure out new hero setup? //
 // 9. Go through and comment all logic code //
 // 10. Add loaders to the images //
+// 11. Add Styling to scrollbar - rounded to match theme //
+// 12. Update github profile to match website //
 // Last. Go through every component and clean up //
 
 import Nav from "../components/Nav/Nav";
