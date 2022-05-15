@@ -27,7 +27,7 @@ const ProjectDetails = ({ projectData }) => {
   return (
     <>
       <Layout>
-        <main className="mt-6 sm:mt-10">
+        <main className="mt-4 sm:mt-10">
           <div className="mb-8">
             <Link href="/#work">
               <a className="border-b border-gray-700 text-secondary hover:bg-gray-100">
@@ -52,31 +52,7 @@ const ProjectDetails = ({ projectData }) => {
               <span className="text-md text-tertiary">{project.stack}</span>
             </div>
           </div>
-          <hr className="my-8 border-t-2 border-b-0 border-dotted border-primary" />
-          <a
-            className="relative inline-block w-full px-4 pt-4 overflow-hidden transition duration-300 ease-in-out bg-gray-100 rounded-lg sm:px-10 sm:pt-10 h-min hover:shadow-lg hover:scale-105 dark:bg-darkModeDetail"
-            href={`https://${project.url}`}
-            target={"_blank"}
-            rel={"noreferrer"}
-          >
-            <div className="w-full overflow-hidden rounded-t-3xl top-10">
-              <Image
-                src={project.imageZoom ? project.imageZoom : project.image}
-                alt={project.name}
-                width={2886}
-                height={1245}
-                // Change these sizes to optimize //
-                objectFit="cover"
-                objectPosition="top left"
-              />
-            </div>
-          </a>
-          <hr className="mt-8 mb-6 border-t-2 border-b-0 border-dotted border-primary" />
-          <h2 className="mb-4 text-3xl font-semibold text-black dark:text-syncWave">
-            Summary
-          </h2>
-          <p className="text-black dark:text-white">{project.description}</p>
-          <div className="my-8">
+          <div className="mt-3">
             <a
               className="mt-2 mr-4 btn-primary primary-grad"
               href={`https://${project.url}`}
@@ -97,6 +73,52 @@ const ProjectDetails = ({ projectData }) => {
             ) : (
               <></>
             )}
+          </div>
+          <hr className="my-8 border-t-2 border-b-0 border-dotted border-primary" />
+          <a
+            className="relative inline-block w-full px-4 pt-4 overflow-hidden transition duration-300 ease-in-out bg-gray-100 rounded-lg sm:px-10 sm:pt-10 h-min hover:shadow-lg hover:scale-105 dark:bg-darkModeDetail"
+            href={`https://${project.url}`}
+            target={"_blank"}
+            rel={"noreferrer"}
+          >
+            <div className="w-full overflow-hidden rounded-t-3xl top-10">
+              <Image
+                src={project.imageZoom ? project.imageZoom : project.image}
+                alt={project.name}
+                width={2886}
+                height={1245}
+                // Change these sizes to optimize //
+                objectFit="cover"
+                objectPosition="top left"
+              />
+            </div>
+          </a>
+          <hr className="my-6 border-t-2 border-b-0 border-dotted border-primary" />
+          <h2 className="mb-4 text-3xl font-semibold text-black dark:text-syncWave">
+            Summary
+          </h2>
+          <p className="text-black dark:text-white">{project.description}</p>
+          <div className="my-8">
+            {/* <a
+              className="mt-2 mr-4 btn-primary primary-grad"
+              href={`https://${project.url}`}
+              target={"_blank"}
+              rel={"noreferrer"}
+            >
+              {!!project.github ? "View Project" : "View Website"}
+            </a>
+            {!!project.github ? (
+              <a
+                className="mt-2 btn-primary primary-grad"
+                href={`https://${project.github}`}
+                target={"_blank"}
+                rel={"noreferrer"}
+              >
+                View Github
+              </a>
+            ) : (
+              <></>
+            )} */}
           </div>
         </main>
       </Layout>

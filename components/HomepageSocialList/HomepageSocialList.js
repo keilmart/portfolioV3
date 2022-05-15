@@ -1,41 +1,68 @@
 import { DesignIcon, DevelopIcon, LearnIcon } from "./HomepageStackIcons/Index";
 
+const cards = [
+  // 			 Develop Card
+  {
+    img: "https://i.ibb.co/f4cY3rk/bc-hockey.jpg",
+    imageAlt: "Lloyd Sibson's Website Banner",
+    link: "https://lloydsibson.com/",
+    title: "BC Hockey",
+    desc: "Sports - 2022",
+  },
+  // 			 Style Card
+  {
+    img: "https://i.ibb.co/Fz90MZJ/stay.jpg",
+    imageAlt: "Lloyd Sibson's Website Banner",
+    link: "https://lloydsibson.com/",
+    title: "Stay",
+    desc: "Accommodation - 2021",
+  },
+  // 			 Learning Card
+  {
+    img: "https://i.ibb.co/W6hvzfc/yiss.jpg",
+    imageAlt: "Lloyd Sibson's Website Banner",
+    link: "https://lloydsibson.com/",
+    title: "YISS Calendar",
+    desc: "Education - 2020",
+  },
+];
+
 const HomepageSocialList = () => {
   return (
-    <section className="grid grid-cols-1 gap-6 mx-10 sm:mx-16 sm:grid-cols-3 sm:gap-10">
+    <section className="grid grid-cols-1 gap-6 mx-16 sm:grid-cols-3 sm:gap-10">
       <div className="z-20 w-full mx-auto text-center transition duration-500 ease-in-out border rounded-lg cursor-pointer px-9 py-7 text-2xs text-syncWave lg:px-10 lg:py-8 sm:w-minlg:text-sm dark:text-white shadow-art active:shadow-art-active hover:shadow-art-hover dark:shadow-none dark:border-0 dark:bg-darkModeDetail hover:rotate-2">
         <DevelopIcon />
-        <h3 className="py-3 text-xl font-semibold text-center text-primary dark:text-white">
+        <h3 className="pt-3 pb-2 text-xl font-semibold text-center text-primary dark:text-white">
           Languages
         </h3>
-        <span className="block pt-1 text-[16px] text-tertiary"> Next.js</span>
-        <span className="block pt-1 text-[16px] text-tertiary"> Gatsby</span>
+        <span className="block text-[16px] text-tertiary"> Next.js</span>
+        <span className="block  text-[16px] text-tertiary"> Gatsby</span>
         <span className="block pt1 text-[16px] text-tertiary">Gatsby</span>
         <span className="block pt1 text-[16px] text-tertiary">JavaScript</span>
         <span className="block pt1 text-[16px] text-tertiary"> jQuery</span>
       </div>
       <div className="z-20 w-full mx-auto text-center transition duration-500 ease-in-out border rounded-lg cursor-pointer px-9 py-7 text-2xs text-syncWave lg:px-10 lg:py-8 sm:w-minlg:text-sm dark:text-white shadow-art active:shadow-art-active hover:shadow-art-hover dark:shadow-none dark:border-0 dark:bg-darkModeDetail hover:rotate-2">
         <DesignIcon />
-        <h3 className="py-3 text-xl font-semibold text-center text-primary dark:text-white">
+        <h3 className="pt-3 pb-2 text-xl font-semibold text-center text-primary dark:text-white">
           Styling
         </h3>
-        <span className="block pt1 text-[16px] text-tertiary">Tailwind</span>
-        <span className="block pt1 text-[16px] text-tertiary">ScSS</span>
-        <span className="block pt1 text-[16px] text-tertiary">Bootstrap</span>
-        <span className="block pt1 text-[16px] text-tertiary">CSS</span>
-        <span className="block pt1 text-[16px] text-tertiary">
+        <span className="block pt-1 text-[16px] text-tertiary">Tailwind</span>
+        <span className="block pt-1 text-[16px] text-tertiary">ScSS</span>
+        <span className="block pt-1 text-[16px] text-tertiary">CSS</span>
+        <span className="block pt-1 text-[16px] text-tertiary">
           Styled Components
         </span>
+        <span className="block pt1 text-[16px] text-tertiary">Figma</span>
       </div>
       <div className="z-20 w-full mx-auto text-center transition duration-500 ease-in-out border rounded-lg cursor-pointer px-9 py-7 text-2xs text-syncWave lg:px-10 lg:py-8 sm:w-minlg:text-sm dark:text-white shadow-art active:shadow-art-active hover:shadow-art-hover dark:shadow-none dark:border-0 dark:bg-darkModeDetail hover:rotate-2">
         <LearnIcon />
-        <h3 className="my-3 text-xl font-semibold text-center text-primary dark:text-white">
+        <h3 className="pt-3 pb-2 text-xl font-semibold text-center text-primary dark:text-white">
           Learning
         </h3>
-        <span className="block pt1 text-[16px] text-tertiary"> CSS3</span>
-        <span className="block pt1 text-[16px] text-tertiary">Tailwind</span>
-        <span className="block pt1 text-[16px] text-tertiary">ScSS</span>
-        <span className="block pt1 text-[16px] text-tertiary">Bootstrap</span>
+        <span className="block pt-1 text-[16px] text-tertiary">TypeScript</span>
+        <span className="block pt-1 text-[16px] text-tertiary">Node.js</span>
+        <span className="block pt-1 text-[16px] text-tertiary">ScSS</span>
+        <span className="block pt-1 text-[16px] text-tertiary">Bootstrap</span>
         <span className="block pt-1 text-[16px] text-tertiary">
           Styled Components
         </span>
