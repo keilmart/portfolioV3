@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MoonStart, MoonMiddle, MoonEnd } from "../HomepageIcons/Index";
+import { MoonStart, MoonMiddle, MoonEnd } from "./HomepageIcons/Index";
 import Image from "next/image";
 
 import Hero from "./Hero";
@@ -30,12 +30,12 @@ const Homepage = ({ personalProjects, workProjects }) => {
     <>
       <FadeIn>
         <Hero />
-        <Image
+        {/* <Image
           src="/pictures/backdrop.svg"
           alt="Picture of a decorative vector"
           layout="fill"
           className="absolute right-0 top-[50px] -z-10 w-5/12"
-        />
+        /> */}
       </FadeIn>
 
       <FadeIn>

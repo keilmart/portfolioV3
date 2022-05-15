@@ -3,7 +3,7 @@ import Link from "next/link";
 const HomepageSocialList = () => {
   return (
     <div>
-      <section className="relative transition duration-500 ease-in-out bg-white rounded-lg px-9 py-7 text-2xs text-syncWave lg:px-10 lg:py-8 lg:text-sm dark:text-white dark:bg-darkModeDetail">
+      <section className="relative px-8 py-6 transition duration-500 ease-in-out bg-white rounded-lg text-2xs text-syncWave lg:px-10 lg:py-8 lg:text-sm dark:text-white dark:bg-darkModeDetail">
         <pre className="m-3 font-montserrat">
           1&nbsp;&nbsp;class <b>Person</b> {"{"}
         </pre>
@@ -26,7 +26,7 @@ const HomepageSocialList = () => {
           6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {"}"}
         </pre>
         <pre className="m-3 font-montserrat">7&nbsp;&nbsp;{"}"}</pre>
-        <div className="absolute z-30 p-3 rounded-lg shadow-art border bg-white transition duration-500 ease-in-out dark:bg-darkModeDetail dark:border-0 bottom-[-13%] left-[-20%]">
+        <div className="absolute z-30 p-3 rounded-lg shadow-art border bg-white transition duration-500 ease-in-out dark:bg-darkModeDetail dark:border-0 bottom-[-13%] sm:left-[-20%] left-[25%]">
           <a className="w-auto btn-primary primary-grad ">**Change this</a>
         </div>
       </section>

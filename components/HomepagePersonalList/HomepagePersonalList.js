@@ -19,7 +19,7 @@ const PersonalProjectList = ({ projects }) => {
   return (
     <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 md:gap-10">
       {projects.map((project) => (
-        <li className="pb-6 border-b-2" key={project.slug}>
+        <li className="pb-6 border-b-2 border-dotted" key={project.slug}>
           <Link
             slug={project.slug}
             href={{
