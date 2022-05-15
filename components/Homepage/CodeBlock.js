@@ -25,7 +25,9 @@ const HomepageSkillsList = () => {
         </pre>
         <pre className="m-2 sm:m-3 font-montserrat">7&nbsp;&nbsp;{"}"}</pre>
         <div className="absolute z-30 p-3 rounded-lg shadow-art border bg-white transition duration-500 ease-in-out dark:bg-darkModeDetail dark:border-0 bottom-[-13%] sm:left-[-20%] left-[25%]">
-          <a className="w-auto btn-primary primary-grad ">**Change this</a>
+          <a className="w-full sm:w-auto btn-primary primary-grad">
+            **Change this
+          </a>
         </div>
       </section>
     </div>

@@ -41,8 +41,11 @@ const HomepageSkillsList = () => {
   return (
     <section>
       <ul className="grid grid-cols-1 gap-6 mx-16 antialiased sm:grid-cols-3 sm:gap-10">
-        {cards.map((card) => (
-          <li className="z-20 w-full mx-auto text-center transition duration-500 ease-in-out border rounded-lg cursor-pointer px-9 py-7 text-2xs text-syncWave lg:px-10 lg:py-8 sm:w-minlg:text-sm dark:text-white shadow-art active:shadow-art-active hover:shadow-art-hover dark:shadow-none dark:border-0 dark:bg-darkModeDetail hover:rotate-2">
+        {cards.map((card, idx) => (
+          <li
+            key={idx}
+            className="z-20 w-full mx-auto text-center transition duration-500 ease-in-out border rounded-lg cursor-pointer px-9 py-7 text-2xs text-syncWave lg:px-10 lg:py-8 sm:w-minlg:text-sm dark:text-white shadow-art active:shadow-art-active hover:shadow-art-hover dark:shadow-none dark:border-0 dark:bg-darkModeDetail hover:rotate-2"
+          >
             <DevelopIcon />
             <h3 className="pt-3 pb-2 text-xl font-semibold text-center text-primary dark:text-white">
               {card.title}

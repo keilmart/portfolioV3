@@ -19,7 +19,7 @@ const Hero = () => {
         <span className="inline-block text-lg antialiased text-tertiary dark:text-white">
           FRONT END DEVELOPER &amp; DOG DAD
         </span>
-        <ul className="flex flex-row mt-3">
+        <ul className="flex flex-row pl-1 mt-3">
           <li className="pr-2 text-sm text-syncWave">
             <Link href="https://www.linkedin.com/in/keilmart/">
               <a>

@@ -79,7 +79,7 @@ const ProjectDetails = ({ projectData }) => {
           <p className="text-primary dark:text-white">{project.description}</p>
           <div className="my-8">
             <a
-              className="mt-2 mr-4 btn-primary primary-grad"
+              className="w-full mt-2 mr-4 sm:w-auto btn-primary primary-grad"
               href={`https://${project.url}`}
               target={"_blank"}
               rel={"noreferrer"}
@@ -88,7 +88,7 @@ const ProjectDetails = ({ projectData }) => {
             </a>
             {!!project.github ? (
               <a
-                className="mt-2 btn-primary primary-grad"
+                className="w-full mt-2 btn-primary primary-grad sm:w-auto"
                 href={`https://${project.github}`}
                 target={"_blank"}
                 rel={"noreferrer"}

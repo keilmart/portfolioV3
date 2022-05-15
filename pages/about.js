@@ -31,7 +31,7 @@ const About = ({ personalProjects }) => {
           About
         </h1>
         <a
-          className="w-full mt-6 btn-light sm:w-auto"
+          className="w-full mt-6 sm:w-auto btn-primary primary-grad"
           href={`https://github.com/keilmart/portfolioV3`}
           target={"_blank"}
           rel={"noreferrer"}
@@ -66,7 +66,7 @@ const About = ({ personalProjects }) => {
         <hr className="mb-12 border-t-2 border-dotted mt-14" />
         <h2 className="mt-12 text-lg font-semibold">View this sites Github </h2>
         <a
-          className="w-full mt-6 btn-light sm:w-auto"
+          className="w-full mt-6 btn-primary primary-grad sm:w-auto"
           href={`https://github.com/keilmart/portfolioV3`}
           target={"_blank"}
           rel={"noreferrer"}

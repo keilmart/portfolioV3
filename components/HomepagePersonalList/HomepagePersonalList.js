@@ -54,7 +54,9 @@ const PersonalProjectList = ({ projects }) => {
               pathname: `/projects/${project.slug}`,
             }}
           >
-            <a className="mt-2 btn-primary primary-grad">View Project</a>
+            <a className="w-full mt-2 btn-primary primary-grad sm:w-auto">
+              View Project
+            </a>
           </Link>
         </li>
       ))}
