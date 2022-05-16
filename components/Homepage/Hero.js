@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col items-center justify-evenly sm:justify-between mx-0 mb-[75px] h-[525px] sm:flex-row sm:mx-16 sm:mb-0 sm:h-[500px]">
+    <section className="flex flex-col items-center justify-evenly md:justify-between mx-0 mb-[75px] h-[525px] md:flex-row md:mx-16 md:mb-2 md:h-[500px]">
       <div>
         <span className="inline-block text-xl antialiased text-tertiary md:text-2xl">
           Hello, I&apos;m
@@ -21,7 +21,11 @@ const Hero = () => {
         </span>
         <ul className="flex flex-row pl-1 mt-3">
           <li className="pr-2 text-sm text-syncWave">
-            <Link href="https://www.linkedin.com/in/keilmart/">
+            <Link
+              href="https://www.linkedin.com/in/keilmart/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <a>
                 <LinkedIcon />
               </a>
@@ -29,7 +33,11 @@ const Hero = () => {
           </li>
 
           <li className="pl-2 text-sm text-syncWave">
-            <Link href="https://github.com/keilmart">
+            <Link
+              href="https://github.com/keilmart"
+              target="_blank"
+              rel="noreferrer"
+            >
               <a>
                 <GithubIcon />
               </a>

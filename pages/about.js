@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Layout from "../components/Layout/Layout";
 import { MoonStars } from "../components/Homepage/HomepageIcons/Index";
 
-const About = ({ personalProjects }) => {
+const About = () => {
   return (
     <Layout>
       <div className="relative">

@@ -9,25 +9,26 @@ const HomepageSkillsList = () => {
           2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; constructor() {"{"}
         </pre>
         <pre className="m-2 sm:m-3 font-montserrat">
-          3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.name = &quot;
-          <b>Keil Martin</b>&quot;;
+          4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.passion = [&quot;
+          <b className="uppercase">traveling</b>&quot;];
         </pre>
         <pre className="m-2 sm:m-3 font-montserrat">
-          4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.job = [&quot;
-          <b className="uppercase">front end dev</b>&quot;];
+          5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.location = &quot;
+          <b>Toronto, Canada</b>&quot;
         </pre>
         <pre className="m-2 sm:m-3 font-montserrat">
-          5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.location = [&quot;
-          <b>Toronto, Canada</b>&quot;]
+          3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.myDog = [&quot;
+          <b>Charles</b>&quot;];
         </pre>
         <pre className="m-2 sm:m-3 font-montserrat">
           6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {"}"}
         </pre>
         <pre className="m-2 sm:m-3 font-montserrat">7&nbsp;&nbsp;{"}"}</pre>
-        <div className="absolute z-30 p-3 rounded-lg shadow-art border bg-white transition duration-500 ease-in-out dark:bg-darkModeDetail dark:border-0 bottom-[-13%] sm:left-[-20%] left-[25%]">
-          <a className="w-full sm:w-auto btn-primary primary-grad">
-            **Change this
-          </a>
+        <div className="absolute z-20 p-3 text-white transition duration-500 ease-in-out bg-white border rounded-lg shadow-art dark:bg-darkModeDetail dark:border-none -bottom-9 sm:-left-20 left-1/4 ">
+          {/* bottom-[13%] sm:left-[-20%] left-[25%] */}
+          <div className="px-4 py-2 antialiased rounded-md primary-grad">
+            A little about me
+          </div>
         </div>
       </section>
     </div>

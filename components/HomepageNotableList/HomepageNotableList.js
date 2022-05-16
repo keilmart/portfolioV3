@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const PersonalProjectList = ({ projects }) => {
+const NotableProjectList = ({ projects }) => {
   // const {
   //   id,
   //   URL,
@@ -54,9 +54,7 @@ const PersonalProjectList = ({ projects }) => {
               pathname: `/projects/${project.slug}`,
             }}
           >
-            <a className="w-full mt-2 btn-primary primary-grad sm:w-auto">
-              View Project
-            </a>
+            <a className="w-auto mt-2 btn-primary primary-grad">View Project</a>
           </Link>
         </li>
       ))}
@@ -64,4 +62,4 @@ const PersonalProjectList = ({ projects }) => {
   );
 };
 
-export default PersonalProjectList;
+export default NotableProjectList;

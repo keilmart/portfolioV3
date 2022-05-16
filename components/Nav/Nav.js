@@ -10,10 +10,10 @@ const Nav = () => {
     return (
       <Link key={item.name} href={item.href}>
         <a
-          className={`text-sm py-1 hover:bg-gray-100 hover:border-b dark:text-white ${
+          className={`text-sm py-1 hover:bg-gray-100 hover:border-b dark:hover:bg-transparent dark:hover:text-syncWave ${
             item.isActive
-              ? "text-syncWave hover:text-syncWave  hover:border-syncWave"
-              : "text-secondary hover:text-primary hover:border-gray-700"
+              ? "text-syncWave hover:text-syncWave  hover:border-syncWave dark:text-syncWave dark:hover:text-syncWave"
+              : "text-secondary hover:text-primary hover:border-gray-700 dark:hover:border-white dark:text-white"
           }`}
         >
           {item.name}
@@ -48,7 +48,7 @@ const Nav = () => {
               <NavItem item={item} key={item.name} />
             ))}
           </div>
-          <DarkModeToggle className="ml-4 text-gray-800 sm:mx-4 w-7 h-7 dark:mb-0 mb-[3px]" />
+          <DarkModeToggle className="ml-4 text-gray-600 sm:mx-4 w-7 h-7 dark:mb-0 mb-[3px]" />
           <div className="hidden sm:block">
             <p className="block text-sm pointer-events-none dark:hidden text-syncWave">
               Light Mode

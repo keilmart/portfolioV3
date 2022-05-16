@@ -1,24 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const HomepageWorkList = ({ projects }) => {
-  // const {
-  //   id,
-  //   URL,
-  //   slug,
-  //   name,
-  //   link,
-  //   stack,
-  //   image,
-  //   company,
-  //   timestamp,
-  //   description,
-  // } = projects || {};
-
+const HomepageFeaturedList = ({ projects }) => {
   return (
-    // <ul>
-    <ul className="pb-11 md:pb-0">
-      {/* <ul className="pb-12 space-y-12"> */}
+    <ul className="mb-11 md:mb-0">
       {projects.map((project) => (
         <li
           className="flex flex-col items-center space-x-0 space-y-4 antialiased md:first:border-b-0 first:border-b-2 first:pb-6 last:pt-6 md:flex-row md:space-y-0 md:space-x-8 lg:space-x-12"
@@ -56,7 +41,7 @@ const HomepageWorkList = ({ projects }) => {
                 pathname: `/projects/${project.slug}`,
               }}
             >
-              <a className="w-auto w-full mt-3 btn-primary primary-grad sm:w-auto">
+              <a className="w-auto mt-3 btn-primary primary-grad">
                 View Project
               </a>
             </Link>
@@ -67,4 +52,4 @@ const HomepageWorkList = ({ projects }) => {
   );
 };
 
-export default HomepageWorkList;
+export default HomepageFeaturedList;

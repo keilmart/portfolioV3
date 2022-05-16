@@ -1,4 +1,4 @@
-const SectionHeader = ({ icon, title, subtitle }) => {
+const SectionHeader = ({ icon, title }) => {
   return (
     <header className="flex items-center mb-2">
       <div className="mr-4">{icon}</div>

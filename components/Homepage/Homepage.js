@@ -6,8 +6,8 @@ import Hero from "./Hero";
 import SectionHeader from "../SectionHeader/SectionHeader";
 
 import HomepageSkillsList from "../HomepageSkillsList/HomepageSkillsList";
-import HomepageWorkList from "../HomepageWorkList/HomepageWorkList";
-import HomepagePersonalList from "../HomepagePersonalList/HomepagePersonalList";
+import HomepageFeaturedList from "../HomepageFeaturedList/HomepageFeaturedList";
+import HomepageNotableList from "../HomepageNotableList/HomepageNotableList";
 
 const FadeIn = ({ children }) => {
   return (
@@ -25,7 +25,7 @@ const FadeIn = ({ children }) => {
   );
 };
 
-const Homepage = ({ personalProjects, workProjects }) => {
+const Homepage = ({ notableProjects, featuredProjects }) => {
   return (
     <>
       <FadeIn>
@@ -67,7 +67,7 @@ const Homepage = ({ personalProjects, workProjects }) => {
             }
           />
           <div className="pt-6 md:pt-11" />
-          <HomepageWorkList projects={workProjects} />
+          <HomepageFeaturedList projects={featuredProjects} />
         </section>
       </FadeIn>
 
@@ -83,7 +83,7 @@ const Homepage = ({ personalProjects, workProjects }) => {
             }
           />
           <div className="pt-6 md:pt-11" />
-          <HomepagePersonalList projects={personalProjects} />
+          <HomepageNotableList projects={notableProjects} />
         </section>
       </FadeIn>
     </>

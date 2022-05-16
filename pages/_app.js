@@ -22,6 +22,9 @@ import "../styles/globals.css";
 // 10. Add loaders to the images //
 // 11. Add Styling to scrollbar - rounded to match theme //
 // 12. Update github profile to match website //
+// 13. antialiased everything //
+// 14. Add in the footer details //
+// 15. Add in the about me page content //
 // Last. Go through every component and clean up //
 
 import Nav from "../components/Nav/Nav";

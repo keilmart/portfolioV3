@@ -4,12 +4,12 @@ import { collection, getDocs } from "firebase/firestore";
 import Homepage from "../components/Homepage/Homepage";
 import Layout from "../components/Layout/Layout";
 
-const Home = ({ personalProjects, workProjects }) => {
+const Home = ({ notableProjects, featuredProjects }) => {
   return (
     <Layout>
       <Homepage
-        workProjects={workProjects}
-        personalProjects={personalProjects}
+        featuredProjects={featuredProjects}
+        notableProjects={notableProjects}
       />
     </Layout>
   );
@@ -17,8 +17,8 @@ const Home = ({ personalProjects, workProjects }) => {
 
 export const getStaticProps = async () => {
   let fireResponse = [];
-  let personalProjects = [];
-  let workProjects = [];
+  let notableProjects = [];
+  let featuredProjects = [];
 
   try {
     const querySnapshot = await getDocs(collection(db, "firestoreProjects"));
@@ -45,10 +45,10 @@ export const getStaticProps = async () => {
     if (fireResponse.length > 0) {
       fireResponse.forEach((project) => {
         if (project.personal === true) {
-          personalProjects.push(project);
+          notableProjects.push(project);
         }
         if (project.personal === false) {
-          workProjects.push(project);
+          featuredProjects.push(project);
         } else {
           console.log("Project not found");
         }
@@ -69,8 +69,8 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      personalProjects,
-      workProjects,
+      notableProjects,
+      featuredProjects,
     },
   };
 };
