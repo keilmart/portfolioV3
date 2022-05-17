@@ -25,6 +25,7 @@ import "../styles/globals.css";
 // 13. antialiased everything //
 // 14. Add in the footer details //
 // 15. Add in the about me page content //
+// 16. xmlns="http://www.w3.org/2000/svg" - on every svg in file //
 // Last. Go through every component and clean up //
 
 import Nav from "../components/Nav/Nav";

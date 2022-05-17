@@ -27,46 +27,47 @@ const About = () => {
       </div>
       <div className="max-w-3xl mx-auto mt-4 mb-8 md:mb-20 md:mt-12 md:pt-16">
         <MoonStars />
-        <h1 className="mt-4 mb-8 text-4xl antialiased font-bold text-primary">
+        <h1 className="mt-4 mb-8 text-4xl antialiased font-bold text-primary dark:text-syncWave">
           About
         </h1>
-        <a
-          className="w-full mt-6 sm:w-auto btn-primary primary-grad"
-          href={`https://github.com/keilmart/portfolioV3`}
-          target={"_blank"}
-          rel={"noreferrer"}
-        >
-          View Sites Github
-        </a>
-        <h2 className="mb-4 text-lg font-semibold">Early Career Stuff</h2>
-        <p className="mb-4 text-xl antialiased leading-relaxed tracking-tight text-secondary">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius,
-          fugiat. Facere vitae magni non! Saepe ut cumque assumenda magni
-          deleniti qui ratione inventore voluptatem itaque tempore quam debitis,
-          ad iusto!
-        </p>
-        <p className="mb-4 text-xl antialiased leading-relaxed tracking-tight text-secondary">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius,
-          fugiat. Facere vitae magni non! Saepe ut cumque assumenda magni
-          deleniti qui ratione inventore voluptatem itaque tempore quam debitis,
-          ad iusto!
-        </p>
+        <h2 className="mb-4 text-lg antialiased font-semibold text-primary dark:text-tertiary">
+          Early Career Stuff
+        </h2>
+        <div className="text-xl antialiased leading-relaxed tracking-tight text-secondary dark:text-white">
+          <p className="mb-4">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius,
+            fugiat. Facere vitae magni non! Saepe ut cumque assumenda magni
+            deleniti qui ratione inventore voluptatem itaque tempore quam
+            debitis, ad iusto!
+          </p>
+          <p className="mb-4">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius,
+            fugiat. Facere vitae magni non! Saepe ut cumque assumenda magni
+            deleniti qui ratione inventore voluptatem itaque tempore quam
+            debitis, ad iusto!
+          </p>
+        </div>
 
         <hr className="mb-12 border-t-2 border-dotted mt-14" />
-        <h2 className="mt-12 mb-4 text-lg font-semibold">
+        <h2 className="mt-12 mb-4 text-lg font-semibold text-primary dark:text-tertiary">
           Where I&apos;ve Worked
         </h2>
-        <p className="text-xl antialiased leading-relaxed tracking-tight text-secondary">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius,
-          fugiat. Facere vitae magni non! Saepe ut cumque assumenda magni
-          deleniti qui ratione inventore voluptatem itaque tempore quam debitis,
-          ad iusto! Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Eius, fugiat. Facere vitae magni non! Saepe ut cumque assumenda magni
-        </p>
+        <div className="text-xl antialiased leading-relaxed tracking-tight text-secondary dark:text-white">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius,
+            fugiat. Facere vitae magni non! Saepe ut cumque assumenda magni
+            deleniti qui ratione inventore voluptatem itaque tempore quam
+            debitis, ad iusto! Lorem ipsum dolor, sit amet consectetur
+            adipisicing elit. Eius, fugiat. Facere vitae magni non! Saepe ut
+            cumque assumenda magni
+          </p>
+        </div>
         <hr className="mb-12 border-t-2 border-dotted mt-14" />
-        <h2 className="mt-12 text-lg font-semibold">View this sites Github </h2>
+        <h2 className="mt-12 text-lg font-semibold text-secondary dark:text-white">
+          View this sites Github{" "}
+        </h2>
         <a
-          className="w-full mt-6 btn-primary primary-grad sm:w-auto"
+          className="w-full mt-3 btn-primary primary-grad sm:w-auto"
           href={`https://github.com/keilmart/portfolioV3`}
           target={"_blank"}
           rel={"noreferrer"}

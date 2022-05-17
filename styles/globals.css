@@ -75,3 +75,39 @@ svg {
 .primary-grad {
   background: linear-gradient(134deg, #6a98f0 0%, #4961dc 99%);
 }
+
+/****************  React-slick case study page *****************/
+.slick-slide > div {
+  margin-left: 0;
+}
+
+.slick-initialized .slick-slide:nth-of-type(1) {
+  margin-left: 0;
+}
+
+.slick-track {
+  min-width: 6000px;
+  margin-left: auto;
+  transform: translate3d(-1380px, 0px, 0px);
+}
+
+.slick-prev:before {
+  cursor: not-allowed;
+  display: none;
+}
+
+.slick-next:before {
+  cursor: not-allowed;
+  content: "";
+  display: none;
+}
+
+.slick-slide {
+  max-width: 260px;
+  min-width: 260px;
+}
+
+.slick-initialized .slick-slide {
+  margin: 0 12px;
+}
+/****** React-slick case study page Ends ******/
