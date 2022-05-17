@@ -14,8 +14,8 @@ import {
 } from "./HomepageSkillsIcons/Index";
 
 const HomepageSkillsList = () => {
-  const [curIdx, setCurIdx] = useState(0);
   const slideRef = useRef();
+  const [curIdx, setCurIdx] = useState(0);
 
   const cards = [
     // 			 Develop Card
@@ -51,9 +51,9 @@ const HomepageSkillsList = () => {
   ];
 
   return (
-    <div>
-      <section className="hidden lg:block">
-        <ul className="grid grid-cols-1 gap-6 mx-12 antialiased sm:grid-cols-3 sm:gap-10">
+    <>
+      <div className="hidden lg:block">
+        <ul className="grid grid-cols-1 gap-6 mx-12 antialiased sm:grid-cols-3 sm:gap-12">
           {cards.map((card, idx) => (
             <li
               key={idx}
@@ -70,16 +70,17 @@ const HomepageSkillsList = () => {
                 )
               }`}
             > */}
-              {/* {`${
-              card.title === "Languages" ? (
-                <DevelopIcon />
-              ) : card.title === "Styling" ? (
-                <DesignIcon />
-              ) : (
-                <LearnIcon />
-              )
-            }`} */}
+              {`${
+                card.title === "Languages" ? (
+                  <DevelopIcon />
+                ) : card.title === "Styling" ? (
+                  <DesignIcon />
+                ) : (
+                  <LearnIcon />
+                )
+              }`}
               {/* </div> */}
+              {card.icon}
               <DevelopIcon />
               <h3 className="pt-3 pb-2 text-xl font-semibold text-center text-primary dark:text-white">
                 {card.title}
@@ -102,9 +103,9 @@ const HomepageSkillsList = () => {
             </li>
           ))}
         </ul>
-      </section>
+      </div>
 
-      <section className="block w-full mx-auto lg:hidden">
+      <div className="block w-full mx-auto lg:hidden">
         <Slider
           {...{
             speed: 500,
@@ -125,10 +126,7 @@ const HomepageSkillsList = () => {
           {cards?.map((card, idx) => {
             return (
               <div key={idx} className="overflow-hidden transition-all ">
-                <li
-                  key={idx}
-                  className="w-full mx-auto text-center transition duration-500 ease-in-out border rounded-lg px-9 py-7 text-2xs text-syncWave dark:text-white shadow-art dark:shadow-none dark:border-0 dark:bg-darkModeDetail"
-                >
+                <div className="w-full mx-auto text-center transition duration-500 ease-in-out border rounded-lg py-7 px-7 text-2xs text-syncWave dark:text-white shadow-art dark:shadow-none dark:border-0 dark:bg-darkModeDetail">
                   <DevelopIcon />
                   <h3 className="pt-3 pb-2 text-xl font-semibold text-center text-primary dark:text-white">
                     {card.title}
@@ -148,7 +146,7 @@ const HomepageSkillsList = () => {
                   <span className="block pt1 text-[16px] text-tertiary">
                     {card.skillFive}
                   </span>
-                </li>
+                </div>
               </div>
             );
           })}
@@ -195,8 +193,8 @@ const HomepageSkillsList = () => {
             ))}
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </>
   );
 };
 

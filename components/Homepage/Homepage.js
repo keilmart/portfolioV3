@@ -39,7 +39,7 @@ const Homepage = ({ notableProjects, featuredProjects }) => {
       </FadeIn>
 
       <FadeIn>
-        <section className="mx-auto mb-11 md:mb-20">
+        <section className="mx-auto mb-11 md:mb-16 lg:mb-20">
           <SectionHeader
             title="My Skills"
             subtitle="Personal branding moon imagery"
@@ -56,7 +56,7 @@ const Homepage = ({ notableProjects, featuredProjects }) => {
       </FadeIn>
 
       <FadeIn>
-        <section className="mx-auto mb-2 md:mb-20">
+        <section className="mx-auto mb-11 md:mb-20">
           <SectionHeader
             title="Featured Projects"
             subtitle="Personal branding moon imagery"

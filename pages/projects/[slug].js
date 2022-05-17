@@ -30,7 +30,7 @@ const ProjectDetails = ({ projectData }) => {
         <main className="mt-4 sm:mt-10">
           <div className="mb-8">
             <Link href="/#work">
-              <a className="border-b border-gray-700 text-secondary hover:bg-gray-100">
+              <a className="border-b border-gray-700 text-tertiary hover:bg-gray-100">
                 &larr; Back to Projects
               </a>
             </Link>

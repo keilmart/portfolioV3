@@ -40,8 +40,8 @@ export function LearnIcon() {
 export function LeftArrow() {
   return (
     <svg
-      width="1.7rem"
-      height="1.7rem"
+      width="1.6rem"
+      height="1.6rem"
       viewBox="0 0 48 48"
       fill="#F1F1F1"
       xmlns="http://www.w3.org/2000/svg"
@@ -61,8 +61,8 @@ export function LeftArrow() {
 export function RightArrow() {
   return (
     <svg
-      width="1.7rem"
-      height="1.7rem"
+      width="1.6rem"
+      height="1.6rem"
       viewBox="0 0 48 48"
       fill="#F1F1F1"
       xmlns="http://www.w3.org/2000/svg"

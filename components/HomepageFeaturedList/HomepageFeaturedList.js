@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const HomepageFeaturedList = ({ projects }) => {
   return (
-    <ul className="mb-11 md:mb-0">
+    <ul>
       {projects.map((project) => (
         <li
           className="flex flex-col items-center space-x-0 space-y-4 antialiased md:first:border-b-0 first:border-b-2 first:pb-6 last:pt-6 md:flex-row md:space-y-0 md:space-x-8 lg:space-x-12"
