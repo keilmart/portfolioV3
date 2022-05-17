@@ -103,11 +103,11 @@ svg {
 }
 
 .slick-slide {
-  max-width: 260px;
-  min-width: 260px;
+  max-width: 230px;
+  min-width: 230px;
 }
 
-.slick-initialized .slick-slide {
+/* .slick-initialized .slick-slide {
   margin: 0 12px;
-}
+} */
 /****** React-slick case study page Ends ******/

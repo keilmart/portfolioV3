@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import Icon from "./HomepageSkillsIcons/Icon";
 import {
   DesignIcon,
   DevelopIcon,
@@ -20,7 +21,6 @@ const HomepageSkillsList = () => {
   const cards = [
     // 			 Develop Card
     {
-      icon: DevelopIcon,
       title: "Developing",
       skillOne: "Next.js",
       skillTwo: "Gatsby",
@@ -30,7 +30,6 @@ const HomepageSkillsList = () => {
     },
     // 			 Style Card
     {
-      icon: DesignIcon,
       title: "Styling",
       skillOne: "Tailwind",
       skillTwo: "ScSS / SaSS",
@@ -40,7 +39,6 @@ const HomepageSkillsList = () => {
     },
     // 			 Learning Card
     {
-      icon: LearnIcon,
       title: "Learning",
       skillOne: "GraphQL",
       skillTwo: "TypeScript",
@@ -52,36 +50,20 @@ const HomepageSkillsList = () => {
 
   return (
     <>
-      <div className="hidden lg:block">
+      <div className="hidden md:block">
         <ul className="grid grid-cols-1 gap-6 mx-12 antialiased sm:grid-cols-3 sm:gap-12">
           {cards.map((card, idx) => (
             <li
               key={idx}
               className="w-full mx-auto text-center transition duration-500 ease-in-out border rounded-lg cursor-pointer px-9 py-7 text-2xs text-syncWave lg:px-10 lg:py-8 dark:text-white shadow-art active:shadow-art-active hover:shadow-art-hover dark:shadow-none dark:border-0 dark:bg-darkModeDetail hover:rotate-2"
             >
-              {/* <div
-              icon={`${
-                card.title === "Languages" ? (
-                  <DevelopIcon />
-                ) : card.title === "Styling" ? (
-                  <DesignIcon />
-                ) : (
-                  <LearnIcon />
-                )
-              }`}
-            > */}
-              {`${
-                card.title === "Languages" ? (
-                  <DevelopIcon />
-                ) : card.title === "Styling" ? (
-                  <DesignIcon />
-                ) : (
-                  <LearnIcon />
-                )
-              }`}
-              {/* </div> */}
-              {card.icon}
-              <DevelopIcon />
+              {card.title === "Developing" ? (
+                <DevelopIcon />
+              ) : card.title === "Styling" ? (
+                <DesignIcon />
+              ) : (
+                <LearnIcon />
+              )}
               <h3 className="pt-3 pb-2 text-xl font-semibold text-center text-primary dark:text-white">
                 {card.title}
               </h3>
@@ -104,8 +86,7 @@ const HomepageSkillsList = () => {
           ))}
         </ul>
       </div>
-
-      <div className="block w-full mx-auto lg:hidden">
+      <div className="block w-full mx-auto md:hidden">
         <Slider
           {...{
             speed: 500,
@@ -126,8 +107,14 @@ const HomepageSkillsList = () => {
           {cards?.map((card, idx) => {
             return (
               <div key={idx} className="overflow-hidden transition-all ">
-                <div className="w-full mx-auto text-center transition duration-500 ease-in-out border rounded-lg py-7 px-7 text-2xs text-syncWave dark:text-white shadow-art dark:shadow-none dark:border-0 dark:bg-darkModeDetail">
-                  <DevelopIcon />
+                <div className="w-11/12 text-center transition duration-500 ease-in-out border rounded-lg py-7 px-7 text-2xs text-syncWave dark:text-white shadow-art dark:shadow-none dark:border-0 dark:bg-darkModeDetail">
+                  {card.title === "Developing" ? (
+                    <DevelopIcon />
+                  ) : card.title === "Styling" ? (
+                    <DesignIcon />
+                  ) : (
+                    <LearnIcon />
+                  )}
                   <h3 className="pt-3 pb-2 text-xl font-semibold text-center text-primary dark:text-white">
                     {card.title}
                   </h3>

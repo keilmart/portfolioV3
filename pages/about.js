@@ -11,22 +11,24 @@ const About = () => {
       <div className="relative">
         <div className="absolute top-0 right-44">
           <motion.div
-            className="hidden overflow-hidden rounded-md md:block md:w-40 md:h-40"
+            className="hidden overflow-hidden rounded-md md:block md:w-40 md:h-48"
             initial={{ rotate: 10 }}
             animate={{ rotate: 0 }}
             transition={{ type: "spring", bounce: 0.25, mass: 2 }}
           >
             <Image
-              src="/pictures/self.jpg"
-              alt="Personal photo of Keil Martin"
+              src="/pictures/charlie2.png"
+              alt="Personal photo of Keil Martin and Charlie"
               height="170"
               width="170"
             />
+            <p className="text-xs text-syncWave">Charlie + Balm Beach</p>
           </motion.div>
         </div>
       </div>
       <div className="max-w-3xl mx-auto mt-4 mb-8 md:mb-20 md:mt-12 md:pt-16">
-        <MoonStars />
+        {/* <MoonStars /> */}
+        <div className="pb-8"></div>
         <h1 className="mt-4 mb-8 text-4xl antialiased font-bold text-primary dark:text-syncWave">
           About
         </h1>
