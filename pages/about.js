@@ -19,6 +19,7 @@ const About = () => {
             <a
               href="https://www.instagram.com/charlieistheshiht/"
               target="_blank"
+              rel="noreferrer"
             >
               <Image
                 src="/pictures/charlie2.png"

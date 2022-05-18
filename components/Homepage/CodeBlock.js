@@ -13,6 +13,7 @@ const HomepageSkillsList = () => {
         <a
           href="https://www.google.com/search?q=da+nang+pictures"
           target="_blank"
+          rel="noreferrer"
         >
           <pre className="m-2 sm:m-3 font-montserrat">
             4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.passion = [&quot;
@@ -22,13 +23,18 @@ const HomepageSkillsList = () => {
         <a
           href="https://www.google.com/search?q=toronto+pictures"
           target="_blank"
+          rel="noreferrer"
         >
           <pre className="m-2 sm:m-3 font-montserrat">
             5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.location = &quot;
             <b>Toronto, Canada</b>&quot;
           </pre>
         </a>
-        <a href="https://www.instagram.com/charlieistheshiht/" target="_blank">
+        <a
+          href="https://www.instagram.com/charlieistheshiht/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <pre className="m-2 sm:m-3 font-montserrat">
             3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.myDog = [&quot;
             <b>Charles</b>&quot;];
