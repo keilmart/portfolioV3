@@ -30,10 +30,10 @@ const Nav = () => {
 
   return (
     <nav className="sticky top-0 z-30 bg-white border-b border-primary dark:bg-darkMode">
-      <div className="container flex items-center justify-between w-full max-w-screen-lg px-4 pt-2 pb-2 mx-auto lg:px-0 md:flex-row">
+      <div className="container flex items-center justify-between w-full max-w-screen-lg px-4 py-2 mx-auto lg:px-0 md:flex-row">
         <Link href="/">
-          <a className="flex flex-row items-center justify-center font-sans text-sm antialiased font-semibold leading-3 tracking-wide text-primary dark:text-white">
-            <MoonStartClone />
+          <a className="flex flex-row items-center justify-center text-sm antialiased font-semibold leading-3 tracking-wide text-primary dark:text-white">
+            <MoonStartClone xmlns="http://www.w3.org/2000/svg" />
             <div className="pl-1">
               <span>
                 Keil <br />
@@ -48,7 +48,10 @@ const Nav = () => {
               <NavItem item={item} key={item.name} />
             ))}
           </div>
-          <DarkModeToggle className="ml-4 text-gray-600 sm:mx-4 w-7 h-7 dark:mb-0 mb-[3px]" />
+          <DarkModeToggle
+            className="ml-4 text-gray-600 sm:mx-4 w-7 h-7 dark:mb-0"
+            xmlns="http://www.w3.org/2000/svg"
+          />
           <div className="hidden sm:block">
             <p className="block text-sm pointer-events-none dark:hidden text-syncWave">
               Light Mode

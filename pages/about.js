@@ -27,7 +27,7 @@ const About = () => {
         </div>
       </div>
       <div className="max-w-3xl mx-auto mt-4 mb-8 md:mb-20 md:mt-12 md:pt-16">
-        {/* <MoonStars /> */}
+        {/* <MoonStars xmlns="http://www.w3.org/2000/svg" /> */}
         <div className="pb-8"></div>
         <h1 className="mt-4 mb-8 text-4xl antialiased font-bold text-primary dark:text-syncWave">
           About

@@ -2,29 +2,30 @@ import Image from "next/image";
 import Link from "next/link";
 
 import CodeBlock from "./CodeBlock";
-import { GithubIcon, LinkedIcon, EmailIcon } from "./HeroIcons/Index";
+import { GithubIcon, LinkedIcon } from "./HeroIcons/Index";
 
 import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col items-center justify-evenly md:justify-between mx-0 mb-[75px] h-[525px] md:flex-row md:mx-12 md:mb-2 md:h-[500px]">
+    <section className="flex flex-col items-center mx-0 mb-20 justify-evenly md:justify-between h-104 H- md:flex-row md:mx-12 md:mb-2 md:h-100">
       <div>
-        <span className="inline-block text-xl antialiased text-tertiary md:text-2xl">
+        <span className="inline-block text-xl antialiased text-tertiary sm:text-2xl">
           Hello, I&apos;m
         </span>
-        <h1 className="text-4xl antialiased font-bold tracking-tight lg:leading-titles md:text-[56px] text-primary dark:text-syncWave">
+        <h1 className="text-4xl antialiased font-bold tracking-tight leading-titles sm:text-6xl text-primary dark:text-syncWave">
           Keil Martin
         </h1>
-        <span className="inline-block text-lg antialiased text-tertiary dark:text-white">
+        <span className="inline-block antialiased text-md sm:text-lg text-tertiary dark:text-white">
           FRONT END DEVELOPER &amp; DOG DAD
         </span>
-        <ul className="flex flex-row pl-1 mt-3">
-          <li className="pr-2 text-sm text-syncWave">
+        <ul className="flex flex-row pl-1 mt-2 text-sm text-md text-syncWave sm:mt-3">
+          <li className="pr-3 sm:pr-4">
             <Link
               href="https://www.linkedin.com/in/keilmart/"
               target="_blank"
               rel="noreferrer"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <a>
                 <LinkedIcon />
@@ -32,11 +33,12 @@ const Hero = () => {
             </Link>
           </li>
 
-          <li className="pl-2 text-sm text-syncWave">
+          <li>
             <Link
               href="https://github.com/keilmart"
               target="_blank"
               rel="noreferrer"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <a>
                 <GithubIcon />
@@ -45,6 +47,7 @@ const Hero = () => {
           </li>
         </ul>
       </div>
+
       <div>
         <motion.div
           alt="Code block describing Keil Martin"

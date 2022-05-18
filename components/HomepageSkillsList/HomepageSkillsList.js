@@ -5,7 +5,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import Icon from "./HomepageSkillsIcons/Icon";
 import {
   DesignIcon,
   DevelopIcon,
@@ -58,28 +57,28 @@ const HomepageSkillsList = () => {
               className="w-full mx-auto text-center transition duration-500 ease-in-out border rounded-lg cursor-pointer px-9 py-7 text-2xs text-syncWave lg:px-10 lg:py-8 dark:text-white shadow-art active:shadow-art-active hover:shadow-art-hover dark:shadow-none dark:border-0 dark:bg-darkModeDetail hover:rotate-2"
             >
               {card.title === "Developing" ? (
-                <DevelopIcon />
+                <DevelopIcon xmlns="http://www.w3.org/2000/svg" />
               ) : card.title === "Styling" ? (
-                <DesignIcon />
+                <DesignIcon xmlns="http://www.w3.org/2000/svg" />
               ) : (
-                <LearnIcon />
+                <LearnIcon xmlns="http://www.w3.org/2000/svg" />
               )}
               <h3 className="pt-3 pb-2 text-xl font-semibold text-center text-primary dark:text-white">
                 {card.title}
               </h3>
-              <span className="block pt1 text-[16px] text-tertiary">
+              <span className="block text-base text-tertiary">
                 {card.skillOne}
               </span>
-              <span className="block text-[16px] text-tertiary">
+              <span className="block text-base text-tertiary">
                 {card.skillTwo}
               </span>
-              <span className="block  text-[16px] text-tertiary">
+              <span className="block text-base text-tertiary">
                 {card.skillThree}
               </span>
-              <span className="block pt1 text-[16px] text-tertiary">
+              <span className="block text-base text-tertiary">
                 {card.skillFour}
               </span>
-              <span className="block pt1 text-[16px] text-tertiary">
+              <span className="block text-base text-tertiary">
                 {card.skillFive}
               </span>
             </li>
@@ -118,19 +117,19 @@ const HomepageSkillsList = () => {
                   <h3 className="pt-3 pb-2 text-xl font-semibold text-center text-primary dark:text-white">
                     {card.title}
                   </h3>
-                  <span className="block pt1 text-[16px] text-tertiary">
+                  <span className="block text-base text-tertiary">
                     {card.skillOne}
                   </span>
-                  <span className="block text-[16px] text-tertiary">
+                  <span className="block text-base text-tertiary">
                     {card.skillTwo}
                   </span>
-                  <span className="block  text-[16px] text-tertiary">
+                  <span className="block text-base text-tertiary">
                     {card.skillThree}
                   </span>
-                  <span className="block pt1 text-[16px] text-tertiary">
+                  <span className="block text-base text-tertiary">
                     {card.skillFour}
                   </span>
-                  <span className="block pt1 text-[16px] text-tertiary">
+                  <span className="block text-base text-tertiary">
                     {card.skillFive}
                   </span>
                 </div>

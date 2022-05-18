@@ -45,7 +45,7 @@ const Homepage = ({ notableProjects, featuredProjects }) => {
             subtitle="Personal branding moon imagery"
             icon={
               <div className="transition duration-1000 ease-in-out hover:scale-125 hover:rotate-45">
-                <MoonStart />
+                <MoonStart xmlns="http://www.w3.org/2000/svg" />
               </div>
             }
           />
@@ -62,7 +62,7 @@ const Homepage = ({ notableProjects, featuredProjects }) => {
             subtitle="Personal branding moon imagery"
             icon={
               <div className="transition duration-1000 ease-in-out hover:scale-125 hover:rotate-90">
-                <MoonMiddle />
+                <MoonMiddle xmlns="http://www.w3.org/2000/svg" />
               </div>
             }
           />
@@ -78,7 +78,7 @@ const Homepage = ({ notableProjects, featuredProjects }) => {
             subtitle="Personal branding moon imagery"
             icon={
               <div className="transition duration-1000 ease-in-out hover:scale-125 hover:rotate-180">
-                <MoonEnd />
+                <MoonEnd xmlns="http://www.w3.org/2000/svg" />
               </div>
             }
           />

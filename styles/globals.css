@@ -1,9 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto&display=swap");
 
-/* @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@500;600;700;800&display=swap');
-font-family: 'Merriweather Sans', sans-serif; */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,37 +21,19 @@ font-family: 'Merriweather Sans', sans-serif; */
   .border-primary {
     @apply border-gray-200;
   }
-
-  /* .scrollbar::-webkit-scrollbar {
-    width: 20px;
-    height: 20px;
-  }
-
-  .scrollbar::-webkit-scrollbar-track {
-    border-radius: 100vh;
-    background: #f7f4ed;
-  }
-
-  .scrollbar::-webkit-scrollbar-thumb {
-    background: #e0cbcb;
-    border-radius: 100vh;
-    border: 3px solid #6d83f2;
-  }
-
-  .scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #c0a0b9;
-  } */
 }
 
 @layer components {
-  /* .btn {
-    @apply inline-block px-4 py-2 text-sm text-center text-white transition duration-200 ease-in-out bg-gray-900 border border-gray-700 rounded-md shadow-sm active:bg-gray-600 hover:shadow-lg focus:ring-4 focus:ring-gray-300 text-opacity-95 hover:text-opacity-100;
-  } */
   .btn-primary {
     @apply inline-block px-4 py-2 text-sm antialiased font-semibold text-center text-white transition duration-300 ease-in-out rounded-md shadow-sm focus:ring-2 text-opacity-95 hover:scale-105 hover:shadow-lg;
   }
 }
 
+.primary-grad {
+  background: linear-gradient(134deg, #6a98f0 0%, #4961dc 99%);
+}
+
+/****  SVG's ****/
 svg {
   display: inline;
 }
@@ -74,20 +53,9 @@ svg {
   stroke: #6d83f2;
   stroke-width: 1;
 }
+/****  SVG's ****/
 
-.primary-grad {
-  background: linear-gradient(134deg, #6a98f0 0%, #4961dc 99%);
-}
-
-/****************  React-slick case study page *****************/
-.slick-slide > div {
-  margin-left: 0;
-}
-
-.slick-initialized .slick-slide:nth-of-type(1) {
-  margin-left: 0;
-}
-
+/****  React-slick Homepage ****/
 .slick-track {
   min-width: 6000px;
   margin-left: auto;
@@ -96,6 +64,7 @@ svg {
 
 .slick-prev:before {
   cursor: not-allowed;
+  content: "";
   display: none;
 }
 
@@ -109,8 +78,4 @@ svg {
   max-width: 236px;
   min-width: 236px;
 }
-
-/* .slick-initialized .slick-slide {
-  margin: 0 12px;
-} */
-/****** React-slick case study page Ends ******/
+/**** React-slick case Homepage ****/
