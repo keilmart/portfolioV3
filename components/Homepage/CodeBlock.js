@@ -2,7 +2,11 @@ const HomepageSkillsList = () => {
   return (
     <div>
       <section className="relative px-6 py-4 antialiased transition duration-500 ease-in-out bg-white rounded-lg text-2xs text-syncWave lg:px-10 lg:py-8 lg:text-sm dark:text-white dark:bg-darkModeDetail">
-        <a href="https://www.linkedin.com/in/keilmart/" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/keilmart/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <pre className="m-2 sm:m-3 font-montserrat">
             1&nbsp;&nbsp;class <b>Person</b> {"{"}
           </pre>
