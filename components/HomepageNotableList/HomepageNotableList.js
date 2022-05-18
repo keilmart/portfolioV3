@@ -20,7 +20,7 @@ const NotableProjectList = ({ projects }) => {
     <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 md:gap-10">
       {projects.map((project) => (
         <li
-          className="pb-6 antialiased border-b-2 border-dotted"
+          className="pb-6 antialiased border-b-2 border-dotted dark:border-gray-400"
           key={project.slug}
         >
           <Link

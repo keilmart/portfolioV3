@@ -43,12 +43,12 @@ export function LeftArrow() {
       width="1.6rem"
       height="1.6rem"
       viewBox="0 0 48 48"
-      fill="#F1F1F1"
+      fill="#f3f4f6"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
         d="M0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24Z"
-        fill="#F1F1F1"
+        fill="#f3f4f6"
       />
       <path
         d="M19.656 23.9995L29.556 33.8995L26.728 36.7275L14 23.9995L26.728 11.2715L29.556 14.0995L19.656 23.9995Z"
@@ -64,12 +64,12 @@ export function RightArrow() {
       width="1.6rem"
       height="1.6rem"
       viewBox="0 0 48 48"
-      fill="#F1F1F1"
+      fill="#f3f4f6"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
         d="M0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24Z"
-        fill="#F1F1F1"
+        fill="#f3f4f6"
       />
       <path
         d="M28.3453 23.9995L18.4453 14.0995L21.2733 11.2715L34.0013 23.9995L21.2733 36.7275L18.4453 33.8995L28.3453 23.9995Z"

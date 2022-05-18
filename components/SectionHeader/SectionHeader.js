@@ -5,7 +5,7 @@ const SectionHeader = ({ icon, title }) => {
       <h2 className="text-3xl antialiased font-bold mr-7 text-primary dark:text-white">
         {title}
       </h2>
-      <hr className="flex-grow border-t-0 border-b-2 border-dotted" />
+      <hr className="flex-grow border-t-0 border-b-2 border-dotted dark:border-gray-400" />
     </header>
   );
 };

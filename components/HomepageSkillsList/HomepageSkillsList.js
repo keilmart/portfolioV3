@@ -21,29 +21,17 @@ const HomepageSkillsList = () => {
     // 			 Develop Card
     {
       title: "Developing",
-      skillOne: "Next.js",
-      skillTwo: "Gatsby",
-      skillThree: "React",
-      skillFour: "JavaScript",
-      skillFive: "jQuery",
+      skillArray: ["Next.js", "Gatsby", "React", "JavaScript", "jQuery"],
     },
     // 			 Style Card
     {
       title: "Styling",
-      skillOne: "Tailwind",
-      skillTwo: "ScSS / SaSS",
-      skillThree: "CSS",
-      skillFour: "Bootstrap",
-      skillFive: "Figma",
+      skillArray: ["Tailwind", "ScSS / SaSS", "CSS", "Bootstrap", "Figma"],
     },
     // 			 Learning Card
     {
       title: "Learning",
-      skillOne: "GraphQL",
-      skillTwo: "TypeScript",
-      skillThree: "Node.js",
-      skillFour: "Express",
-      skillFive: "MongoDB",
+      skillArray: ["GraphQL", "TypeScript", "Node.js", "Express", "MongoDB"],
     },
   ];
 
@@ -66,21 +54,15 @@ const HomepageSkillsList = () => {
               <h3 className="pt-3 pb-2 text-xl font-semibold text-center text-primary dark:text-white">
                 {card.title}
               </h3>
-              <span className="block text-base text-tertiary">
-                {card.skillOne}
-              </span>
-              <span className="block text-base text-tertiary">
-                {card.skillTwo}
-              </span>
-              <span className="block text-base text-tertiary">
-                {card.skillThree}
-              </span>
-              <span className="block text-base text-tertiary">
-                {card.skillFour}
-              </span>
-              <span className="block text-base text-tertiary">
-                {card.skillFive}
-              </span>
+              <ul>
+                {card.skillArray.map((cardSkill, idx) => (
+                  <li key={card.idx}>
+                    <span className="block text-base text-tertiary">
+                      {cardSkill}
+                    </span>
+                  </li>
+                ))}
+              </ul>
             </li>
           ))}
         </ul>
@@ -117,21 +99,15 @@ const HomepageSkillsList = () => {
                   <h3 className="pt-3 pb-2 text-xl font-semibold text-center text-primary dark:text-white">
                     {card.title}
                   </h3>
-                  <span className="block text-base text-tertiary">
-                    {card.skillOne}
-                  </span>
-                  <span className="block text-base text-tertiary">
-                    {card.skillTwo}
-                  </span>
-                  <span className="block text-base text-tertiary">
-                    {card.skillThree}
-                  </span>
-                  <span className="block text-base text-tertiary">
-                    {card.skillFour}
-                  </span>
-                  <span className="block text-base text-tertiary">
-                    {card.skillFive}
-                  </span>
+                  <ul>
+                    {card.skillArray.map((cardSkill) => (
+                      <li key={card.idx}>
+                        <span className="block text-base text-tertiary">
+                          {cardSkill}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             );
@@ -162,18 +138,17 @@ const HomepageSkillsList = () => {
           </button>
 
           <div className="flex justify-between flex-1 h-1 ml-5 bg-gray-200 rounded">
-            {/* <div className="justify-between flex-1 hidden h-1 ml-5 bg-gray-200 rounded md:flex"> */}
-            {cards.map((card, i) => (
+            {cards.map((card, idx) => (
               <button
-                key={i}
+                key={idx}
                 className={`block w-full h-full ${
-                  curIdx == i && "bg-syncWave rounded"
-                } ${i == 0 && "rounded-l-5xl"} ${
-                  i == cards.length - 1 && "rounded-r-5xl"
+                  curIdx == idx && "bg-syncWave rounded"
+                } ${idx == 0 && "rounded-l-5xl"} ${
+                  idx == cards.length - 1 && "rounded-r-5xl"
                 }`}
                 onClick={() => {
-                  setCurIdx(i);
-                  slideRef.current.slickGoTo(i);
+                  setCurIdx(idx);
+                  slideRef.current.slickGoTo(idx);
                 }}
               ></button>
             ))}

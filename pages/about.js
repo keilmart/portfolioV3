@@ -50,7 +50,7 @@ const About = () => {
           </p>
         </div>
 
-        <hr className="mb-12 border-t-2 border-dotted mt-14" />
+        <hr className="mb-12 border-t-2 border-dotted mt-14 dark:border-gray-400" />
         <h2 className="mt-12 mb-4 text-lg font-semibold text-primary dark:text-tertiary">
           Where I&apos;ve Worked
         </h2>
@@ -64,7 +64,7 @@ const About = () => {
             cumque assumenda magni
           </p>
         </div>
-        <hr className="mb-12 border-t-2 border-dotted mt-14" />
+        <hr className="mb-12 border-t-2 border-dotted mt-14 dark:border-gray-400" />
         <h2 className="mt-12 text-lg font-semibold text-secondary dark:text-white">
           View this sites Github{" "}
         </h2>

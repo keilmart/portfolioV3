@@ -53,7 +53,7 @@ const ProjectDetails = ({ projectData }) => {
             </div>
           </div>
           <div className="mt-3"></div>
-          <hr className="my-8 border-t-2 border-b-0 border-dotted border-primary" />
+          <hr className="my-8 border-t-2 border-b-0 border-dotted border-primary dark:border-gray-400" />
           <a
             className="relative inline-block w-full px-4 pt-4 overflow-hidden transition duration-500 ease-in-out bg-gray-100 rounded-lg sm:px-10 sm:pt-10 h-min hover:shadow-lg hover:scale-105 dark:bg-darkModeDetail"
             href={`https://${project.url}`}
@@ -72,7 +72,7 @@ const ProjectDetails = ({ projectData }) => {
               />
             </div>
           </a>
-          <hr className="my-6 border-t-2 border-b-0 border-dotted border-primary" />
+          <hr className="my-6 border-t-2 border-b-0 border-dotted border-primary dark:border-gray-400" />
           <h2 className="mb-4 text-3xl font-semibold text-primary dark:text-syncWave">
             Summary
           </h2>
