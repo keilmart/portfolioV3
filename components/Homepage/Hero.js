@@ -21,25 +21,17 @@ const Hero = () => {
         </span>
         <ul className="flex flex-row pt-1 pl-1 text-sm text-md text-syncWave sm:pt-2">
           <li className="pr-3 sm:pr-4">
-            <Link
-              href="https://www.linkedin.com/in/keilmart/"
-              rel="noreferrer"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <a target="_blank">
-                <LinkedIcon />
+            <Link href="https://www.linkedin.com/in/keilmart/">
+              <a target="_blank" rel="noreferrer">
+                <LinkedIcon xmlns="http://www.w3.org/2000/svg" />
               </a>
             </Link>
           </li>
 
           <li>
-            <Link
-              href="https://github.com/keilmart"
-              rel="noreferrer"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <a target="_blank">
-                <GithubIcon />
+            <Link href="https://github.com/keilmart">
+              <a target="_blank" rel="noreferrer">
+                <GithubIcon xmlns="http://www.w3.org/2000/svg" />
               </a>
             </Link>
           </li>
