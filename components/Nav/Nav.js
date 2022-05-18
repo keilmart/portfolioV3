@@ -1,9 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
 import { useRouter } from "next/router";
 
 import { DarkModeToggle } from "tailwind-darkmode-toggle";
-import { MoonStartClone } from "../../components/Homepage/HomepageIcons/Index";
+import { WorldIcon } from "./NavIcons/Index";
 
 const Nav = () => {
   const NavItem = ({ item }) => {
@@ -31,17 +30,17 @@ const Nav = () => {
   return (
     <nav className="sticky top-0 z-30 bg-white border-b border-primary dark:bg-darkMode">
       <div className="container flex items-center justify-between w-full max-w-screen-lg px-4 py-2 mx-auto lg:px-0 md:flex-row">
-        <Link href="/">
-          <a className="flex flex-row items-center justify-center text-sm antialiased font-semibold leading-3 tracking-wide text-primary dark:text-white">
-            <MoonStartClone xmlns="http://www.w3.org/2000/svg" />
-            <div className="pl-1">
-              <span>
-                Keil <br />
-                Martin
-              </span>
-            </div>
-          </a>
-        </Link>
+        <div className="flex flex-row items-center justify-center text-sm antialiased font-semibold leading-3 tracking-wide text-primary dark:text-white">
+          <div className="transition duration-1000 ease-in-out hover:rotate-180">
+            <WorldIcon xmlns="http://www.w3.org/2000/svg" />
+          </div>
+          <div className="pl-[.35rem] pt-[.1rem]">
+            <span>
+              Keil <br />
+              Martin
+            </span>
+          </div>
+        </div>
         <div className="flex items-center">
           <div className="space-x-5">
             {navigation.map((item) => (
@@ -49,7 +48,7 @@ const Nav = () => {
             ))}
           </div>
           <DarkModeToggle
-            className="ml-4 text-gray-600 sm:mx-4 w-7 h-7 dark:mb-0"
+            className="ml-4 text-gray-600 sm:mx-4 w-7 h-7 mb-[2px] dark:mb-0"
             xmlns="http://www.w3.org/2000/svg"
           />
           <div className="hidden sm:block">

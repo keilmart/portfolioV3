@@ -18,6 +18,7 @@ module.exports = {
       height: {
         100: "31.25rem",
         104: "32.75rem",
+        404: "85vh",
       },
       colors: {
         syncWave: "#6D83F2",

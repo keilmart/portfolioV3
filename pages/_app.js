@@ -11,7 +11,6 @@ import "../styles/globals.css";
 // 9. Go through and comment all logic code //
 // Intergrate SEO //
 // customs scroll bar //
-// Last. Go through every component and clean up //
 
 import Nav from "../components/Nav/Nav";
 import Footer from "../components/Footer/Footer";

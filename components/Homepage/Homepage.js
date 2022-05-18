@@ -44,9 +44,9 @@ const Homepage = ({ notableProjects, featuredProjects }) => {
             title="My Skills"
             subtitle="Personal branding moon imagery"
             icon={
-              <div className="transition duration-1000 ease-in-out hover:scale-125 hover:rotate-45">
-                <MoonStart xmlns="http://www.w3.org/2000/svg" />
-              </div>
+              // <div className="transition duration-1000 ease-in-out hover:scale-125 hover:rotate-45">
+              <MoonStart xmlns="http://www.w3.org/2000/svg" />
+              // </div>
             }
           />
           <div className="pt-6 md:pt-11" />
@@ -61,9 +61,9 @@ const Homepage = ({ notableProjects, featuredProjects }) => {
             title="Featured Projects"
             subtitle="Personal branding moon imagery"
             icon={
-              <div className="transition duration-1000 ease-in-out hover:scale-125 hover:rotate-90">
-                <MoonMiddle xmlns="http://www.w3.org/2000/svg" />
-              </div>
+              // <div className="transition duration-1000 ease-in-out hover:scale-125 hover:rotate-90">
+              <MoonMiddle xmlns="http://www.w3.org/2000/svg" />
+              // </div>
             }
           />
           <div className="pt-6 md:pt-11" />
@@ -77,9 +77,9 @@ const Homepage = ({ notableProjects, featuredProjects }) => {
             title="Notable Projects"
             subtitle="Personal branding moon imagery"
             icon={
-              <div className="transition duration-1000 ease-in-out hover:scale-125 hover:rotate-180">
-                <MoonEnd xmlns="http://www.w3.org/2000/svg" />
-              </div>
+              // <div className="transition duration-1000 ease-in-out hover:scale-125 hover:rotate-180">
+              <MoonEnd xmlns="http://www.w3.org/2000/svg" />
+              // </div>
             }
           />
           <div className="pt-6 md:pt-11" />

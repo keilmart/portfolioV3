@@ -5,7 +5,7 @@ import Layout from "../components/Layout/Layout";
 const NotFound = () => {
   return (
     <Layout>
-      <div className="flex justify-center items-center h-[80vh]">
+      <div className="flex items-center justify-center h-404">
         <div>
           <h1 className="mb-6 font-serif text-4xl text-center md:text-left md:mb-10 md:text-8xl dark:text-syncWave">
             404: Oops!

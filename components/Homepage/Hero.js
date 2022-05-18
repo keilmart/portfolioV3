@@ -19,15 +19,14 @@ const Hero = () => {
         <span className="inline-block antialiased text-md sm:text-lg text-tertiary dark:text-white">
           FRONT END DEVELOPER &amp; DOG DAD
         </span>
-        <ul className="flex flex-row pl-1 mt-2 text-sm text-md text-syncWave sm:mt-3">
+        <ul className="flex flex-row pt-1 pl-1 text-sm text-md text-syncWave sm:pt-2">
           <li className="pr-3 sm:pr-4">
             <Link
               href="https://www.linkedin.com/in/keilmart/"
-              target="_blank"
               rel="noreferrer"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <a>
+              <a target="_blank">
                 <LinkedIcon />
               </a>
             </Link>
@@ -36,11 +35,10 @@ const Hero = () => {
           <li>
             <Link
               href="https://github.com/keilmart"
-              target="_blank"
               rel="noreferrer"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <a>
+              <a target="_blank">
                 <GithubIcon />
               </a>
             </Link>

@@ -9,20 +9,25 @@ const About = () => {
   return (
     <Layout>
       <div className="relative">
-        <div className="absolute top-0 right-44">
+        <div className="absolute top-1 right-48">
           <motion.div
-            className="hidden overflow-hidden rounded-md md:block md:w-40 md:h-48"
+            className="hidden overflow-hidden md:block md:w-40 md:h-40"
             initial={{ rotate: 10 }}
             animate={{ rotate: 0 }}
             transition={{ type: "spring", bounce: 0.25, mass: 2 }}
           >
-            <Image
-              src="/pictures/charlie2.png"
-              alt="Personal photo of Keil Martin and Charlie"
-              height="170"
-              width="170"
-            />
-            <p className="text-xs text-syncWave">Charlie + Balm Beach</p>
+            <a
+              href="https://www.instagram.com/charlieistheshiht/"
+              target="_blank"
+            >
+              <Image
+                src="/pictures/charlie2.png"
+                alt="Personal photo of Keil Martin and Charlie"
+                height="170"
+                width="170"
+                className="rounded-full"
+              />
+            </a>
           </motion.div>
         </div>
       </div>
@@ -70,9 +75,9 @@ const About = () => {
         </h2>
         <a
           className="w-full mt-3 btn-primary primary-grad sm:w-auto"
-          href={`https://github.com/keilmart/portfolioV3`}
-          target={"_blank"}
-          rel={"noreferrer"}
+          href="https://github.com/keilmart/portfolioV3`"
+          target="_blank"
+          rel="noreferrer"
         >
           View Github
         </a>

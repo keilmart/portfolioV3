@@ -27,7 +27,7 @@ const ProjectDetails = ({ projectData }) => {
   return (
     <>
       <Layout>
-        <main className="mt-4 sm:mt-10">
+        <main className="mt-9">
           <div className="mb-8">
             <Link href="/#work">
               <a className="border-b border-gray-700 text-tertiary hover:bg-gray-100">
@@ -57,8 +57,8 @@ const ProjectDetails = ({ projectData }) => {
           <a
             className="relative inline-block w-full px-4 pt-4 overflow-hidden transition duration-500 ease-in-out bg-gray-100 rounded-lg sm:px-10 sm:pt-10 h-min hover:shadow-lg hover:scale-105 dark:bg-darkModeDetail"
             href={`https://${project.url}`}
-            target={"_blank"}
-            rel={"noreferrer"}
+            target="_blank"
+            rel="noreferrer"
           >
             <div className="w-full overflow-hidden rounded-t-3xl top-10">
               <Image
@@ -81,8 +81,8 @@ const ProjectDetails = ({ projectData }) => {
             <a
               className="w-full mt-2 mr-4 sm:w-auto btn-primary primary-grad"
               href={`https://${project.url}`}
-              target={"_blank"}
-              rel={"noreferrer"}
+              target="_blank"
+              rel="noreferrer"
             >
               {!!project.github ? "View Project" : "View Website"}
             </a>
@@ -90,8 +90,8 @@ const ProjectDetails = ({ projectData }) => {
               <a
                 className="w-full mt-2 btn-primary primary-grad sm:w-auto"
                 href={`https://${project.github}`}
-                target={"_blank"}
-                rel={"noreferrer"}
+                target="_blank"
+                rel="noreferrer"
               >
                 View Github
               </a>
