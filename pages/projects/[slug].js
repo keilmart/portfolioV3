@@ -55,7 +55,7 @@ const ProjectDetails = ({ projectData }) => {
           <div className="mt-3"></div>
           <hr className="my-8 border-t-2 border-b-0 border-dotted border-primary" />
           <a
-            className="relative inline-block w-full px-4 pt-4 overflow-hidden transition duration-300 ease-in-out bg-gray-100 rounded-lg sm:px-10 sm:pt-10 h-min hover:shadow-lg hover:scale-105 dark:bg-darkModeDetail"
+            className="relative inline-block w-full px-4 pt-4 overflow-hidden transition duration-500 ease-in-out bg-gray-100 rounded-lg sm:px-10 sm:pt-10 h-min hover:shadow-lg hover:scale-105 dark:bg-darkModeDetail"
             href={`https://${project.url}`}
             target={"_blank"}
             rel={"noreferrer"}

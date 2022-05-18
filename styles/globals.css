@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto&display=swap");
 
+/* @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@500;600;700;800&display=swap');
+font-family: 'Merriweather Sans', sans-serif; */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -103,8 +106,8 @@ svg {
 }
 
 .slick-slide {
-  max-width: 230px;
-  min-width: 230px;
+  max-width: 236px;
+  min-width: 236px;
 }
 
 /* .slick-initialized .slick-slide {
