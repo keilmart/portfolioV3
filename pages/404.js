@@ -1,10 +1,12 @@
 import Link from "next/link";
 
 import Layout from "../components/Layout/Layout";
+import SEO from "../components/SEO/SEO";
 
 const NotFound = () => {
   return (
     <Layout>
+      <SEO />
       <div className="flex items-center justify-center h-404">
         <div>
           <h1 className="mb-6 font-serif text-4xl text-center md:text-left md:mb-10 md:text-8xl dark:text-syncWave">

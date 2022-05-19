@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-import { MoonStart, MoonMiddle, MoonEnd } from "./HomepageIcons/Index";
 import Image from "next/image";
 
 import Hero from "./Hero";
@@ -8,6 +6,17 @@ import SectionHeader from "../SectionHeader/SectionHeader";
 import HomepageSkillsList from "../HomepageSkillsList/HomepageSkillsList";
 import HomepageFeaturedList from "../HomepageFeaturedList/HomepageFeaturedList";
 import HomepageNotableList from "../HomepageNotableList/HomepageNotableList";
+
+import {
+  MoonStart,
+  MoonMiddle,
+  MoonEnd,
+  SkillsIcon,
+  FeaturedIcon,
+  NotableIcon,
+} from "./HomepageIcons/Index";
+
+import { motion } from "framer-motion";
 
 const FadeIn = ({ children }) => {
   return (
@@ -43,11 +52,8 @@ const Homepage = ({ notableProjects, featuredProjects }) => {
           <SectionHeader
             title="My Skills"
             subtitle="Personal branding moon imagery"
-            icon={
-              // <div className="transition duration-1000 ease-in-out hover:scale-125 hover:rotate-45">
-              <MoonStart xmlns="http://www.w3.org/2000/svg" />
-              // </div>
-            }
+            icon={<SkillsIcon xmlns="http://www.w3.org/2000/svg" />}
+            // icon={<MoonStart xmlns="http://www.w3.org/2000/svg" />}
           />
           <div className="pt-6 md:pt-11" />
           <HomepageSkillsList />
@@ -60,11 +66,8 @@ const Homepage = ({ notableProjects, featuredProjects }) => {
           <SectionHeader
             title="Featured Projects"
             subtitle="Personal branding moon imagery"
-            icon={
-              // <div className="transition duration-1000 ease-in-out hover:scale-125 hover:rotate-90">
-              <MoonMiddle xmlns="http://www.w3.org/2000/svg" />
-              // </div>
-            }
+            icon={<FeaturedIcon xmlns="http://www.w3.org/2000/svg" />}
+            // icon={<MoonMiddle xmlns="http://www.w3.org/2000/svg" />}
           />
           <div className="pt-6 md:pt-11" />
           <HomepageFeaturedList projects={featuredProjects} />
@@ -76,11 +79,8 @@ const Homepage = ({ notableProjects, featuredProjects }) => {
           <SectionHeader
             title="Notable Projects"
             subtitle="Personal branding moon imagery"
-            icon={
-              // <div className="transition duration-1000 ease-in-out hover:scale-125 hover:rotate-180">
-              <MoonEnd xmlns="http://www.w3.org/2000/svg" />
-              // </div>
-            }
+            icon={<NotableIcon xmlns="http://www.w3.org/2000/svg" />}
+            // icon={<MoonStart xmlns="http://www.w3.org/2000/svg" />}
           />
           <div className="pt-6 md:pt-11" />
           <HomepageNotableList projects={notableProjects} />

@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import Layout from "../../components/Layout/Layout";
+import SEO from "/components/SEO/SEO";
 // import { getStaticPathBoy, getStaticPropBoy } from "../../lib/projects";
 import { db } from "../../firebase/firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
-
-import Layout from "../../components/Layout/Layout";
 
 const ProjectDetails = ({ projectData }) => {
   let project = projectData[0];
@@ -25,83 +25,86 @@ const ProjectDetails = ({ projectData }) => {
   // } = project || {};
 
   return (
-    <>
-      <Layout>
-        <main className="mt-9">
-          <div className="mb-8">
-            <Link href="/#work">
-              <a className="border-b border-gray-700 text-tertiary hover:bg-gray-100">
-                &larr; Back to Projects
-              </a>
-            </Link>
+    <Layout>
+      <SEO
+        title={project.name}
+        description={project.description}
+        og="og-home.png"
+      />
+      <main className="mt-9">
+        <div className="mb-8">
+          <Link href="/#work">
+            <a className="border-b border-gray-700 text-tertiary hover:bg-gray-100">
+              &larr; Back to Projects
+            </a>
+          </Link>
+        </div>
+        <h1 className="mb-6 text-3xl font-bold tracking-tight md:mb-8 md:text-6xl leading-headers dark:text-syncWave">
+          {project.name}
+        </h1>
+        <div className="flex items-center space-x-8">
+          <div>
+            <h2 className="font-semibold text-md dark:text-white">Company</h2>
+            <span className="text-md text-tertiary">
+              {!!project.company && project.personal == false
+                ? project.company
+                : "Personal"}
+            </span>
           </div>
-          <h1 className="mb-6 text-3xl font-bold tracking-tight md:mb-8 md:text-6xl leading-headers dark:text-syncWave">
-            {project.name}
-          </h1>
-          <div className="flex items-center space-x-8">
-            <div>
-              <h2 className="font-semibold text-md dark:text-white">Company</h2>
-              <span className="text-md text-tertiary">
-                {!!project.company && project.personal == false
-                  ? project.company
-                  : "Personal"}
-              </span>
-            </div>
-            <div>
-              <h2 className="font-semibold text-md dark:text-white">Stack</h2>
-              <span className="text-md text-tertiary">{project.stack}</span>
-            </div>
+          <div>
+            <h2 className="font-semibold text-md dark:text-white">Stack</h2>
+            <span className="text-md text-tertiary">{project.stack}</span>
           </div>
-          <div className="mt-3"></div>
-          <hr className="my-8 border-t-2 border-b-0 border-dotted border-primary dark:border-gray-400" />
+        </div>
+        <div className="mt-3"></div>
+        <hr className="my-8 border-t-2 border-b-0 border-dotted border-primary dark:border-gray-400" />
+        <a
+          className="relative inline-block w-full px-4 pt-4 overflow-hidden transition duration-500 ease-in-out bg-gray-100 rounded-lg sm:px-10 sm:pt-10 h-min hover:shadow-lg hover:scale-105 dark:bg-darkModeDetail"
+          href={`https://${project.url}`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div className="w-full overflow-hidden rounded-t-3xl top-10">
+            <Image
+              src={project.imageZoom ? project.imageZoom : project.image}
+              alt={project.name}
+              width={2886}
+              height={1245}
+              // Change these sizes to optimize //
+              objectFit="cover"
+              objectPosition="top left"
+            />
+          </div>
+        </a>
+        <hr className="my-6 border-t-2 border-b-0 border-dotted border-primary dark:border-gray-400" />
+        <h2 className="mb-4 text-3xl font-semibold text-primary dark:text-syncWave">
+          Summary
+        </h2>
+        <p className="text-primary dark:text-white">{project.description}</p>
+        <div className="my-8">
           <a
-            className="relative inline-block w-full px-4 pt-4 overflow-hidden transition duration-500 ease-in-out bg-gray-100 rounded-lg sm:px-10 sm:pt-10 h-min hover:shadow-lg hover:scale-105 dark:bg-darkModeDetail"
+            className="w-full mt-2 mr-4 sm:w-auto btn-primary primary-grad"
             href={`https://${project.url}`}
             target="_blank"
             rel="noreferrer"
           >
-            <div className="w-full overflow-hidden rounded-t-3xl top-10">
-              <Image
-                src={project.imageZoom ? project.imageZoom : project.image}
-                alt={project.name}
-                width={2886}
-                height={1245}
-                // Change these sizes to optimize //
-                objectFit="cover"
-                objectPosition="top left"
-              />
-            </div>
+            {!!project.github ? "View Project" : "View Website"}
           </a>
-          <hr className="my-6 border-t-2 border-b-0 border-dotted border-primary dark:border-gray-400" />
-          <h2 className="mb-4 text-3xl font-semibold text-primary dark:text-syncWave">
-            Summary
-          </h2>
-          <p className="text-primary dark:text-white">{project.description}</p>
-          <div className="my-8">
+          {!!project.github ? (
             <a
-              className="w-full mt-2 mr-4 sm:w-auto btn-primary primary-grad"
-              href={`https://${project.url}`}
+              className="w-full mt-2 btn-primary primary-grad sm:w-auto"
+              href={`https://${project.github}`}
               target="_blank"
               rel="noreferrer"
             >
-              {!!project.github ? "View Project" : "View Website"}
+              View Github
             </a>
-            {!!project.github ? (
-              <a
-                className="w-full mt-2 btn-primary primary-grad sm:w-auto"
-                href={`https://${project.github}`}
-                target="_blank"
-                rel="noreferrer"
-              >
-                View Github
-              </a>
-            ) : (
-              <></>
-            )}
-          </div>
-        </main>
-      </Layout>
-    </>
+          ) : (
+            <></>
+          )}
+        </div>
+      </main>
+    </Layout>
   );
 };
 

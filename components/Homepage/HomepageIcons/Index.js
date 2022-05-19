@@ -41,3 +41,36 @@ export function MoonStars() {
     </svg>
   );
 }
+
+export function SkillsIcon() {
+  return (
+    <svg className="svg-icon" viewBox="0 0 24 24" width="1em" height="1em">
+      <path d="M19 0H5a5.006 5.006 0 00-5 5v14a5.006 5.006 0 005 5v-3a7 7 0 0114 0v3a5.006 5.006 0 005-5V5a5.006 5.006 0 00-5-5zm-7 12a4 4 0 114-4 4 4 0 01-4 4z" />
+      <circle cx={12} cy={8} r={2} />
+      <path d="M12 16a5.006 5.006 0 00-5 5v3h10v-3a5.006 5.006 0 00-5-5z" />
+    </svg>
+  );
+}
+
+export function FeaturedIcon() {
+  return (
+    <svg
+      className="svg-icon"
+      height="1em"
+      viewBox="0 0 24 24"
+      width="1em"
+      data-name="Layer 1"
+    >
+      <path d="M0 9v9a5.006 5.006 0 005 5h14a5.006 5.006 0 005-5V9zm14 10H6a1 1 0 010-2h8a1 1 0 010 2zm4-4H6a1 1 0 010-2h12a1 1 0 010 2zm6-8V6a5.006 5.006 0 00-5-5H5a5.006 5.006 0 00-5 5v1zM10 3a1 1 0 11-1 1 1 1 0 011-1zM7 3a1 1 0 11-1 1 1 1 0 011-1zM4 3a1 1 0 11-1 1 1 1 0 011-1z" />
+    </svg>
+  );
+}
+
+export function NotableIcon() {
+  return (
+    <svg className="svg-icon" viewBox="0 0 24 24" width="1em" height="1em">
+      <path d="M18 19v4.7a4.968 4.968 0 001.879-1.164l2.656-2.658A4.954 4.954 0 0023.7 18H19a1 1 0 00-1 1zM7.172 13.828A4 4 0 006 16.657V18h1.343a4 4 0 002.829-1.172L21.5 5.5a2.121 2.121 0 00-3-3z" />
+      <path d="M24 4.952a4.087 4.087 0 01-1.08 1.962L11.586 18.243A5.961 5.961 0 017.343 20H6a2 2 0 01-2-2v-1.343a5.957 5.957 0 011.758-4.242L17.086 1.086A4.078 4.078 0 0119.037 0H5a5.006 5.006 0 00-5 5v14a5.006 5.006 0 005 5h11v-5a3 3 0 013-3h5V5v-.048z" />
+    </svg>
+  );
+}

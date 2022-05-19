@@ -1,15 +1,21 @@
 import Image from "next/image";
 
-import { motion } from "framer-motion";
-// import { ExternalLink } from "../components/Footer/Footer";
 import Layout from "../components/Layout/Layout";
+import SEO from "../components/SEO/SEO";
+
+import { motion } from "framer-motion";
 import { MoonStars } from "../components/Homepage/HomepageIcons/Index";
 
 const About = () => {
   return (
     <Layout>
+      <SEO
+        og="og-about.png"
+        title="About"
+        description="About Keil Martin the Developer"
+      />
       <div className="relative">
-        <div className="absolute top-1 right-48">
+        <div className="absolute top-1 lg:right-48 right-24">
           <motion.div
             className="hidden overflow-hidden md:block md:w-40 md:h-40"
             initial={{ rotate: 10 }}

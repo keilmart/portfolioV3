@@ -21,6 +21,22 @@
   .border-primary {
     @apply border-gray-200;
   }
+
+  body::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: #f7f4ed;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: #6d83f2;
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    background: #6a98f0;
+  }
 }
 
 @layer components {
@@ -52,6 +68,7 @@ svg {
 .svg-icon circle {
   stroke: #6d83f2;
   stroke-width: 1;
+  fill: #6d83f2;
 }
 /****  SVG's ****/
 

@@ -1,12 +1,14 @@
-import { db } from "../firebase/firebase";
-import { collection, getDocs } from "firebase/firestore";
-
 import Homepage from "../components/Homepage/Homepage";
 import Layout from "../components/Layout/Layout";
+import SEO from "../components/SEO/SEO";
+
+import { db } from "../firebase/firebase";
+import { collection, getDocs } from "firebase/firestore";
 
 const Home = ({ notableProjects, featuredProjects }) => {
   return (
     <Layout>
+      <SEO />
       <Homepage
         featuredProjects={featuredProjects}
         notableProjects={notableProjects}

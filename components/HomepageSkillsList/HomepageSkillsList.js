@@ -14,8 +14,8 @@ import {
 } from "./HomepageSkillsIcons/Index";
 
 const HomepageSkillsList = () => {
-  const slideRef = useRef();
   const [curIdx, setCurIdx] = useState(0);
+  const slideRef = useRef();
 
   const cards = [
     // 			 Develop Card
@@ -42,7 +42,7 @@ const HomepageSkillsList = () => {
           {cards.map((card, idx) => (
             <li
               key={idx}
-              className="w-full mx-auto text-center transition duration-500 ease-in-out border rounded-lg cursor-pointer px-9 py-7 text-2xs text-syncWave lg:px-10 lg:py-8 dark:text-white shadow-art active:shadow-art-active hover:shadow-art-hover dark:shadow-none dark:border-0 dark:bg-darkModeDetail hover:rotate-2"
+              className="w-full mx-auto text-center transition duration-500 ease-in-out border rounded-lg cursor-pointer px-9 py-7 text-2xs text-syncWave lg:px-10 lg:py-8 dark:text-white shadow-art active:shadow-art-active hover:shadow-art-hover dark:shadow-none dark:border-0 dark:bg-darkModeDetail hover:rotate-2 hover:even:-rotate-2"
             >
               {card.title === "Developing" ? (
                 <DevelopIcon xmlns="http://www.w3.org/2000/svg" />
@@ -90,11 +90,11 @@ const HomepageSkillsList = () => {
               <div key={idx} className="overflow-hidden transition-all ">
                 <div className="w-11/12 text-center transition duration-500 ease-in-out border rounded-lg py-7 px-7 text-2xs text-syncWave dark:text-white shadow-art dark:shadow-none dark:border-0 dark:bg-darkModeDetail">
                   {card.title === "Developing" ? (
-                    <DevelopIcon />
+                    <DevelopIcon xmlns="http://www.w3.org/2000/svg" />
                   ) : card.title === "Styling" ? (
-                    <DesignIcon />
+                    <DesignIcon xmlns="http://www.w3.org/2000/svg" />
                   ) : (
-                    <LearnIcon />
+                    <LearnIcon xmlns="http://www.w3.org/2000/svg" />
                   )}
                   <h3 className="pt-3 pb-2 text-xl font-semibold text-center text-primary dark:text-white">
                     {card.title}
@@ -138,7 +138,7 @@ const HomepageSkillsList = () => {
           </button>
 
           <div className="flex justify-between flex-1 h-1 ml-5 bg-gray-200 rounded">
-            {cards.map((card, idx) => (
+            {cards.map((cards, idx) => (
               <button
                 key={idx}
                 className={`block w-full h-full ${

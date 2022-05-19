@@ -9,8 +9,6 @@ import "../styles/globals.css";
 // 4. Write out descriptions for all projects //
 // 5. Write out the about me page //
 // 9. Go through and comment all logic code //
-// Intergrate SEO //
-// customs scroll bar //
 
 import Nav from "../components/Nav/Nav";
 import Footer from "../components/Footer/Footer";
