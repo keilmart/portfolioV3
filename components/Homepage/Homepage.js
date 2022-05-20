@@ -37,14 +37,21 @@ const FadeIn = ({ children }) => {
 const Homepage = ({ notableProjects, featuredProjects }) => {
   return (
     <>
+      <Image
+        src="/pictures/Vector.svg"
+        alt="Picture of a decorative vector"
+        layout="fill"
+        className="absolute top-0 right-0 hidden w-5/12 dark:block"
+      />
+      <Image
+        src="/pictures/VectorPurple.svg"
+        alt="Picture of a decorative vector"
+        layout="fill"
+        className="absolute top-0 right-0 block w-5/12 dark:hidden"
+      />
+
       <FadeIn>
         <Hero />
-        {/* <Image
-          src="/pictures/backdrop.svg"
-          alt="Picture of a decorative vector"
-          layout="fill"
-          className="absolute right-0 top-[50px] -z-10 w-5/12"
-        /> */}
       </FadeIn>
 
       <FadeIn>

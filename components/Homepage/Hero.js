@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import CodeBlock from "./CodeBlock";
@@ -8,9 +7,9 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col items-center mx-0 mb-20 justify-evenly md:justify-between h-104 H- md:flex-row md:mx-12 md:mb-2 md:h-100">
+    <section className="flex flex-col items-center mx-0 mb-20 justify-evenly md:justify-between h-104 md:flex-row md:mx-12 md:mb-2 md:h-100">
       <div>
-        <span className="inline-block text-xl antialiased text-tertiary sm:text-2xl">
+        <span className="inline-block text-xl antialiased leading-5 text-tertiary sm:text-2xl">
           Hello, I&apos;m
         </span>
         <h1 className="text-4xl antialiased font-bold tracking-tight leading-titles sm:text-6xl text-primary dark:text-syncWave">

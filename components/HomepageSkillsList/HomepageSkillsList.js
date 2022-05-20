@@ -42,7 +42,7 @@ const HomepageSkillsList = () => {
           {cards.map((card, idx) => (
             <li
               key={idx}
-              className="w-full mx-auto text-center transition duration-500 ease-in-out border rounded-lg cursor-pointer px-9 py-7 text-2xs text-syncWave lg:px-10 lg:py-8 dark:text-white shadow-art active:shadow-art-active hover:shadow-art-hover dark:shadow-none dark:border-0 dark:bg-darkModeDetail hover:rotate-2 hover:even:-rotate-2"
+              className="z-10 w-full mx-auto text-center transition duration-500 ease-in-out bg-white border rounded-lg cursor-pointer px-9 py-7 text-2xs text-syncWave lg:px-10 lg:py-8 dark:text-white shadow-art active:shadow-art-active hover:shadow-art-hover dark:shadow-none dark:border-0 dark:bg-darkModeDetail hover:rotate-2 hover:even:-rotate-2"
             >
               {card.title === "Developing" ? (
                 <DevelopIcon xmlns="http://www.w3.org/2000/svg" />
@@ -87,8 +87,8 @@ const HomepageSkillsList = () => {
         >
           {cards?.map((card, idx) => {
             return (
-              <div key={idx} className="overflow-hidden transition-all ">
-                <div className="w-11/12 text-center transition duration-500 ease-in-out border rounded-lg py-7 px-7 text-2xs text-syncWave dark:text-white shadow-art dark:shadow-none dark:border-0 dark:bg-darkModeDetail">
+              <div key={idx} className="z-10 overflow-hidden transition-all ">
+                <div className="w-11/12 text-center transition duration-500 ease-in-out bg-white border rounded-lg py-7 px-7 text-2xs text-syncWave shadow-artdark:text-white dark:shadow-none dark:border-0 dark:bg-darkModeDetail">
                   {card.title === "Developing" ? (
                     <DevelopIcon xmlns="http://www.w3.org/2000/svg" />
                   ) : card.title === "Styling" ? (

@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       lineHeight: {
-        titles: 1,
+        titles: 0.9,
       },
       fontSize: {
         "2xs": "0.8rem",
