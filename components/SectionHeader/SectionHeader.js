@@ -1,4 +1,4 @@
-const SectionHeader = ({ icon, title }) => {
+const SectionHeader = ({ icon, title, skills = false }) => {
   return (
     <header className="flex items-center mb-2">
       <div className="mr-4">{icon}</div>
@@ -6,6 +6,11 @@ const SectionHeader = ({ icon, title }) => {
         {title}
       </h2>
       <hr className="flex-grow border-t-0 border-b-2 border-dotted dark:border-gray-400" />
+      {/* <hr
+        className={`flex-grow border-t-0 border-b-2 border-dotted dark:border-gray-400${
+          skills ? true : "block sm:hidden"
+        }`}
+      /> */}
     </header>
   );
 };

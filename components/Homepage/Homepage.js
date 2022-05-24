@@ -14,6 +14,8 @@ import {
   SkillsIcon,
   FeaturedIcon,
   NotableIcon,
+  GlobeBlack,
+  GlobePurple,
 } from "./HomepageIcons/Index";
 
 import { motion } from "framer-motion";
@@ -37,7 +39,7 @@ const FadeIn = ({ children }) => {
 const Homepage = ({ notableProjects, featuredProjects }) => {
   return (
     <>
-      <Image
+      {/* <Image
         src="/pictures/Vector.svg"
         alt="Picture of a decorative vector"
         layout="fill"
@@ -48,7 +50,13 @@ const Homepage = ({ notableProjects, featuredProjects }) => {
         alt="Picture of a decorative vector"
         layout="fill"
         className="absolute top-0 right-0 block w-5/12 dark:hidden"
-      />
+      /> */}
+      {/* <div className="absolute top-0 right-0 block dark:hidden">
+        <GlobeBlack />
+      </div>
+      <div className="absolute top-0 right-0 hidden dark:block">
+        <GlobePurple />
+      </div> */}
 
       <FadeIn>
         <Hero />
