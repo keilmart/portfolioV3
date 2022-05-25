@@ -49,16 +49,18 @@ const About = () => {
         </h2>
         <div className="text-xl antialiased leading-relaxed tracking-tight text-secondary dark:text-white">
           <p className="mb-4">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius,
-            fugiat. Facere vitae magni non! Saepe ut cumque assumenda magni
-            deleniti qui ratione inventore voluptatem itaque tempore quam
-            debitis, ad iusto!
+            As a graduate from the Electrical Engineering Technology program at
+            Georgian College, I knew I always wanted to work with technology, I
+            just wasn’t sure what part fully grabbed my interest. I took some
+            courses in software and hardware and knew this was the right fit for
+            me. I started playing with a Raspberry Pi and python for a OACETT
+            technical project, which I received in the top donors and finished
+            in the top 10% of my graduating class.
           </p>
           <p className="mb-4">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius,
-            fugiat. Facere vitae magni non! Saepe ut cumque assumenda magni
-            deleniti qui ratione inventore voluptatem itaque tempore quam
-            debitis, ad iusto!
+            I then attended a front end developer bootcamp at Juno College of
+            technology, where I first started learning everything I needed to
+            know to become a front end developer.
           </p>
         </div>
 
@@ -68,12 +70,14 @@ const About = () => {
         </h2>
         <div className="text-xl antialiased leading-relaxed tracking-tight text-secondary dark:text-white">
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius,
-            fugiat. Facere vitae magni non! Saepe ut cumque assumenda magni
-            deleniti qui ratione inventore voluptatem itaque tempore quam
-            debitis, ad iusto! Lorem ipsum dolor, sit amet consectetur
-            adipisicing elit. Eius, fugiat. Facere vitae magni non! Saepe ut
-            cumque assumenda magni
+            I have just over 2 year’s of experience as a Front End Developer
+            focusing mainly in component driven development, mainly working in
+            Next.js, React, Tailwind and Scss. In my short time on this
+            adventure, I've already contributed to over a dozen projects and
+            have taken a few independent ventures where I not only developed
+            these projects, but also managed all communication between me and
+            the clients as well as provided all contracts and adhered to the
+            outlines timelines in the contracts.
           </p>
         </div>
         <hr className="mb-12 border-t-2 border-dotted mt-14 dark:border-gray-400" />

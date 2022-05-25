@@ -8,9 +8,6 @@ import HomepageFeaturedList from "../HomepageFeaturedList/HomepageFeaturedList";
 import HomepageNotableList from "../HomepageNotableList/HomepageNotableList";
 
 import {
-  MoonStart,
-  MoonMiddle,
-  MoonEnd,
   SkillsIcon,
   FeaturedIcon,
   NotableIcon,
@@ -39,24 +36,12 @@ const FadeIn = ({ children }) => {
 const Homepage = ({ notableProjects, featuredProjects }) => {
   return (
     <>
-      {/* <Image
-        src="/pictures/Vector.svg"
-        alt="Picture of a decorative vector"
-        layout="fill"
-        className="absolute top-0 right-0 hidden w-5/12 dark:block"
-      />
-      <Image
-        src="/pictures/VectorPurple.svg"
-        alt="Picture of a decorative vector"
-        layout="fill"
-        className="absolute top-0 right-0 block w-5/12 dark:hidden"
-      /> */}
-      {/* <div className="absolute top-0 right-0 block dark:hidden">
+      <div className="absolute top-0 right-0 block dark:hidden">
         <GlobeBlack />
       </div>
       <div className="absolute top-0 right-0 hidden dark:block">
         <GlobePurple />
-      </div> */}
+      </div>
 
       <FadeIn>
         <Hero />

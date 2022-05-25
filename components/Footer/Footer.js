@@ -4,7 +4,7 @@ const Footer = () => {
     <footer className="border-t border-primary">
       <div className="container flex justify-between w-full max-w-screen-lg px-4 py-4 mx-auto text-sm font-medium bg-white text-secondary text-primary dark:bg-darkMode dark:text-white">
         <div className="flex items-center">
-          <span className="text-syncWave">{currentYear} &nbsp;</span>
+          <span>{currentYear} &nbsp;</span>
           <span className="hidden sm:block">
             &bull;&nbsp;&nbsp;Built with Next.js, Tailwind and Firestore
           </span>
