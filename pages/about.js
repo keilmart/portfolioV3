@@ -73,8 +73,8 @@ const About = () => {
             I have just over 2 year’s of experience as a Front End Developer
             focusing mainly in component driven development, mainly working in
             Next.js, React, Tailwind and Scss. In my short time on this
-            adventure, I've already contributed to over a dozen projects and
-            have taken a few independent ventures where I not only developed
+            adventure, I&apos;ve already contributed to over a dozen projects
+            and have taken a few independent ventures where I not only developed
             these projects, but also managed all communication between me and
             the clients as well as provided all contracts and adhered to the
             outlines timelines in the contracts.
