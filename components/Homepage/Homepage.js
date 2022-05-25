@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import Hero from "./Hero";
 import SectionHeader from "../SectionHeader/SectionHeader";
 
@@ -53,7 +51,6 @@ const Homepage = ({ notableProjects, featuredProjects }) => {
             title="My Skills"
             subtitle="Personal branding moon imagery"
             icon={<SkillsIcon xmlns="http://www.w3.org/2000/svg" />}
-            // icon={<MoonStart xmlns="http://www.w3.org/2000/svg" />}
           />
           <div className="pt-6 md:pt-11" />
           <HomepageSkillsList />
@@ -67,7 +64,6 @@ const Homepage = ({ notableProjects, featuredProjects }) => {
             title="Featured Projects"
             subtitle="Personal branding moon imagery"
             icon={<FeaturedIcon xmlns="http://www.w3.org/2000/svg" />}
-            // icon={<MoonMiddle xmlns="http://www.w3.org/2000/svg" />}
           />
           <div className="pt-6 md:pt-11" />
           <HomepageFeaturedList projects={featuredProjects} />
@@ -80,7 +76,6 @@ const Homepage = ({ notableProjects, featuredProjects }) => {
             title="Notable Projects"
             subtitle="Personal branding moon imagery"
             icon={<NotableIcon xmlns="http://www.w3.org/2000/svg" />}
-            // icon={<MoonStart xmlns="http://www.w3.org/2000/svg" />}
           />
           <div className="pt-6 md:pt-11" />
           <HomepageNotableList projects={notableProjects} />

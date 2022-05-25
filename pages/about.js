@@ -47,7 +47,7 @@ const About = () => {
         <h2 className="mb-4 text-lg antialiased font-semibold text-primary dark:text-tertiary">
           Early Career Stuff
         </h2>
-        <div className="text-xl antialiased leading-relaxed tracking-tight text-secondary dark:text-white">
+        <div className="text-lg antialiased leading-relaxed tracking-tight text-secondary dark:text-white">
           <p className="mb-4">
             As a graduate from the Electrical Engineering Technology program at
             Georgian College, I knew I always wanted to work with technology, I
@@ -68,16 +68,16 @@ const About = () => {
         <h2 className="mt-12 mb-4 text-lg font-semibold text-primary dark:text-tertiary">
           Where I&apos;ve Worked
         </h2>
-        <div className="text-xl antialiased leading-relaxed tracking-tight text-secondary dark:text-white">
+        <div className="text-lg antialiased leading-relaxed tracking-tight text-secondary dark:text-white">
           <p>
-            I have just over 2 year’s of experience as a Front End Developer
-            focusing mainly in component driven development, mainly working in
-            Next.js, React, Tailwind and Scss. In my short time on this
-            adventure, I&apos;ve already contributed to over a dozen projects
-            and have taken a few independent ventures where I not only developed
-            these projects, but also managed all communication between me and
-            the clients as well as provided all contracts and adhered to the
-            outlines timelines in the contracts.
+            I have just over 2 year&apos;s of experience as a Front End
+            Developer focusing mainly in component driven development, mainly
+            working in Next.js, React, Tailwind and Scss. In my short time on
+            this adventure, I&apos;ve already contributed to over a dozen
+            projects and have taken a few independent ventures where I not only
+            developed these projects, but also managed all communication between
+            me and the clients as well as provided all contracts and adhered to
+            the outlines timelines in the contracts.
           </p>
         </div>
         <hr className="mb-12 border-t-2 border-dotted mt-14 dark:border-gray-400" />
