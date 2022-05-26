@@ -5,14 +5,8 @@ import HomepageSkillsList from "../HomepageSkillsList/HomepageSkillsList";
 import HomepageFeaturedList from "../HomepageFeaturedList/HomepageFeaturedList";
 import HomepageNotableList from "../HomepageNotableList/HomepageNotableList";
 
-import {
-  SkillsIcon,
-  FeaturedIcon,
-  NotableIcon,
-  GlobeBlack,
-  GlobePurple,
-} from "./HomepageIcons/Index";
-
+import { SkillsIcon, FeaturedIcon, NotableIcon } from "./HomepageIcons/Index";
+import { GlobeBlack, GlobePurple } from "../GlobalIcons/Index";
 import { motion } from "framer-motion";
 
 const FadeIn = ({ children }) => {

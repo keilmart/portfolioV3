@@ -6,9 +6,18 @@ import SEO from "../components/SEO/SEO";
 import { motion } from "framer-motion";
 import { MoonStars } from "../components/Homepage/HomepageIcons/Index";
 
+import { GlobeBlack, GlobePurple } from "../components/GlobalIcons/Index";
+
 const About = () => {
   return (
     <Layout>
+      <div className="absolute top-0 right-0 block dark:hidden">
+        <GlobeBlack />
+      </div>
+      <div className="absolute top-0 right-0 hidden dark:block">
+        <GlobePurple />
+      </div>
+
       <SEO
         og="og-about.png"
         title="About"
