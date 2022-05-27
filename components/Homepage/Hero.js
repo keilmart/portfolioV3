@@ -39,11 +39,11 @@ const Hero = () => {
       </div>
 
       <div className="relative">
-        <div className="absolute hidden sm:block -top-36 -left-40 dark:hidden">
-          <GlobeBlack className="w-1/2" />
+        <div className="absolute hidden sm:block -top-[19rem] -left-[14rem]  dark:hidden rotate-6">
+          <GlobeBlack />
         </div>
-        <div className="absolute hidden -top-36 -left-40 sm:dark:block">
-          <GlobePurple className="w-1/2" />
+        <div className="absolute hidden -top-[19rem] -left-[14rem] sm:dark:block rotate-6">
+          <GlobePurple />
         </div>
         <motion.div
           alt="Code block describing Keil Martin"

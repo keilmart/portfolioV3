@@ -2,15 +2,10 @@ const HomepageSkillsList = () => {
   return (
     <div>
       <section className="relative z-10 px-6 py-4 antialiased transition duration-500 ease-in-out bg-white rounded-lg text-2xs text-syncWave lg:px-10 lg:py-8 lg:text-sm dark:text-white dark:bg-darkModeDetail">
-        <a
-          href="https://www.linkedin.com/in/keilmart/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <pre className="m-2 sm:m-3 font-montserrat">
-            1&nbsp;&nbsp;class <b>Person</b> {"{"}
-          </pre>
-        </a>
+        <pre className="m-2 sm:m-3 font-montserrat">
+          1&nbsp;&nbsp;class <b>Person</b> {"{"}
+        </pre>
+
         <pre className="m-2 sm:m-3 font-montserrat">
           2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; constructor() {"{"}
         </pre>
@@ -24,16 +19,12 @@ const HomepageSkillsList = () => {
             <b className="uppercase">traveling</b>&quot;];
           </pre>
         </a>
-        <a
-          href="https://www.google.com/search?q=toronto+pictures"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <pre className="m-2 sm:m-3 font-montserrat">
-            5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.location = &quot;
-            <b>Toronto, Canada</b>&quot;
-          </pre>
-        </a>
+
+        <pre className="m-2 sm:m-3 font-montserrat">
+          5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.location = &quot;
+          <b>Toronto, Canada</b>&quot;
+        </pre>
+
         <a
           href="https://www.instagram.com/charlieistheshiht/"
           target="_blank"
