@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import CodeBlock from "./CodeBlock";
 import { GithubIcon, LinkedIcon } from "./HeroIcons/Index";
+import { GlobeBlack, GlobePurple } from "../GlobalIcons/Index";
 
 import { motion } from "framer-motion";
 
@@ -37,7 +38,13 @@ const Hero = () => {
         </ul>
       </div>
 
-      <div>
+      <div className="relative">
+        <div className="absolute hidden sm:block -top-36 -left-40 dark:hidden">
+          <GlobeBlack className="w-1/2" />
+        </div>
+        <div className="absolute hidden -top-36 -left-40 sm:dark:block">
+          <GlobePurple className="w-1/2" />
+        </div>
         <motion.div
           alt="Code block describing Keil Martin"
           initial={{
@@ -50,7 +57,6 @@ const Hero = () => {
             transition: { type: "spring", bounce: 0.35, mass: 2 },
           }}
           transition={{ type: "spring" }}
-          dragConstraints={{ left: -50, right: 50, top: -50, bottom: 20 }}
           whileTap={{ rotate: 20, scale: 0.95 }}
           whileHover={{ scale: 1.01 }}
           className="z-20 mx-auto bg-white border rounded-lg cursor-pointer shadow-art active:shadow-art-active hover:shadow-art-hover dark:shadow-none dark:border-0 dark:bg-darkModeDetail"

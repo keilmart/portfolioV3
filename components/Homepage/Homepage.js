@@ -28,13 +28,6 @@ const FadeIn = ({ children }) => {
 const Homepage = ({ notableProjects, featuredProjects }) => {
   return (
     <>
-      <div className="absolute top-0 right-0 block dark:hidden">
-        <GlobeBlack />
-      </div>
-      <div className="absolute top-0 right-0 hidden dark:block">
-        <GlobePurple />
-      </div>
-
       <FadeIn>
         <Hero />
       </FadeIn>
