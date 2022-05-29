@@ -50,14 +50,22 @@ const HomepageSkillsCarousel = ({ cards }) => {
                 <h3 className="pt-3 pb-2 text-xl font-semibold text-center text-primary dark:text-white">
                   {card.title}
                 </h3>
-                <ul>
-                  {card.skillArray.map((cardSkill) => (
-                    <li key={card.idx}>
-                      <span className="block text-base text-tertiary">
-                        {cardSkill}
-                      </span>
-                    </li>
-                  ))}
+                <ul className="block text-base text-tertiary">
+                  <li>
+                    <span>{card.skillOne}</span>
+                  </li>
+                  <li>
+                    <span>{card.skillTwo}</span>
+                  </li>
+                  <li>
+                    <span>{card.skillThree}</span>
+                  </li>
+                  <li>
+                    <span>{card.skillFour}</span>
+                  </li>
+                  <li>
+                    <span>{card.skillFive}</span>
+                  </li>
                 </ul>
               </div>
             </div>

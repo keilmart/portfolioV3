@@ -99,8 +99,6 @@ export const getStaticPaths = async () => {
   try {
     const querySnapshot = await getDocs(collection(db, "firestoreProjects"));
 
-    console.log(querySnapshot);
-
     querySnapshot.forEach((project) => {
       projects.push({
         id: project.id,
@@ -109,12 +107,20 @@ export const getStaticPaths = async () => {
       });
       // console.log(project.id, " => ", project.data());
     });
-    // Get the paths we want to pre-render based on posts
+  } catch (e) {
+    console.log(e);
+  }
+
+  // Get the paths we want to pre-render based on posts
+  try {
     const paths = projects.map((singleSlug) => ({
       params: { slug: singleSlug.slug },
     }));
 
-    return { paths, fallback: false };
+    return {
+      paths,
+      fallback: false,
+    };
   } catch (e) {
     console.log(e);
     return { paths: {}, fallback: false }; // No paths.

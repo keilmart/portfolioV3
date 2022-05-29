@@ -10,15 +10,27 @@ const HomepageSkillsList = () => {
   const cards = [
     {
       title: "Developing",
-      skillArray: ["Next.js", "Gatsby", "React", "JavaScript", "jQuery"],
+      skillOne: "Next.js",
+      skillTwo: "Gatsby",
+      skillThree: "React",
+      skillFour: "JavaScript",
+      skillFive: "jQuery",
     },
     {
       title: "Styling",
-      skillArray: ["Tailwind", "ScSS / SaSS", "CSS", "Bootstrap", "Figma"],
+      skillOne: "Tailwind",
+      skillTwo: "ScSS / SaSS",
+      skillThree: "CSS",
+      skillFour: "Bootstrap",
+      skillFive: "Figma",
     },
     {
       title: "Learning",
-      skillArray: ["GraphQL", "TypeScript", "Node.js", "Express", "MongoDB"],
+      skillOne: "GraphQL",
+      skillTwo: "TypeScript",
+      skillThree: "Node.js",
+      skillFour: "Express",
+      skillFive: "MongoDB",
     },
   ];
 
@@ -41,14 +53,22 @@ const HomepageSkillsList = () => {
               <h3 className="pt-3 pb-2 text-xl font-semibold text-center text-primary dark:text-white">
                 {card.title}
               </h3>
-              <ul>
-                {card.skillArray.map((cardSkill, idx) => (
-                  <li key={cardSkill.idx}>
-                    <span className="block text-base text-tertiary">
-                      {cardSkill}
-                    </span>
-                  </li>
-                ))}
+              <ul className="block text-base text-tertiary">
+                <li>
+                  <span>{card.skillOne}</span>
+                </li>
+                <li>
+                  <span>{card.skillTwo}</span>
+                </li>
+                <li>
+                  <span>{card.skillThree}</span>
+                </li>
+                <li>
+                  <span>{card.skillFour}</span>
+                </li>
+                <li>
+                  <span>{card.skillFive}</span>
+                </li>
               </ul>
             </li>
           ))}

@@ -16,8 +16,6 @@ const SEO = ({
       <meta property="og:image" content={`https://keilmart.com/meta/${og}`} />
       <meta property="og:image:width" content="170" />
       <meta property="og:image:height" content="320" />
-      <link rel="icon" type="image/png" sizes="16x16" href="meta/favicon.ico" />
-      <link rel="manifest" href="meta/site.webmanifest" />
       <meta name="theme-color" content="#ffffff" />
     </Head>
   );

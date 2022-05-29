@@ -48,11 +48,10 @@ export const getStaticProps = async () => {
       fireResponse.forEach((project) => {
         if (project.personal === true) {
           notableProjects.push(project);
-        }
-        if (project.personal === false) {
+        } else if (project.personal === false) {
           featuredProjects.push(project);
         } else {
-          console.log("Project not found");
+          console.log("Project not found", project);
         }
       });
     }

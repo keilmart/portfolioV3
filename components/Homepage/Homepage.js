@@ -6,7 +6,6 @@ import HomepageFeaturedList from "../HomepageFeaturedList/HomepageFeaturedList";
 import HomepageNotableList from "../HomepageNotableList/HomepageNotableList";
 
 import { SkillsIcon, FeaturedIcon, NotableIcon } from "./HomepageIcons/Index";
-import { GlobeBlack, GlobePurple } from "../GlobalIcons/Index";
 import { motion } from "framer-motion";
 
 const FadeIn = ({ children }) => {
