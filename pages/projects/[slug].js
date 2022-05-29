@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import Layout from "../../components/Layout/Layout";
 import SEO from "/components/SEO/SEO";
-// import { getStaticPathBoy, getStaticPropBoy } from "../../lib/projects";
+
 import { db } from "../../firebase/firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
 
@@ -56,7 +56,6 @@ const ProjectDetails = ({ projectData }) => {
               alt={project.name}
               width={2886}
               height={1245}
-              // Change these sizes to optimize //
               objectFit="cover"
               objectPosition="top left"
             />
@@ -100,23 +99,26 @@ export const getStaticPaths = async () => {
   try {
     const querySnapshot = await getDocs(collection(db, "firestoreProjects"));
 
+    console.log(querySnapshot);
+
     querySnapshot.forEach((project) => {
       projects.push({
         id: project.id,
         slug: project.slug,
         ...project.data(),
       });
-      console.log(project.id, " => ", project.data());
+      // console.log(project.id, " => ", project.data());
     });
+    // Get the paths we want to pre-render based on posts
+    const paths = projects.map((singleSlug) => ({
+      params: { slug: singleSlug.slug },
+    }));
+
+    return { paths, fallback: false };
   } catch (e) {
     console.log(e);
+    return { paths: {}, fallback: false }; // No paths.
   }
-  // Get the paths we want to pre-render based on posts
-  const paths = projects.map((singleSlug) => ({
-    params: { slug: singleSlug.slug },
-  }));
-
-  return { paths, fallback: false };
 };
 
 export const getStaticProps = async (context) => {
@@ -144,7 +146,7 @@ export const getStaticProps = async (context) => {
         timeline: project.timeline,
         ...project.data(),
       });
-      console.log(project.id, " => ", project.data());
+      // console.log(project.id, " => ", project.data());
     });
 
     return {
@@ -152,26 +154,9 @@ export const getStaticProps = async (context) => {
       revalidate: 1,
     };
   } catch (e) {
-    props = {};
     console.log(e);
+    return { props: {} };
   }
 };
-
-// export async function getStaticPaths() {
-//   const paths = getStaticPathBoy();
-//   return {
-//     paths,
-//     fallback: false,
-//   };
-// }
-
-// export async function getStaticProps({ params }) {
-//   const projectData = getStaticPropBoy(params.slug);
-//   return {
-//     props: {
-//       projectData,
-//     },
-//   };
-// }
 
 export default ProjectDetails;

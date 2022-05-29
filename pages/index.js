@@ -41,7 +41,7 @@ export const getStaticProps = async () => {
         ...doc.data(),
       });
 
-      console.log(doc.id, " => ", doc.data());
+      // console.log(doc.id, " => ", doc.data());
     });
 
     if (fireResponse.length > 0) {
