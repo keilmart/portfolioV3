@@ -61,14 +61,6 @@ export const getStaticProps = async () => {
     props = {};
   }
 
-  // return allPostsData.sort((a, b) => {
-  //   if (a.date < b.date) {
-  //     return 1;
-  //   } else {
-  //     return -1;
-  //   }
-  // });
-
   return {
     props: {
       notableProjects,

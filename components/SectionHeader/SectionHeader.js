@@ -6,11 +6,6 @@ const SectionHeader = ({ icon, title, skills = false }) => {
         {title}
       </h2>
       <hr className="flex-grow border-t-0 border-b-2 border-dotted dark:border-gray-400" />
-      {/* <hr
-        className={`flex-grow border-t-0 border-b-2 border-dotted dark:border-gray-400${
-          skills ? true : "block sm:hidden"
-        }`}
-      /> */}
     </header>
   );
 };

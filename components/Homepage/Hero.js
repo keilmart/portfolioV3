@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="z-10 flex flex-col items-center mx-0 mb-20 justify-evenly md:justify-between h-104 md:flex-row md:mx-12 md:mb-2 md:h-100">
+    <section className="z-10 flex flex-col items-center mx-0 mb-20 justify-evenly md:justify-between h-104 md:flex-row lg:mx-12 md:mb-2 md:h-100">
       <div>
         <span className="inline-block text-xl antialiased leading-5 text-tertiary sm:text-2xl">
           Hello, I&apos;m
