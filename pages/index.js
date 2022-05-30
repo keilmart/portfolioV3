@@ -17,7 +17,7 @@ const Home = ({ notableProjects, featuredProjects }) => {
   );
 };
 
-export const getStaticProps = async () => {
+export async function getStaticProps() {
   let fireResponse = [];
   let notableProjects = [];
   let featuredProjects = [];
@@ -40,10 +40,14 @@ export const getStaticProps = async () => {
         timeline: doc.timeline,
         ...doc.data(),
       });
-
       // console.log(doc.id, " => ", doc.data());
     });
+  } catch (error) {
+    console.log(error);
+    return (fireResponse = []);
+  }
 
+  try {
     if (fireResponse.length > 0) {
       fireResponse.forEach((project) => {
         if (project.personal === true) {
@@ -57,7 +61,7 @@ export const getStaticProps = async () => {
     }
   } catch (error) {
     console.log(error);
-    props = {};
+    return (props = {});
   }
 
   return {
@@ -66,6 +70,6 @@ export const getStaticProps = async () => {
       featuredProjects,
     },
   };
-};
+}
 
 export default Home;

@@ -8,12 +8,12 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="z-10 flex flex-col items-center mx-0 mb-20 justify-evenly md:justify-between h-104 md:flex-row lg:mx-12 md:mb-2 md:h-100">
+    <section className="z-10 flex flex-col items-center mb-20 justify-evenly md:justify-between h-104 md:flex-row md:mb-2 md:h-100">
       <div>
         <span className="inline-block text-xl antialiased leading-5 text-tertiary sm:text-2xl">
           Hello, I&apos;m
         </span>
-        <h1 className="text-4xl antialiased font-bold tracking-tight leading-titles sm:text-6xl text-primary dark:text-syncWave">
+        <h1 className="text-4xl antialiased font-bold tracking-tight font-montserrat leading-titles sm:text-6xl text-primary dark:text-syncWave">
           Keil Martin
         </h1>
         <span className="inline-block antialiased text-md sm:text-lg text-tertiary dark:text-white">
@@ -39,10 +39,10 @@ const Hero = () => {
       </div>
 
       <div className="relative">
-        <div className="absolute hidden md:block -top-[19rem] -left-[14rem]  dark:hidden rotate-6">
+        <div className="absolute hidden md:block -top-[18rem] -left-[14rem]  dark:hidden rotate-6">
           <GlobeBlack />
         </div>
-        <div className="absolute hidden -top-[19rem] -left-[14rem] md:dark:block rotate-6">
+        <div className="absolute hidden -top-[18rem] -left-[14rem] md:dark:block rotate-6">
           <GlobePurple />
         </div>
         <motion.div

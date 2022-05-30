@@ -39,7 +39,7 @@ const About = () => {
       </div>
       <div className="max-w-3xl mx-auto mt-4 mb-8 md:mb-20 md:mt-12 md:pt-16">
         <div className="pb-8"></div>
-        <h1 className="mt-4 mb-8 text-4xl antialiased font-bold text-primary dark:text-syncWave">
+        <h1 className="mt-4 mb-8 text-4xl antialiased font-bold font-montserrat text-primary dark:text-syncWave">
           About
         </h1>
         <h2 className="mb-4 text-lg antialiased font-semibold text-primary dark:text-tertiary">

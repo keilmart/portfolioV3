@@ -31,8 +31,9 @@ const HomepageSkillsList = () => {
           rel="noreferrer"
         >
           <pre className="m-2 sm:m-3 font-montserrat">
-            3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.myDog = [&quot;
-            <b>Charles</b>&quot;];
+            3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.myDog = {"{"}
+            &quot;
+            <b>Charles</b>&quot;{"}"};
           </pre>
         </a>
         <pre className="m-2 sm:m-3 font-montserrat">

@@ -8,7 +8,8 @@ import { db } from "../../firebase/firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
 
 const ProjectDetails = ({ projectData }) => {
-  let project = projectData[0];
+  const project = projectData[0];
+  console.log(projectData);
 
   return (
     <Layout>
@@ -19,20 +20,22 @@ const ProjectDetails = ({ projectData }) => {
       />
       <main className="mt-9">
         <div className="mb-8">
-          <Link href="/#work">
+          <Link
+            href={`${project.personal === true ? "/#notable" : "/#featured"}`}
+          >
             <a className="border-b border-gray-700 text-tertiary hover:bg-gray-100">
               &larr; Back to Projects
             </a>
           </Link>
         </div>
-        <h1 className="mb-6 text-3xl font-bold tracking-tight md:mb-8 md:text-6xl leading-headers dark:text-syncWave">
+        <h1 className="mb-6 text-3xl font-bold tracking-tight font-montserrat md:mb-8 md:text-6xl leading-headers dark:text-syncWave">
           {project.name}
         </h1>
         <div className="flex items-center space-x-8">
           <div>
             <h2 className="font-semibold text-md dark:text-white">Company</h2>
             <span className="text-md text-tertiary">
-              {!!project.company && project.personal == false
+              {!!project.company && project.personal === false
                 ? project.company
                 : "Personal"}
             </span>
@@ -68,7 +71,7 @@ const ProjectDetails = ({ projectData }) => {
         <p className="text-primary dark:text-white">{project.description}</p>
         <div className="my-8">
           <a
-            className="w-full mt-2 mr-4 sm:w-auto btn-primary primary-grad"
+            className="w-full mr-4 sm:w-auto btn-primary primary-grad"
             href={`https://${project.url}`}
             target="_blank"
             rel="noreferrer"
@@ -93,7 +96,7 @@ const ProjectDetails = ({ projectData }) => {
   );
 };
 
-export const getStaticPaths = async () => {
+export async function getStaticPaths() {
   let projects = [];
 
   try {
@@ -106,6 +109,7 @@ export const getStaticPaths = async () => {
         ...project.data(),
       });
       // console.log(project.id, " => ", project.data());
+      console.log("data", projects);
     });
   } catch (e) {
     console.log(e);
@@ -117,17 +121,19 @@ export const getStaticPaths = async () => {
       params: { slug: singleSlug.slug },
     }));
 
+    console.log("paths", paths);
+
     return {
       paths,
       fallback: false,
     };
   } catch (e) {
     console.log(e);
-    return { paths: {}, fallback: false }; // No paths.
+    return { paths: {} }; // No paths.
   }
-};
+}
 
-export const getStaticProps = async (context) => {
+export async function getStaticProps(context) {
   const slug = context.params.slug;
   try {
     let projectData = [];
@@ -155,14 +161,15 @@ export const getStaticProps = async (context) => {
       // console.log(project.id, " => ", project.data());
     });
 
+    console.log(projectData);
     return {
       props: { projectData },
-      revalidate: 1,
+      revalidate: 5,
     };
   } catch (e) {
     console.log(e);
     return { props: {} };
   }
-};
+}
 
 export default ProjectDetails;
