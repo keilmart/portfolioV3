@@ -40,7 +40,7 @@ export async function getStaticProps() {
         timeline: doc.timeline,
         ...doc.data(),
       });
-      // console.log(doc.id, " => ", doc.data());
+      console.log(doc.id, " => ", doc.data());
     });
   } catch (error) {
     console.log(error);

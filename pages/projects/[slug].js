@@ -28,7 +28,7 @@ const ProjectDetails = ({ projectData }) => {
             </a>
           </Link>
         </div>
-        <h1 className="mb-6 text-3xl font-bold tracking-tight font-montserrat md:mb-8 md:text-6xl leading-headers dark:text-syncWave">
+        <h1 className="mb-6 text-3xl antialiased font-bold tracking-tight font-montserrat md:mb-8 md:text-6xl leading-titles md:leading-titles dark:text-syncWave">
           {project.name}
         </h1>
         <div className="flex items-center space-x-8">
@@ -108,7 +108,7 @@ export async function getStaticPaths() {
         slug: project.slug,
         ...project.data(),
       });
-      // console.log(project.id, " => ", project.data());
+      console.log(project.id, " => ", project.data());
       console.log("data", projects);
     });
   } catch (e) {
@@ -152,19 +152,19 @@ export async function getStaticProps(context) {
         image: project.image,
         imageZoom: !!project.imageZoom ? project.imageZoom : null,
         name: project.name,
-        personal: project.personal,
+        personal: !!project.personal ? project.personal : null,
         slug: project.slug,
         stack: project.stack,
         timeline: project.timeline,
         ...project.data(),
       });
-      // console.log(project.id, " => ", project.data());
+      console.log(project.id, " => ", project.data());
     });
 
     console.log(projectData);
     return {
       props: { projectData },
-      revalidate: 5,
+      revalidate: 1,
     };
   } catch (e) {
     console.log(e);

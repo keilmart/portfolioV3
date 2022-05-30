@@ -10,8 +10,9 @@ const HomepageFeaturedList = ({ projects }) => {
           key={project.slug}
         >
           <Link
+            slug={project.slug}
             href={{
-              pathname: `/projects/${projects.slug}`,
+              pathname: `/projects/${project.slug}`,
             }}
           >
             <a className="relative flex w-full h-48 pt-8 pl-8 overflow-hidden transition duration-500 ease-in-out bg-gray-100 rounded-lg dark:bg-darkModeDetail md:pl-12 md:pt-12 flex-end md:w-1/2 lg:w-2/3 sm:h-56 lg:h-72 hover:shadow-lg hover:scale-105">
