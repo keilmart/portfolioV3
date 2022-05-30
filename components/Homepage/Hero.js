@@ -10,10 +10,10 @@ const Hero = () => {
   return (
     <section className="z-10 flex flex-col items-center mb-20 justify-evenly md:justify-between h-104 md:flex-row md:mb-2 md:h-100">
       <div>
-        <span className="inline-block mb-1 text-xl antialiased leading-5 text-tertiary sm:text-2xl sm:mb:0">
+        <span className="inline-block mb-1 text-xl antialiased leading-4 sm:mb-0 text-tertiary sm:text-2xl">
           Hello, I&apos;m
         </span>
-        <h1 className="text-4xl antialiased font-bold tracking-normal font-montserrat sm:text-6xl text-primary dark:text-syncWave">
+        <h1 className="text-4xl antialiased font-bold tracking-tight leading-titles font-montserrat sm:leading-titles sm:text-6xl text-primary dark:text-syncWave">
           Keil Martin
         </h1>
         <span className="inline-block antialiased text-md sm:text-lg text-tertiary dark:text-white">
