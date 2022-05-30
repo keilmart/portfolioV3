@@ -10,9 +10,6 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
-      lineHeight: {
-        titles: 0.9,
-      },
       fontSize: {
         "2xs": "0.8rem",
       },
