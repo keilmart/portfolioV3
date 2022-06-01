@@ -24,7 +24,6 @@ export async function getStaticProps() {
 
   try {
     const querySnapshot = await getDocs(collection(db, "firestoreProjects"));
-    // const querySnapshot = query(personalRef, orderBy("rank", "desc"));
 
     querySnapshot.forEach((doc) => {
       fireResponse.push({
@@ -42,8 +41,8 @@ export async function getStaticProps() {
       });
       console.log(doc.id, " => ", doc.data());
     });
-  } catch (error) {
-    console.log(error);
+  } catch (e) {
+    console.log(e);
     return (fireResponse = []);
   }
 
@@ -59,9 +58,12 @@ export async function getStaticProps() {
         }
       });
     }
-  } catch (error) {
-    console.log(error);
-    return (props = {});
+  } catch (e) {
+    console.log(e);
+    return (props = {
+      notableProjects: [],
+      featuredProjects: [],
+    });
   }
 
   return {

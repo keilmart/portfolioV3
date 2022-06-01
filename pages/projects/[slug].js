@@ -9,7 +9,6 @@ import { collection, getDocs, query, where } from "firebase/firestore";
 
 const ProjectDetails = ({ projectData }) => {
   const project = projectData[0];
-  console.log(projectData);
 
   return (
     <Layout>

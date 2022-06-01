@@ -49,11 +49,11 @@ const About = () => {
           <p className="mb-4">
             As a graduate from the Electrical Engineering Technology program at
             Georgian College, I knew I always wanted to work with technology, I
-            just wasn’t sure what part fully grabbed my interest. I took some
-            courses in software and hardware and knew this was the right fit for
-            me. I started playing with a Raspberry Pi and python for a OACETT
-            technical project, which I received in the top donors and finished
-            in the top 10% of my graduating class.
+            just wasn&apos;t sure what part fully grabbed my interest. I took
+            some courses in software and hardware and knew this was the right
+            fit for me. I started playing with a Raspberry Pi and python for a
+            OACETT technical project, which I received in the top donors and
+            finished in the top 10% of my graduating class.
           </p>
           <p className="mb-4">
             I then attended a front end developer bootcamp at Juno College of
