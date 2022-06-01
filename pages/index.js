@@ -30,7 +30,7 @@ export async function getStaticProps() {
         company: !!doc.company ? doc.company : null,
         description: doc.description,
         github: !!doc.github ? doc.github : null,
-        image: doc.image,
+        image: !!doc.image ? doc.image : doc.imageZoom,
         imageZoom: !!doc.imageZoom ? doc.imageZoom : null,
         name: doc.name,
         personal: doc.personal,

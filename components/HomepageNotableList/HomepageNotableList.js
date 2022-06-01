@@ -18,7 +18,7 @@ const NotableProjectList = ({ projects }) => {
             <a className="relative inline-block w-full h-48 pt-8 pl-8 mb-4 overflow-hidden transition duration-500 ease-in-out bg-gray-100 rounded-lg dark:bg-darkModeDetail hover:shadow-lg hover:scale-105">
               <div className="absolute w-full overflow-hidden rounded-tl-3xl top-10">
                 <Image
-                  src={project.image}
+                  src={project.imageZoom ? project.imageZoom : project.image}
                   alt={project.name}
                   width={768}
                   height={384}

@@ -54,7 +54,7 @@ const ProjectDetails = ({ projectData }) => {
         >
           <div className="w-full overflow-hidden rounded-t-3xl top-10">
             <Image
-              src={project.imageZoom ? project.imageZoom : project.image}
+              src={project.image ? project.image : project.imageZoom}
               alt={project.name}
               width={2886}
               height={1245}
