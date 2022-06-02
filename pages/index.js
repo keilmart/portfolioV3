@@ -5,7 +5,7 @@ import SEO from "../components/SEO/SEO";
 import { db } from "../firebase/firebase";
 import { collection, getDocs } from "firebase/firestore";
 
-const Home = ({ notableProjects, featuredProjects }) => {
+const Home = ({ featuredProjects, notableProjects }) => {
   return (
     <Layout>
       <SEO />
@@ -43,16 +43,16 @@ export async function getStaticProps() {
     });
   } catch (e) {
     console.log(e);
-    return (fireResponse = []);
+    return (fireResponse = []); // No response.
   }
 
   try {
     if (fireResponse.length > 0) {
       fireResponse.forEach((project) => {
-        if (project.personal === true) {
-          notableProjects.push(project);
-        } else if (project.personal === false) {
+        if (project.personal === false) {
           featuredProjects.push(project);
+        } else if (project.personal === true) {
+          notableProjects.push(project);
         } else {
           console.log("Project not found", project);
         }
@@ -61,15 +61,15 @@ export async function getStaticProps() {
   } catch (e) {
     console.log(e);
     return (props = {
-      notableProjects: [],
-      featuredProjects: [],
+      featuredProjects: [], // No Featured projects.
+      notableProjects: [], // No Notable projects.
     });
   }
 
   return {
     props: {
-      notableProjects,
       featuredProjects,
+      notableProjects,
     },
   };
 }

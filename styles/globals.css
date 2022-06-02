@@ -5,6 +5,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .btn-primary {
+    @apply inline-block px-4 py-2 text-sm antialiased font-semibold text-center text-white transition duration-300 ease-in-out rounded-md shadow-sm focus:ring-2 text-opacity-95 hover:scale-105 hover:shadow-lg;
+  }
+}
+
 @layer utilities {
   .text-primary {
     @apply text-gray-900;
@@ -22,6 +28,11 @@
     @apply border-gray-200;
   }
 
+  .primary-grad {
+    background: linear-gradient(134deg, #6a98f0 0%, #4961dc 99%);
+  }
+
+  /**** Scroll Bar ****/
   body::-webkit-scrollbar {
     width: 10px;
   }
@@ -38,16 +49,7 @@
     background: #6a98f0;
   }
 }
-
-@layer components {
-  .btn-primary {
-    @apply inline-block px-4 py-2 text-sm antialiased font-semibold text-center text-white transition duration-300 ease-in-out rounded-md shadow-sm focus:ring-2 text-opacity-95 hover:scale-105 hover:shadow-lg;
-  }
-}
-
-.primary-grad {
-  background: linear-gradient(134deg, #6a98f0 0%, #4961dc 99%);
-}
+/**** Scroll Bar ****/
 
 /****  SVG's ****/
 svg {

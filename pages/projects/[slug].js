@@ -112,6 +112,7 @@ export async function getStaticPaths() {
     });
   } catch (e) {
     console.log(e);
+    return { projects: [] }; // No projects.
   }
 
   // Get the paths we want to pre-render based on posts
@@ -167,7 +168,7 @@ export async function getStaticProps(context) {
     };
   } catch (e) {
     console.log(e);
-    return { props: {} };
+    return { props: {} }; // No props.
   }
 }
 

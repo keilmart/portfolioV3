@@ -2,7 +2,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
     <footer className="border-t border-primary">
-      <div className="container flex justify-between w-full max-w-screen-lg px-4 py-4 mx-auto text-sm font-medium bg-white text-secondary text-primary dark:bg-darkMode dark:text-white">
+      <div className="container flex justify-between w-full max-w-screen-lg px-4 py-4 mx-auto text-sm font-medium bg-white text-secondary text-primary dark:bg-darkMode dark:text-white ">
         <div className="flex items-center">
           <span>{currentYear} &nbsp;</span>
           <span className="hidden sm:block">
@@ -16,7 +16,9 @@ const Footer = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <span className="hover:text-syncWave">Email Me!</span>
+              <span className="pb-1 hover:text-syncWave hover:border-gray-700 dark:hover:border-white hover:border-b">
+                Email Me!
+              </span>
             </a>
           </div>
         </div>
