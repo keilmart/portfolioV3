@@ -37,7 +37,7 @@ const HomepageSkillsList = () => {
   return (
     <>
       <div className="hidden md:block">
-        <ul className="grid grid-cols-1 mx-12 antialiased md:gap-6 lg:gap-12 sm:grid-cols-3">
+        <ul className="grid grid-cols-1 mx-0 antialiased lg:mx-12 md:gap-6 lg:gap-12 sm:grid-cols-3">
           {cards.map((card, idx) => (
             <li
               key={idx}
