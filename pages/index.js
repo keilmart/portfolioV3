@@ -29,7 +29,6 @@ export async function getStaticProps() {
       fireResponse.push({
         company: !!doc.company ? doc.company : null,
         description: doc.description,
-        descriptionTwo: doc.descriptionTwo,
         github: !!doc.github ? doc.github : null,
         image: !!doc.image ? doc.image : doc.imageZoom,
         imageZoom: !!doc.imageZoom ? doc.imageZoom : null,
@@ -40,7 +39,7 @@ export async function getStaticProps() {
         timeline: doc.timeline,
         ...doc.data(),
       });
-      console.log(doc.id, " => ", doc.data());
+      // console.log(doc.id, " => ", doc.data());
     });
   } catch (e) {
     console.log(e);

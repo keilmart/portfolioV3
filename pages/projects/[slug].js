@@ -9,7 +9,6 @@ import { collection, getDocs, query, where } from "firebase/firestore";
 
 const ProjectDetails = ({ projectData }) => {
   const project = projectData[0];
-
   return (
     <Layout>
       <SEO
@@ -149,7 +148,6 @@ export async function getStaticProps(context) {
       projectData.push({
         company: !!project.company ? project.company : null,
         description: project.description,
-        descriptionTwo: doc.descriptionTwo,
         github: !!project.github ? project.github : null,
         image: project.image,
         imageZoom: !!project.imageZoom ? project.imageZoom : null,
