@@ -29,6 +29,7 @@ export async function getStaticProps() {
       fireResponse.push({
         company: !!doc.company ? doc.company : null,
         description: doc.description,
+        descriptionTwo: doc.descriptionTwo,
         github: !!doc.github ? doc.github : null,
         image: !!doc.image ? doc.image : doc.imageZoom,
         imageZoom: !!doc.imageZoom ? doc.imageZoom : null,

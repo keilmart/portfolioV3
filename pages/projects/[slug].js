@@ -68,6 +68,7 @@ const ProjectDetails = ({ projectData }) => {
           Summary
         </h2>
         <p className="text-primary dark:text-white">{project.description}</p>
+        <p className="text-primary dark:text-white">{project.descriptionTwo}</p>
         <div className="my-8">
           <a
             className="w-full mr-4 sm:w-auto btn-primary primary-grad"
@@ -148,6 +149,7 @@ export async function getStaticProps(context) {
       projectData.push({
         company: !!project.company ? project.company : null,
         description: project.description,
+        descriptionTwo: doc.descriptionTwo,
         github: !!project.github ? project.github : null,
         image: project.image,
         imageZoom: !!project.imageZoom ? project.imageZoom : null,

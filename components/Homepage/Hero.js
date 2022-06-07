@@ -20,7 +20,7 @@ const Hero = () => {
           FRONT END DEVELOPER &amp; DOG DAD
         </span>
         <ul className="flex flex-row pt-1 pl-1 text-sm text-md text-syncWave sm:pt-2">
-          <li className="pr-3 sm:pr-4">
+          <li className="pr-3">
             <Link href="https://www.linkedin.com/in/keilmart/">
               <a target="_blank" rel="noreferrer">
                 <LinkedIcon xmlns="http://www.w3.org/2000/svg" />
