@@ -37,14 +37,11 @@ const About = () => {
           </motion.div>
         </div>
       </div>
-      <div className="max-w-3xl mx-auto mt-4 mb-8 md:mb-20 md:mt-12 md:pt-16">
+      <div className="max-w-3xl mx-auto mt-8 mb-10 md:mb-20 md:mt-18 md:pt-20">
         <div className="pb-8"></div>
         <h1 className="mt-4 mb-8 text-4xl antialiased font-bold font-montserrat text-primary dark:text-syncWave">
           About
         </h1>
-        <h2 className="mb-4 text-lg antialiased font-semibold text-primary dark:text-tertiary">
-          Early Career Stuff
-        </h2>
         <div className="text-lg antialiased leading-relaxed tracking-tight text-secondary dark:text-white">
           <p className="mb-4">
             As a graduate from the Electrical Engineering Technology program at

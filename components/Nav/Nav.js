@@ -52,12 +52,12 @@ const Nav = () => {
             xmlns="http://www.w3.org/2000/svg"
           />
           <div className="hidden sm:block">
-            <p className="block text-sm pointer-events-none dark:hidden text-syncWave">
+            <p className="block text-sm pointer-events-none dark:hidden text-secondary">
               Light Mode
             </p>
           </div>
           <div className="hidden sm:block">
-            <p className="hidden text-sm pointer-events-none dark:block text-syncWave">
+            <p className="hidden text-sm pointer-events-none dark:block dark:text-white">
               Dark Mode
             </p>
           </div>
