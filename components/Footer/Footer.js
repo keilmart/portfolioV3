@@ -16,7 +16,7 @@ const Footer = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <span className="pb-1 hover:text-syncWave hover:border-gray-700 dark:hover:border-white hover:border-b">
+              <span className="pb-1 hover:text-syncWave hover:border-b hover:border-syncWave">
                 Email Me!
               </span>
             </a>

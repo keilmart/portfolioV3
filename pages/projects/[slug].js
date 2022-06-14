@@ -161,7 +161,6 @@ export async function getStaticProps(context) {
       console.log(project.id, " => ", project.data());
     });
 
-    console.log(projectData);
     return {
       props: { projectData },
       revalidate: 1,
