@@ -59,7 +59,7 @@ const Hero = () => {
           transition={{ type: "spring" }}
           whileTap={{ rotate: 20, scale: 0.95 }}
           whileHover={{ scale: 1.01 }}
-          className="z-20 mx-auto bg-white border rounded-lg cursor-pointer shadow-art active:shadow-art-active hover:shadow-art-hover dark:shadow-none dark:border-0 dark:bg-darkModeDetail"
+          className="z-20 mx-auto bg-white border rounded-lg cursor-pointer shadow-art active:shadow-art-active hover:shadow-art-hover dark:shadow-none dark:bg-darkModeDetail dark:border-transparent"
         >
           <CodeBlock />
         </motion.div>

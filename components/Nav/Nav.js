@@ -48,7 +48,7 @@ const Nav = () => {
             ))}
           </div>
           <DarkModeToggle
-            className="ml-4 text-gray-600 sm:mx-4 w-7 h-7 mb-[2px] dark:mb-0"
+            className="ml-4 text-gray-600 sm:mx-4 w-7 h-7 cursor-pointer mb-[2px] dark:mb-0"
             xmlns="http://www.w3.org/2000/svg"
           />
           <div className="hidden sm:block">
