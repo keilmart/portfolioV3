@@ -27,11 +27,11 @@ export async function getStaticProps() {
 
     querySnapshot.forEach((doc) => {
       fireResponse.push({
-        company: !!doc.company ? doc.company : null,
+        company: !!doc.company ? doc.company : "",
         description: doc.description,
-        github: !!doc.github ? doc.github : null,
+        github: !!doc.github ? doc.github : "",
         image: !!doc.image ? doc.image : doc.imageZoom,
-        imageZoom: !!doc.imageZoom ? doc.imageZoom : null,
+        imageZoom: !!doc.imageZoom ? doc.imageZoom : "",
         name: doc.name,
         personal: doc.personal,
         slug: doc.slug,

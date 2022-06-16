@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import Layout from "../../components/Layout/Layout";
 import SEO from "/components/SEO/SEO";
+import Layout from "../../components/Layout/Layout";
+import PlaceholderBlur from "../../components/PlaceholderBlur/PlaceholderBlur";
 
 import { db } from "../../firebase/firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
@@ -52,11 +53,19 @@ const ProjectDetails = ({ projectData }) => {
           rel="noreferrer"
         >
           <div className="w-full overflow-hidden rounded-t-3xl top-10">
-            <Image
+            {/* <Image
               src={project.image ? project.image : project.imageZoom}
               alt={project.name}
               width={2886}
               height={1245}
+              objectFit="cover"
+              objectPosition="top left"
+            /> */}
+            <PlaceholderBlur
+              imageSrc={project.image || project.imageZoom}
+              imageAlt={project.name}
+              imageWidth={2886}
+              imageHeight={1245}
               objectFit="cover"
               objectPosition="top left"
             />
@@ -146,13 +155,13 @@ export async function getStaticProps(context) {
     const querySnapshot = await getDocs(firstQuery);
     querySnapshot.forEach((project) => {
       projectData.push({
-        company: !!project.company ? project.company : null,
+        company: !!project.company ? project.company : "",
         description: project.description,
-        github: !!project.github ? project.github : null,
+        github: !!project.github ? project.github : "",
         image: project.image,
-        imageZoom: !!project.imageZoom ? project.imageZoom : null,
+        imageZoom: !!project.imageZoom ? project.imageZoom : "",
         name: project.name,
-        personal: !!project.personal ? project.personal : null,
+        personal: !!project.personal ? project.personal : "",
         slug: project.slug,
         stack: project.stack,
         timeline: project.timeline,

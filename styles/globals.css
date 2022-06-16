@@ -74,7 +74,7 @@ svg {
 }
 /****  SVG's ****/
 
-/****  React-slick Homepage ****/
+/**** Carousel Homepage ****/
 .slick-track {
   min-width: 6000px;
   margin-left: auto;
@@ -97,4 +97,19 @@ svg {
   max-width: 236px;
   min-width: 236px;
 }
-/**** React-slick case Homepage ****/
+/**** Carousel Homepage ****/
+
+/**** PlaceholderBlur Homepage ****/
+.unblur {
+  animation: unblur 1s linear;
+}
+
+@keyframes unblur {
+  from {
+    filter: blur(20px);
+  }
+  to {
+    filter: blur(0);
+  }
+}
+/**** PlaceholderBlur Homepage ****/

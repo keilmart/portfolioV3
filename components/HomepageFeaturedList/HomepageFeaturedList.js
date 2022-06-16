@@ -1,5 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
+
+import PlaceholderBlur from "../PlaceholderBlur/PlaceholderBlur";
 
 const HomepageFeaturedList = ({ projects }) => {
   return (
@@ -17,11 +18,11 @@ const HomepageFeaturedList = ({ projects }) => {
           >
             <a className="relative flex w-full h-48 pt-8 pl-8 overflow-hidden transition duration-500 ease-in-out bg-gray-100 rounded-lg dark:bg-darkModeDetail md:pl-12 md:pt-12 flex-end md:w-1/2 lg:w-2/3 sm:h-56 lg:h-72 hover:shadow-lg hover:scale-105">
               <div className="absolute flex overflow-hidden shadow-md top-10 rounded-tl-3xl">
-                <Image
-                  src={project.imageZoom ? project.imageZoom : project.image}
-                  alt={project.name}
-                  width={721}
-                  height={471}
+                <PlaceholderBlur
+                  imageSrc={project.imageZoom}
+                  imageWidth={721}
+                  imageHeight={471}
+                  imageAlt={project.name}
                   objectFit="fill"
                   objectPosition="top left"
                 />
