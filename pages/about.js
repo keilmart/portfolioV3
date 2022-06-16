@@ -46,10 +46,11 @@ const About = () => {
           <p className="mb-4">
             Building creative tech solutions is my biggest passion, and coding
             has been a life-long hobby for me. I started like most others
-            playing around in myspace and the love of it has continued to grow
+            playing around in Myspace and the love of it has continued to grow
             over the years. As a child I was always taking apart my Playstations
             and laptops trying to figure out how everything worked and that need
-            to tinker has never dissipated.
+            to tinker has never dissipated (although my game systems were never
+            the same).
           </p>
         </div>
 
@@ -61,18 +62,19 @@ const About = () => {
           <p>
             My journey started in the Electrical Engineering Technology program
             at Georgian College, I knew growing up I always wanted to work with
-            technology. Although I wasn&apos;t sure what aspect I wanted to
-            pursue (hardware, software, robotics, etc.) I took the leap and
-            enrolled. During my third year, I entered my PLC class and started
-            programming a and wiring a Raspberry Pi, I knew this was the right
+            technology, although I wasn&apos;t sure what aspect I wanted to
+            pursue (hardware, software, robotics, etc.). It was in my third year
+            that I started programming in my PLC class. I started by programming
+            and connecting a Raspberry Pi to a live circuit. When I saw my code
+            being translated to physical movements, I knew this was the right
             fit for me. From that day onward I knew I wanted to be a programmer.
           </p>
           <br />
           <p className="mb-4">
             In 2019, I decided to pursue a formal education in web development
             at Juno College of Technology (formerly HackerYou), where I
-            completed the Web Development Immersive. This gave me all the tools
-            necsasary
+            completed the Web Development Immersive bootcamp. This gave me all
+            the tools necessary to become a Front End developer.
           </p>
         </div>
 
@@ -82,15 +84,15 @@ const About = () => {
         </h2>
         <div>
           <p>
-            I have just over 2 year&apos;s of experience as a Front End
-            Developer, my main focus has been component driven development,
-            primarily working in Next.js, React, Tailwind and ScSS. In my short
-            time on this adventure, I&apos;ve already contributed to over a
-            dozen large scale projects. I have taken on freelance opportunities
-            where I have not only been the lead developer on these projects
-            (teams of up to 3), but also managed all communications between
-            myself and the clients, drafted all the contracts and been the point
-            of contact for any of their needs.
+            I have just over 2 years of experience as a Front End Developer. My
+            main focus has been component driven development. Primarily working
+            in Next.js, React, Tailwind and ScSS. In my short time on this
+            adventure, I&apos;ve already contributed to over a dozen large scale
+            projects. I have taken on freelance opportunities where I have not
+            only been the lead developer on these projects (teams of up to 3),
+            but also managed all communications between myself and the clients.
+            This includes drafting all the contracts and been the main point of
+            contact for any of their needs.
           </p>
         </div>
 
@@ -99,7 +101,7 @@ const About = () => {
           View this websites Github
         </h2>
         <a
-          className="w-full mt-3 btn-primary primary-grad sm:w-auto"
+          className="w-full mt-4 btn-primary primary-grad sm:w-auto"
           href="https://github.com/keilmart/portfolioV3`"
           target="_blank"
           rel="noreferrer"
