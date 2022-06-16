@@ -23,8 +23,8 @@ const HomepageFeaturedList = ({ projects }) => {
                   imageWidth={721}
                   imageHeight={471}
                   imageAlt={project.name}
-                  objectFit="fill"
-                  objectPosition="top left"
+                  // objectFit="fill"
+                  // objectPosition="top left"
                 />
               </div>
             </a>

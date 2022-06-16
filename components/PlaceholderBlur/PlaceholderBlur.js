@@ -7,14 +7,16 @@ const PlaceholderBlur = ({ imageSrc, imageAlt, imageWidth, imageHeight }) => {
   return (
     <>
       <Image
-        placeholder="blur"
-        blurDataURL={imageSrc}
-        alt={imageAlt}
         src={imageSrc}
+        alt={imageAlt}
         width={imageWidth}
         height={imageHeight}
+        blurDataURL={imageSrc}
         className={loaded ? "unblur" : ""}
         onLoadingComplete={() => setLoaded(true)}
+        objectPosition="top left"
+        placeholder="blur"
+        objectFit="cover"
       />
     </>
   );

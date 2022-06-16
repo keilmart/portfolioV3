@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 
 import SEO from "/components/SEO/SEO";
 import Layout from "../../components/Layout/Layout";
@@ -53,21 +52,13 @@ const ProjectDetails = ({ projectData }) => {
           rel="noreferrer"
         >
           <div className="w-full overflow-hidden rounded-t-3xl top-10">
-            {/* <Image
-              src={project.image ? project.image : project.imageZoom}
-              alt={project.name}
-              width={2886}
-              height={1245}
-              objectFit="cover"
-              objectPosition="top left"
-            /> */}
             <PlaceholderBlur
               imageSrc={project.image || project.imageZoom}
               imageAlt={project.name}
               imageWidth={2886}
               imageHeight={1245}
-              objectFit="cover"
-              objectPosition="top left"
+              // objectFit="cover"
+              // objectPosition="top left"
             />
           </div>
         </a>

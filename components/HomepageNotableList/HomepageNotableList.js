@@ -19,14 +19,12 @@ const NotableProjectList = ({ projects }) => {
             <a className="relative inline-block w-full h-48 pt-8 pl-8 mb-4 overflow-hidden transition duration-500 ease-in-out bg-gray-100 rounded-lg dark:bg-darkModeDetail hover:shadow-lg hover:scale-105">
               <div className="absolute w-full overflow-hidden rounded-tl-3xl top-10">
                 <PlaceholderBlur
-                  imageSrc={
-                    project.imageZoom ? project.imageZoom : project.image
-                  }
+                  imageSrc={project.image ? project.image : project.imageZoom}
                   imageWidth={768}
                   imageHeight={384}
                   imageAlt={project.name}
-                  objectFit="cover"
-                  objectPosition="top left"
+                  // objectFit="cover"
+                  // objectPosition="top left"
                 />
               </div>
             </a>
