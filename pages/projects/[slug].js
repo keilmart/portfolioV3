@@ -7,6 +7,8 @@ import PlaceholderBlur from "../../components/PlaceholderBlur/PlaceholderBlur";
 import { db } from "../../firebase/firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
 
+import { getProjectSlugs } from "../../lib/dataFetch";
+
 const ProjectDetails = ({ projectData }) => {
   const project = projectData[0];
   return (
@@ -107,8 +109,8 @@ export async function getStaticPaths() {
         slug: project.slug,
         ...project.data(),
       });
-      console.log(project.id, " => ", project.data());
-      console.log("data", projects);
+      // console.log(project.id, " => ", project.data());
+      // console.log("data", projects);
     });
   } catch (e) {
     console.log(e);
@@ -121,7 +123,7 @@ export async function getStaticPaths() {
       params: { slug: singleSlug.slug },
     }));
 
-    console.log("paths", paths);
+    // console.log("paths", paths);
 
     return {
       paths,
@@ -134,10 +136,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
+  let projectData = [];
   const slug = context.params.slug;
   try {
-    let projectData = [];
-
     const firstQuery = query(
       collection(db, "firestoreProjects"),
       where("slug", "==", slug)
@@ -170,5 +171,23 @@ export async function getStaticProps(context) {
     return { props: {} }; // No props.
   }
 }
+
+// export async function getStaticProps({ params }) {
+//   try {
+//     const projectSlugs = await getProjectSlugs(params.slug);
+//     // const featuredProjects = await getProjectData();
+//     console.log("projectSlugs", projectSlugs);
+
+//     return {
+//       props: {
+//         projectSlugs,
+//         revalidate: 1,
+//       },
+//     };
+//   } catch (e) {
+//     console.log(e);
+//     return { props: {} }; // No props.
+//   }
+// }
 
 export default ProjectDetails;

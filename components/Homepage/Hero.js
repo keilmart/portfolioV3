@@ -20,15 +20,14 @@ const Hero = () => {
           FRONT END DEVELOPER &amp; DOG DAD
         </span>
         <ul className="flex flex-row pt-1 pl-1 text-sm text-md text-syncWave sm:pt-2">
-          <li className="pr-3 transition duration-300 ease-in-out hover:scale-110">
+          <li className="pr-3">
             <Link href="https://www.linkedin.com/in/keilmart/">
               <a target="_blank" rel="noreferrer" aria-label="Linkedin Logo">
                 <LinkedIcon xmlns="http://www.w3.org/2000/svg" />
               </a>
             </Link>
           </li>
-
-          <li className="transition duration-300 ease-in-out hover:scale-110">
+          <li>
             <Link href="https://github.com/keilmart">
               <a target="_blank" rel="noreferrer" aria-label="Github Logo">
                 <GithubIcon xmlns="http://www.w3.org/2000/svg" />

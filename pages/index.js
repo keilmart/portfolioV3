@@ -2,8 +2,10 @@ import Homepage from "../components/Homepage/Homepage";
 import Layout from "../components/Layout/Layout";
 import SEO from "../components/SEO/SEO";
 
-import { db } from "../firebase/firebase";
-import { collection, getDocs } from "firebase/firestore";
+// import { db } from "../firebase/firebase";
+// import { collection, getDocs } from "firebase/firestore";
+
+import { getProjectData } from "../lib/dataFetch";
 
 const Home = ({ featuredProjects, notableProjects }) => {
   return (
@@ -18,37 +20,15 @@ const Home = ({ featuredProjects, notableProjects }) => {
 };
 
 export async function getStaticProps() {
-  let fireResponse = [];
   let notableProjects = [];
   let featuredProjects = [];
+  const allProjectData = await getProjectData();
+
+  // console.log("allProjectData", allProjectData.allProjectData);
 
   try {
-    const querySnapshot = await getDocs(collection(db, "firestoreProjects"));
-
-    querySnapshot.forEach((doc) => {
-      fireResponse.push({
-        company: !!doc.company ? doc.company : "",
-        description: doc.description,
-        github: !!doc.github ? doc.github : "",
-        image: !!doc.image ? doc.image : doc.imageZoom,
-        imageZoom: !!doc.imageZoom ? doc.imageZoom : "",
-        name: doc.name,
-        personal: doc.personal,
-        slug: doc.slug,
-        stack: doc.stack,
-        timeline: doc.timeline,
-        ...doc.data(),
-      });
-      // console.log(doc.id, " => ", doc.data());
-    });
-  } catch (e) {
-    console.log(e);
-    return (fireResponse = []); // No response.
-  }
-
-  try {
-    if (fireResponse.length > 0) {
-      fireResponse.forEach((project) => {
+    if (allProjectData.allProjectData.length > 0) {
+      allProjectData.allProjectData.forEach((project) => {
         if (project.personal === false) {
           featuredProjects.push(project);
         } else if (project.personal === true) {
@@ -70,6 +50,7 @@ export async function getStaticProps() {
     props: {
       featuredProjects,
       notableProjects,
+      revalidate: 1,
     },
   };
 }
