@@ -7,8 +7,6 @@ import PlaceholderBlur from "../../components/PlaceholderBlur/PlaceholderBlur";
 import { db } from "../../firebase/firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
 
-import { getProjectSlugs } from "../../lib/dataFetch";
-
 const ProjectDetails = ({ projectData }) => {
   const project = projectData[0];
   return (
@@ -110,7 +108,6 @@ export async function getStaticPaths() {
         ...project.data(),
       });
       // console.log(project.id, " => ", project.data());
-      // console.log("data", projects);
     });
   } catch (e) {
     console.log(e);
@@ -122,8 +119,6 @@ export async function getStaticPaths() {
     const paths = projects.map((singleSlug) => ({
       params: { slug: singleSlug.slug },
     }));
-
-    // console.log("paths", paths);
 
     return {
       paths,
@@ -171,23 +166,5 @@ export async function getStaticProps(context) {
     return { props: {} }; // No props.
   }
 }
-
-// export async function getStaticProps({ params }) {
-//   try {
-//     const projectSlugs = await getProjectSlugs(params.slug);
-//     // const featuredProjects = await getProjectData();
-//     console.log("projectSlugs", projectSlugs);
-
-//     return {
-//       props: {
-//         projectSlugs,
-//         revalidate: 1,
-//       },
-//     };
-//   } catch (e) {
-//     console.log(e);
-//     return { props: {} }; // No props.
-//   }
-// }
 
 export default ProjectDetails;

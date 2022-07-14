@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import { DarkModeToggle } from "tailwind-darkmode-toggle";
 import { WorldIcon } from "./NavIcons/Index";
+import { DarkModeToggle } from "tailwind-darkmode-toggle";
 
 const Nav = () => {
   const NavItem = ({ item }) => {

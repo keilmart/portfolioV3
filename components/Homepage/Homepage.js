@@ -1,6 +1,5 @@
 import Hero from "./Hero";
 import SectionHeader from "../SectionHeader/SectionHeader";
-
 import HomepageSkillsList from "../HomepageSkillsList/HomepageSkillsList";
 import HomepageFeaturedList from "../HomepageFeaturedList/HomepageFeaturedList";
 import HomepageNotableList from "../HomepageNotableList/HomepageNotableList";
@@ -11,13 +10,19 @@ import { motion } from "framer-motion";
 const FadeIn = ({ children }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: -7 }}
+      // className="framer"
+      viewport={{ once: false }}
+      initial={{ opacity: 0, y: -8 }}
       whileInView={{
         opacity: 1,
         y: 0,
-        transition: { ease: "easeInOut", duration: 1.3 },
+        transition: {
+          // ease: isVisible ? "easeInOut" : 0,
+          // duration: isVisible ? 1.5 : 0,
+          ease: "easeInOut",
+          duration: 1.5,
+        },
       }}
-      viewport={{ once: false }}
     >
       {children}
     </motion.div>

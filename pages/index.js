@@ -2,9 +2,6 @@ import Homepage from "../components/Homepage/Homepage";
 import Layout from "../components/Layout/Layout";
 import SEO from "../components/SEO/SEO";
 
-// import { db } from "../firebase/firebase";
-// import { collection, getDocs } from "firebase/firestore";
-
 import { getProjectData } from "../lib/dataFetch";
 
 const Home = ({ featuredProjects, notableProjects }) => {
@@ -23,9 +20,7 @@ export async function getStaticProps() {
   let notableProjects = [];
   let featuredProjects = [];
   const allProjectData = await getProjectData();
-
   // console.log("allProjectData", allProjectData.allProjectData);
-
   try {
     if (allProjectData.allProjectData.length > 0) {
       allProjectData.allProjectData.forEach((project) => {

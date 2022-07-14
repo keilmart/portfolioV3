@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { useState } from "react";
+import Image from "next/image";
 
 const PlaceholderBlur = ({ imageSrc, imageAlt, imageWidth, imageHeight }) => {
   const [loaded, setLoaded] = useState(false);
@@ -17,6 +17,7 @@ const PlaceholderBlur = ({ imageSrc, imageAlt, imageWidth, imageHeight }) => {
         objectPosition="top left"
         placeholder="blur"
         objectFit="cover"
+        // borderRadius="24px"
       />
     </>
   );
