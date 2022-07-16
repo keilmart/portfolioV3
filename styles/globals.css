@@ -51,11 +51,12 @@
 }
 /**** Scroll Bar ****/
 
-/* Framer Motion */
-
-/* .framer {
-  transition: ease-in-out;
-} */
+/**** Prevent Chrome Flash ****/
+body {
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+}
+/**** Prevent Chrome Flash ****/
 
 /****  SVG's ****/
 svg {

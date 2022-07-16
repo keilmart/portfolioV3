@@ -10,15 +10,12 @@ import { motion } from "framer-motion";
 const FadeIn = ({ children }) => {
   return (
     <motion.div
-      // className="framer"
       viewport={{ once: false }}
       initial={{ opacity: 0, y: -8 }}
       whileInView={{
         opacity: 1,
         y: 0,
         transition: {
-          // ease: isVisible ? "easeInOut" : 0,
-          // duration: isVisible ? 1.5 : 0,
           ease: "easeInOut",
           duration: 1.5,
         },
@@ -52,7 +49,7 @@ const Homepage = ({ notableProjects, featuredProjects }) => {
       <FadeIn>
         <section className="mx-auto mb-11 md:mb-20">
           <SectionHeader
-            title="Featured Projects"
+            title="Featured Work"
             subtitle="Personal branding moon imagery"
             icon={<FeaturedIcon xmlns="http://www.w3.org/2000/svg" />}
           />
@@ -65,7 +62,7 @@ const Homepage = ({ notableProjects, featuredProjects }) => {
       <FadeIn>
         <section className="mx-auto mb-11 md:mb-20">
           <SectionHeader
-            title="Notable Projects"
+            title="Notable Work"
             subtitle="Personal branding moon imagery"
             icon={<NotableIcon xmlns="http://www.w3.org/2000/svg" />}
           />
