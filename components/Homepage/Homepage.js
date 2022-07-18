@@ -17,7 +17,7 @@ const FadeIn = ({ children }) => {
         y: 0,
         transition: {
           ease: "easeInOut",
-          duration: 1.5,
+          duration: 1,
         },
       }}
     >

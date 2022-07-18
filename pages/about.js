@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import PlaceholderBlur from "../components/PlaceholderBlur/PlaceholderBlur";
 import Layout from "../components/Layout/Layout";
 import SEO from "../components/SEO/SEO";
 
@@ -33,6 +34,15 @@ const About = () => {
                 width="170"
                 className="rounded-full"
               />
+              {/* <PlaceholderBlur
+                imageSrc="/pictures/charlie2.png"
+                imageWidth={170}
+                imageHeight={170}
+                imageAlt="Personal photo of Keil Martin and Charlie"
+                rounded={true}
+                // objectFit="fill"
+                // objectPosition="top left"
+              /> */}
             </a>
           </motion.div>
         </div>
@@ -40,7 +50,7 @@ const About = () => {
       <div className="max-w-3xl mx-auto mt-10 mb-10 text-xl antialiased leading-relaxed tracking-tight md:mb-20 md:mt-18 md:pt-20 text-secondary dark:text-white">
         <div className="pb-8"></div>
         <h1 className="mt-4 mb-8 text-4xl antialiased font-bold font-montserrat text-primary dark:text-syncWave">
-          About
+          About Me
         </h1>
         <div>
           <p className="mb-4">

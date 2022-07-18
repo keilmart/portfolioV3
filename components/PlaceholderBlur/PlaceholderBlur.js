@@ -1,7 +1,13 @@
 import { useState } from "react";
 import Image from "next/image";
 
-const PlaceholderBlur = ({ imageSrc, imageAlt, imageWidth, imageHeight }) => {
+const PlaceholderBlur = ({
+  imageSrc,
+  imageAlt,
+  imageWidth,
+  imageHeight,
+  rounded = false,
+}) => {
   const [loaded, setLoaded] = useState(false);
 
   return (
@@ -12,7 +18,7 @@ const PlaceholderBlur = ({ imageSrc, imageAlt, imageWidth, imageHeight }) => {
         width={imageWidth}
         height={imageHeight}
         blurDataURL={imageSrc}
-        className={loaded ? "unblur" : ""}
+        className={`${loaded ? "unblur" : ""} ${rounded ? "rounded-full" : ""}`}
         onLoadingComplete={() => setLoaded(true)}
         objectPosition="top left"
         placeholder="blur"
