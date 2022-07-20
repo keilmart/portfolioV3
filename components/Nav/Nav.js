@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
+// import ThemeToggle from "./ThemeToggle";
 import { WorldIcon } from "./NavIcons/Index";
 import { DarkModeToggle } from "tailwind-darkmode-toggle";
 
@@ -51,6 +52,7 @@ const Nav = () => {
               <NavItem item={item} key={item.name} />
             ))}
           </div>
+          {/* <ThemeToggle /> */}
           <DarkModeToggle
             className="ml-4 text-gray-600 sm:mx-4 w-7 h-7 cursor-pointer mb-[2px] dark:mb-0"
             xmlns="http://www.w3.org/2000/svg"
