@@ -8,7 +8,11 @@ import "../styles/globals.css";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <ThemeProvider attribute="class" defaultTheme="light">
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="light"
+        enableSystem={false}
+      >
         <Nav />
         <Component {...pageProps} />
         <Footer />
