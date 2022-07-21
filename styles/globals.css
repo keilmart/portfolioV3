@@ -29,7 +29,7 @@
   }
 
   .toggle-dark {
-    @apply translate-x-[84%];
+    @apply translate-x-[83%];
   }
 
   svg {

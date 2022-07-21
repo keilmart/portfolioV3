@@ -1,9 +1,15 @@
+import { useState, useEffect } from "react";
+
 import { DarkMoon, LightSun } from "./NavIcons/Index";
 
 import { useTheme } from "next-themes";
 
 const ThemeToggle = () => {
+  const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
 
   const toggleTheme = () => {
     theme == "dark" ? setTheme("light") : setTheme("dark");

@@ -154,7 +154,7 @@ export async function getStaticProps(context) {
         timeline: project.timeline,
         ...project.data(),
       });
-      console.log(project.id, " => ", project.data());
+      // console.log(project.id, " => ", project.data());
     });
 
     return {

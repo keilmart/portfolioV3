@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import CodeBlock from "./CodeBlock";
 import { GithubIcon, LinkedIcon } from "./HeroIcons/Index";
-import { GlobeBlack, GlobePurple } from "../GlobalIcons/Index";
+import { GlobeBlack, GlobePurple } from "./GlobeIcons/Index";
 
 import { motion } from "framer-motion";
 
