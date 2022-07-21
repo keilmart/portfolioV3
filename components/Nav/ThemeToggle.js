@@ -21,7 +21,7 @@ const ThemeToggle = () => {
           theme == "dark" ? "toggle-active" : ""
         } relative inline-block w-6 h-6 transition duration-200 ease-in-out bg-white rounded-full shadow pointer-events-none dark:bg-darkMode ring-0`}
       >
-        <span className="absolute inset-0 flex items-center justify-center w-full h-full text-gray-800 transition-opacity -rotate-[30deg] svg-icon">
+        <span className="absolute inset-0 flex items-center justify-center w-full h-full transition-opacity -rotate-[30deg]">
           {theme == "dark" ? (
             <DarkMoon xmlns="http://www.w3.org/2000/svg" />
           ) : (
