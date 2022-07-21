@@ -58,6 +58,12 @@ body {
 }
 /**** Prevent Chrome Flash ****/
 
+/**** Theme Toggle ****/
+.toggle-active {
+  transform: translateX(84%);
+}
+/**** Theme Toggle ****/
+
 /****  SVG's ****/
 svg {
   display: inline;
@@ -120,7 +126,3 @@ svg {
   }
 }
 /**** PlaceholderBlur Homepage ****/
-
-.toggle-active {
-  transform: translateX(84%);
-}
