@@ -54,13 +54,7 @@ export function SkillsIcon() {
 
 export function FeaturedIcon() {
   return (
-    <svg
-      className="svg-icon"
-      height="1em"
-      viewBox="0 0 24 24"
-      width="1em"
-      data-name="Layer 1"
-    >
+    <svg className="svg-icon" height="1em" viewBox="0 0 24 24" width="1em">
       <path d="M0 9v9a5.006 5.006 0 005 5h14a5.006 5.006 0 005-5V9zm14 10H6a1 1 0 010-2h8a1 1 0 010 2zm4-4H6a1 1 0 010-2h12a1 1 0 010 2zm6-8V6a5.006 5.006 0 00-5-5H5a5.006 5.006 0 00-5 5v1zM10 3a1 1 0 11-1 1 1 1 0 011-1zM7 3a1 1 0 11-1 1 1 1 0 011-1zM4 3a1 1 0 11-1 1 1 1 0 011-1z" />
     </svg>
   );

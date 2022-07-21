@@ -6,6 +6,28 @@ import { GlobeBlack, GlobePurple } from "../GlobalIcons/Index";
 
 import { motion } from "framer-motion";
 
+const AnimateBlock = ({ children }) => {
+  return (
+    <motion.div
+      initial={{
+        opacity: 0,
+        rotate: 17,
+      }}
+      animate={{
+        opacity: 1,
+        rotate: 0,
+        transition: { type: "spring", bounce: 0.35, mass: 2 },
+      }}
+      transition={{ type: "spring" }}
+      whileTap={{ rotate: 20, scale: 0.95 }}
+      whileHover={{ scale: 1.025 }}
+      className="z-20 mx-auto bg-white border rounded-lg cursor-pointer shadow-art active:shadow-art-active hover:shadow-art-hover dark:shadow-none dark:bg-darkModeDetail dark:border-transparent"
+    >
+      {children}
+    </motion.div>
+  );
+};
+
 const Hero = () => {
   return (
     <section className="z-10 flex flex-col items-center mb-20 justify-evenly md:justify-between h-104 md:flex-row md:mb-2 md:h-100">
@@ -44,24 +66,9 @@ const Hero = () => {
         <div className="absolute hidden -top-[18rem] -left-[14rem] md:dark:block rotate-6">
           <GlobePurple />
         </div>
-        <motion.div
-          alt="Code block describing Keil Martin"
-          initial={{
-            opacity: 0,
-            rotate: 17,
-          }}
-          animate={{
-            opacity: 1,
-            rotate: 0,
-            transition: { type: "spring", bounce: 0.35, mass: 2 },
-          }}
-          transition={{ type: "spring" }}
-          whileTap={{ rotate: 20, scale: 0.95 }}
-          whileHover={{ scale: 1.025 }}
-          className="z-20 mx-auto bg-white border rounded-lg cursor-pointer shadow-art active:shadow-art-active hover:shadow-art-hover dark:shadow-none dark:bg-darkModeDetail dark:border-transparent"
-        >
+        <AnimateBlock alt="Code block describing Keil Martin">
           <CodeBlock />
-        </motion.div>
+        </AnimateBlock>
       </div>
     </section>
   );

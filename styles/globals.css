@@ -28,28 +28,28 @@
     @apply border-gray-200;
   }
 
-  .primary-grad {
-    background: linear-gradient(134deg, #6a98f0 0%, #4961dc 99%);
+  .toggle-dark {
+    @apply translate-x-[84%];
   }
 
-  /**** Scroll Bar ****/
-  body::-webkit-scrollbar {
-    width: 10px;
+  svg {
+    @apply inline;
   }
 
-  body::-webkit-scrollbar-track {
-    background: #f7f4ed;
+  .svg-icon {
+    @apply w-[1.7em] h-[1.6em];
   }
 
-  body::-webkit-scrollbar-thumb {
-    background: #6d83f2;
+  .svg-icon path,
+  .svg-icon polygon,
+  .svg-icon rect {
+    @apply fill-[#6d83f2];
   }
 
-  body::-webkit-scrollbar-thumb:hover {
-    background: #6a98f0;
+  .svg-icon circle {
+    @apply stroke-1 stroke-[#6d83f2] fill-[#6d83f2];
   }
 }
-/**** Scroll Bar ****/
 
 /**** Prevent Chrome Flash ****/
 body {
@@ -58,34 +58,29 @@ body {
 }
 /**** Prevent Chrome Flash ****/
 
-/**** Theme Toggle ****/
-.toggle-active {
-  transform: translateX(84%);
-}
-/**** Theme Toggle ****/
-
-/****  SVG's ****/
-svg {
-  display: inline;
+/**** Scroll Bar ****/
+body::-webkit-scrollbar {
+  width: 10px;
 }
 
-.svg-icon {
-  width: 1.7em;
-  height: 1.6em;
+body::-webkit-scrollbar-track {
+  background: #f7f4ed;
 }
 
-.svg-icon path,
-.svg-icon polygon,
-.svg-icon rect {
-  fill: #6d83f2;
+body::-webkit-scrollbar-thumb {
+  background: #6d83f2;
 }
 
-.svg-icon circle {
-  stroke: #6d83f2;
-  stroke-width: 1;
-  fill: #6d83f2;
+body::-webkit-scrollbar-thumb:hover {
+  background: #6a98f0;
 }
-/****  SVG's ****/
+/**** Scroll Bar ****/
+
+/**** Primary Gradient ****/
+.primary-grad {
+  background: linear-gradient(134deg, #6a98f0 0%, #4961dc 99%);
+}
+/**** Primary Gradient ****/
 
 /**** Carousel Homepage ****/
 .slick-track {

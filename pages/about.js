@@ -1,10 +1,23 @@
 import Image from "next/image";
 
-import PlaceholderBlur from "../components/PlaceholderBlur/PlaceholderBlur";
+// import PlaceholderBlur from "../components/PlaceholderBlur/PlaceholderBlur";
 import Layout from "../components/Layout/Layout";
 import SEO from "../components/SEO/SEO";
 
 import { motion } from "framer-motion";
+
+const RotateIn = ({ children }) => {
+  return (
+    <motion.div
+      className="hidden overflow-hidden md:block md:w-40 md:h-40"
+      initial={{ rotate: 10 }}
+      animate={{ rotate: 0 }}
+      transition={{ type: "spring", bounce: 0.25, mass: 2 }}
+    >
+      {children}
+    </motion.div>
+  );
+};
 
 const About = () => {
   return (
@@ -16,12 +29,7 @@ const About = () => {
       />
       <div className="relative">
         <div className="absolute top-0 lg:right-48 right-24">
-          <motion.div
-            className="hidden overflow-hidden md:block md:w-40 md:h-40"
-            initial={{ rotate: 10 }}
-            animate={{ rotate: 0 }}
-            transition={{ type: "spring", bounce: 0.25, mass: 2 }}
-          >
+          <RotateIn>
             <a
               href="https://www.instagram.com/charlieistheshiht/"
               target="_blank"
@@ -44,7 +52,7 @@ const About = () => {
                 // objectPosition="top left"
               /> */}
             </a>
-          </motion.div>
+          </RotateIn>
         </div>
       </div>
       <div className="max-w-3xl mx-auto mt-10 mb-10 text-xl antialiased leading-relaxed tracking-tight md:mb-20 md:mt-18 md:pt-20 text-secondary dark:text-white">
