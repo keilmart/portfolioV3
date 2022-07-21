@@ -120,3 +120,7 @@ svg {
   }
 }
 /**** PlaceholderBlur Homepage ****/
+
+.toggle-active {
+  transform: translateX(84%);
+}

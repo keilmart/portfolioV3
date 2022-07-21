@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-// import ThemeToggle from "./ThemeToggle";
 import { WorldIcon } from "./NavIcons/Index";
-import { DarkModeToggle } from "tailwind-darkmode-toggle";
+
+import ThemeToggle from "./ThemeToggle";
 
 const Nav = () => {
   const NavItem = ({ item }) => {
@@ -29,8 +29,8 @@ const Nav = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-30 bg-white border-b border-primary dark:bg-darkMode">
-      <div className="container flex items-center justify-between w-full max-w-screen-lg px-4 py-2 mx-auto lg:px-0 md:flex-row">
+    <nav className="sticky top-0 z-30 bg-white border-b border-primary dark:bg-darkModeDetail dark:border-b-0">
+      <div className="container flex items-center justify-between w-full max-w-screen-lg px-4 py-3 mx-auto lg:px-0 md:flex-row">
         <div className="flex flex-row items-center justify-center text-sm antialiased font-semibold leading-3 tracking-wide text-primary dark:text-white">
           <Link href="/">
             <a className="flex">
@@ -52,20 +52,8 @@ const Nav = () => {
               <NavItem item={item} key={item.name} />
             ))}
           </div>
-          {/* <ThemeToggle /> */}
-          <DarkModeToggle
-            className="ml-4 text-gray-600 sm:mx-4 w-7 h-7 cursor-pointer mb-[2px] dark:mb-0"
-            xmlns="http://www.w3.org/2000/svg"
-          />
-          <div className="hidden sm:block">
-            <p className="block text-sm pointer-events-none dark:hidden text-secondary">
-              Light Mode
-            </p>
-          </div>
-          <div className="hidden sm:block">
-            <p className="hidden text-sm pointer-events-none dark:block dark:text-white">
-              Dark Mode
-            </p>
+          <div className="flex ml-5">
+            <ThemeToggle />
           </div>
         </div>
       </div>
