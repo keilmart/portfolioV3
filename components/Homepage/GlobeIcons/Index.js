@@ -2,7 +2,7 @@ export function GlobePurple() {
   return (
     <svg width="50em" height="50em" viewBox="0 0 851 832" fill="none">
       <g
-        opacity={0.32}
+        opacity={0.37}
         stroke="#4564FF"
         strokeWidth={0.5}
         strokeLinecap="round"

@@ -28,7 +28,7 @@ const ThemeToggle = () => {
       </span>
       <span
         className={`${
-          theme === "dark" ? "toggle-dark" : ""
+          theme === "dark" ? "toggle-light" : ""
         } relative inline-block w-6 h-6 transition duration-200 ease-in-out bg-white rounded-full shadow pointer-events-none dark:bg-syncWave ring-0`}
       >
         <span

@@ -28,7 +28,7 @@
     @apply border-gray-200;
   }
 
-  .toggle-dark {
+  .toggle-light {
     @apply translate-x-[83%];
   }
 

@@ -27,7 +27,7 @@ module.exports = {
       colors: {
         syncWave: "#6D83F2",
         darkMode: "#191919",
-        darkModeDetail: "#232323",
+        darkModeDetail: "#242424",
         darkModeSecondary: "#303030",
       },
       fontFamily: {
