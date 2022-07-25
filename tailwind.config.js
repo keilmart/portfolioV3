@@ -28,7 +28,6 @@ module.exports = {
         syncWave: "#6D83F2",
         darkMode: "#191919",
         darkModeDetail: "#242424",
-        darkModeSecondary: "#303030",
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],

@@ -21,7 +21,7 @@ const ThemeToggle = () => {
       role="switch"
       onClick={toggleTheme}
       aria-checked={theme === "dark" ? true : false}
-      className="relative inline-flex w-12 transition-colors duration-500 ease-in-out bg-gray-200 border-2 border-transparent rounded-full cursor-pointer dark:bg-darkModeSecondary shrink-0 h-7 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+      className="relative inline-flex w-12 transition-colors duration-500 ease-in-out bg-gray-200 border-2 border-transparent rounded-full cursor-pointer dark:bg-[#313131] shrink-0 h-7 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
     >
       <span className="sr-only">
         Toggle {theme === "dark" ? "light" : "dark"} mode

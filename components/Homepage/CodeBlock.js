@@ -32,8 +32,7 @@ const HomepageSkillsList = () => {
         >
           <pre className="m-2 sm:m-3 font-montserrat">
             3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.myDog = {"{"}
-            &quot;
-            <b>Charles</b>&quot;{"}"};
+            &quot;name:&nbsp;&nbsp;<b>Charlie</b>&quot;{"}"};
           </pre>
         </a>
         <pre className="m-2 sm:m-3 font-montserrat">

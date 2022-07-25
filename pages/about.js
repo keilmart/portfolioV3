@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-// import PlaceholderBlur from "../components/PlaceholderBlur/PlaceholderBlur";
 import Layout from "../components/Layout/Layout";
 import SEO from "../components/SEO/SEO";
 
@@ -42,15 +41,6 @@ const About = () => {
                 width="170"
                 className="rounded-full"
               />
-              {/* <PlaceholderBlur
-                imageSrc="/pictures/charlie2.png"
-                imageWidth={170}
-                imageHeight={170}
-                imageAlt="Personal photo of Keil Martin and Charlie"
-                rounded={true}
-                // objectFit="fill"
-                // objectPosition="top left"
-              /> */}
             </a>
           </RotateIn>
         </div>
@@ -102,15 +92,15 @@ const About = () => {
         </h2>
         <div>
           <p>
-            I have just over 2 years of experience as a Front End Developer. My
-            main focus has been component driven development. Primarily working
-            in Next.js, React, Tailwind and ScSS. In my short time on this
-            adventure, I&apos;ve already contributed to over a dozen large scale
-            projects. I have taken on freelance opportunities where I have not
-            only been the lead developer on these projects (teams of up to 3),
-            but also managed all communications between myself and the clients.
-            This includes drafting all the contracts and been the main point of
-            contact for any of their needs.
+            I have 2.5 years of professional experience as a Front End
+            Developer. My main focus has been component driven development.
+            Primarily working in Next.js, React, Tailwind and ScSS. In my short
+            time on this adventure, I&apos;ve already contributed to over a
+            dozen large scale projects. I have taken on freelance opportunities
+            where I have not only been the lead developer on these projects
+            (teams of up to 3), but also managed all communications between
+            myself and the clients. This includes drafting all the contracts and
+            have been the main point of contact for any of their needs.
           </p>
         </div>
 

@@ -63,7 +63,7 @@ const ProjectDetails = ({ projectData }) => {
           </div>
         </a>
         <hr className="my-6 border-t-2 border-b-0 border-dotted border-primary dark:border-gray-400" />
-        <h2 className="mb-4 text-3xl font-semibold text-primary dark:text-syncWave">
+        <h2 className="mb-4 text-3xl font-semibold text-primary dark:text-tertiary">
           Summary
         </h2>
         <p className="text-primary dark:text-white">{project.description}</p>
