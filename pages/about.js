@@ -55,10 +55,12 @@ const About = () => {
             Building creative tech solutions is my biggest passion, and coding
             has been a life-long hobby for me. I started like most others
             playing around in Myspace and the love of it has continued to grow
-            over the years. As a child I was always taking apart my Playstations
-            and laptops trying to figure out how everything worked and that need
-            to tinker has never dissipated (although my game systems were never
-            the same).
+            over the years.
+          </p>
+          <p className="mb-4">
+            As a child I was always taking apart my Playstations and laptops
+            trying to figure out how everything worked and that need to tinker
+            has never dissipated (although my game systems were never the same).
           </p>
         </div>
 

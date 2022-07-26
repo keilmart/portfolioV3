@@ -38,18 +38,18 @@ const Hero = () => {
         <h1 className="text-4xl antialiased font-bold tracking-tight leading-titles font-montserrat sm:leading-titles sm:text-6xl text-primary dark:text-syncWave">
           Keil Martin
         </h1>
-        <span className="inline-block antialiased text-md sm:text-lg text-tertiary dark:text-white">
-          FRONT END DEVELOPER &amp; DOG DAD
+        <span className="inline-block antialiased uppercase text-md sm:text-lg text-tertiary dark:text-white">
+          front end developer &amp; dog dad
         </span>
         <ul className="flex flex-row pt-1 pl-1 text-sm text-md text-syncWave sm:pt-2">
-          <li className="pr-3">
+          <li className="pr-3 transition duration-500 ease-in-out hover:scale-110">
             <Link href="https://www.linkedin.com/in/keilmart/">
               <a target="_blank" rel="noreferrer" aria-label="Linkedin Logo">
                 <LinkedIcon xmlns="http://www.w3.org/2000/svg" />
               </a>
             </Link>
           </li>
-          <li>
+          <li className="transition duration-500 ease-in-out hover:scale-110">
             <Link href="https://github.com/keilmart">
               <a target="_blank" rel="noreferrer" aria-label="Github Logo">
                 <GithubIcon xmlns="http://www.w3.org/2000/svg" />
