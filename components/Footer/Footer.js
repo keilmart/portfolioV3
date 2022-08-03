@@ -17,8 +17,7 @@ const Footer = () => {
               href="mailto:keilwmartin@gmail.com"
               className="py-1 mb-1 hover:text-syncWave hover:border-b hover:border-syncWave hover:bg-gray-100 dark:hover:bg-transparent"
             >
-              <span className="mr-1">Email Me!</span>
-              <span>↗</span>
+              Email Me!&nbsp;↗
             </a>
           </div>
         </div>
