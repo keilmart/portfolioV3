@@ -48,6 +48,19 @@ const Homepage = ({ notableProjects, featuredProjects }) => {
       </FadeIn>
 
       <FadeIn>
+        <section className="mx-auto mb-11">
+          <SectionHeader
+            title="Testimonials"
+            subtitle="Personal branding moon imagery"
+            icon={<SkillsIcon xmlns="http://www.w3.org/2000/svg" />}
+          />
+          <div className="pt-6 md:pt-11" />
+          <HomepageTestimonialList />
+          <a id="featured" />
+        </section>
+      </FadeIn>
+
+      <FadeIn>
         <section className="mx-auto mb-11 md:mb-20">
           <SectionHeader
             title="Featured Work"
@@ -69,19 +82,6 @@ const Homepage = ({ notableProjects, featuredProjects }) => {
           />
           <div className="pt-6 md:pt-11" />
           <HomepageNotableList projects={notableProjects} />
-        </section>
-      </FadeIn>
-
-      <FadeIn>
-        <section className="mx-auto mb-11">
-          <SectionHeader
-            title="Testimonials"
-            subtitle="Personal branding moon imagery"
-            icon={<SkillsIcon xmlns="http://www.w3.org/2000/svg" />}
-          />
-          <div className="pt-6 md:pt-11" />
-          <HomepageTestimonialList />
-          <a id="featured" />
         </section>
       </FadeIn>
     </>

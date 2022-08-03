@@ -53,13 +53,13 @@ const HomepageTestimonialList = () => {
     //     ))}
     //   </ul>
     // </div>
-    <div className="grid grid-cols-1 gap-4 -mt-10 md:-mt-8 md:grid-cols-3">
-      <ul className="col-span-3">
+    <div className="gap-4 -mt-10 md:-mt-8">
+      <ul>
         {testimonials.map((testimonial, idx) => (
           <li className="border-b-2 border-dotted last-of-type:border-0">
             <div
               key={idx}
-              className="grid grid-cols-1 gap-1 py-4 transition duration-500 ease-in-out group md:py-6 md:gap-4 md:grid-cols-4 hover:bg-gray-100"
+              className="grid grid-cols-1 gap-1 px-4 py-4 transition duration-500 ease-in-out group md:py-8 md:gap-4 md:grid-cols-4 hover:bg-gray-100 md:px-8 dark:hover:bg-transparent"
             >
               <div className="flex flex-col col-span-1">
                 <span className="inline-block pb-2 text-sm text-tertiary">
@@ -77,12 +77,10 @@ const HomepageTestimonialList = () => {
               </div>
               <div className="flex justify-between col-span-3">
                 <div>
-                  <h3 className="mb-1 text-xl font-semibold text-primary">
-                    {testimonial.name}, {testimonial.position}
-                  </h3>
-                  {/* <p className="text-md text-tertiary">
-                    {testimonial.testimonial}
-                  </p> */}
+                  <div className="flex mb-1 text-xl text-primary dark:text-white">
+                    <h3 className="font-semibold">{testimonial.name},&nbsp;</h3>
+                    <h3>{testimonial.position}</h3>
+                  </div>
                   <ReadMoreReact
                     text={testimonial.testimonial}
                     min={290}
