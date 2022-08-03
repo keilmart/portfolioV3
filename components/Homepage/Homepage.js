@@ -54,7 +54,7 @@ const Homepage = ({ notableProjects, featuredProjects }) => {
             subtitle="Personal branding moon imagery"
             icon={<SkillsIcon xmlns="http://www.w3.org/2000/svg" />}
           />
-          <div className="pt-6 md:pt-11" />
+          <div className="pt-9 md:pt-11" />
           <HomepageTestimonialList />
           <a id="featured" />
         </section>
