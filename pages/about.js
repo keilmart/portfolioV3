@@ -35,7 +35,7 @@ const About = () => {
               rel="noreferrer"
             >
               <Image
-                src="/pictures/charlie2.png"
+                src="/pictures/me-charlie.png"
                 alt="Personal photo of Keil Martin and Charlie"
                 height="170"
                 width="170"

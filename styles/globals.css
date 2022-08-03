@@ -107,6 +107,19 @@ body::-webkit-scrollbar-thumb:hover {
 }
 /**** Carousel Homepage ****/
 
+/**** Read more ****/
+.read-more-button {
+  display: inline-block;
+  margin-left: 5px;
+  color: #6d83f2;
+  cursor: pointer;
+}
+
+.display-text-group {
+  color: #6b7280;
+}
+/**** Read more ****/
+
 /**** PlaceholderBlur Homepage ****/
 .unblur {
   animation: unblur 1s linear;
