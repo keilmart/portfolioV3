@@ -15,7 +15,7 @@ const HomepageTestimonialList = () => {
     },
     {
       name: "Amy Mejia",
-      position: "Civil Engineering Tech.",
+      position: "Civil Engineering Tech",
       photo: "/pictures/amy-mejia.png",
       year: "Aug 2018",
       company: "Tatham Engineering",
@@ -32,9 +32,9 @@ const HomepageTestimonialList = () => {
             className="border-b-2 border-dotted last-of-type:border-0"
             key={idx}
           >
-            <div className="grid grid-cols-1 gap-1 px-4 py-4 transition duration-500 ease-in-out rounded-lg group md:py-8 md:gap-4 md:grid-cols-4 hover:bg-gray-100 md:px-12 dark:hover:bg-darkModeDetail">
+            <div className="grid grid-cols-1 gap-1 py-4 pl-3 pr-2 transition duration-500 ease-in-out rounded-lg group md:py-8 md:gap-4 md:grid-cols-4 hover:bg-gray-100 md:px-12 dark:hover:bg-darkModeDetail">
               <div className="w-[95px]">
-                <div className="flex justify-start w-full pb-2 pl-1 sm:pl-0 sm:justify-center">
+                <div className="justify-start hidden w-full pt-1 pb-2 pl-1 md:flex md:pl-0 md:justify-center">
                   <span className="inline-block text-xs font-semibold tracking-widest uppercase text-tertiary">
                     {testimonial.year}
                   </span>
