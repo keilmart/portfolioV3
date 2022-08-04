@@ -56,11 +56,11 @@ const HomepageTestimonialList = () => {
     <div className="gap-4 -mt-10 md:-mt-8">
       <ul>
         {testimonials.map((testimonial, idx) => (
-          <li className="border-b-2 border-dotted last-of-type:border-0">
-            <div
-              key={idx}
-              className="grid grid-cols-1 gap-1 px-2 py-4 transition duration-500 ease-in-out rounded-lg group md:py-8 md:gap-4 md:grid-cols-4 hover:bg-gray-100 md:px-12 dark:hover:bg-darkModeDetail"
-            >
+          <li
+            className="border-b-2 border-dotted last-of-type:border-0"
+            key={idx}
+          >
+            <div className="grid grid-cols-1 gap-1 px-2 py-4 transition duration-500 ease-in-out rounded-lg group md:py-8 md:gap-4 md:grid-cols-4 hover:bg-gray-100 md:px-12 dark:hover:bg-darkModeDetail">
               <div className="w-[95px]">
                 <div className="flex justify-start w-full pb-2 pl-1 sm:pl-0 sm:justify-center">
                   <span className="inline-block text-xs font-semibold tracking-widest uppercase text-tertiary">
