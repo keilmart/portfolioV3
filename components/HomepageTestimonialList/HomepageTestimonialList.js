@@ -25,34 +25,6 @@ const HomepageTestimonialList = () => {
   ];
 
   return (
-    // <div className="grid grid-cols-1 gap-4 -mt-10 md:-mt-8 md:grid-cols-3">
-    //   <ul className="col-span-3">
-    //     {testimonials.map((testimonial, idx) => (
-    //       <li className="border-b-2 border-dotted last-of-type:border-0">
-    //         <div
-    //           key={idx}
-    //           className="grid grid-cols-1 gap-1 py-4 transition duration-500 ease-in-out group md:py-6 md:gap-4 md:grid-cols-4 hover:bg-gray-100"
-    //         >
-    //           <div className="col-span-1">
-    //             <span className="inline-block text-sm text-tertiary">
-    //               {testimonial.year}
-    //             </span>
-    //           </div>
-    //           <div className="flex justify-between col-span-3">
-    //             <div>
-    //               <h3 className="mb-1 text-xl font-semibold text-primary">
-    //                 {testimonial.name}, {testimonial.position}
-    //               </h3>
-    //               <p className="text-md text-tertiary">
-    //                 {testimonial.testimonial}
-    //               </p>
-    //             </div>
-    //           </div>
-    //         </div>
-    //       </li>
-    //     ))}
-    //   </ul>
-    // </div>
     <div className="gap-4 -mt-10 md:-mt-8">
       <ul>
         {testimonials.map((testimonial, idx) => (
@@ -60,7 +32,7 @@ const HomepageTestimonialList = () => {
             className="border-b-2 border-dotted last-of-type:border-0"
             key={idx}
           >
-            <div className="grid grid-cols-1 gap-1 px-2 py-4 transition duration-500 ease-in-out rounded-lg group md:py-8 md:gap-4 md:grid-cols-4 hover:bg-gray-100 md:px-12 dark:hover:bg-darkModeDetail">
+            <div className="grid grid-cols-1 gap-1 px-4 py-4 transition duration-500 ease-in-out rounded-lg group md:py-8 md:gap-4 md:grid-cols-4 hover:bg-gray-100 md:px-12 dark:hover:bg-darkModeDetail">
               <div className="w-[95px]">
                 <div className="flex justify-start w-full pb-2 pl-1 sm:pl-0 sm:justify-center">
                   <span className="inline-block text-xs font-semibold tracking-widest uppercase text-tertiary">
@@ -80,8 +52,12 @@ const HomepageTestimonialList = () => {
               <div className="flex justify-between col-span-3">
                 <div>
                   <div className="flex mb-1 text-xl text-primary dark:text-white">
-                    <h3 className="font-semibold">{testimonial.name},&nbsp;</h3>
-                    <h3>{testimonial.position}</h3>
+                    <h3 className="font-semibold dark:text-white">
+                      {testimonial.name},&nbsp;
+                    </h3>
+                    <h3 className="dark:text-slate-300">
+                      {testimonial.position}
+                    </h3>
                   </div>
                   <ReadMoreReact
                     text={testimonial.testimonial}
