@@ -43,6 +43,7 @@ const Homepage = ({ notableProjects, featuredProjects }) => {
           />
           <div className="pt-6 md:pt-11" />
           <HomepageSkillsList />
+          <a id="featured" />
         </section>
       </FadeIn>
 
@@ -55,7 +56,6 @@ const Homepage = ({ notableProjects, featuredProjects }) => {
           />
           <div className="pt-6 md:pt-11" />
           <HomepageFeaturedList projects={featuredProjects} />
-          <a id="featured" />
         </section>
       </FadeIn>
 
@@ -68,6 +68,7 @@ const Homepage = ({ notableProjects, featuredProjects }) => {
           />
           <div className="pt-11" />
           <HomepageTestimonialList />
+          <a id="notable" />
         </section>
       </FadeIn>
 
@@ -80,7 +81,6 @@ const Homepage = ({ notableProjects, featuredProjects }) => {
           />
           <div className="pt-6 md:pt-11" />
           <HomepageNotableList projects={notableProjects} />
-          <a id="notable" />
         </section>
       </FadeIn>
     </>

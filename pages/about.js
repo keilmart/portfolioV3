@@ -45,7 +45,7 @@ const About = () => {
           </RotateIn>
         </div>
       </div>
-      <div className="max-w-3xl mx-auto mt-10 mb-10 text-xl antialiased leading-relaxed tracking-tight md:mb-20 md:mt-18 md:pt-20 text-secondary dark:text-white">
+      <div className="max-w-3xl mx-auto mt-10 mb-10 text-xl antialiased leading-relaxed tracking-tight md:mb-20 md:mt-18 md:pt-20 text-tertiary">
         <div className="pb-8"></div>
         <h1 className="mt-4 mb-8 text-4xl antialiased font-bold font-montserrat text-primary dark:text-syncWave">
           About Me
@@ -65,7 +65,7 @@ const About = () => {
         </div>
 
         <hr className="mb-12 border-t-2 border-dotted mt-14 dark:border-gray-400" />
-        <h2 className="mt-12 mb-4 text-2xl font-semibold text-primary dark:text-tertiary">
+        <h2 className="mt-12 mb-4 text-2xl font-semibold text-primary dark:text-white">
           My Education
         </h2>
         <div>
@@ -89,7 +89,7 @@ const About = () => {
         </div>
 
         <hr className="mb-12 border-t-2 border-dotted mt-14 dark:border-gray-400" />
-        <h2 className="mt-12 mb-4 text-2xl font-semibold text-primary dark:text-tertiary">
+        <h2 className="mt-12 mb-4 text-2xl font-semibold text-primary dark:text-white">
           Where I&apos;ve Worked
         </h2>
         <div>

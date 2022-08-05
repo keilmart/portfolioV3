@@ -15,9 +15,9 @@ const Footer = () => {
               target="_blank"
               rel="noreferrer"
               href="mailto:keilwmartin@gmail.com"
-              className="py-1 mb-1 hover:text-syncWave hover:border-b hover:border-syncWave hover:bg-gray-100 dark:hover:bg-transparent"
+              className="py-1 mb-1 leading-snug hover:text-syncWave hover:border-b hover:border-syncWave hover:bg-gray-100 dark:hover:bg-transparent"
             >
-              Email Me!&nbsp;↗
+              <span>Email Me!&nbsp;↗</span>
             </a>
           </div>
         </div>
