@@ -63,11 +63,11 @@ const ProjectDetails = ({ projectData }) => {
           </div>
         </a>
         <hr className="my-6 border-t-2 border-b-0 border-dotted border-primary dark:border-gray-400" />
-        <h2 className="mb-4 text-3xl font-semibold text-primary dark:text-tertiary">
+        <h2 className="mb-4 text-3xl font-semibold text-primary dark:text-white">
           Summary
         </h2>
-        <p className="text-primary dark:text-white">{project.description}</p>
-        <p className="text-primary dark:text-white">{project.descriptionTwo}</p>
+        <p className="text-tertiary">{project.description}</p>
+        <p className="text-tertiary">{project.descriptionTwo}</p>
         <div className="my-8">
           <a
             className="w-full mr-4 sm:w-auto btn-primary primary-grad"
