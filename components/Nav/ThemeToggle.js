@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
-
 import { DarkMoon, LightSun } from "./NavIcons/Index";
-
 import { useTheme } from "next-themes";
 
 const ThemeToggle = () => {

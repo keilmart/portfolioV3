@@ -32,7 +32,7 @@ const HomepageTestimonialList = () => {
             className="antialiased border-b-2 border-dotted last-of-type:border-0"
             key={idx}
           >
-            <div className="grid grid-cols-1 gap-1 py-4 pl-3 pr-2 transition duration-500 ease-in-out rounded-lg group md:py-8 md:gap-4 md:grid-cols-4 hover:bg-gray-100 md:px-12 dark:hover:bg-darkModeDetail">
+            <div className="grid grid-cols-1 gap-1 py-4 pl-3 pr-2 transition duration-500 ease-in-out rounded-lg group md:py-8 md:gap-4 md:grid-cols-5 hover:bg-gray-100 md:px-12 dark:hover:bg-darkModeDetail">
               <div className="w-[95px]">
                 <div className="justify-start hidden w-full pt-1 pb-2 pl-1 md:flex md:pl-0 md:justify-center">
                   <span className="inline-block text-xs font-semibold tracking-widest uppercase text-tertiary">
@@ -49,7 +49,7 @@ const HomepageTestimonialList = () => {
                   />
                 </div>
               </div>
-              <div className="flex justify-between col-span-3">
+              <div className="flex justify-between col-span-4">
                 <div>
                   <div className="flex mb-1 text-xl text-primary dark:text-white">
                     <h3 className="font-semibold dark:text-white">
@@ -61,9 +61,9 @@ const HomepageTestimonialList = () => {
                   </div>
                   <ReadMoreReact
                     text={testimonial.testimonial}
-                    min={290}
-                    ideal={310}
-                    max={330}
+                    min={340}
+                    ideal={360}
+                    max={370}
                     readMoreText="...see more"
                   />
                 </div>

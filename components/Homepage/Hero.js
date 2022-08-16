@@ -60,7 +60,7 @@ const Hero = () => {
       </div>
 
       <div className="relative">
-        <div className="absolute hidden md:block -top-[18rem] -left-[14rem]  dark:hidden rotate-6">
+        <div className="absolute hidden md:block -top-[18rem] -left-[14rem] dark:hidden rotate-6">
           <GlobeBlack />
         </div>
         <div className="absolute hidden -top-[18rem] -left-[14rem] md:dark:block rotate-6">
