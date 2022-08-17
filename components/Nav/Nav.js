@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import { WorldIcon } from "./NavIcons/Index";
+import { CircleIcon } from "./NavIcons/Index";
 
 import ThemeToggle from "./ThemeToggle";
 
@@ -26,6 +26,11 @@ const Nav = () => {
   const navigation = [
     { name: "Home", href: "/#", isActive: router.pathname === "/" },
     { name: "About", href: "/about", isActive: router.pathname === "/about" },
+    // {
+    //   name: "Resume",
+    //   href: "/resume",
+    //   isActive: router.pathname === "/resume",
+    // },
   ];
 
   return (
@@ -35,9 +40,9 @@ const Nav = () => {
           <Link href="/">
             <a className="flex">
               <div className="transition duration-1000 ease-in-out hover:rotate-180">
-                <WorldIcon xmlns="http://www.w3.org/2000/svg" />
+                <CircleIcon />
               </div>
-              <div className="pl-[.35rem] pt-[.1rem]">
+              <div className="pl-[.5rem] pt-[.1rem]">
                 <span>
                   Keil <br />
                   Martin

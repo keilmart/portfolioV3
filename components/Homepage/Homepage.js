@@ -5,7 +5,7 @@ import HomepageFeaturedList from "../HomepageFeaturedList/HomepageFeaturedList";
 import HomepageNotableList from "../HomepageNotableList/HomepageNotableList";
 import HomepageTestimonialList from "../HomepageTestimonialList/HomepageTestimonialList";
 
-import { SkillsIcon, FeaturedIcon, NotableIcon } from "./HomepageIcons/Index";
+import { DiamondIcon, SquirqleIcon, PentaIcon } from "./HomepageIcons/Index";
 import { motion } from "framer-motion";
 
 const FadeIn = ({ children }) => {
@@ -39,7 +39,7 @@ const Homepage = ({ notableProjects, featuredProjects }) => {
           <SectionHeader
             title="My Skills"
             subtitle="Personal branding moon imagery"
-            icon={<SkillsIcon xmlns="http://www.w3.org/2000/svg" />}
+            icon={<DiamondIcon />}
           />
           <div className="pt-6 md:pt-11" />
           <HomepageSkillsList />
@@ -52,7 +52,11 @@ const Homepage = ({ notableProjects, featuredProjects }) => {
           <SectionHeader
             title="Featured Work"
             subtitle="Personal branding moon imagery"
-            icon={<FeaturedIcon xmlns="http://www.w3.org/2000/svg" />}
+            icon={
+              <div className="rotate-90">
+                <SquirqleIcon />
+              </div>
+            }
           />
           <div className="pt-6 md:pt-11" />
           <HomepageFeaturedList projects={featuredProjects} />
@@ -64,7 +68,7 @@ const Homepage = ({ notableProjects, featuredProjects }) => {
           <SectionHeader
             title="Testimonials"
             subtitle="Personal branding moon imagery"
-            icon={<SkillsIcon xmlns="http://www.w3.org/2000/svg" />}
+            icon={<PentaIcon />}
           />
           <div className="pt-11" />
           <HomepageTestimonialList />
@@ -77,7 +81,11 @@ const Homepage = ({ notableProjects, featuredProjects }) => {
           <SectionHeader
             title="Notable Work"
             subtitle="Personal branding moon imagery"
-            icon={<NotableIcon xmlns="http://www.w3.org/2000/svg" />}
+            icon={
+              <div className="rotate-45">
+                <SquirqleIcon />
+              </div>
+            }
           />
           <div className="pt-6 md:pt-11" />
           <HomepageNotableList projects={notableProjects} />
