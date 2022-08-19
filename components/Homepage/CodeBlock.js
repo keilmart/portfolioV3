@@ -1,7 +1,7 @@
 const HomepageSkillsList = () => {
   return (
     <div>
-      <section className="relative z-10 px-6 py-4 antialiased transition duration-500 ease-in-out bg-white rounded-lg text-2xs text-syncWave lg:px-10 lg:py-8 lg:text-sm dark:text-white dark:bg-darkModeDetail">
+      <section className="relative z-10 px-6 py-4 antialiased transition duration-500 ease-in-out bg-white rounded-lg text-2xs text-syncWave lg:px-10 lg:py-8 lg:text-sm dark:text-slate-300 dark:bg-darkModeDetail">
         <pre className="m-2 sm:m-3 font-montserrat">
           1&nbsp;&nbsp;class <b>Person</b> {"{"}
         </pre>
@@ -39,7 +39,7 @@ const HomepageSkillsList = () => {
           6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {"}"}
         </pre>
         <pre className="m-2 sm:m-3 font-montserrat">7&nbsp;&nbsp;{"}"}</pre>
-        <div className="absolute z-20 p-3 text-white transition duration-500 ease-in-out bg-white border rounded-lg shadow-art dark:bg-darkModeDetail dark:border-none -bottom-9 sm:-left-20 left-1/4">
+        <div className="absolute z-20 p-3 text-slate-300 transition duration-500 ease-in-out bg-white border rounded-lg shadow-art dark:bg-darkModeDetail dark:border-none -bottom-9 sm:-left-20 left-1/4">
           <div className="px-4 py-2 antialiased rounded-md primary-grad">
             A little about me
           </div>

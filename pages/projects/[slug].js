@@ -31,7 +31,9 @@ const ProjectDetails = ({ projectData }) => {
         </h1>
         <div className="flex items-center space-x-8">
           <div>
-            <h2 className="font-semibold text-md dark:text-white">Company</h2>
+            <h2 className="font-semibold text-md dark:text-slate-300">
+              Company
+            </h2>
             <span className="text-md text-tertiary">
               {!!project.company && project.personal === false
                 ? project.company
@@ -39,7 +41,7 @@ const ProjectDetails = ({ projectData }) => {
             </span>
           </div>
           <div>
-            <h2 className="font-semibold text-md dark:text-white">Stack</h2>
+            <h2 className="font-semibold text-md dark:text-slate-300">Stack</h2>
             <span className="text-md text-tertiary">{project.stack}</span>
           </div>
         </div>
@@ -63,7 +65,7 @@ const ProjectDetails = ({ projectData }) => {
           </div>
         </a>
         <hr className="my-6 border-t-2 border-b-0 border-dotted border-primary dark:border-gray-400" />
-        <h2 className="mb-4 text-3xl font-semibold text-primary dark:text-white">
+        <h2 className="mb-4 text-3xl font-semibold text-primary dark:text-slate-300">
           Summary
         </h2>
         <p className="text-tertiary">{project.description}</p>
