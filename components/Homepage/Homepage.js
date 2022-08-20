@@ -5,7 +5,12 @@ import HomepageFeaturedList from "../HomepageFeaturedList/HomepageFeaturedList";
 import HomepageNotableList from "../HomepageNotableList/HomepageNotableList";
 import HomepageTestimonialList from "../HomepageTestimonialList/HomepageTestimonialList";
 
-import { DiamondIcon, SquirqleIcon, PentaIcon } from "./HomepageIcons/Index";
+import {
+  DiamondIcon,
+  SquirqleIcon,
+  PentaIcon,
+  CircleIcon,
+} from "./HomepageIcons/Index";
 import { motion } from "framer-motion";
 
 const FadeIn = ({ children }) => {
@@ -81,11 +86,7 @@ const Homepage = ({ notableProjects, featuredProjects }) => {
           <SectionHeader
             title="Notable Work"
             subtitle="Personal branding moon imagery"
-            icon={
-              <div className="rotate-45">
-                <SquirqleIcon />
-              </div>
-            }
+            icon={<CircleIcon />}
           />
           <div className="pt-6 md:pt-11" />
           <HomepageNotableList projects={notableProjects} />

@@ -32,7 +32,7 @@ const NotableProjectList = ({ projects }) => {
               </div>
             </a>
           </Link>
-          <h3 className="mb-1 text-xl font-semibold text-primary dark:text-slate-300">
+          <h3 className="mb-1 text-xl font-semibold text-primary dark:text-slate-200">
             {project.name}
           </h3>
           <span className="block mb-1 text-md text-tertiary">

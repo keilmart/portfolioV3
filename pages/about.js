@@ -65,7 +65,7 @@ const About = () => {
         </div>
 
         <hr className="mb-12 border-t-2 border-dotted mt-14 dark:border-gray-400" />
-        <h2 className="mt-12 mb-4 text-2xl font-semibold text-primary dark:text-slate-300">
+        <h2 className="mt-12 mb-4 text-2xl font-semibold text-primary dark:text-slate-200">
           My Education
         </h2>
         <div>
@@ -89,7 +89,7 @@ const About = () => {
         </div>
 
         <hr className="mb-12 border-t-2 border-dotted mt-14 dark:border-gray-400" />
-        <h2 className="mt-12 mb-4 text-2xl font-semibold text-primary dark:text-slate-300">
+        <h2 className="mt-12 mb-4 text-2xl font-semibold text-primary dark:text-slate-200">
           Where I&apos;ve Worked
         </h2>
         <div>
@@ -107,7 +107,7 @@ const About = () => {
         </div>
 
         <hr className="mb-12 border-t-2 border-dotted mt-14 dark:border-gray-400" />
-        <h2 className="mt-12 text-2xl font-semibold text-secondary dark:text-slate-300">
+        <h2 className="mt-12 text-2xl font-semibold text-secondary dark:text-slate-200">
           View this websites Github
         </h2>
         <a

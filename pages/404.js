@@ -17,7 +17,7 @@ const NotFound = () => {
               I can&apos;t seem to find the page you&apos;re looking for.
             </p>
             <Link href="/">
-              <a className="dark:text-slate-300">Go Home</a>
+              <a className="dark:text-slate-200">Go Home</a>
             </Link>
           </div>
         </div>

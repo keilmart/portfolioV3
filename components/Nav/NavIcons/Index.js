@@ -14,47 +14,6 @@ export function DarkMoon() {
   );
 }
 
-export function CircleIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="26"
-      height="26"
-      fill="none"
-      viewBox="0 0 40 40"
-    >
-      <mask
-        id="mask0_611_4815"
-        style={{ maskType: "alpha" }}
-        width="40"
-        height="40"
-        x="0"
-        y="0"
-        maskUnits="userSpaceOnUse"
-      >
-        <circle cx="20" cy="20" r="20" fill="#C4C4C4"></circle>
-      </mask>
-      <g mask="url(#mask0_611_4815)">
-        <path
-          fill="#6d83f2"
-          d="M-104.863 -76.459H-91.474V179.049H-104.863z"
-          transform="rotate(-45 -104.863 -76.459)"
-        ></path>
-        <path
-          fill="#E5E7EB"
-          d="M-95.398 -85.926H-82.009V169.582H-95.398z"
-          transform="rotate(-45 -95.398 -85.926)"
-        ></path>
-        <path
-          fill="#999999"
-          d="M-85.93 -95.394H-72.54100000000001V160.114H-85.93z"
-          transform="rotate(-45 -85.93 -95.394)"
-        ></path>
-      </g>
-    </svg>
-  );
-}
-
 // export function WorldIcon() {
 //   return (
 //     <svg viewBox="0 0 24 24" width="1.95em" height="1.95em">
@@ -74,7 +33,7 @@ export function CircleIcon1() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="w-5 h-5"
+      className="w-9 h-9"
       viewBox="0 0 20 20"
       fill="#6d83f2"
     >
@@ -91,7 +50,7 @@ export function CircleIcon2() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="w-5 h-5"
+      className="w-[34px] h-[34px]"
       viewBox="0 0 20 20"
       fill="#6d83f2"
     >
@@ -107,25 +66,52 @@ export function CircleIcon2() {
 export function CircleIcon3() {
   return (
     <svg
+      width="34"
+      height="34"
+      viewBox="0 0 24 24"
+      fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="w-5 h-5"
-      viewBox="0 0 20 20"
-      fill="#6d83f2"
     >
       <path
-        fillRule="evenodd"
-        d="M6.625 2.655A9 9 0 0119 11a1 1 0 11-2 0 7 7 0 00-9.625-6.492 1 1 0 11-.75-1.853zM4.662 4.959A1 1 0 014.75 6.37 6.97 6.97 0 003 11a1 1 0 11-2 0 8.97 8.97 0 012.25-5.953 1 1 0 011.412-.088z"
-        clipRule="evenodd"
+        d="M3.03509 12.9431C3.24245 14.9227 4.10472 16.8468 5.62188 18.364C7.13904 19.8811 9.0631 20.7434 11.0428 20.9508L3.03509 12.9431Z"
+        fill="#6d83f2"
       />
       <path
-        fillRule="evenodd"
-        d="M5 11a5 5 0 1110 0 1 1 0 11-2 0 3 3 0 10-6 0c0 1.677-.345 3.276-.968 4.729a1 1 0 11-1.838-.789A9.964 9.964 0 005 11zm8.921 2.012a1 1 0 01.831 1.145 19.86 19.86 0 01-.545 2.436 1 1 0 11-1.92-.558c.207-.713.371-1.445.49-2.192a1 1 0 011.144-.83z"
-        clipRule="evenodd"
+        d="M3 11.4938L12.4921 20.9858C13.2976 20.9407 14.0981 20.7879 14.8704 20.5273L3.4585 9.11548C3.19793 9.88771 3.0451 10.6883 3 11.4938Z"
+        fill="#6d83f2"
       />
       <path
-        fillRule="evenodd"
-        d="M10 10a1 1 0 011 1c0 2.236-.46 4.368-1.29 6.304a1 1 0 01-1.838-.789A13.952 13.952 0 009 11a1 1 0 011-1z"
-        clipRule="evenodd"
+        d="M3.86722 8.10999L15.8758 20.1186C16.4988 19.8201 17.0946 19.4458 17.6493 18.9956L4.99021 6.33659C4.54006 6.89125 4.16573 7.487 3.86722 8.10999Z"
+        fill="#6d83f2"
+      />
+      <path
+        d="M5.66301 5.59517C9.18091 2.12137 14.8488 2.135 18.3498 5.63604C21.8508 9.13708 21.8645 14.8049 18.3907 18.3228L5.66301 5.59517Z"
+        fill="#6d83f2"
+      />
+    </svg>
+  );
+}
+
+export function CircleIcon4() {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M13.325 3.05011L8.66741 20.4323L10.5993 20.9499L15.2568 3.56775L13.325 3.05011Z"
+        fill="#6d83f2"
+      />
+      <path
+        d="M7.61197 18.3608L8.97136 16.9124L8.97086 16.8933L3.87657 12.1121L8.66699 7.00798L7.20868 5.63928L1.04956 12.2017L7.61197 18.3608Z"
+        fill="#6d83f2"
+      />
+      <path
+        d="M16.388 18.3608L15.0286 16.9124L15.0291 16.8933L20.1234 12.1121L15.333 7.00798L16.7913 5.63928L22.9504 12.2017L16.388 18.3608Z"
+        fill="#6d83f2"
       />
     </svg>
   );

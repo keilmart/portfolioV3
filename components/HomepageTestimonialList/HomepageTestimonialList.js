@@ -51,11 +51,11 @@ const HomepageTestimonialList = () => {
               </div>
               <div className="flex justify-between col-span-4">
                 <div>
-                  <div className="flex mb-1 text-xl text-primary dark:text-slate-300">
-                    <h3 className="font-semibold dark:text-slate-300">
+                  <div className="flex mb-1 text-xl text-primary dark:text-slate-200">
+                    <h3 className="font-semibold dark:text-slate-200">
                       {testimonial.name},&nbsp;
                     </h3>
-                    <h3 className="dark:text-slate-300">
+                    <h3 className="dark:text-slate-200">
                       {testimonial.position}
                     </h3>
                   </div>
