@@ -1,12 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import {
-  CircleIcon,
-  CircleIcon1,
-  CircleIcon2,
-  CircleIcon3,
-  CircleIcon4,
-} from "./NavIcons/Index";
+import { CircleIcon } from "./NavIcons/Index";
 import ThemeToggle from "./ThemeToggle";
 
 const Nav = () => {
@@ -44,13 +38,10 @@ const Nav = () => {
           <Link href="/">
             <a className="flex">
               <div className="transition duration-1000 ease-in-out hover:rotate-180">
-                {/* <CircleIcon /> */}
-                {/* <CircleIcon2 /> */}
-                <CircleIcon3 />
-                {/* <CircleIcon4 /> */}
+                <CircleIcon />
               </div>
-              <div className="flex justify-center items-center pl-[.3rem]">
-                <span>
+              <div className="flex justify-center items-center pl-[.4rem]">
+                <span className="leading-[.825rem]">
                   Keil <br />
                   Martin
                 </span>
