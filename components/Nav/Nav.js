@@ -40,7 +40,7 @@ const Nav = () => {
               <div className="transition duration-1000 ease-in-out hover:rotate-180">
                 <CircleIcon />
               </div>
-              <div className="flex justify-center items-center pl-[.4rem]">
+              <div className="flex items-center justify-center pl-[.3rem]">
                 <span className="leading-[.825rem]">
                   Keil <br />
                   Martin
