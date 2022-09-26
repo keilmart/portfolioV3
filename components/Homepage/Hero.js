@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import CodeBlock from "./CodeBlock";
 import { GithubIcon, LinkedIcon } from "./HeroIcons/Index";
-import { GlobeBlack, GlobePurple } from "./GlobeIcons/Index";
+import { GlobeBlack, GlobePurple, Triangle } from "./GlobeIcons/Index";
 
 import { motion } from "framer-motion";
 
@@ -32,6 +32,9 @@ const Hero = () => {
   return (
     <section className="z-10 flex flex-col items-center mb-20 justify-evenly md:justify-between h-104 md:flex-row md:mb-2 md:h-100">
       <div>
+        {/* <div className="absolute -top-[50px] right-0">
+          <Triangle className="w-2/5" />
+        </div> */}
         <span className="inline-block mb-1 text-xl antialiased leading-4 sm:mb-0 text-tertiary sm:text-2xl">
           Hello, I&apos;m
         </span>

@@ -14,7 +14,7 @@ const HomepageSkillsList = () => {
       skillTwo: "Gatsby",
       skillThree: "React",
       skillFour: "JavaScript",
-      skillFive: "jQuery",
+      skillFive: "React Native",
     },
     {
       title: "Styling",
@@ -26,10 +26,10 @@ const HomepageSkillsList = () => {
     },
     {
       title: "Learning",
-      skillOne: "GraphQL",
-      skillTwo: "TypeScript",
-      skillThree: "Node.js",
-      skillFour: "Express",
+      skillOne: "TypeScript",
+      skillTwo: "Node.js",
+      skillThree: "Express",
+      skillFour: "GraphQL",
       skillFive: "MongoDB",
     },
   ];
