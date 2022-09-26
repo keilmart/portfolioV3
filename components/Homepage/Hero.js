@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-import CodeBlock from "./CodeBlock";
+import { Blob } from "./MainDecal/Index";
 import { GithubIcon, LinkedIcon } from "./HeroIcons/Index";
-import { GlobeBlack, GlobePurple, Triangle } from "./GlobeIcons/Index";
+import CodeBlock from "./CodeBlock";
 
 import { motion } from "framer-motion";
 
@@ -32,9 +32,6 @@ const Hero = () => {
   return (
     <section className="z-10 flex flex-col items-center mb-20 justify-evenly md:justify-between h-104 md:flex-row md:mb-2 md:h-100">
       <div>
-        {/* <div className="absolute -top-[50px] right-0">
-          <Triangle className="w-2/5" />
-        </div> */}
         <span className="inline-block mb-1 text-xl antialiased leading-4 sm:mb-0 text-tertiary sm:text-2xl">
           Hello, I&apos;m
         </span>
@@ -63,14 +60,11 @@ const Hero = () => {
       </div>
 
       <div className="relative">
-        <div className="absolute hidden md:block -top-[18rem] -left-[14rem] dark:hidden rotate-6">
-          <GlobeBlack />
-        </div>
-        <div className="absolute hidden -top-[18rem] -left-[14rem] md:dark:block rotate-6">
-          <GlobePurple />
+        <div className="absolute hidden md:block -rotate-12 -left-8 -top-[27rem] w-[60rem]">
+          <Blob />
         </div>
         <AnimateBlock alt="Code block describing Keil Martin">
-          <CodeBlock />
+          <CodeBlock className="z-20" />
         </AnimateBlock>
       </div>
     </section>
