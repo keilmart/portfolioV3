@@ -128,7 +128,7 @@ export async function getStaticPaths() {
     };
   } catch (e) {
     console.log(e);
-    return { paths: {} }; // No paths.
+    return { paths: {} };
   }
 }
 
@@ -158,6 +158,10 @@ export async function getStaticProps(context) {
       });
       // console.log(project.id, " => ", project.data());
     });
+    // } catch (e) {
+    //   console.log(e);
+    //   return { props: {} }; // No props.
+    // }
 
     return {
       props: { projectData },
