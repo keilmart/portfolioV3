@@ -26,7 +26,7 @@ const ExternalLink = ({ href, title }) => {
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="flex items-center mt-1 text-sm border-b border-gray-700 text-secondary hover:text-syncWave hover:border-syncWave hover:bg-gray-100 dark:hover:bg-transparent dark:text-white dark:border-white dark:hover:text-syncWave dark:hover:border-syncWave"
+      className="flex items-center mt-1 text-sm border-b border-gray-700 text-secondary hover:text-syncWave hover:border-syncWave hover:bg-gray-100 dark:hover:bg-transparent dark:text-slate-200 dark:border-slate-200 dark:hover:text-syncWave dark:hover:border-syncWave"
     >
       <span className="mr-1">{title}</span>
       <span className="mb-1 leading-snug">↗</span>
@@ -82,7 +82,7 @@ const About = () => {
         </div>
 
         <ul className="flex items-baseline space-x-4">
-          <p className="text-sm dark:text-white">Find me on</p>
+          <p className="text-sm dark:text-slate-200">Find me on</p>
           <li>
             <ExternalLink
               href="https://www.linkedin.com/in/keilmart/"
