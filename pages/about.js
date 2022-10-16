@@ -3,7 +3,7 @@ import Image from "next/image";
 import Layout from "../components/Layout/Layout";
 import SEO from "../components/SEO/SEO";
 
-import { TriSquareIcon } from "../components/Homepage/HomepageIcons/index";
+import { TriSquareIcon } from "../components/Homepage/HomepageIcons/Index";
 
 import { motion } from "framer-motion";
 
