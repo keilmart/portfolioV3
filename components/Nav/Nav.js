@@ -32,11 +32,9 @@ const Nav = () => {
         <div className="flex flex-row items-center justify-center text-sm antialiased font-semibold leading-3 tracking-wide text-primary dark:text-slate-200">
           <Link href="/">
             <a className="flex">
-              <div className="transition duration-1000 ease-in-out hover:rotate-180">
-                <CircleIcon />
-              </div>
-              <div className="flex items-center justify-center pl-[.35rem] pt-[.05rem]">
-                <span className="leading-[.8rem]">
+              <CircleIcon />
+              <div className="flex items-center justify-center pl-[.3rem] pt-[.05rem]">
+                <span className="tracking-tight font-montserrat text-[15px]">
                   Keil <br />
                   Martin
                 </span>
