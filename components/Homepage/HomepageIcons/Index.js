@@ -1,41 +1,3 @@
-export function TriSquareIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="62"
-      height="42"
-      fill="none"
-      viewBox="0 0 62 42"
-    >
-      <g strokeWidth="2" clipPath="url(#clip0_611_4813)">
-        <path
-          fill="#999999"
-          stroke="#EED4C3"
-          d="M1.304 12.631H31.304V42.631H1.304z"
-          transform="rotate(-22.184 1.304 12.631)"
-        ></path>
-        <path
-          fill="#E5E7EB"
-          stroke="#E17757"
-          d="M22.414 24.109H44.414V46.109H22.414z"
-          transform="rotate(-40.536 22.414 24.11)"
-        ></path>
-        <path
-          fill="#6d83f2"
-          stroke="#6d83f2"
-          d="M46.395 25.485H56.395V35.485H46.395z"
-          transform="rotate(-45 46.395 25.485)"
-        ></path>
-      </g>
-      <defs>
-        <clipPath id="clip0_611_4813">
-          <path fill="#fff" d="M0 0H62V42H0z"></path>
-        </clipPath>
-      </defs>
-    </svg>
-  );
-}
-
 export function PentaIcon() {
   return (
     <svg
@@ -189,6 +151,45 @@ export function SquirqleIcon() {
           transform="rotate(-90 -26.258 14.297)"
         ></path>
       </g>
+    </svg>
+  );
+}
+
+// This is located on the about page //
+export function TriSquareIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="62"
+      height="42"
+      fill="none"
+      viewBox="0 0 62 42"
+    >
+      <g strokeWidth="2" clipPath="url(#clip0_611_4813)">
+        <path
+          fill="#999999"
+          stroke="#999999"
+          d="M1.304 12.631H31.304V42.631H1.304z"
+          transform="rotate(-22.184 1.304 12.631)"
+        ></path>
+        <path
+          fill="#E5E7EB"
+          stroke="#E5E7EB"
+          d="M22.414 24.109H44.414V46.109H22.414z"
+          transform="rotate(-40.536 22.414 24.11)"
+        ></path>
+        <path
+          fill="#6d83f2"
+          stroke="#6d83f2"
+          d="M46.395 25.485H56.395V35.485H46.395z"
+          transform="rotate(-45 46.395 25.485)"
+        ></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_611_4813">
+          <path fill="#fff" d="M0 0H62V42H0z"></path>
+        </clipPath>
+      </defs>
     </svg>
   );
 }

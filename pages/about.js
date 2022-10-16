@@ -3,6 +3,8 @@ import Image from "next/image";
 import Layout from "../components/Layout/Layout";
 import SEO from "../components/SEO/SEO";
 
+import { TriSquareIcon } from "../components/Homepage/HomepageIcons/index";
+
 import { motion } from "framer-motion";
 
 const RotateIn = ({ children }) => {
@@ -15,6 +17,20 @@ const RotateIn = ({ children }) => {
     >
       {children}
     </motion.div>
+  );
+};
+
+const ExternalLink = ({ href, title }) => {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      className="flex items-center mt-1 text-sm border-b border-gray-700 text-secondary hover:text-syncWave hover:border-syncWave hover:bg-gray-100 dark:hover:bg-transparent dark:text-white dark:border-white dark:hover:text-syncWave dark:hover:border-syncWave"
+    >
+      <span className="mr-1">{title}</span>
+      <span className="mb-1 leading-snug">↗</span>
+    </a>
   );
 };
 
@@ -45,8 +61,9 @@ const About = () => {
           </RotateIn>
         </div>
       </div>
-      <div className="max-w-3xl mx-auto mt-10 mb-10 text-xl antialiased leading-relaxed tracking-tight md:mb-20 md:mt-18 md:pt-20 text-tertiary">
+      <div className="max-w-3xl mx-auto my-10 text-xl antialiased leading-relaxed tracking-tight md:mb-20 md:mt-18 md:pt-10 text-tertiary">
         <div className="pb-8"></div>
+        <TriSquareIcon />
         <h1 className="mt-4 mb-8 text-4xl antialiased font-bold font-montserrat text-primary dark:text-syncWave">
           About Me
         </h1>
@@ -63,6 +80,22 @@ const About = () => {
             has never dissipated (although my game systems were never the same).
           </p>
         </div>
+
+        <ul className="flex items-baseline space-x-4">
+          <p className="text-sm dark:text-white">Find me on</p>
+          <li>
+            <ExternalLink
+              href="https://www.linkedin.com/in/keilmart/"
+              title="LinkedIn"
+            />
+          </li>
+          <li>
+            <ExternalLink href="https://github.com/keilmart" title="Github" />
+          </li>
+          <li>
+            <ExternalLink href="mailto:keilwmartin@gmail.com" title="Email" />
+          </li>
+        </ul>
 
         <hr className="mb-12 border-t-2 border-dotted mt-14 dark:border-gray-400" />
         <h2 className="mt-12 mb-4 text-2xl font-semibold text-primary dark:text-slate-200">
