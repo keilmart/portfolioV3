@@ -72,7 +72,7 @@ const ProjectDetails = ({ projectData }) => {
         <p className="text-tertiary">{project.descriptionTwo}</p>
         <div className="my-8">
           <a
-            className="w-full mr-4 sm:w-auto btn-primary primary-grad"
+            className="mr-4 btn-primary primary-grad"
             href={`https://${project.url}`}
             target="_blank"
             rel="noreferrer"
@@ -81,7 +81,7 @@ const ProjectDetails = ({ projectData }) => {
           </a>
           {!!project.github ? (
             <a
-              className="w-full mt-2 btn-primary primary-grad sm:w-auto"
+              className="mt-2 btn-primary primary-grad"
               href={`https://${project.github}`}
               target="_blank"
               rel="noreferrer"

@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import Layout from "../components/Layout/Layout";
+import Emoji from "../components/Emoji/Emoji";
 import SEO from "../components/SEO/SEO";
 
 import { TriSquareIcon } from "../components/Homepage/HomepageIcons/Index";
@@ -77,7 +78,14 @@ const About = () => {
           <p className="mb-4">
             As a child I was always taking apart my Playstations and laptops
             trying to figure out how everything worked and that need to tinker
-            has never dissipated (although my game systems were never the same).
+            has never dissipated (although my game systems were never the same
+            &nbsp;
+            <Emoji symbol="🤯" label="Mind blown" />
+            &nbsp;
+            <Emoji symbol="💥" label="Explosion" />
+            &nbsp;
+            <Emoji symbol="🎮" label="Game system" />
+            ).
           </p>
         </div>
 
@@ -141,11 +149,19 @@ const About = () => {
 
         <hr className="mb-12 border-t-2 border-dotted mt-14 dark:border-gray-400" />
         <h2 className="mt-12 text-2xl font-semibold text-secondary dark:text-slate-200">
-          View this websites Github
+          My Resume & Site Github Repo
         </h2>
         <a
-          className="w-full mt-4 btn-primary primary-grad sm:w-auto"
-          href="https://github.com/keilmart/portfolioV3`"
+          className="mt-4 mr-4 btn-primary primary-grad"
+          href="https://firebasestorage.googleapis.com/v0/b/portfoliov3-6fb9a.appspot.com/o/project-photos%2FKeil%20Martin%20-%20Resume.pdf?alt=media&token=7c39d70d-69db-4fdd-b169-6c064ca5c1d0"
+          target="_blank"
+          rel="noreferrer"
+        >
+          My Resume
+        </a>
+        <a
+          className="mt-4 btn-primary primary-grad"
+          href="https://github.com/keilmart/portfolioV3"
           target="_blank"
           rel="noreferrer"
         >
