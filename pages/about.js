@@ -61,7 +61,7 @@ const About = () => {
           </RotateIn>
         </div>
       </div>
-      <div className="max-w-3xl mx-auto my-10 text-xl antialiased leading-relaxed tracking-tight md:mb-20 md:mt-18 md:pt-10 text-tertiary">
+      <div className="max-w-3xl mx-auto my-8 text-xl antialiased leading-relaxed tracking-tight md:mb-20 md:mt-18 md:pt-10 text-tertiary">
         <div className="pb-8"></div>
         <TriSquareIcon />
         <h1 className="mt-4 mb-8 text-4xl antialiased font-bold font-montserrat text-primary dark:text-syncWave">
