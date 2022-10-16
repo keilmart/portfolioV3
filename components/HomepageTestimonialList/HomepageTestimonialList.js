@@ -33,7 +33,7 @@ const HomepageTestimonialList = () => {
             key={idx}
           >
             <div className="grid grid-cols-1 gap-1 py-4 pl-3 pr-2 transition duration-500 ease-in-out rounded-lg group md:py-8 md:gap-4 md:grid-cols-5 hover:bg-gray-100 md:px-12 dark:hover:bg-darkModeDetail">
-              <div className="w-[95px]">
+              <div className="w-24">
                 <div className="justify-start hidden w-full pt-1 pb-2 pl-1 md:flex md:pl-0 md:justify-center">
                   <span className="inline-block text-xs font-semibold tracking-widest uppercase text-tertiary">
                     {testimonial.year}

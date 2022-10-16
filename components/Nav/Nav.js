@@ -33,8 +33,8 @@ const Nav = () => {
           <Link href="/">
             <a className="flex">
               <CircleIcon />
-              <div className="flex items-center justify-center pl-[.3rem] pt-[.05rem]">
-                <span className="antialiased tracking-tight font-montserrat tracking text-[15px] dark:tracking-normal">
+              <div className="flex items-center justify-center pl-navX pt-navY">
+                <span className="antialiased tracking-tight font-montserrat tracking text-2sm dark:tracking-normal">
                   Keil <br />
                   Martin
                 </span>

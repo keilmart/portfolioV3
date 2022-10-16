@@ -60,7 +60,7 @@ const Hero = () => {
       </div>
 
       <div className="relative">
-        <div className="absolute hidden md:block -rotate-12 -left-8 -top-[27rem] w-[60rem]">
+        <div className="absolute hidden md:block -rotate-12 -left-8 -top-blobY w-blobWidth">
           <Blob />
         </div>
         <AnimateBlock alt="Code block describing Keil Martin">

@@ -19,7 +19,13 @@ export function LightSun() {
 
 export function DarkMoon() {
   return (
-    <svg viewBox="0 0 24 24" width="1em" height="1em" fill="#FFFFFF">
+    <svg
+      viewBox="0 0 24 24"
+      width="1em"
+      height="1em"
+      fill="#FFFFFF"
+      transform="rotate(-45)"
+    >
       <path d="M14 24A12.013 12.013 0 012 12C1.847 3.044 12.031-2.985 19.791 1.509l1.553.862-1.543.88c-6.7 3.688-6.21 13.87.8 16.906l1.621.731-1.467 1.006A11.921 11.921 0 0114 24zm0-22A10.011 10.011 0 004 12c-.155 7.117 7.763 12.2 14.155 9.082a11.544 11.544 0 01-.876-18.521A9.745 9.745 0 0014 2z" />
     </svg>
   );

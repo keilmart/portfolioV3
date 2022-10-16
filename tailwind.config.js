@@ -13,19 +13,31 @@ module.exports = {
       lineHeight: {
         titles: 0.9,
       },
-      // letterSpacing: {
-      //   titles: "-0.1em",
-      // },
+      letterSpacing: {
+        titles: "-0.1em",
+      },
       fontSize: {
         "2xs": "0.8rem",
+        "2sm": ".938rem",
       },
       height: {
         100: "31.25rem",
         104: "32.75rem",
         404: "87vh",
       },
+      padding: {
+        navX: "0.35rem",
+        navY: "0.05rem",
+      },
+      width: {
+        blobWidth: "60rem",
+      },
+      inset: {
+        blobY: "27rem",
+      },
       colors: {
         syncWave: "#6D83F2",
+        toggleBg: "#313131",
         darkMode: "#191919",
         darkModeDetail: "#242424",
       },
