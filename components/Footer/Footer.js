@@ -18,7 +18,7 @@ const Footer = () => {
               className="py-1 mb-1 leading-snug hover:text-syncWave hover:border-b hover:border-syncWave hover:bg-gray-100 dark:hover:bg-transparent"
             >
               <span>
-                Email Me! <span>↗</span>
+                Email Me! <span className="hidden sm:inline-block">↗</span>
               </span>
             </a>
           </div>
