@@ -32,6 +32,10 @@
     @apply translate-x-[83%];
   }
 
+  p {
+    @apply font-light;
+  }
+
   svg {
     @apply inline;
   }
@@ -51,16 +55,42 @@
   }
 }
 
-p {
-  @apply font-light;
-}
-
 /**** Prevent Chrome Flash ****/
 body {
   -webkit-backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
 }
-/**** Prevent Chrome Flash ****/
+
+/**** Primary Gradient ****/
+.primary-grad {
+  background: linear-gradient(134deg, #6a98f0 0%, #4961dc 99%);
+}
+
+/**** Read more ****/
+.read-more-button {
+  display: inline-block;
+  margin-left: 5px;
+  color: #6d83f2;
+  cursor: pointer;
+}
+
+.display-text-group {
+  color: #6b7280;
+}
+
+/**** PlaceholderBlur Homepage ****/
+.unblur {
+  animation: unblur 1s linear;
+}
+
+@keyframes unblur {
+  from {
+    filter: blur(20px);
+  }
+  to {
+    filter: blur(0);
+  }
+}
 
 /**** Scroll Bar ****/
 body::-webkit-scrollbar {
@@ -78,13 +108,6 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
   background: #6a98f0;
 }
-/**** Scroll Bar ****/
-
-/**** Primary Gradient ****/
-.primary-grad {
-  background: linear-gradient(134deg, #6a98f0 0%, #4961dc 99%);
-}
-/**** Primary Gradient ****/
 
 /**** Carousel Homepage ****/
 .slick-track {
@@ -109,32 +132,3 @@ body::-webkit-scrollbar-thumb:hover {
   max-width: 236px;
   min-width: 236px;
 }
-/**** Carousel Homepage ****/
-
-/**** Read more ****/
-.read-more-button {
-  display: inline-block;
-  margin-left: 5px;
-  color: #6d83f2;
-  cursor: pointer;
-}
-
-.display-text-group {
-  color: #6b7280;
-}
-/**** Read more ****/
-
-/**** PlaceholderBlur Homepage ****/
-.unblur {
-  animation: unblur 1s linear;
-}
-
-@keyframes unblur {
-  from {
-    filter: blur(20px);
-  }
-  to {
-    filter: blur(0);
-  }
-}
-/**** PlaceholderBlur Homepage ****/
