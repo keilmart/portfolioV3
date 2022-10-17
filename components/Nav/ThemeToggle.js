@@ -31,7 +31,7 @@ const ThemeToggle = () => {
       >
         <span
           aria-hidden={true}
-          className="absolute inset-0 flex items-center justify-center w-full h-full transition-opacity"
+          className="absolute inset-0 flex items-center justify-center w-full h-full transition-opacity -rotate-45"
         >
           {theme === "dark" ? (
             <DarkMoon xmlns="http://www.w3.org/2000/svg" />
