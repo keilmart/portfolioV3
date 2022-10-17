@@ -1,8 +1,7 @@
 import Link from "next/link";
 
-import { Blob } from "./MainDecal/Index";
-import { GithubIcon, LinkedIcon } from "./HeroIcons/Index";
 import CodeBlock from "./CodeBlock";
+import { Blob, GithubIcon, LinkedIcon } from "./HomepageIcons/Index";
 
 import { motion } from "framer-motion";
 

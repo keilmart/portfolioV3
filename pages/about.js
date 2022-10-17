@@ -149,7 +149,7 @@ const About = () => {
 
         <hr className="mb-12 border-t-2 border-dotted mt-14 dark:border-gray-400" />
         <h2 className="mt-12 text-2xl font-semibold text-secondary dark:text-slate-200">
-          My Resume & Site Github Repo
+          Resume & Portfolio Github
         </h2>
         <a
           className="mt-4 mr-4 btn-primary primary-grad"
@@ -157,7 +157,7 @@ const About = () => {
           target="_blank"
           rel="noreferrer"
         >
-          My Resume
+          View Resume
         </a>
         <a
           className="mt-4 btn-primary primary-grad"
