@@ -10,11 +10,11 @@ const HomepageSkillsList = () => {
   const cards = [
     {
       title: "Developing",
-      skillOne: "Next.js",
-      skillTwo: "Gatsby",
-      skillThree: "React",
-      skillFour: "JavaScript",
-      skillFive: "React Native",
+      skillOne: "React",
+      skillTwo: "JavaScript",
+      skillThree: "React Native",
+      skillFour: "Next.js",
+      skillFive: "Redux",
     },
     {
       title: "Styling",
