@@ -39,7 +39,7 @@ const HomepageSkillsCarousel = ({ cards }) => {
         {cards?.map((card, idx) => {
           return (
             <div key={idx} className="z-10 overflow-hidden transition-all ">
-              <div className="w-11/12 text-center transition duration-500 ease-in-out bg-white border rounded-lg py-7 px-7 text-2xs text-syncWave shadow-artdark:text-slate-200 dark:shadow-none dark:border-0 dark:bg-darkModeDetail">
+              <div className="w-11/12 text-center transition duration-500 ease-in-out bg-gray-100 border-2 border-dotted rounded-lg py-7 px-7 text-2xs text-syncWave shadow-artdark:text-slate-200 dark:shadow-none dark:border-0 dark:bg-darkModeDetail">
                 {card.title === "Developing" ? (
                   <DevelopIcon xmlns="http://www.w3.org/2000/svg" />
                 ) : card.title === "Styling" ? (

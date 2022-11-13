@@ -41,7 +41,7 @@ const HomepageSkillsList = () => {
           {cards.map((card, idx) => (
             <li
               key={idx}
-              className="z-10 w-full mx-auto text-center transition duration-500 ease-in-out bg-white border rounded-lg cursor-pointer px-9 py-7 text-2xs text-syncWave lg:px-10 lg:py-8 dark:text-slate-200 shadow-art active:shadow-art-active hover:shadow-art-hover dark:shadow-none dark:border-transparent dark:bg-darkModeDetail hover:rotate-2 hover:even:-rotate-2"
+              className="z-10 w-full mx-auto text-center transition duration-500 ease-in-out bg-gray-100 border-2 border-dotted rounded-lg cursor-pointer px-9 py-7 text-2xs text-syncWave lg:px-10 lg:py-8 dark:text-slate-200 active:shadow-art-active hover:shadow-art-hover dark:shadow-none dark:border-transparent dark:bg-darkModeDetail hover:rotate-2 hover:even:-rotate-2"
             >
               {card.title === "Developing" ? (
                 <DevelopIcon xmlns="http://www.w3.org/2000/svg" />
