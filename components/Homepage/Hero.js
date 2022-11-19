@@ -20,8 +20,7 @@ const AnimateBlock = ({ children }) => {
       transition={{ type: "spring" }}
       whileTap={{ rotate: 20, scale: 0.95 }}
       whileHover={{ scale: 1.025 }}
-      className="z-20 mx-auto rounded-lg cursor-pointer shadow-art active:shadow-art-active hover:shadow-art-hover dark:shadow-none dark:bg-darkModeDetail"
-    >
+      className="z-20 mx-auto rounded-lg cursor-pointer shadow-art active:shadow-art-active hover:shadow-art-hover dark:shadow-none dark:bg-darkModeDetail">
       {children}
     </motion.div>
   );
@@ -38,7 +37,7 @@ const Hero = () => {
           Keil Martin
         </h1>
         <span className="inline-block antialiased uppercase text-md sm:text-lg text-tertiary dark:text-slate-200">
-          front end developer &amp; dog dad
+          Software Engineer
         </span>
         <ul className="flex flex-row pt-1 pl-1 text-sm text-md text-syncWave sm:pt-2">
           <li className="pr-3 transition duration-500 ease-in-out hover:scale-110">
