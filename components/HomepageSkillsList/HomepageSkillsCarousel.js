@@ -34,18 +34,17 @@ const HomepageSkillsCarousel = ({ cards }) => {
             setCurIdx(idx);
           },
         }}
-        ref={slideRef}
-      >
+        ref={slideRef}>
         {cards?.map((card, idx) => {
           return (
             <div key={idx} className="z-10 overflow-hidden transition-all ">
-              <div className="w-11/12 text-center transition duration-500 ease-in-out bg-gray-100 border-2 border-dotted rounded-lg py-7 px-7 text-2xs text-syncWave shadow-artdark:text-slate-200 dark:shadow-none dark:border-0 dark:bg-darkModeDetail">
+              <div className="w-11/12 text-center transition duration-500 ease-in-out bg-gray-100 border-2 border-dotted rounded-lg py-7 px-7 text-2xs text-syncWave shadow-art dark:text-slate-200 dark:shadow-none dark:border-0 dark:bg-darkModeDetail">
                 {card.title === "Developing" ? (
-                  <DevelopIcon xmlns="http://www.w3.org/2000/svg" />
+                  <DevelopIcon />
                 ) : card.title === "Styling" ? (
-                  <DesignIcon xmlns="http://www.w3.org/2000/svg" />
+                  <DesignIcon />
                 ) : (
-                  <LearnIcon xmlns="http://www.w3.org/2000/svg" />
+                  <LearnIcon />
                 )}
                 <h3 className="pt-3 pb-2 text-xl font-semibold text-center text-primary dark:text-slate-200">
                   {card.title}
@@ -80,8 +79,7 @@ const HomepageSkillsCarousel = ({ cards }) => {
               setCurIdx(curIdx - 1);
               slideRef.current.slickGoTo(curIdx - 1);
             }
-          }}
-        >
+          }}>
           <LeftArrow />
         </button>
 
@@ -91,8 +89,7 @@ const HomepageSkillsCarousel = ({ cards }) => {
               setCurIdx(curIdx + 1);
               slideRef.current.slickGoTo(curIdx + 1);
             }
-          }}
-        >
+          }}>
           <RightArrow />
         </button>
 
@@ -100,16 +97,13 @@ const HomepageSkillsCarousel = ({ cards }) => {
           {cards.map((cards, idx) => (
             <button
               key={idx}
-              className={`block w-full h-full ${
-                curIdx == idx && "bg-syncWave rounded"
-              } ${idx == 0 && "rounded-l-5xl"} ${
-                idx == cards.length - 1 && "rounded-r-5xl"
-              }`}
+              className={`block w-full h-full ${curIdx == idx && "bg-syncWave rounded"} ${
+                idx == 0 && "rounded-l-5xl"
+              } ${idx == cards.length - 1 && "rounded-r-5xl"}`}
               onClick={() => {
                 setCurIdx(idx);
                 slideRef.current.slickGoTo(idx);
-              }}
-            ></button>
+              }}></button>
           ))}
         </div>
       </div>
