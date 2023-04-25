@@ -20,7 +20,7 @@ const HomepageSkillsList = () => {
 
       <pre className="m-2 sm:m-3 font-montserrat">
         5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.location = &quot;
-        <b>Toronto, Canada</b>&quot;
+        <b>Toronto, Canada </b>&quot;
       </pre>
 
       <a
