@@ -11,7 +11,7 @@ const HomepageTestimonialList = () => {
       year: "Nov 2019",
       company: "TOK Design Studio",
       testimonial:
-        "Keil and I worked together for almost a year, and throughout that time he proved an immensely valuable asset to both our team and our firm as a whole. During our time as colleagues, he ensured all work completed was done so in a timely manner and of the highest quality. He possesses a self-motivated attitude and overall personability which, when paired with his constant strive to further himself through continuing education, created someone who led by example and demonstrated that the road to success was paved with hard-work and a dedication to your craft. He is passionate about what he does and is continuously driven to create the finest product possible. I cannot hold Keil in higher regards. ",
+        "Keil and I worked together for almost a year, and throughout that time he proved an immensely valuable asset to both our team and our firm as a whole. During our time as colleagues, he ensured all work completed was done so in a timely manner and of the highest quality. He possesses a self-motivated attitude and overall personability which, when paired with his constant strive to further himself through continuing education, created someone who led by example and demonstrated that the road to success was paved with hard-work and a dedication to your craft. He is passionate about what he does and is continuously driven to create the finest product possible. I cannot hold Keil in higher regards.  ",
     },
     {
       name: "Amy Mejia",
