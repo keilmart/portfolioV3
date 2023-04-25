@@ -67,14 +67,11 @@ const About = () => {
         </h1>
         <div>
           <p className="mb-4">
-            Building creative tech solutions is my biggest passion, and coding has been a
-            life-long hobby for me. I started like most others playing around in Myspace
-            and the love of it has continued to grow over the years.
-          </p>
-          <p className="mb-4">
-            As a child I was always taking apart my Playstations and laptops trying to
-            figure out how everything worked and that need to tinker has never dissipated
-            (although my game systems were never the same &nbsp;
+            I'm all about creating awesome tech solutions - it's not just my job, it's my
+            passion. Ever since my teenage years, when I was playing around with Myspace,
+            coding has been a lifelong love affair for me. I remember taking apart my
+            Playstations and laptops as a kid, just to see how they worked. That tinkering
+            bug never left me (although I can't say the same for my poor game systems!)
             <Emoji symbol="🤯" label="Mind blown" />
             &nbsp;
             <Emoji symbol="💥" label="Explosion" />

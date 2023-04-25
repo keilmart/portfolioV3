@@ -5,12 +5,7 @@ import HomepageFeaturedList from "../HomepageFeaturedList/HomepageFeaturedList";
 import HomepageNotableList from "../HomepageNotableList/HomepageNotableList";
 import HomepageTestimonialList from "../HomepageTestimonialList/HomepageTestimonialList";
 
-import {
-  DiamondIcon,
-  SquirqleIcon,
-  PentaIcon,
-  CircleIcon,
-} from "./HomepageIcons/Index";
+import { DiamondIcon, SquirqleIcon, PentaIcon, CircleIcon } from "./HomepageIcons/Index";
 import { motion } from "framer-motion";
 
 const FadeIn = ({ children }) => {
@@ -25,8 +20,7 @@ const FadeIn = ({ children }) => {
           ease: "easeInOut",
           duration: 1,
         },
-      }}
-    >
+      }}>
       {children}
     </motion.div>
   );
@@ -42,7 +36,7 @@ const Homepage = ({ notableProjects, featuredProjects }) => {
       <FadeIn>
         <section className="mx-auto mb-11 md:mb-16 lg:mb-20">
           <SectionHeader
-            title="My Skills"
+            title="Toolbox"
             subtitle="Personal branding moon imagery"
             icon={<DiamondIcon />}
           />
