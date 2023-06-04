@@ -6,7 +6,7 @@ const HomepageTestimonialList = () => {
   const testimonials = [
     {
       name: "Joel Bott",
-      position: "Architectural Designer",
+      position: "-30- Forensic Engineering",
       photo: "/pictures/joel-bott.png",
       year: "Nov 2019",
       company: "TOK Design Studio",
@@ -15,7 +15,7 @@ const HomepageTestimonialList = () => {
     },
     {
       name: "Amy Mejia",
-      position: "Civil Engineering Tech",
+      position: "York Region",
       photo: "/pictures/amy-mejia.png",
       year: "Aug 2018",
       company: "Tatham Engineering",
