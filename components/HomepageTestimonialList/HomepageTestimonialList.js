@@ -6,7 +6,7 @@ const HomepageTestimonialList = () => {
   const testimonials = [
     {
       name: "Joel Bott",
-      position: "-30- Forensic Engineering",
+      position: "30 Forensic Engineering",
       photo: "/pictures/joel-bott.png",
       year: "Nov 2019",
       company: "TOK Design Studio",
