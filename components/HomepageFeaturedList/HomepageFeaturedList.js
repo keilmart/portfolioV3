@@ -8,18 +8,15 @@ const HomepageFeaturedList = ({ projects }) => {
       {projects.map((project) => (
         <li
           className="flex flex-col items-center space-x-0 space-y-4 antialiased border-dotted md:first:border-b-0 first:border-b-2 first:pb-6 last:pt-6 md:flex-row md:space-y-0 md:space-x-8 lg:space-x-12 dark:border-gray-400"
-          key={project.slug}
-        >
+          key={project.slug}>
           <Link
             slug={project.slug}
             href={{
               pathname: `/projects/${project.slug}`,
-            }}
-          >
+            }}>
             <a
               className="relative flex w-full h-48 pt-8 pl-8 overflow-hidden transition duration-500 ease-in-out bg-gray-100 rounded-lg dark:bg-darkModeDetail md:pl-12 md:pt-12 flex-end md:w-1/2 lg:w-2/3 sm:h-56 lg:h-72 hover:shadow-lg hover:scale-105"
-              aria-label="Project Card"
-            >
+              aria-label="Project Card">
               <div className="absolute flex overflow-hidden shadow-md top-10 rounded-tl-3xl">
                 <PlaceholderBlur
                   imageSrc={project.imageZoom}
@@ -44,11 +41,8 @@ const HomepageFeaturedList = ({ projects }) => {
               slug={project.slug}
               href={{
                 pathname: `/projects/${project.slug}`,
-              }}
-            >
-              <a className="w-auto mt-3 btn-primary primary-grad">
-                View Project
-              </a>
+              }}>
+              <a className="w-auto mt-3 btn-primary primary-grad">View Details</a>
             </Link>
           </div>
         </li>
