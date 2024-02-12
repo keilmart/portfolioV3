@@ -62,8 +62,8 @@ const About = () => {
         </h1>
         <div>
           <p className="mb-4">
-            Creating cool tech stuff is more than just a job for me—it's what I live for.
-            My love for coding kicked off back in my teen years, messing around on
+            Creating cool tech stuff is more than just a job for me—it&apos;s what I live
+            for. My love for coding kicked off back in my teen years, messing around on
             Myspace, turning it into a full-blown obsession. I was that kid who took apart
             Playstations and laptops just for the fun of seeing how they ticked. That urge
             to tinker and figure things out? It's never really left me.
@@ -93,13 +93,13 @@ const About = () => {
             Georgian College, where my lifelong passion for technology found its
             direction. Throughout my childhood, I was captivated by the vast possibilities
             within the technological realm, yet undecided about which path to take—be it
-            hardware, software, robotics, or another field. It wasn't until my third year,
-            during a PLC class, that everything clicked into place. The moment I started
-            programming and integrating a Raspberry Pi with a live circuit, witnessing my
-            code transform into tangible actions, I experienced a profound sense of
-            alignment with my career aspirations. That pivotal experience crystallized my
-            ambition: to pursue a career in programming. From that point forward, I was
-            resolute in my goal to become a programmer.
+            hardware, software, robotics, or another field. It wasn&apos;t until my third
+            year, during a PLC class, that everything clicked into place. The moment I
+            started programming and integrating a Raspberry Pi with a live circuit,
+            witnessing my code transform into tangible actions, I experienced a profound
+            sense of alignment with my career aspirations. That pivotal experience
+            crystallized my ambition: to pursue a career in programming. From that point
+            forward, I was resolute in my goal to become a programmer.
           </p>
           <br />
           <p className="mb-4">
