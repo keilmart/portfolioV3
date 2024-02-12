@@ -6,6 +6,9 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "engines": {
+    "node": "20.x"
+  },
   "dependencies": {
     "@firebase/firestore": "^3.4.7",
     "@heroicons/react": "^1.0.6",
