@@ -66,7 +66,7 @@ const About = () => {
             for. My love for coding kicked off back in my teen years, messing around on
             Myspace, turning it into a full-blown obsession. I was that kid who took apart
             Playstations and laptops just for the fun of seeing how they ticked. That urge
-            to tinker and figure things out? It's never really left me.
+            to tinker and figure things out? It&apos;s never really left me.
           </p>
         </div>
 
