@@ -37,7 +37,7 @@ const Hero = () => {
           Keil Martin
         </h1>
         <span className="inline-block antialiased uppercase text-md sm:text-lg text-tertiary dark:text-slate-200">
-          Software Dev & Dog Dad
+          Software Developer
         </span>
         <ul className="flex flex-row pt-1 pl-1 text-sm text-md text-syncWave sm:pt-2">
           <li className="pr-3 transition duration-500 ease-in-out hover:scale-110">

@@ -20,7 +20,7 @@ const HomepageSkillsList = () => {
 
       <pre className="m-2 sm:m-3 font-montserrat">
         5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.location = &quot;
-        <b>Toronto, Canada </b>&quot;
+        <b>Toronto, Canada</b>&quot;
       </pre>
 
       <a
@@ -29,7 +29,7 @@ const HomepageSkillsList = () => {
         rel="noreferrer">
         <pre className="m-2 sm:m-3 font-montserrat">
           3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.myDog = {"{"}
-          &quot;name:&nbsp;&nbsp;<b>Charlie</b>&quot;{"}"};
+          name:&nbsp;&nbsp;&quot;<b>Charlie</b>&quot;{"}"};
         </pre>
       </a>
       <pre className="m-2 sm:m-3 font-montserrat">

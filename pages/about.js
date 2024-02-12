@@ -44,18 +44,13 @@ const About = () => {
       <div className="relative">
         <div className="absolute top-0 lg:right-48 right-24">
           <RotateIn>
-            <a
-              href="https://www.instagram.com/charlieistheshiht/"
-              target="_blank"
-              rel="noreferrer">
-              <Image
-                src="/pictures/me-charlie.png"
-                alt="Personal photo of Keil Martin and Charlie"
-                height="170"
-                width="170"
-                className="rounded-full"
-              />
-            </a>
+            <Image
+              src="/pictures/profile.JPG"
+              alt="Personal photo of Keil Martin"
+              height="170"
+              width="170"
+              className="rounded-full"
+            />
           </RotateIn>
         </div>
       </div>
@@ -67,18 +62,11 @@ const About = () => {
         </h1>
         <div>
           <p className="mb-4">
-            I&apos;m all about creating awesome tech solutions - it&apos;s not just my
-            job, it&apos;s my passion. Ever since my teenage years, when I was playing
-            around with Myspace, coding has been a lifelong love affair for me. I remember
-            taking apart my Playstations and laptops as a kid, just to see how they
-            worked. That tinkering bug never left me (although I can&apos;t say the same
-            for my poor game systems!)
-            <Emoji symbol="🤯" label="Mind blown" />
-            &nbsp;
-            <Emoji symbol="💥" label="Explosion" />
-            &nbsp;
-            <Emoji symbol="🎮" label="Game system" />
-            ).
+            Creating cool tech stuff is more than just a job for me—it's what I live for.
+            My love for coding kicked off back in my teen years, messing around on
+            Myspace, turning it into a full-blown obsession. I was that kid who took apart
+            Playstations and laptops just for the fun of seeing how they ticked. That urge
+            to tinker and figure things out? It's never really left me.
           </p>
         </div>
 
@@ -101,21 +89,25 @@ const About = () => {
         </h2>
         <div>
           <p>
-            My journey started in the Electrical Engineering Technology program at
-            Georgian College, I knew growing up I always wanted to work with technology,
-            although I wasn&apos;t sure what aspect I wanted to pursue (hardware,
-            software, robotics, etc.). It was in my third year that I started programming
-            in my PLC class. I started by programming and connecting a Raspberry Pi to a
-            live circuit. When I saw my code being translated to physical movements, I
-            knew this was the right fit for me. From that day onward I knew I wanted to be
-            a programmer.
+            My academic journey began in the Electrical Engineering Technology program at
+            Georgian College, where my lifelong passion for technology found its
+            direction. Throughout my childhood, I was captivated by the vast possibilities
+            within the technological realm, yet undecided about which path to take—be it
+            hardware, software, robotics, or another field. It wasn't until my third year,
+            during a PLC class, that everything clicked into place. The moment I started
+            programming and integrating a Raspberry Pi with a live circuit, witnessing my
+            code transform into tangible actions, I experienced a profound sense of
+            alignment with my career aspirations. That pivotal experience crystallized my
+            ambition: to pursue a career in programming. From that point forward, I was
+            resolute in my goal to become a programmer.
           </p>
           <br />
           <p className="mb-4">
-            In 2019, I decided to pursue a formal education in web development at Juno
-            College of Technology (formerly HackerYou), where I completed the Web
-            Development Immersive bootcamp. This gave me all the tools necessary to become
-            a Front End developer.
+            In 2019, I took a significant step toward my career goals by enrolling in the
+            Front End Development Immersive bootcamp at Juno College of Technology,
+            previously known as HackerYou. This intensive program equipped me with a
+            comprehensive toolkit for software development, laying the groundwork for my
+            future as a Software Developer.
           </p>
         </div>
 
@@ -125,14 +117,16 @@ const About = () => {
         </h2>
         <div>
           <p>
-            I have 2.5 years of professional experience as a Front End Developer. My main
-            focus has been component driven development. Primarily working in Next.js,
-            React, Tailwind and ScSS. In my short time on this adventure, I&apos;ve
-            already contributed to over a dozen large scale projects. I have taken on
-            freelance opportunities where I have not only been the lead developer on these
-            projects (teams of up to 3), but also managed all communications between
-            myself and the clients. This includes drafting all the contracts and have been
-            the main point of contact for any of their needs.
+            Over the past three years, I have honed my skills as a Front End Developer,
+            specializing in component-driven development with a primary focus on Next.js,
+            React, Tailwind, and ScSS. During this dynamic journey, I have significantly
+            contributed to more than a dozen large-scale projects, showcasing my ability
+            to adapt and excel in a fast-paced environment. My role has expanded beyond
+            development; I have embraced freelance projects where I led teams of up to
+            four developers, serving not only as the lead developer but also as the
+            technical project manager. My responsibilities encompassed direct client
+            communication, team management, contract drafting, and being the primary
+            liaison for client needs.
           </p>
         </div>
 
