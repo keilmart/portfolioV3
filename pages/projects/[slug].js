@@ -11,16 +11,10 @@ const ProjectDetails = ({ projectData }) => {
   const project = projectData[0];
   return (
     <Layout>
-      <SEO
-        title={project.name}
-        description={project.description}
-        og="og-home.png"
-      />
+      <SEO title={project.name} description={project.description} og="og-home.png" />
       <main className="mt-9">
         <div className="mb-8">
-          <Link
-            href={`${project.personal === true ? "/#notable" : "/#featured"}`}
-          >
+          <Link href={`${project.personal === true ? "/#notable" : "/#featured"}`}>
             <a className="border-b border-gray-700 text-tertiary hover:bg-gray-100 dark:hover:bg-transparent dark:hover:text-syncWave">
               &larr; Back to Work
             </a>
@@ -31,9 +25,7 @@ const ProjectDetails = ({ projectData }) => {
         </h1>
         <div className="flex items-center space-x-8">
           <div>
-            <h2 className="font-semibold text-md dark:text-slate-200">
-              Company
-            </h2>
+            <h2 className="font-semibold text-md dark:text-slate-200">Company</h2>
             <span className="text-md text-tertiary">
               {!!project.company && project.personal === false
                 ? project.company
@@ -51,8 +43,7 @@ const ProjectDetails = ({ projectData }) => {
           className="relative inline-block w-full px-4 pt-4 overflow-hidden transition duration-500 ease-in-out bg-gray-100 rounded-lg sm:px-10 sm:pt-10 h-min hover:shadow-lg hover:scale-105 dark:bg-darkModeDetail"
           href={`https://${project.url}`}
           target="_blank"
-          rel="noreferrer"
-        >
+          rel="noreferrer">
           <div className="w-full overflow-hidden rounded-t-3xl top-10">
             <PlaceholderBlur
               imageSrc={project.image || project.imageZoom}
@@ -69,14 +60,13 @@ const ProjectDetails = ({ projectData }) => {
           Summary
         </h2>
         <p className="text-tertiary">{project.description}</p>
-        <p className="text-tertiary">{project.descriptionTwo}</p>
+        <p className="mt-5 text-tertiary">{project.descriptionTwo}</p>
         <div className="my-8">
           <a
             className="mr-4 btn-primary primary-grad"
             href={`https://${project.url}`}
             target="_blank"
-            rel="noreferrer"
-          >
+            rel="noreferrer">
             {!!project.github ? "View Project" : "View Website"}
           </a>
           {!!project.github ? (
@@ -84,8 +74,7 @@ const ProjectDetails = ({ projectData }) => {
               className="mt-2 btn-primary primary-grad"
               href={`https://${project.github}`}
               target="_blank"
-              rel="noreferrer"
-            >
+              rel="noreferrer">
               View Github
             </a>
           ) : (
