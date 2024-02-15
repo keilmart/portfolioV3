@@ -136,7 +136,7 @@ const About = () => {
         </h2>
         <a
           className="mt-4 mr-4 btn-primary primary-grad"
-          href="https://firebasestorage.googleapis.com/v0/b/portfoliov3-6fb9a.appspot.com/o/project-photos%2FKeil%20Martin%20-%20Resume.pdf?alt=media&token=980d9d3b-e8a2-4f13-a6c9-7287bab07610"
+          href="https://firebasestorage.googleapis.com/v0/b/portfoliov3-6fb9a.appspot.com/o/project-photos%2FKeil-Martin-Resume.pdf?alt=media&token=d2fd5b83-5599-4be8-9328-b8052e6ee9de"
           target="_blank"
           rel="noreferrer">
           View Resume
