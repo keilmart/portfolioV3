@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       lineHeight: {
-        titles: 0.9,
+        titles: 1.15,
       },
       letterSpacing: {
         titles: "-0.1em",
