@@ -27,7 +27,7 @@ const Nav = () => {
 
   return (
     <nav className="sticky top-0 z-30 bg-white border-b border-primary dark:bg-darkModeDetail dark:border-b-0">
-      <div className="container flex items-center justify-between w-full max-w-screen-lg px-4 py-3 mx-auto lg:px-0 md:flex-row">
+      <div className="container flex items-center justify-between w-full max-w-screen-xl px-4 py-3 mx-auto lg:px-8 md:flex-row">
         <div className="flex flex-row items-center justify-center text-sm antialiased font-semibold leading-3 tracking-wide text-primary dark:text-slate-200">
           <Link href="/">
             <a className="flex">
