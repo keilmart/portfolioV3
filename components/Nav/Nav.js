@@ -20,6 +20,7 @@ const Nav = () => {
   };
 
   const router = useRouter();
+
   const navigation = [
     { name: "Home", href: "/#", isActive: router.pathname === "/" },
     { name: "About", href: "/about", isActive: router.pathname === "/about" },
