@@ -1,6 +1,6 @@
 const HomepageSkillsList = () => {
   return (
-    <div className="relative z-10 px-6 py-4 antialiased transition duration-500 ease-in-out bg-white border-2 rounded-lg text-2xs text-syncWave lg:px-10 lg:py-8 lg:text-sm dark:text-slate-200 dark:bg-darkModeDetail dark:border-transparent">
+    <div className="relative z-10 px-6 py-4 antialiased text-gray-700 transition duration-500 ease-in-out bg-white border-2 rounded-lg text-2xs lg:px-10 lg:py-8 lg:text-sm dark:text-slate-200 dark:bg-darkModeDetail dark:border-transparent">
       <pre className="m-2 sm:m-3 font-montserrat">
         1&nbsp;&nbsp;class <b>Person</b> {"{"}
       </pre>
@@ -13,13 +13,13 @@ const HomepageSkillsList = () => {
         target="_blank"
         rel="noreferrer">
         <pre className="m-2 sm:m-3 font-montserrat">
-          4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.passion = [&quot;
-          <b className="uppercase">traveling</b>&quot;];
+          4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; expertise = [&quot;
+          <b>App Development</b>&quot;];
         </pre>
       </a>
 
       <pre className="m-2 sm:m-3 font-montserrat">
-        5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.location = &quot;
+        5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; location = &quot;
         <b>Toronto, Canada</b>&quot;
       </pre>
 
@@ -28,8 +28,8 @@ const HomepageSkillsList = () => {
         target="_blank"
         rel="noreferrer">
         <pre className="m-2 sm:m-3 font-montserrat">
-          3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.myDog = {"{"}
-          name:&nbsp;&nbsp;&quot;<b>Charlie</b>&quot;{"}"};
+          3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; specialty = {"{"}
+          project:&nbsp;&nbsp;&quot;<b>Management</b>&quot;{"}"};
         </pre>
       </a>
       <pre className="m-2 sm:m-3 font-montserrat">

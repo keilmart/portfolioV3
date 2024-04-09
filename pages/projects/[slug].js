@@ -20,7 +20,7 @@ const ProjectDetails = ({ projectData }) => {
             </a>
           </Link>
         </div>
-        <h1 className="mb-6 text-3xl antialiased font-bold tracking-tight font-montserrat md:mb-8 md:text-6xl leading-titles md:leading-titles dark:text-syncWave">
+        <h1 className="mb-6 text-3xl antialiased font-bold tracking-tight font-montserrat md:mb-8 md:text-6xl leading-titles dark:text-syncWave">
           {project.name}
         </h1>
         <div className="flex items-center space-x-8">
@@ -134,7 +134,7 @@ export async function getStaticProps(context) {
     querySnapshot.forEach((project) => {
       projectData.push({
         company: !!project.company ? project.company : "",
-        description: project.description,
+        description: !!project.description ? project.description : "",
         github: !!project.github ? project.github : "",
         image: project.image,
         imageZoom: !!project.imageZoom ? project.imageZoom : "",

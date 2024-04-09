@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import CodeBlock from "./CodeBlock";
-import { Blob, GithubIcon, LinkedIcon } from "./HomepageIcons/Index";
+import { Blob, GithubIcon, LinkedIcon, CalenderIcon } from "./HomepageIcons/Index";
 
 import { motion } from "framer-motion";
 
@@ -29,28 +29,35 @@ const AnimateBlock = ({ children }) => {
 const Hero = () => {
   return (
     <section className="z-10 flex flex-col items-center mb-20 justify-evenly md:justify-between h-104 md:flex-row md:mb-2 md:h-100">
-      <div>
-        <span className="inline-block mb-1 text-xl antialiased leading-4 sm:mb-0 text-tertiary sm:text-2xl">
-          Hello, I&apos;m
+      <div className="md:w-1/2">
+        <span className="inline-block mt-2 mb-3 text-xl antialiased leading-4 text-tertiary sm:text-2xl">
+          Hello, I&apos;m Keil —
         </span>
-        <h1 className="text-4xl antialiased font-bold tracking-tight leading-titles font-montserrat sm:leading-titles sm:text-6xl text-primary dark:text-syncWave">
-          Keil Martin
+        <h1 className="text-4xl antialiased font-bold tracking-tight font-montserrat sm:text-5xl text-primary dark:text-syncWave leading-titles">
+          I'm a software developer & project management guru
         </h1>
-        <span className="inline-block antialiased uppercase text-md sm:text-lg text-tertiary dark:text-slate-200">
+        {/* <span className="inline-block antialiased uppercase text-md sm:text-lg text-tertiary dark:text-slate-200">
           Software Developer
-        </span>
-        <ul className="flex flex-row pt-1 pl-1 text-sm text-md text-syncWave sm:pt-2">
-          <li className="pr-3 transition duration-500 ease-in-out hover:scale-110">
+        </span> */}
+        <ul className="flex flex-row pl-1 mt-3.5 text-sm text-md text-syncWave">
+          <li className="pr-3 transition duration-500 ease-in-out hover:scale-[1.2]">
             <Link href="https://www.linkedin.com/in/keilmart/">
               <a target="_blank" rel="noreferrer" aria-label="Linkedin Logo">
                 <LinkedIcon xmlns="http://www.w3.org/2000/svg" />
               </a>
             </Link>
           </li>
-          <li className="transition duration-500 ease-in-out hover:scale-110">
+          <li className="pr-3 transition duration-500 ease-in-out hover:scale-[1.2]">
             <Link href="https://github.com/keilmart">
               <a target="_blank" rel="noreferrer" aria-label="Github Logo">
                 <GithubIcon xmlns="http://www.w3.org/2000/svg" />
+              </a>
+            </Link>
+          </li>
+          <li className="-mt-[1px] transition duration-500 ease-in-out hover:scale-[1.2]">
+            <Link href="https://calendly.com/keilwmartin/15min">
+              <a target="_blank" rel="noreferrer" aria-label="Github Logo">
+                <CalenderIcon />
               </a>
             </Link>
           </li>

@@ -8,6 +8,7 @@ const nextConfig = {
   images: {
     domains: [
       "firebasestorage.googleapis.com",
+      "console.firebase.google.com",
       "keilmart.com",
       "localhost:3000",
     ],

@@ -18,7 +18,7 @@ const PlaceholderBlur = ({
         width={imageWidth}
         height={imageHeight}
         blurDataURL={imageSrc}
-        className={`${loaded ? "unblur" : ""} ${rounded ? "rounded-full" : ""}`}
+        className={`relative ${loaded ? "unblur" : ""} ${rounded ? "rounded-full" : ""}`}
         onLoadingComplete={() => setLoaded(true)}
         objectPosition="top left"
         placeholder="blur"

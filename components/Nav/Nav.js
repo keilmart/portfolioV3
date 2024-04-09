@@ -12,8 +12,7 @@ const Nav = () => {
             item.isActive
               ? "text-syncWave hover:text-syncWave  hover:border-syncWave dark:text-syncWave dark:hover:text-syncWave"
               : "text-secondary hover:text-primary hover:border-gray-700 dark:hover:border-white dark:text-slate-200"
-          }`}
-        >
+          }`}>
           {item.name}
         </a>
       </Link>
