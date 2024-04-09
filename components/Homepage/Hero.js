@@ -55,7 +55,7 @@ const Hero = () => {
             </Link>
           </li>
           <li className="-mt-[1px] transition duration-500 ease-in-out hover:scale-[1.2]">
-            <Link href="https://calendly.com/keilwmartin/15min">
+            <Link href="https://calendly.com/keilmart/15min">
               <a target="_blank" rel="noreferrer" aria-label="Github Logo">
                 <CalenderIcon />
               </a>

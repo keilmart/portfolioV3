@@ -14,7 +14,7 @@ const Footer = () => {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://calendly.com/keilwmartin/15min"
+              href="https://calendly.com/keilmart/15min"
               className="py-1 mb-1 leading-snug hover:text-syncWave hover:border-b hover:border-syncWave hover:bg-gray-100 dark:hover:bg-transparent">
               <span>
                 Meet me! <span className="hidden sm:inline-block">↗</span>
