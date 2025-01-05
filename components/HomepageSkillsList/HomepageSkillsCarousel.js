@@ -30,6 +30,9 @@ const HomepageSkillsCarousel = ({ cards }) => {
           centerMode: false,
           centerPadding: `0px 0px 0px 40px`,
           initialSlide: curIdx,
+          // autoplay: true, // Enable autoplay mode
+          // autoplaySpeed: 0, // As fast as possible transitions
+          // cssEase: "linear", // Use linear animation for smooth constant movement
           afterChange: (idx) => {
             setCurIdx(idx);
           },

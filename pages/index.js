@@ -4,7 +4,7 @@ import SEO from "../components/SEO/SEO";
 
 import { getProjectData } from "../lib/dataFetch";
 
-const Home = ({ featuredProjects, notableProjects, comingProjects }) => {
+const Home = ({ featuredProjects, notableProjects, comingProjects, mobileImages }) => {
   return (
     <Layout>
       <SEO />
@@ -12,6 +12,7 @@ const Home = ({ featuredProjects, notableProjects, comingProjects }) => {
         featuredProjects={featuredProjects}
         notableProjects={notableProjects}
         comingProjects={comingProjects}
+        mobileImages={mobileImages}
       />
     </Layout>
   );
@@ -21,7 +22,9 @@ export async function getStaticProps() {
   let notableProjects = [];
   let featuredProjects = [];
   let comingProjects = [];
+  let mobileImages = [];
   const allProjectData = await getProjectData();
+  const mobileImagesData = await getProjectData();
   // console.log("allProjectData", allProjectData.allProjectData);
   try {
     if (allProjectData.allProjectData.length > 0) {
@@ -37,12 +40,19 @@ export async function getStaticProps() {
         }
       });
     }
+
+    if (mobileImagesData.mobileImagesData.length > 0) {
+      mobileImagesData.mobileImagesData.forEach((project) => {
+        mobileImages.push(project);
+      });
+    }
   } catch (e) {
     console.log(e);
     return (props = {
       comingProjects: [],
-      featuredProjects: [], // No Featured projects.
-      notableProjects: [], // No Notable projects.
+      featuredProjects: [],
+      notableProjects: [],
+      mobileImages: [],
     });
   }
 
@@ -51,6 +61,7 @@ export async function getStaticProps() {
       comingProjects,
       featuredProjects,
       notableProjects,
+      mobileImages,
       revalidate: 1,
     },
   };

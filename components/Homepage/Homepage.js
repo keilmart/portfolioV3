@@ -27,7 +27,13 @@ const FadeIn = ({ children }) => {
   );
 };
 
-const Homepage = ({ notableProjects, featuredProjects, comingProjects }) => {
+const Homepage = ({
+  notableProjects,
+  featuredProjects,
+  comingProjects,
+  mobileImages,
+}) => {
+  console.log(mobileImages);
   return (
     <>
       <FadeIn>

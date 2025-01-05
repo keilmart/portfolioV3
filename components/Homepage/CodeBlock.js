@@ -1,6 +1,6 @@
 const HomepageSkillsList = () => {
   return (
-    <div className="relative z-10 px-6 py-4 antialiased text-gray-700 transition duration-500 ease-in-out bg-white border-2 rounded-lg text-2xs lg:px-10 lg:py-8 lg:text-sm dark:text-slate-200 dark:bg-darkModeDetail dark:border-transparent">
+    <div className="relative z-10 px-6 py-4 antialiased text-gray-700 transition duration-500 ease-in-out bg-gray-100 border-2 rounded-lg text-2xs lg:px-10 lg:py-8 lg:text-sm dark:text-slate-200 dark:bg-darkModeDetail dark:border-transparent">
       <pre className="m-2 sm:m-3 font-montserrat">
         1&nbsp;&nbsp;class <b>Person</b> {"{"}
       </pre>
