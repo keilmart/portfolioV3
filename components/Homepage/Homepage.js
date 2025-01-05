@@ -33,7 +33,7 @@ const Homepage = ({
   comingProjects,
   mobileImages,
 }) => {
-  console.log(mobileImages);
+  // console.log(mobileImages);
   return (
     <>
       <FadeIn>

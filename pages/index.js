@@ -26,6 +26,7 @@ export async function getStaticProps() {
   const allProjectData = await getProjectData();
   const mobileImagesData = await getProjectData();
   // console.log("allProjectData", allProjectData.allProjectData);
+
   try {
     if (allProjectData.allProjectData.length > 0) {
       allProjectData.allProjectData.forEach((project) => {
