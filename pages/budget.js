@@ -36,9 +36,6 @@ const About = () => {
           <div>
             <h1>Google Sheets Data</h1>
             <pre>{JSON.stringify(sheetData, null, 2)}</pre>
-
-            <h1>Project Data</h1>
-            <pre>{JSON.stringify(projectData, null, 2)}</pre>
           </div>
         </div>
       </div>
