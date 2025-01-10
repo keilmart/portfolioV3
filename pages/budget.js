@@ -19,68 +19,62 @@ const BudgetSection = ({ data, sectionTitle, filterCondition }) => {
   };
 
   return (
-    <div>
-      <h2 className="mt-8 mb-4 text-2xl font-semibold">{sectionTitle}</h2>
+    <div className="w-full px-2 md:px-12">
+      <h2 className="mt-8 mb-4 text-xl font-semibold md:text-3xl">{sectionTitle}</h2>
       {data
         .filter(filterCondition) // Apply the filter condition passed in props
-        .map((row, index) => {
-          console.log(row);
-          return (
-            <div key={index} className="mb-4">
-              {row.Category !== "" && (
-                <p>
-                  <strong>Category:</strong> {row.Category}
-                </p>
-              )}
-              {row["Total Amount"] !== "" && (
-                <p
-                  className={`${
-                    row["Total Amount"] < 0 ? "text-red-400" : "text-green-400"
-                  }`}>
-                  <strong className="display-text-group">Total Amount:</strong>$
-                  {formatValue(row["Total Amount"]).value}
-                </p>
-              )}
-              {row["Goal Amount"] !== "" && (
-                <p
-                  className={`${
-                    row["Goal Amount"] < 0 ? "text-red-400" : "text-green-400"
-                  }`}>
-                  <strong className="display-text-group">Goal Amount:</strong> $
-                  {formatValue(row["Goal Amount"]).value}
-                </p>
-              )}
-              {row["Difference"] !== "" && (
-                <p
-                  className={`${
-                    row["Difference"] < 0 ? "text-red-400" : "text-green-400"
-                  }`}>
-                  <strong className="display-text-group">Difference:</strong>$
-                  {formatValue(row["Difference"]).value}
-                </p>
-              )}
-              {Object.entries(row)
-                .filter(
-                  ([key, value]) =>
-                    key !== "" &&
-                    value !== "" &&
-                    key !== "Category" &&
-                    key !== "Total Amount" &&
-                    key !== "Goal Amount" &&
-                    key !== "Difference"
-                )
-                .map(([key, value], idx) => {
-                  const { value: formattedValue, class: textColorClass } =
-                    formatValue(value);
-                  return (
-                    <p key={idx} className={textColorClass}>
-                      <strong>{key}:</strong> {formattedValue}
-                    </p>
-                  );
-                })}
-            </div>
-          );
-        })}
+        .filter((row) => row.Category.trim() !== "") // Exclude rows where "Category" is empty
+        .map((row, index) => (
+          <div key={index} className="pb-4 mb-4 border-b border-r border-gray-200">
+            <p className="text-2xl font-semibold">{row.Category}</p>
+            {row["Total Amount"] !== "" && (
+              <p
+                className={`${
+                  row["Total Amount"] < 0 ? "text-red-400" : "text-green-400"
+                }`}>
+                <strong className="display-text-group">Total Amount: </strong> $
+                {formatValue(row["Total Amount"]).value}
+              </p>
+            )}
+            {row["Goal Amount"] !== "" && (
+              <p
+                className={`${
+                  row["Goal Amount"] < 0 ? "text-red-400" : "text-green-400"
+                }`}>
+                <strong className="display-text-group">Goal Amount:</strong> $
+                {formatValue(row["Goal Amount"]).value}
+              </p>
+            )}
+            {row["Difference"] !== "" && (
+              <p
+                className={`${
+                  row["Difference"] < 0 ? "text-red-400" : "text-green-400"
+                }`}>
+                <strong className="display-text-group">Difference:</strong> $
+                {formatValue(row["Difference"]).value}
+              </p>
+            )}
+            {Object.entries(row)
+              .filter(
+                ([key, value]) =>
+                  key !== "" &&
+                  value !== "" &&
+                  key !== "Category" &&
+                  key !== "Total Amount" &&
+                  key !== "Goal Amount" &&
+                  key !== "Difference"
+              )
+              .map(([key, value], idx) => {
+                const { value: formattedValue, class: textColorClass } =
+                  formatValue(value);
+                return (
+                  <p key={idx} className={textColorClass}>
+                    <strong>{key}:</strong> {formattedValue}
+                  </p>
+                );
+              })}
+          </div>
+        ))}
     </div>
   );
 };
@@ -137,16 +131,25 @@ const Budget = () => {
         <h1 className="mt-4 mb-8 text-4xl font-bold font-montserrat text-primary dark:text-syncWave">
           Budget
         </h1>
-        <BudgetSection
-          data={firstPart}
-          sectionTitle="First Part"
-          filterCondition={(row) => row.Difference !== "" && row["Goal Amount"] !== ""}
-        />
-        <BudgetSection
-          data={secondPart}
-          sectionTitle="Second Part"
-          filterCondition={(row) => row["Goal Amount"] === "" || row.Difference === ""}
-        />
+        <div className="flex flex-col md:flex-row">
+          <BudgetSection
+            data={firstPart}
+            sectionTitle="Categories"
+            filterCondition={(row) =>
+              row.Difference !== "" &&
+              row["Goal Amount"] !== "" &&
+              row.Category.trim() !== ""
+            }
+          />
+          <BudgetSection
+            data={secondPart}
+            sectionTitle="Summary"
+            filterCondition={(row) =>
+              (row["Goal Amount"] === "" || row.Difference === "") &&
+              row.Category.trim() !== ""
+            }
+          />
+        </div>
       </div>
     </Layout>
   );

@@ -23,17 +23,18 @@ const Nav = () => {
   const navigation = [
     { name: "Home", href: "/#", isActive: router.pathname === "/" },
     { name: "About", href: "/about", isActive: router.pathname === "/about" },
+    { name: "Sign In", href: "/budget", isActive: router.pathname === "/budget" },
   ];
 
   return (
     <nav className="sticky top-0 z-30 bg-white border-b border-primary dark:bg-darkModeDetail dark:border-b-0">
-      <div className="container flex items-center justify-between w-full max-w-screen-xl px-4 py-3 mx-auto lg:px-8 md:flex-row">
+      <div className="container flex items-center justify-between w-full max-w-screen-xl px-2.5 py-3 mx-auto sm:px-4 lg:px-8 md:flex-row">
         <div className="flex flex-row items-center justify-center text-sm antialiased font-semibold leading-3 tracking-wide text-primary dark:text-slate-200">
           <Link href="/">
             <a className="flex">
               <CircleIcon />
               <div className="flex items-center justify-center pl-navX pt-navY">
-                <span className="text-lg antialiased tracking-tight font-montserrat tracking dark:tracking-normal">
+                <span className="text-base antialiased tracking-tight sm:text-lg font-montserrat tracking dark:tracking-normal">
                   TripleByte
                 </span>
                 {/* <span className="antialiased tracking-tight font-montserrat tracking text-2sm dark:tracking-normal">
@@ -45,12 +46,12 @@ const Nav = () => {
           </Link>
         </div>
         <div className="flex items-center">
-          <div className="space-x-5">
+          <div className="space-x-3 sm:space-x-5">
             {navigation.map((item) => (
               <NavItem item={item} key={item.name} />
             ))}
           </div>
-          <div className="flex ml-5">
+          <div className="flex ml-3 sm:ml-5">
             <ThemeToggle />
           </div>
         </div>
