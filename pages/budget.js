@@ -21,7 +21,12 @@ const Budget = () => {
     fetchData();
   }, []);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading)
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <div className="spinner"></div>
+      </div>
+    );
 
   return (
     <Layout>
@@ -46,15 +51,28 @@ const Budget = () => {
                 </tr>
               </thead>
               <tbody>
-                {sheetData.map((row, index) => (
-                  <tr key={index}>
-                    {Object.values(row).map((value, idx) => (
-                      <td key={idx} className="px-4 py-2 border border-gray-300">
-                        {value}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
+                {sheetData
+                  .filter((row) => row.Category && row.Category.trim() !== "") // Filter out rows with empty "Category"
+                  .map((row, index) => (
+                    <tr key={index}>
+                      {Object.entries(row).map(([key, value], idx) => {
+                        // Skip columns with empty string values
+                        if (value === "") {
+                          return null;
+                        }
+
+                        // Round numbers to 2 decimal places
+                        const displayValue =
+                          typeof value === "number" ? value.toFixed(2) : value;
+
+                        return (
+                          <td key={idx} className="px-4 py-2 border border-gray-300">
+                            {displayValue}
+                          </td>
+                        );
+                      })}
+                    </tr>
+                  ))}
               </tbody>
             </table>
           </div>
