@@ -1,11 +1,8 @@
 import { useAuth0 } from "@auth0/auth0-react";
 
 const Profile = () => {
-  const { user, isAuthenticated, isLoading } = useAuth0();
+  const { user, isAuthenticated } = useAuth0();
 
-  // if (isLoading) return <div>Loading...</div>;
-
-  // Custom function to capitalize each word in the string
   const capitalizeWords = (str) => {
     if (!str) return ""; // If there's no string, return an empty string
     return str
