@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
           domain={process.env.AUTH0_PUBLIC_DOMAIN}
           clientId={process.env.AUTH0_PUBLIC_CLIENT_ID}
           authorizationParams={{
-            redirect_uri: window.location.origin, // Only accessed in the browser
+            redirect_uri: window.location.origin, // Ensures proper redirect URI
           }}>
           <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
             <Nav />

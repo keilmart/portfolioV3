@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Layout from "../components/Layout/Layout";
+
+import { useAuth0 } from "@auth0/auth0-react";
 import { getGoogleSheetData } from "../lib/dataFetch";
+
+import Layout from "../components/Layout/Layout";
 
 // Shared component for rendering rows
 const BudgetSection = ({ data, sectionTitle, filterCondition }) => {
@@ -80,6 +83,7 @@ const BudgetSection = ({ data, sectionTitle, filterCondition }) => {
 };
 
 const Budget = () => {
+  const { isAuthenticated } = useAuth0();
   const [sheetData, setSheetData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [firstPart, setFirstPart] = useState([]);
@@ -123,6 +127,10 @@ const Budget = () => {
         <div className="spinner"></div>
       </div>
     );
+  }
+
+  if (!isAuthenticated) {
+    return <div>You must log in to view this page.</div>;
   }
 
   return (
