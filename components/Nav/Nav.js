@@ -3,22 +3,29 @@ import Link from "next/link";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useRouter } from "next/router";
 
-import Profile from "../Auth/Profile";
 import ThemeToggle from "./ThemeToggle";
 import { CircleIcon } from "./NavIcons/Index";
 
 const Nav = () => {
   const { loginWithRedirect, logout, isAuthenticated } = useAuth0();
   const router = useRouter();
-  const [isClient, setIsClient] = useState(false); // State to track if we're on the client
+  const [isClient, setIsClient] = useState(false);
+  const [loading, setLoading] = useState(true); // Add loading state
 
-  // This useEffect will run only on the client side
   useEffect(() => {
     setIsClient(true); // Set client flag to true once the component is mounted in the client
   }, []);
 
-  // Only access window if we're on the client side
+  useEffect(() => {
+    // Ensure the component doesn't try to redirect while the authentication is in progress
+    if (isAuthenticated && loading) {
+      setLoading(false); // Set loading to false once authenticated
+      router.push("/budget"); // Manually redirect to /budget if authenticated
+    }
+  }, [isAuthenticated, loading, router]);
+
   const redirectUrl = isClient ? `${window.location.origin}/budget` : "";
+  console.log("Redirect URL:", redirectUrl);
 
   const NavItem = ({ item }) => {
     return (
@@ -39,12 +46,6 @@ const Nav = () => {
     { name: "Home", href: "/#", isActive: router.pathname === "/" },
     { name: "About", href: "/about", isActive: router.pathname === "/about" },
   ];
-
-  useEffect(() => {
-    if (isClient) {
-      console.log("redirectUrl:", redirectUrl); // Log the redirectUrl value
-    }
-  }, [isClient, redirectUrl]);
 
   return (
     <nav className="sticky top-0 z-30 bg-white border-b border-primary dark:bg-darkModeDetail dark:border-b-0">
@@ -74,21 +75,23 @@ const Nav = () => {
           </div>
 
           <div className="ml-4">
-            <Profile />
-            {!isAuthenticated &&
-              isClient && ( // Only show sign-in button if on the client
-                <button
-                  onClick={() => loginWithRedirect({ redirect_uri: redirectUrl })}
-                  className="btn-primary primary-grad">
-                  Sign In
-                </button>
-              )}
+            {!isAuthenticated && isClient && (
+              <button
+                onClick={() => {
+                  const redirectUrl = "http://localhost:3000/budget"; // Hardcoded for testing
+                  console.log("Redirect URL:", redirectUrl); // Log the redirect URL
+                  loginWithRedirect({ redirect_uri: redirectUrl }); // Call the login redirect
+                }}
+                className="btn-primary primary-grad">
+                Sign In
+              </button>
+            )}
             {isAuthenticated && (
               <button
                 onClick={() =>
                   logout({
                     logoutParams: {
-                      returnTo: window.location.origin, // Redirect to the root URL after logout
+                      returnTo: window.location.origin, // Redirect after logout
                     },
                   })
                 }

@@ -6,15 +6,17 @@ import { getProjectData } from "../lib/dataFetch";
 
 const Home = ({ featuredProjects, notableProjects, comingProjects, mobileImages }) => {
   return (
-    <Layout>
-      <SEO />
-      <Homepage
-        featuredProjects={featuredProjects}
-        notableProjects={notableProjects}
-        comingProjects={comingProjects}
-        mobileImages={mobileImages}
-      />
-    </Layout>
+    <>
+      <Layout>
+        <SEO />
+        <Homepage
+          featuredProjects={featuredProjects}
+          notableProjects={notableProjects}
+          comingProjects={comingProjects}
+          mobileImages={mobileImages}
+        />
+      </Layout>
+    </>
   );
 };
 

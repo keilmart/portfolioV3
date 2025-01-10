@@ -13,7 +13,6 @@ function MyApp({ Component, pageProps }) {
     <>
       {isBrowser ? (
         <Auth0Provider
-          // TODO //
           // domain={process.env.AUTH0_PUBLIC_DOMAIN}
           // clientId={process.env.AUTH0_PUBLIC_CLIENT_ID}
           domain="keilmart.us.auth0.com"
@@ -32,6 +31,7 @@ function MyApp({ Component, pageProps }) {
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           <Nav />
           <Component {...pageProps} />
+
           <Footer />
         </ThemeProvider>
       )}

@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
       animate="enter"
       exit="exit"
       transition={{ type: "linear", duration: 0.5 }}
-      className="overflow-x-hidden bg-white dark:bg-darkMode">
+      className="relative w-full h-full overflow-x-hidden bg-white dark:bg-darkMode">
       <div className="container max-w-screen-xl mx-auto">
         <div className="px-4 lg:px-8">{children}</div>
       </div>

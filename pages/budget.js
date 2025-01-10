@@ -5,6 +5,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { getGoogleSheetData } from "../lib/dataFetch";
 
 import Layout from "../components/Layout/Layout";
+import Profile from "../components/Auth/Profile";
 
 // Shared component for rendering rows
 const BudgetSection = ({ data, sectionTitle, filterCondition }) => {
@@ -89,6 +90,8 @@ const Budget = () => {
   const [loading, setLoading] = useState(true);
   const [firstPart, setFirstPart] = useState([]);
   const [secondPart, setSecondPart] = useState([]);
+  const [showProfile, setShowProfile] = useState(false); // State for showing profile
+  const [fadeOut, setFadeOut] = useState(false); // State for fading out
 
   useEffect(() => {
     const fetchData = async () => {
@@ -122,13 +125,17 @@ const Budget = () => {
     fetchData();
   }, []);
 
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center h-[83vh]">
-        <div className="spinner"></div>
-      </div>
-    );
-  }
+  useEffect(() => {
+    if (isAuthenticated) {
+      setShowProfile(true); // Show profile when authenticated
+      setTimeout(() => {
+        setFadeOut(true); // Start fade-out effect
+        setTimeout(() => {
+          setShowProfile(false); // Hide profile after fading out
+        }, 1000); // Wait 1 second for fade-out transition
+      }, 100000);
+    }
+  }, [isAuthenticated]);
 
   if (!isAuthenticated) {
     return (
@@ -146,6 +153,14 @@ const Budget = () => {
             </Link>
           </div>
         </div>
+      </div>
+    );
+  }
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-[83vh]">
+        <div className="spinner"></div>
       </div>
     );
   }
@@ -176,6 +191,14 @@ const Budget = () => {
           />
         </div>
       </div>
+      {showProfile && ( // Conditionally render Profile with fade-out effect
+        <div
+          className={`absolute top-0 left-0 flex items-center justify-center w-full h-screen backdrop-blur-md transition-opacity duration-1000 ${
+            fadeOut ? "opacity-0" : "opacity-100"
+          }`}>
+          <Profile />
+        </div>
+      )}
     </Layout>
   );
 };
