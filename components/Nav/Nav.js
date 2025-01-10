@@ -46,7 +46,7 @@ const Nav = () => {
           </Link>
         </div>
         <div className="flex items-center">
-          <div className="space-x-3 sm:space-x-5">
+          <div className="space-x-2.5 sm:space-x-5">
             {navigation.map((item) => (
               <NavItem item={item} key={item.name} />
             ))}
