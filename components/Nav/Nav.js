@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react"; // Import necessary hooks
 import Link from "next/link";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useRouter } from "next/router";
@@ -9,6 +10,15 @@ import { CircleIcon } from "./NavIcons/Index";
 const Nav = () => {
   const { loginWithRedirect, logout, isAuthenticated } = useAuth0();
   const router = useRouter();
+  const [isClient, setIsClient] = useState(false); // State to track if we're on the client
+
+  // This useEffect will run only on the client side
+  useEffect(() => {
+    setIsClient(true); // Set client flag to true once the component is mounted in the client
+  }, []);
+
+  // Only access window if we're on the client side
+  const redirectUrl = isClient ? `${window.location.origin}/budget` : "";
 
   const NavItem = ({ item }) => {
     return (
@@ -30,6 +40,12 @@ const Nav = () => {
     { name: "About", href: "/about", isActive: router.pathname === "/about" },
   ];
 
+  useEffect(() => {
+    if (isClient) {
+      console.log("redirectUrl:", redirectUrl); // Log the redirectUrl value
+    }
+  }, [isClient, redirectUrl]);
+
   return (
     <nav className="sticky top-0 z-30 bg-white border-b border-primary dark:bg-darkModeDetail dark:border-b-0">
       <div className="container flex items-center justify-between w-full max-w-screen-xl px-2.5 py-3 mx-auto sm:px-4 lg:px-8 md:flex-row">
@@ -47,7 +63,6 @@ const Nav = () => {
           </Link>
         </div>
 
-        {/* Navigation Links and Theme Toggle */}
         <div className="flex items-center">
           <div className="space-x-2.5 sm:space-x-5">
             {navigation.map((item) => (
@@ -58,21 +73,25 @@ const Nav = () => {
             <ThemeToggle />
           </div>
 
-          {/* Authentication Buttons */}
           <div className="ml-4">
             <Profile />
-            {!isAuthenticated && (
-              <button
-                onClick={() =>
-                  loginWithRedirect({ redirect_uri: `${window.location.origin}/budget` })
-                }
-                className="btn-primary primary-grad">
-                Sign In
-              </button>
-            )}
+            {!isAuthenticated &&
+              isClient && ( // Only show sign-in button if on the client
+                <button
+                  onClick={() => loginWithRedirect({ redirect_uri: redirectUrl })}
+                  className="btn-primary primary-grad">
+                  Sign In
+                </button>
+              )}
             {isAuthenticated && (
               <button
-                onClick={() => logout({ returnTo: window.location.origin })}
+                onClick={() =>
+                  logout({
+                    logoutParams: {
+                      returnTo: window.location.origin, // Redirect to the root URL after logout
+                    },
+                  })
+                }
                 className="btn-primary primary-grad">
                 Sign Out
               </button>
@@ -85,8 +104,3 @@ const Nav = () => {
 };
 
 export default Nav;
-
-/* <span className="antialiased tracking-tight font-montserrat tracking text-2sm dark:tracking-normal">
-                  Keil <br />
-                  Martin
-                </span> */

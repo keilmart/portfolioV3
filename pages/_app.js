@@ -13,8 +13,11 @@ function MyApp({ Component, pageProps }) {
     <>
       {isBrowser ? (
         <Auth0Provider
-          domain={process.env.AUTH0_PUBLIC_DOMAIN}
-          clientId={process.env.AUTH0_PUBLIC_CLIENT_ID}
+          // TODO //
+          // domain={process.env.AUTH0_PUBLIC_DOMAIN}
+          // clientId={process.env.AUTH0_PUBLIC_CLIENT_ID}
+          domain="keilmart.us.auth0.com"
+          clientId="GUC8ADXxT3GAZ633l1eMafCKLgx4ZBYs"
           authorizationParams={{
             redirect_uri: window.location.origin, // Ensures proper redirect URI
           }}>

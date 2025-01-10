@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 
 import { useAuth0 } from "@auth0/auth0-react";
 import { getGoogleSheetData } from "../lib/dataFetch";
@@ -123,14 +124,30 @@ const Budget = () => {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center h-screen">
+      <div className="flex items-center justify-center h-[83vh]">
         <div className="spinner"></div>
       </div>
     );
   }
 
   if (!isAuthenticated) {
-    return <div>You must log in to view this page.</div>;
+    return (
+      <div className="flex items-center justify-center h-[83vh]">
+        <div>
+          <h1 className="mb-6 font-serif text-4xl text-center md:text-left md:mb-10 md:text-8xl dark:text-syncWave">
+            Oops!
+          </h1>
+          <div>
+            <p className="mb-3 text-lg text-secondary">
+              You must be logged in to view this page.
+            </p>
+            <Link href="/">
+              <a className="dark:text-slate-200">Go Home</a>
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   return (
