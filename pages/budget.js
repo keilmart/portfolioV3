@@ -129,7 +129,7 @@ const Budget = () => {
     <Layout>
       <div className="mx-auto my-8 text-xl antialiased leading-relaxed tracking-tight md:my-18 text-tertiary">
         <h1 className="mt-4 mb-8 text-4xl font-bold font-montserrat text-primary dark:text-syncWave">
-          Budget
+          Budget / Mobile first *
         </h1>
         <div className="flex flex-col md:flex-row">
           <BudgetSection

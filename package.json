@@ -10,6 +10,7 @@
     "node": "18.x"
   },
   "dependencies": {
+    "@auth0/auth0-react": "^2.2.4",
     "@firebase/firestore": "^3.4.7",
     "@heroicons/react": "^1.0.6",
     "database": "^0.0.2",
