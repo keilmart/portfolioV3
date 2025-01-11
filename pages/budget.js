@@ -1,21 +1,27 @@
 import React, { useEffect, useState } from "react";
-import Link from "next/link";
-
 import { useAuth0 } from "@auth0/auth0-react";
 import { getGoogleSheetData } from "../lib/dataFetch";
-
 import Layout from "../components/Layout/Layout";
 import Profile from "../components/Auth/Profile";
 import BudgetSection from "../components/BudgetPage/BudgetSection";
+import TabButton from "../components/BudgetPage/TabButton";
 
 const Budget = () => {
   const { isAuthenticated } = useAuth0();
   const [sheetData, setSheetData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [firstPart, setFirstPart] = useState([]);
-  const [secondPart, setSecondPart] = useState([]);
+  const [categoriesTab, setCategoriesTab] = useState([]);
+  const [metricsTab, setMetricsTab] = useState([]);
+  const [activeTab, setActiveTab] = useState("categories");
   const [showProfile, setShowProfile] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
+
+  const tabs = [
+    { key: "categories", label: "Categories" },
+    { key: "metrics", label: "Overall Metrics" },
+    { key: "singles", label: "Single expenses" },
+    { key: "trip", label: "Trip Fund" },
+  ];
 
   useEffect(() => {
     const fetchData = async () => {
@@ -36,8 +42,8 @@ const Budget = () => {
           }
         });
 
-        setFirstPart(firstArray);
-        setSecondPart(secondArray);
+        setCategoriesTab(firstArray);
+        setMetricsTab(secondArray);
       } catch (error) {
         console.error("Error loading data:", error);
       } finally {
@@ -68,43 +74,76 @@ const Budget = () => {
     );
   }
 
-  return (
-    <Layout wide={true}>
-      <div className="flex">
-        <div className=" bg-syncWave max-w-[384px] w-96 min-w-[384px]">
-          <p>Categories</p>
-          <p>Yearly target on track?</p>
-          <p>Trip fund</p>
-        </div>
-        <div className="p-8 mx-auto text-xl antialiased leading-relaxed tracking-tight border-t md:my-18 text-tertiary border-primary dark:border-b-0">
-          {/* <h1 className="mt-4 mb-8 text-4xl font-bold font-montserrat text-primary dark:text-syncWave">
-          Budget / Mobile first *
-        </h1> */}
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-10">
+  const renderActiveTabContent = () => {
+    switch (activeTab) {
+      case "categories":
+        return (
+          <BudgetSection
+            data={categoriesTab}
+            showPieChart={true}
+            showBarGraph={false}
+            legend={true}
+            sectionTitle="Categories"
+            filterCondition={(row) =>
+              row.Difference !== "" &&
+              row["Goal Amount"] !== "" &&
+              row.Category.trim() !== ""
+            }
+          />
+        );
+      case "metrics":
+        return (
+          <>
+            <p>Compare last month with this month</p>
+            <p>Compare yearly monthly average with this month</p>
             <BudgetSection
-              data={firstPart}
-              showPieChart={true}
-              showBarGraph={false}
-              legend={true}
-              sectionTitle="Categories"
-              filterCondition={(row) =>
-                row.Difference !== "" &&
-                row["Goal Amount"] !== "" &&
-                row.Category.trim() !== ""
-              }
-            />
-            <BudgetSection
-              data={secondPart}
+              data={metricsTab}
               showPieChart={false}
               showBarGraph={true}
               legend={false}
-              sectionTitle="Summary"
+              sectionTitle="Yearly Target on Track"
               filterCondition={(row) =>
                 (row["Goal Amount"] === "" || row.Difference === "") &&
                 row.Category.trim() !== ""
               }
             />
+          </>
+        );
+      case "singles":
+        return (
+          <div className="text-center">
+            <h2 className="text-xl font-bold">Single Expenses</h2>
+            <p>Click here to manually add entry</p>
+            <p>
+              Popup modal with fields to fill in Date, Description, Category, Amount,
+              Split, Total (will calculate automatically)
+            </p>
+            <p>
+              https://skwad.app/blog/is-it-safe-to-connect-your-bank-account-to-budgeting-apps
+            </p>
+            <p>This will be its on repo so dont have to reuse nav and footer</p>
+            <p>https://skwad.app/pricing</p>
+            <p>https://budgetduo.com/</p>
           </div>
+        );
+      case "trip":
+        return (
+          <div className="text-center">
+            <h2 className="text-xl font-bold">Trip Fund</h2>
+            <p>Coming soon...</p>
+          </div>
+        );
+      default:
+        return null;
+    }
+  };
+
+  return (
+    <Layout wide={true}>
+      <div className="flex">
+        <TabButton tabs={tabs} activeTab={activeTab} onTabChange={setActiveTab} />
+        <div className="p-8 text-xl antialiased leading-relaxed tracking-tight border-t md:my-18 text-tertiary border-primary dark:border-b-0 ">
+          {renderActiveTabContent()}
         </div>
       </div>
       {showProfile && (

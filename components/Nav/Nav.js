@@ -60,7 +60,7 @@ const Nav = () => {
               : "container max-w-screen-xl lg:px-8 "
           }`}>
           {router.pathname === "/budget" && (
-            <div className="absolute left-0 h-full w-96 bg-syncWave"></div>
+            <div className="absolute left-0 h-full w-96 bg-syncWave dark:bg-darkModeDetail"></div>
           )}
           {/* Logo Section */}
           <div className="z-10 flex flex-row items-center justify-center text-sm antialiased font-semibold leading-3 tracking-wide text-primary dark:text-slate-200">

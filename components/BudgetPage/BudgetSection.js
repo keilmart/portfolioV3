@@ -35,89 +35,91 @@ const BudgetSection = ({
           </div>
         </div>
       )}
-      {data
-        .filter(filterCondition)
-        .filter((row) => row.Category.trim() !== "")
-        .map((row, index) => (
-          <div
-            key={index}
-            className="flex justify-between py-10 mb-6 transition duration-500 ease-in-out bg-gray-100 rounded-lg px-7 hover:shadow-lg hover:scale-105 dark:bg-darkModeDetail">
-            <div>
-              <p className="text-2xl font-semibold">{row.Category}</p>
-              {row["Total Amount"] !== "" && (
-                <p
-                  className={`${
-                    row["Total Amount"] < 0 ? "text-red-400" : "text-green-400"
-                  }`}>
-                  <strong className="display-text-group">Total Amount: </strong> $
-                  {formatValue(row["Total Amount"]).value}
-                </p>
+      <div className="grid grid-cols-2 gap-6">
+        {data
+          .filter(filterCondition)
+          .filter((row) => row.Category.trim() !== "")
+          .map((row, index) => (
+            <div
+              key={index}
+              className="flex justify-between py-10 mb-6 transition duration-500 ease-in-out bg-gray-100 rounded-lg px-7 hover:shadow-lg hover:scale-105 dark:bg-darkModeDetail">
+              <div>
+                <p className="text-2xl font-semibold">{row.Category}</p>
+                {row["Total Amount"] !== "" && (
+                  <p
+                    className={`${
+                      row["Total Amount"] < 0 ? "text-red-400" : "text-green-400"
+                    }`}>
+                    <strong className="display-text-group">Total Amount: </strong> $
+                    {formatValue(row["Total Amount"]).value}
+                  </p>
+                )}
+                {row["Goal Amount"] !== "" && (
+                  <p
+                    className={`${
+                      row["Goal Amount"] < 0 ? "text-red-400" : "text-green-400"
+                    }`}>
+                    <strong className="display-text-group">Goal Amount:</strong> $
+                    {formatValue(row["Goal Amount"]).value}
+                  </p>
+                )}
+                {row["Difference"] !== "" && (
+                  <p
+                    className={`${
+                      row["Difference"] < 0 ? "text-red-400" : "text-green-400"
+                    }`}>
+                    <strong className="display-text-group">Difference:</strong> $
+                    {formatValue(row["Difference"]).value}
+                  </p>
+                )}
+                {row["Percentage Used"] !== "" && (
+                  <p
+                    className={`${
+                      row["Percentage Used"] < 0 ? "text-red-400" : "text-green-400"
+                    }`}>
+                    <strong className="display-text-group">Percentage Used:</strong>
+                    {""} {""}
+                    {formatValue(row["Percentage Used"]).value}%
+                  </p>
+                )}
+                {Object.entries(row)
+                  .filter(
+                    ([key, value]) =>
+                      key !== "" &&
+                      value !== "" &&
+                      key !== "Category" &&
+                      key !== "Total Amount" &&
+                      key !== "Goal Amount" &&
+                      key !== "Difference" &&
+                      key !== "Percentage Used"
+                  )
+                  .map(([key, value], idx) => {
+                    const { value: formattedValue, class: textColorClass } =
+                      formatValue(value);
+                    return (
+                      <p key={idx} className={textColorClass}>
+                        <strong>{key}:</strong> {formattedValue}
+                      </p>
+                    );
+                  })}
+              </div>
+              {showPieChart && (
+                <PieChartComponent
+                  percentageUsed={formatValue(row["Percentage Used"]).value}
+                />
               )}
-              {row["Goal Amount"] !== "" && (
-                <p
-                  className={`${
-                    row["Goal Amount"] < 0 ? "text-red-400" : "text-green-400"
-                  }`}>
-                  <strong className="display-text-group">Goal Amount:</strong> $
-                  {formatValue(row["Goal Amount"]).value}
-                </p>
+              {showBarGraph && (
+                <BarGraphComponent
+                  data={[
+                    { name: "Total Amount", value: row["Total Amount"] },
+                    { name: "Goal Amount", value: row["Goal Amount"] },
+                    // { name: "Difference", value: row["Difference"] },
+                  ]}
+                />
               )}
-              {row["Difference"] !== "" && (
-                <p
-                  className={`${
-                    row["Difference"] < 0 ? "text-red-400" : "text-green-400"
-                  }`}>
-                  <strong className="display-text-group">Difference:</strong> $
-                  {formatValue(row["Difference"]).value}
-                </p>
-              )}
-              {row["Percentage Used"] !== "" && (
-                <p
-                  className={`${
-                    row["Percentage Used"] < 0 ? "text-red-400" : "text-green-400"
-                  }`}>
-                  <strong className="display-text-group">Percentage Used:</strong>
-                  {""} {""}
-                  {formatValue(row["Percentage Used"]).value}%
-                </p>
-              )}
-              {Object.entries(row)
-                .filter(
-                  ([key, value]) =>
-                    key !== "" &&
-                    value !== "" &&
-                    key !== "Category" &&
-                    key !== "Total Amount" &&
-                    key !== "Goal Amount" &&
-                    key !== "Difference" &&
-                    key !== "Percentage Used"
-                )
-                .map(([key, value], idx) => {
-                  const { value: formattedValue, class: textColorClass } =
-                    formatValue(value);
-                  return (
-                    <p key={idx} className={textColorClass}>
-                      <strong>{key}:</strong> {formattedValue}
-                    </p>
-                  );
-                })}
             </div>
-            {showPieChart && (
-              <PieChartComponent
-                percentageUsed={formatValue(row["Percentage Used"]).value}
-              />
-            )}
-            {showBarGraph && (
-              <BarGraphComponent
-                data={[
-                  { name: "Total Amount", value: row["Total Amount"] },
-                  { name: "Goal Amount", value: row["Goal Amount"] },
-                  // { name: "Difference", value: row["Difference"] },
-                ]}
-              />
-            )}
-          </div>
-        ))}
+          ))}
+      </div>
     </div>
   );
 };
