@@ -6,7 +6,7 @@ const variants = {
   exit: { opacity: 0, x: 0, y: -100 },
 };
 
-const Layout = ({ children }) => {
+const Layout = ({ children, wide = false }) => {
   return (
     <motion.main
       variants={variants}
@@ -15,8 +15,8 @@ const Layout = ({ children }) => {
       exit="exit"
       transition={{ type: "linear", duration: 0.5 }}
       className="relative w-full h-full overflow-x-hidden bg-white dark:bg-darkMode">
-      <div className="container max-w-screen-xl mx-auto">
-        <div className="px-4 lg:px-8">{children}</div>
+      <div className={`mx-auto ${wide ? "" : "container max-w-screen-xl"}`}>
+        <div className={`${wide ? "" : "px-4 lg:px-8"}`}>{children}</div>
       </div>
     </motion.main>
   );
