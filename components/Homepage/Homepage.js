@@ -3,11 +3,12 @@ import SectionHeader from "../SectionHeader/SectionHeader";
 import HomepageSkillsList from "../HomepageSkillsList/HomepageSkillsList";
 import HomepageFeaturedList from "../HomepageFeaturedList/HomepageFeaturedList";
 import HomepageNotableList from "../HomepageNotableList/HomepageNotableList";
-import HomepageComingList from "../HomepageComingList/HomepageComingList";
 import HomepageTestimonialList from "../HomepageTestimonialList/HomepageTestimonialList";
 
 import { DiamondIcon, SquirqleIcon, PentaIcon, CircleIcon } from "./HomepageIcons/Index";
 import { motion } from "framer-motion";
+
+// import HomepageComingList from "../HomepageComingList/HomepageComingList";
 
 const FadeIn = ({ children }) => {
   return (
@@ -30,10 +31,9 @@ const FadeIn = ({ children }) => {
 const Homepage = ({
   notableProjects,
   featuredProjects,
-  comingProjects,
-  mobileImages,
+  // comingProjects,
+  // mobileImages,
 }) => {
-  // console.log(mobileImages);
   return (
     <>
       <FadeIn>

@@ -1,11 +1,10 @@
 import Image from "next/image";
 
 import Layout from "../components/Layout/Layout";
-import Emoji from "../components/Emoji/Emoji";
 import SEO from "../components/SEO/SEO";
+// import Emoji from "../components/Emoji/Emoji";
 
 import { TriSquareIcon } from "../components/Homepage/HomepageIcons/Index";
-
 import { motion } from "framer-motion";
 
 const RotateIn = ({ children }) => {
