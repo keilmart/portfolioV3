@@ -94,7 +94,7 @@ const Homepage = ({
         </section>
       </FadeIn>
 
-      <FadeIn>
+      {/* <FadeIn>
         <section className="mx-auto mb-11 md:mb-20">
           <SectionHeader
             title="Launching Soon"
@@ -104,7 +104,7 @@ const Homepage = ({
           <div className="pt-6 md:pt-11" />
           <HomepageComingList projects={comingProjects} />
         </section>
-      </FadeIn>
+      </FadeIn> */}
     </>
   );
 };
