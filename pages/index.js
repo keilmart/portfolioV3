@@ -42,6 +42,9 @@ export async function getStaticProps() {
           console.log("Project not found", project);
         }
       });
+      featuredProjects.sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
+      notableProjects.sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
+      comingProjects.sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
     }
 
     if (mobileImagesData.mobileImagesData.length > 0) {
