@@ -151,3 +151,25 @@ body::-webkit-scrollbar-thumb:hover {
     transform: rotate(360deg);
   }
 }
+
+.effect-shine {
+  -webkit-mask-image: linear-gradient(
+    -75deg,
+    rgba(0, 0, 0, 0.5) 20%,
+    rgb(0, 0, 0) 40%,
+    rgb(0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.5) 80%
+  );
+  -webkit-mask-size: 200%;
+  -webkit-mask-position: 0% 0%; /* Starting position */
+  animation: shine 4s infinite linear;
+}
+
+@keyframes shine {
+  0% {
+    -webkit-mask-position: 200% 0%;
+  }
+  100% {
+    -webkit-mask-position: 0% 0%;
+  }
+}

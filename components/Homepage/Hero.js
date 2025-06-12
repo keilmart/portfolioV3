@@ -33,15 +33,11 @@ const Hero = () => {
         <span className="inline-block mt-2 mb-3 text-xl antialiased leading-4 text-tertiary sm:text-2xl">
           Hello, I&apos;m Keil —
         </span>
-        <h1 className="text-4xl antialiased font-bold tracking-tight font-montserrat sm:text-7xl text-primary dark:text-syncWave leading-titles">
-          {/* <h1 className="text-4xl antialiased font-bold tracking-tight font-montserrat sm:text-5xl text-primary dark:text-syncWave leading-titles"> */}
-          {/* I&apos;m a software developer & project management guru */}
-          TripleByte
+        <h1 className="text-4xl antialiased font-bold tracking-tight font-montserrat sm:text-5xl text-primary dark:text-syncWave leading-titles">
+          I'm a software dev with front-end
+          <span className="effect-shine"> superpowers</span>
         </h1>
-        {/* <span className="inline-block antialiased uppercase text-md sm:text-lg text-tertiary dark:text-slate-200">
-          Software Developer
-        </span> */}
-        <ul className="flex flex-row pl-1 mt-3.5 text-sm text-md text-syncWave">
+        {/* <ul className="flex flex-row pl-1 mt-3.5 text-sm text-md text-syncWave">
           <li className="pr-3 transition duration-500 ease-in-out hover:scale-[1.2]">
             <Link href="https://www.linkedin.com/in/keilmart/">
               <a target="_blank" rel="noreferrer" aria-label="Linkedin Logo">
@@ -63,7 +59,7 @@ const Hero = () => {
               </a>
             </Link>
           </li>
-        </ul>
+        </ul> */}
       </div>
 
       <div className="relative">

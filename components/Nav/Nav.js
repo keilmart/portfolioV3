@@ -43,7 +43,7 @@ const Nav = () => {
               <div className="flex items-center justify-center pl-navX pt-navY">
                 <span
                   className={`text-base antialiased tracking-tight sm:text-lg font-montserrat tracking dark:tracking-normal `}>
-                  TripleByte
+                  Keil Martin
                 </span>
               </div>
             </a>
