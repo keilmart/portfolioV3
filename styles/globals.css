@@ -28,6 +28,10 @@
     @apply border-gray-200;
   }
 
+  .border-tertiary {
+    @apply border-gray-500;
+  }
+
   .toggle-light {
     @apply translate-x-[83%];
   }

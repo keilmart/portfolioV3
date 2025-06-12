@@ -11,8 +11,8 @@ import {
 
 const HomepageListedSkills = () => {
   return (
-    <div className="max-w-3xl px-5 py-6 mx-auto mb-10 text-center bg-gray-100 border-2 border-gray-200 border-dotted rounded-lg mt-9 md:mb-20 md:mt-24 md:p-12">
-      <h2 className="text-xl font-semibold md:text-2xl text-primary">
+    <div className="max-w-3xl px-5 py-6 mx-auto mb-10 text-center bg-gray-100 border-2 border-gray-200 border-dotted rounded-lg mt-9 md:mb-20 md:mt-24 md:p-12 dark:bg-darkModeDetail dark:border-none">
+      <h2 className="text-xl font-semibold md:text-2xl text-primary dark:text-slate-200">
         (A couple of my favorite tools)
       </h2>
       <div className="flex flex-wrap justify-center mt-6 mx-9">

@@ -33,7 +33,7 @@ const Hero = () => {
         <span className="inline-block mt-2 mb-3 text-xl antialiased leading-4 text-tertiary sm:text-2xl">
           Hello, I&apos;m Keil —
         </span>
-        <h1 className="text-4xl antialiased font-bold tracking-tight font-montserrat sm:text-5xl text-primary dark:text-syncWave leading-titles">
+        <h1 className="text-4xl antialiased font-bold tracking-tight font-montserrat lg:text-5xl text-primary dark:text-syncWave leading-titles">
           I'm a software dev with front-end
           <span className="effect-shine"> superpowers</span>
         </h1>
