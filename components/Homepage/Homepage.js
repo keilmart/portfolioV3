@@ -1,14 +1,14 @@
 import Hero from "./Hero";
 import SectionHeader from "../SectionHeader/SectionHeader";
-import HomepageSkillsList from "../HomepageSkillsList/HomepageSkillsList";
+import HomepageListedSkills from "../HomepageListedSkills/HomepageListedSkills";
 import HomepageFeaturedList from "../HomepageFeaturedList/HomepageFeaturedList";
 import HomepageNotableList from "../HomepageNotableList/HomepageNotableList";
 import HomepageTestimonialList from "../HomepageTestimonialList/HomepageTestimonialList";
+// import HomepageSkillsList from "../HomepageSkillsList/HomepageSkillsList";
+// import HomepageComingList from "../HomepageComingList/HomepageComingList";
 
 import { DiamondIcon, SquirqleIcon, PentaIcon, CircleIcon } from "./HomepageIcons/Index";
 import { motion } from "framer-motion";
-
-// import HomepageComingList from "../HomepageComingList/HomepageComingList";
 
 const FadeIn = ({ children }) => {
   return (
@@ -42,13 +42,13 @@ const Homepage = ({
 
       <FadeIn>
         <section className="mx-auto mb-11 md:mb-16 lg:mb-20">
-          <SectionHeader
+          {/* <SectionHeader
             title="My Toolbox"
             subtitle="Personal branding moon imagery"
             icon={<DiamondIcon />}
-          />
-          <div className="pt-6 md:pt-11" />
-          <HomepageSkillsList />
+          /> */}
+          {/* <div className="pt-6 md:pt-11" /> */}
+          <HomepageListedSkills />
           <a id="featured" />
         </section>
       </FadeIn>
