@@ -16,7 +16,7 @@ const HomepageTestimonialList = () => {
       name: "Amy Mejia",
       position: "York Region",
       photo: "/pictures/amy-mejia.png",
-      title: "C Tech",
+      title: "C.E.T",
       company: "Tatham Engineering",
       testimonial:
         "Keil is very organized and consistent with how he keeps electronic files and hard copy files stored.He has great mathematical abilities and is able to communicate with anyone, which allows him to be very efficient and have a very strong work ethic. Keil is a very quick learner and uses it to his advantage when faced with any new challenges as well as helping others around him on programs such as AutoCAD. He is very reliable as he is able to meet all of his deadlines therefore, I believe that Keil would be a valuable asset and any company would greatly benefit from having him as part of their team.",

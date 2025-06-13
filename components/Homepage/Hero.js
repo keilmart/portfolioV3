@@ -29,7 +29,7 @@ const AnimateBlock = ({ children }) => {
 const Hero = () => {
   return (
     <section className="z-10 flex flex-col items-center mb-20 justify-evenly md:justify-between h-104 md:flex-row md:mb-2 md:h-100">
-      <div className="md:w-1/2">
+      <div className=" md:w-1/2">
         <span className="inline-block mt-2 mb-3 text-xl antialiased leading-4 text-tertiary sm:text-2xl">
           Hello, I&apos;m Keil —
         </span>
