@@ -34,7 +34,7 @@ const Hero = () => {
           Hello, I&apos;m Keil —
         </span>
         <h1 className="text-4xl antialiased font-bold tracking-tight font-montserrat lg:text-5xl text-primary dark:text-syncWave leading-titles">
-          I'm a software dev with front-end
+          I&apos;m a software dev with front-end
           <span className="effect-shine"> superpowers</span>
         </h1>
         {/* <ul className="flex flex-row pl-1 mt-3.5 text-sm text-md text-syncWave">
