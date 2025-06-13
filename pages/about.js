@@ -133,7 +133,7 @@ const About = () => {
 
         <hr className="mb-12 border-t-2 border-dotted mt-14 dark:border-gray-400" />
         <h2 className="mt-12 text-2xl font-semibold text-secondary dark:text-slate-200">
-          Resume & Portfolio Github
+          Linkedin & Github
         </h2>
         <a
           className="mt-4 mr-4 btn-primary primary-grad"
