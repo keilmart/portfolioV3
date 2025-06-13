@@ -59,6 +59,12 @@ const ProjectDetails = ({ projectData }) => {
         <h2 className="mb-4 text-3xl font-semibold text-primary dark:text-slate-200">
           Summary
         </h2>
+
+        <div className="flex items-center mb-4 ">
+          <h2 className="font-semibold text-md dark:text-slate-200">Project date:</h2>
+          <span className="text-md text-tertiary">&nbsp;{project.timeline}</span>
+        </div>
+
         <p className="text-tertiary">{project.description}</p>
         <p className="mt-5 text-tertiary">{project.descriptionTwo}</p>
         <div className="my-8">
