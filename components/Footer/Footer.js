@@ -10,6 +10,7 @@ const Footer = () => {
             &bull;&nbsp;&nbsp;Built with Next.js, Tailwind and Firestore
           </span>
         </div>
+
         <div className="flex items-center">
           <div>
             <a
