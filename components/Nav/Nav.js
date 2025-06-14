@@ -39,7 +39,7 @@ const Nav = () => {
         <div className="z-10 flex flex-row items-center justify-center text-sm antialiased font-semibold leading-3 tracking-wide text-primary dark:text-slate-200">
           <Link href="/">
             <a className="flex">
-              <CircleIcon />
+              {/* <CircleIcon /> */}
               <div className="flex items-center justify-center pl-navX pt-navY">
                 <span
                   className={`text-base antialiased tracking-tight sm:text-lg font-montserrat tracking dark:tracking-normal `}>
