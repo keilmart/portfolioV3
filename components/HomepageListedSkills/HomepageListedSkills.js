@@ -17,29 +17,29 @@ const HomepageListedSkills = () => {
       </h2>
       <div className="flex flex-wrap justify-center mt-6 sm:mx-9">
         <Capsule
-          text="Next.js"
+          text="JavaScript"
           className="m-1 hover:rotate-2"
+          icon={<Code className="w-5 h-6 text-indigo-500" />}
+        />
+        <Capsule
+          text="Next.js"
+          className="m-1 hover:-rotate-2"
           icon={<ArrowBigRight className="w-5 h-6 text-indigo-500" />}
         />
         <Capsule
           text="CSS + Tailwind"
-          className="m-1 hover:-rotate-2"
+          className="m-1 hover:rotate-2"
           icon={<Brush className="w-5 h-6 text-indigo-500" />}
         />
         <Capsule
-          text="JavaScript"
+          text="React Native"
           className="m-1 hover:-rotate-2"
-          icon={<Code className="w-5 h-6 text-indigo-500" />}
+          icon={<SquareDashedBottomCode className="w-5 h-6 text-indigo-500" />}
         />
         <Capsule
           text="API integration"
           className="m-1 hover:rotate-2"
           icon={<Webhook className="w-5 h-6 text-indigo-500" />}
-        />
-        <Capsule
-          text="React"
-          className="m-1 hover:rotate-2"
-          icon={<SquareDashedBottomCode className="w-5 h-6 text-indigo-500" />}
         />
         <Capsule
           text="Node.js"
