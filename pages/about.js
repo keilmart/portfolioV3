@@ -59,14 +59,14 @@ const About = () => {
         </h1>
         <div>
           <p className="mb-4">
-            Technology has always been more than just a career path for me—it&apos;s a
-            core interest that began early in life. My passion for development started in
-            my teenage years, experimenting with code on platforms like Myspace and
-            gradually evolving into a deep fascination with how digital systems function.
-            Whether it was disassembling hardware like PlayStations and laptops or
-            building interfaces from scratch, I&apos;ve always been driven by a strong
-            curiosity and a desire to understand and improve the tools we use every day.
-            That mindset continues to shape my approach to software development today.
+            Technology has always been more than just a business for me—it&apos;s a core
+            interest that began early in life. My passion for development started in my
+            teen years, experimenting with code on platforms like Myspace and gradually
+            evolving into a deep fascination with how digital systems function. Whether it
+            was disassembling hardware like PlayStations and laptops or building
+            interfaces from scratch, I&apos;ve always been driven by a strong curiosity
+            and a desire to understand and improve the tools we use every day. That
+            mindset continues to shape my approach to software development today.
           </p>
         </div>
 
