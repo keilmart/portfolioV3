@@ -37,7 +37,7 @@ const HomepageListedSkills = () => {
           icon={<SquareDashedBottomCode className="w-5 h-6 text-indigo-500" />}
         />
         <Capsule
-          text="API integration"
+          text="API + CMS integration"
           className="m-1 hover:rotate-2"
           icon={<Webhook className="w-5 h-6 text-indigo-500" />}
         />
