@@ -92,11 +92,11 @@ const About = () => {
             My academic path began in the Electrical Engineering Technology program at
             Georgian College, where a long-standing interest in technology started to take
             focused shape. Growing up, I was drawn to the vast potential of tech—whether
-            in hardware, software, or robotics—but it wasn’t until my third year, during a
-            PLC course, that my direction became clear. Programming a Raspberry Pi to
-            interact with live circuits provided a hands-on understanding of how code
-            could drive real-world systems. That experience solidified my decision to
-            pursue software development as a career.
+            in hardware, software, or robotics—but it wasn&apos;t until my third year,
+            during a PLC course, that my direction became clear. Programming a Raspberry
+            Pi to interact with live circuits provided a hands-on understanding of how
+            code could drive real-world systems. That experience solidified my decision to
+            pursue software development.
           </p>
           <br />
           <p className="mb-4">
