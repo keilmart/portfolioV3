@@ -1,10 +1,7 @@
-import { useEffect, useState } from "react"; // Import necessary hooks
 import Link from "next/link";
-import { useAuth0 } from "@auth0/auth0-react";
 import { useRouter } from "next/router";
-
 import ThemeToggle from "./ThemeToggle";
-import { CircleIcon } from "./NavIcons/Index";
+// import { CircleIcon } from "./NavIcons/Index";
 
 const Nav = () => {
   const router = useRouter();
