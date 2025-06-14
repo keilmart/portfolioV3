@@ -116,9 +116,9 @@ const About = () => {
           <p className="mb-4">
             Over the past five years, I have built a strong foundation as a Front-End
             Developer, specializing in component-driven development using Next.js, React,
-            Tailwind CSS, and ScSS. My experience spans over a dozen large-scale projects,
-            where I&apos;ve consistently delivered high-quality solutions in fast-paced,
-            deadline-driven environments.
+            Tailwind CSS, and ScSS. My experience spans over two dozen large-scale
+            projects, where I&apos;ve consistently delivered high-quality solutions in
+            fast-paced, deadline-driven environments.
           </p>
           <p>
             In addition to hands-on development, I have led teams of up to four
