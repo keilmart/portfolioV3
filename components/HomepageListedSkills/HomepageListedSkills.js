@@ -3,7 +3,7 @@ import Capsule from "./Capsule";
 import {
   SquareDashedBottomCode,
   Brush,
-  Wind,
+  Hexagon,
   Code,
   Webhook,
   ArrowBigRight,
@@ -22,14 +22,9 @@ const HomepageListedSkills = () => {
           icon={<ArrowBigRight className="w-5 h-6 text-indigo-500" />}
         />
         <Capsule
-          text="Tailwind CSS"
+          text="CSS + Tailwind"
           className="m-1 hover:-rotate-2"
-          icon={<Wind className="w-5 h-6 text-indigo-500" />}
-        />
-        <Capsule
-          text="API integration"
-          className="m-1 hover:rotate-2"
-          icon={<Webhook className="w-5 h-6 text-indigo-500" />}
+          icon={<Brush className="w-5 h-6 text-indigo-500" />}
         />
         <Capsule
           text="JavaScript"
@@ -37,14 +32,19 @@ const HomepageListedSkills = () => {
           icon={<Code className="w-5 h-6 text-indigo-500" />}
         />
         <Capsule
+          text="API integration"
+          className="m-1 hover:rotate-2"
+          icon={<Webhook className="w-5 h-6 text-indigo-500" />}
+        />
+        <Capsule
           text="React"
           className="m-1 hover:rotate-2"
           icon={<SquareDashedBottomCode className="w-5 h-6 text-indigo-500" />}
         />
         <Capsule
-          text="CSS Styling"
+          text="Node.js"
           className="m-1 hover:-rotate-2"
-          icon={<Brush className="w-5 h-6 text-indigo-500" />}
+          icon={<Hexagon className="w-5 h-6 text-indigo-500" />}
         />
       </div>
     </div>
