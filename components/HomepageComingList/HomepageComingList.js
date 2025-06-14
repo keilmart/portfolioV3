@@ -10,7 +10,6 @@ const HomepageComingList = ({ projects }) => {
           <div
             className="relative inline-block w-full h-56 pt-8 pl-8 mb-4 overflow-hidden transition duration-500 ease-in-out bg-gray-100 rounded-lg dark:bg-darkModeDetail hover:shadow-lg hover:scale-105"
             aria-label="Project Card">
-            {/* Apply blur effect to the image */}
             <div className="absolute w-full h-full overflow-hidden rounded-tl-3xl top-10 blur-sm">
               <PlaceholderBlur
                 imageSrc={project.image ? project.image : project.imageZoom}
@@ -19,9 +18,7 @@ const HomepageComingList = ({ projects }) => {
                 imageAlt={project.name}
               />
             </div>
-            {/* Apply color overlay */}
             <div className="absolute inset-0 opacity-50 bg-[#4757a3]"></div>
-            {/* Add text in the middle */}
             <div className="absolute inset-0 flex items-center justify-center">
               <h4 className="text-xl font-semibold text-white">Launching soon</h4>
             </div>

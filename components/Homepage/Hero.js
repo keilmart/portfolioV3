@@ -1,9 +1,7 @@
-import Link from "next/link";
-
 import CodeBlock from "./CodeBlock";
 import { Blob, GithubIcon, LinkedIcon, CalenderIcon } from "./HomepageIcons/Index";
-
 import { motion } from "framer-motion";
+// import Link from "next/link";
 
 const AnimateBlock = ({ children }) => {
   return (

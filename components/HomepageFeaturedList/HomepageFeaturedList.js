@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import PlaceholderBlur from "../PlaceholderBlur/PlaceholderBlur";
 
 const HomepageFeaturedList = ({ projects }) => {

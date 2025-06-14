@@ -3,7 +3,7 @@ import Head from "next/head";
 const SEO = ({
   title = "Keil Martin",
   og = "og-home.png",
-  description = "Hi I'm Keil Martin, a Software and UX/UI Developer from Toronto, Canada. My stack includes but is not limited to React, React Native, TypeScript, Node.js, TailwindCSS and ScSS / SaSS.",
+  description = "Hi I'm Keil Martin, a Software and UX/UI Developer from Toronto, Canada. My stack includes but is not limited to React, React Native, Next.js, JavaScript, TypeScript, Node.js, TailwindCSS and ScSS / SaSS.",
 }) => {
   return (
     <Head>
