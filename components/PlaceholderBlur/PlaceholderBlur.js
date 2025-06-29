@@ -7,7 +7,7 @@ const PlaceholderBlur = ({
   imageHeight,
   rounded = false,
   priority = false,
-  blurDataURL, // optional real blur data
+  blurDataURL,
 }) => {
   return (
     <Image
@@ -16,7 +16,7 @@ const PlaceholderBlur = ({
       width={imageWidth}
       height={imageHeight}
       className={`${rounded ? "rounded-full" : ""}`}
-      placeholder={blurDataURL ? "blur" : undefined}
+      placeholder={blurDataURL ? "blur" : "empty"}
       blurDataURL={blurDataURL}
       objectFit="cover"
       objectPosition="top left"
