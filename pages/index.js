@@ -4,16 +4,12 @@ import SEO from "../components/SEO/SEO";
 
 import { getProjectData } from "../lib/dataFetch";
 
-const Home = ({ featuredProjects, notableProjects, mobileImages }) => {
+const Home = ({ featuredProjects, notableProjects }) => {
   return (
     <>
       <Layout>
         <SEO />
-        <Homepage
-          featuredProjects={featuredProjects}
-          notableProjects={notableProjects}
-          mobileImages={mobileImages}
-        />
+        <Homepage featuredProjects={featuredProjects} notableProjects={notableProjects} />
       </Layout>
     </>
   );
@@ -22,9 +18,7 @@ const Home = ({ featuredProjects, notableProjects, mobileImages }) => {
 export async function getStaticProps() {
   let notableProjects = [];
   let featuredProjects = [];
-  let mobileImages = [];
   const allProjectData = await getProjectData();
-  const mobileImagesData = await getProjectData();
   // console.log("allProjectData", allProjectData.allProjectData);
 
   try {
@@ -41,18 +35,11 @@ export async function getStaticProps() {
       featuredProjects.sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
       notableProjects.sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
     }
-
-    if (mobileImagesData.mobileImagesData.length > 0) {
-      mobileImagesData.mobileImagesData.forEach((project) => {
-        mobileImages.push(project);
-      });
-    }
   } catch (e) {
     console.log(e);
     return (props = {
       featuredProjects: [],
       notableProjects: [],
-      mobileImages: [],
     });
   }
 
@@ -60,7 +47,6 @@ export async function getStaticProps() {
     props: {
       featuredProjects,
       notableProjects,
-      mobileImages,
       revalidate: 1,
     },
   };

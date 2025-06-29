@@ -5,7 +5,6 @@ import HomepageFeaturedList from "../HomepageFeaturedList/HomepageFeaturedList";
 import HomepageNotableList from "../HomepageNotableList/HomepageNotableList";
 import HomepageTestimonialList from "../HomepageTestimonialList/HomepageTestimonialList";
 // import HomepageSkillsList from "../HomepageSkillsList/HomepageSkillsList";
-// import HomepageComingList from "../HomepageComingList/HomepageComingList";
 
 import { DiamondIcon, SquirqleIcon, PentaIcon, CircleIcon } from "./HomepageIcons/Index";
 import { motion } from "framer-motion";
@@ -28,11 +27,7 @@ const FadeIn = ({ children }) => {
   );
 };
 
-const Homepage = ({
-  notableProjects,
-  featuredProjects,
-  // mobileImages,
-}) => {
+const Homepage = ({ notableProjects, featuredProjects }) => {
   return (
     <>
       <FadeIn>
