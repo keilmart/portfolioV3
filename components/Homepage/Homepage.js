@@ -4,28 +4,8 @@ import HomepageListedSkills from "../HomepageListedSkills/HomepageListedSkills";
 import HomepageFeaturedList from "../HomepageFeaturedList/HomepageFeaturedList";
 import HomepageNotableList from "../HomepageNotableList/HomepageNotableList";
 import HomepageTestimonialList from "../HomepageTestimonialList/HomepageTestimonialList";
-// import HomepageSkillsList from "../HomepageSkillsList/HomepageSkillsList";
-
+import FadeIn from "./HomepageAnimations/FadeIn";
 import { DiamondIcon, SquirqleIcon, PentaIcon, CircleIcon } from "./HomepageIcons/Index";
-import { motion } from "framer-motion";
-
-const FadeIn = ({ children }) => {
-  return (
-    <motion.div
-      viewport={{ once: false }}
-      initial={{ opacity: 0, y: -8 }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-        transition: {
-          ease: "easeInOut",
-          duration: 1,
-        },
-      }}>
-      {children}
-    </motion.div>
-  );
-};
 
 const Homepage = ({ notableProjects, featuredProjects }) => {
   return (
