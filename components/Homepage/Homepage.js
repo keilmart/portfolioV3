@@ -31,7 +31,6 @@ const FadeIn = ({ children }) => {
 const Homepage = ({
   notableProjects,
   featuredProjects,
-  // comingProjects,
   // mobileImages,
 }) => {
   return (
@@ -42,12 +41,6 @@ const Homepage = ({
 
       <FadeIn>
         <section className="mx-auto mb-11 md:mb-16 lg:mb-20">
-          {/* <SectionHeader
-            title="My Toolbox"
-            subtitle="Personal branding moon imagery"
-            icon={<DiamondIcon />}
-          /> */}
-          {/* <div className="pt-6 md:pt-11" /> */}
           <HomepageListedSkills />
           <a id="featured" />
         </section>
@@ -93,18 +86,6 @@ const Homepage = ({
           <HomepageNotableList projects={notableProjects} />
         </section>
       </FadeIn>
-
-      {/* <FadeIn>
-        <section className="mx-auto mb-11 md:mb-20">
-          <SectionHeader
-            title="Launching Soon"
-            subtitle="Personal branding moon imagery"
-            icon={<CircleIcon />}
-          />
-          <div className="pt-6 md:pt-11" />
-          <HomepageComingList projects={comingProjects} />
-        </section>
-      </FadeIn> */}
     </>
   );
 };

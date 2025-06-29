@@ -14,7 +14,7 @@ const ProjectDetails = ({ projectData }) => {
       <SEO title={project.name} description={project.description} og="og-home.png" />
       <main className="mt-9">
         <div className="mb-8">
-          <Link href={`${project.personal === true ? "/#notable" : "/#featured"}`}>
+          <Link href={`${project.featured === false ? "/#notable" : "/#featured"}`}>
             <a className="border-b border-gray-700 text-tertiary hover:bg-gray-100 dark:hover:bg-transparent dark:hover:text-syncWave">
               &larr; Back to Work
             </a>
@@ -27,9 +27,9 @@ const ProjectDetails = ({ projectData }) => {
           <div>
             <h2 className="font-semibold text-md dark:text-slate-200">Company</h2>
             <span className="text-md text-tertiary">
-              {!!project.company && project.personal === false
+              {!!project.company && project.company !== ""
                 ? project.company
-                : "Personal"}
+                : "Contracted Work"}
             </span>
           </div>
           <div>
@@ -145,7 +145,7 @@ export async function getStaticProps(context) {
         image: project.image,
         imageZoom: !!project.imageZoom ? project.imageZoom : "",
         name: project.name,
-        personal: !!project.personal ? project.personal : "",
+        featured: !!project.featured ? project.featured : "",
         slug: project.slug,
         stack: project.stack,
         timeline: project.timeline,
