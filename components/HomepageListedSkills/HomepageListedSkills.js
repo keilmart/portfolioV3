@@ -44,7 +44,7 @@ const HomepageListedSkills = () => {
         <Capsule
           text="Node.js"
           className="m-1 hover:-rotate-2"
-          icon={<Hexagon className="w-5 h-6 text-orange-600" />}
+          icon={<Hexagon className="w-5 h-6 text-orange-500" />}
         />
       </div>
     </div>
