@@ -4,7 +4,7 @@ import HomepageListedSkills from "../HomepageListedSkills/HomepageListedSkills";
 import HomepageFeaturedList from "../HomepageFeaturedList/HomepageFeaturedList";
 import HomepageNotableList from "../HomepageNotableList/HomepageNotableList";
 import HomepageTestimonialList from "../HomepageTestimonialList/HomepageTestimonialList";
-import FadeIn from "./HomepageAnimations/FadeIn";
+import FadeIn from "../GlobalComponents/GlobalAnimations/FadeIn";
 import { DiamondIcon, SquirqleIcon, PentaIcon, CircleIcon } from "./HomepageIcons/Index";
 
 const Homepage = ({ notableProjects, featuredProjects }) => {

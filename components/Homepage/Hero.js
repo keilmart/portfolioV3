@@ -1,6 +1,6 @@
 import { Blob } from "./HomepageIcons/Index";
 import CodeBlock from "./CodeBlock";
-import AnimateBlock from "./HomepageAnimations/AnimateBlock";
+import AnimateBlock from "../GlobalComponents/GlobalAnimations/AnimateBlock";
 
 const Hero = () => {
   return (
