@@ -1,5 +1,4 @@
-import { motion } from "framer-motion";
-import { Blob, GithubIcon, LinkedIcon, CalenderIcon } from "./HomepageIcons/Index";
+import { Blob } from "./HomepageIcons/Index";
 import CodeBlock from "./CodeBlock";
 import AnimateBlock from "./HomepageAnimations/AnimateBlock";
 
