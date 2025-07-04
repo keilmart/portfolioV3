@@ -113,6 +113,28 @@ body::-webkit-scrollbar-thumb:hover {
   background: #6a98f0;
 }
 
+.effect-shine {
+  -webkit-mask-image: linear-gradient(
+    -75deg,
+    rgba(0, 0, 0, 0.5) 20%,
+    rgb(0, 0, 0) 40%,
+    rgb(0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.5) 80%
+  );
+  -webkit-mask-size: 200%;
+  -webkit-mask-position: 0% 0%; /* Starting position */
+  animation: shine 4s infinite linear;
+}
+
+@keyframes shine {
+  0% {
+    -webkit-mask-position: 200% 0%;
+  }
+  100% {
+    -webkit-mask-position: 0% 0%;
+  }
+}
+
 /**** Carousel Homepage ****/
 .slick-track {
   min-width: 6000px;
@@ -135,45 +157,4 @@ body::-webkit-scrollbar-thumb:hover {
 .slick-slide {
   max-width: 236px;
   min-width: 236px;
-}
-
-/* budget loader */
-.spinner {
-  border: 4px solid #f3f3f3;
-  border-top: 4px solid #6d83f2;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.effect-shine {
-  -webkit-mask-image: linear-gradient(
-    -75deg,
-    rgba(0, 0, 0, 0.5) 20%,
-    rgb(0, 0, 0) 40%,
-    rgb(0, 0, 0) 60%,
-    rgba(0, 0, 0, 0.5) 80%
-  );
-  -webkit-mask-size: 200%;
-  -webkit-mask-position: 0% 0%; /* Starting position */
-  animation: shine 4s infinite linear;
-}
-
-@keyframes shine {
-  0% {
-    -webkit-mask-position: 200% 0%;
-  }
-  100% {
-    -webkit-mask-position: 0% 0%;
-  }
 }
