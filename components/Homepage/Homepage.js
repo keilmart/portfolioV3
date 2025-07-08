@@ -17,7 +17,7 @@ const Homepage = ({ notableProjects, featuredProjects }) => {
       <FadeIn>
         <section className="mx-auto mb-11 md:mb-16 lg:mb-20">
           <HomepageListedSkills />
-          <a id="featured" />
+          <div id="featured" className="scroll-mt-16" />
         </section>
       </FadeIn>
 
@@ -46,7 +46,7 @@ const Homepage = ({ notableProjects, featuredProjects }) => {
           />
           <div className="pt-11" />
           <HomepageTestimonialList />
-          <a id="notable" />
+          <div id="notable" className="scroll-mt-10" />
         </section>
       </FadeIn>
 

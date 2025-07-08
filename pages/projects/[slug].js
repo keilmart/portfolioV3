@@ -16,7 +16,7 @@ const ProjectDetails = ({ projectData }) => {
         <div className="mb-8">
           <Link href={`${project.featured === false ? "/#notable" : "/#featured"}`}>
             <a className="border-b border-gray-700 text-tertiary hover:bg-gray-100 dark:hover:bg-transparent dark:hover:text-syncWave">
-              &larr; Back to Work
+              &larr; Back to work
             </a>
           </Link>
         </div>
